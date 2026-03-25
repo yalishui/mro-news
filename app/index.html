@@ -912,9 +912,7 @@ function toggleHeroAudio(src, label) {
   const cur       = document.getElementById('heroCurrent');
   const dur       = document.getElementById('heroDur');
 
-  // If a different archive card is playing, stop it
-  stopCurrentAudio(false);
-
+  // Toggle pause/resume if hero is already the active track
   if (currentAudio && currentIssue === 'hero') {
     if (!currentAudio.paused) {
       currentAudio.pause();
@@ -922,16 +920,18 @@ function toggleHeroAudio(src, label) {
       playIcon.style.display = '';
       pauseIcon.style.display = 'none';
       meta.textContent = 'Paused';
-      return;
     } else {
       currentAudio.play();
       btn.classList.add('playing');
       playIcon.style.display = 'none';
       pauseIcon.style.display = '';
       meta.textContent = 'Playing…';
-      return;
     }
+    return;
   }
+
+  // Stop any archive card that is currently playing
+  stopCurrentAudio(true);
 
   currentAudio = new Audio(src);
   currentIssue = 'hero';
@@ -1021,6 +1021,22 @@ function toggleArchiveAudio(e, idx, src) {
   const timeEl  = document.getElementById(`arcTime-${idx}`);
   const durEl   = document.getElementById(`arcDur-${idx}`);
 
+  // Toggle pause/resume if this card is already the active track
+  if (currentAudio && currentIssue === idx) {
+    if (!currentAudio.paused) {
+      currentAudio.pause();
+      btn.classList.remove('playing');
+      play.style.display = '';
+      pause.style.display = 'none';
+    } else {
+      currentAudio.play();
+      btn.classList.add('playing');
+      play.style.display = 'none';
+      pause.style.display = '';
+    }
+    return;
+  }
+
   // Stop hero if playing
   if (currentIssue === 'hero' && currentAudio) {
     currentAudio.pause();
@@ -1038,22 +1054,6 @@ function toggleArchiveAudio(e, idx, src) {
   // Stop another archive card
   if (currentIssue !== null && currentIssue !== 'hero' && currentIssue !== idx) {
     stopCurrentAudio(true);
-  }
-
-  if (currentAudio && currentIssue === idx) {
-    if (!currentAudio.paused) {
-      currentAudio.pause();
-      btn.classList.remove('playing');
-      play.style.display = '';
-      pause.style.display = 'none';
-      return;
-    } else {
-      currentAudio.play();
-      btn.classList.add('playing');
-      play.style.display = 'none';
-      pause.style.display = '';
-      return;
-    }
   }
 
   currentAudio = new Audio(src);
