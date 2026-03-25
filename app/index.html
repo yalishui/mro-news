@@ -1,0 +1,1209 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+  <title>MRO Daily Intelligence</title>
+  <meta name="description" content="Daily MRO aviation market intelligence briefings with audio."/>
+
+  <!-- PWA -->
+  <link rel="manifest" href="manifest.json"/>
+  <meta name="theme-color" content="#0a1628" media="(prefers-color-scheme: dark)"/>
+  <meta name="theme-color" content="#1a56db" media="(prefers-color-scheme: light)"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+  <meta name="apple-mobile-web-app-title" content="MRO Daily"/>
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png"/>
+  <link rel="apple-touch-icon" sizes="152x152" href="icons/icon-152.png"/>
+  <link rel="apple-touch-icon" sizes="167x167" href="icons/icon-167.png"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png"/>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+
+  <style>
+    /* ── Reset & tokens ──────────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:           #0a1628;
+      --bg2:          #0f2347;
+      --bg3:          #162d5a;
+      --surface:      #112040;
+      --surface2:     #1a2f55;
+      --border:       rgba(255,255,255,.08);
+      --accent:       #1a56db;
+      --accent-light: #3b82f6;
+      --accent-glow:  rgba(26,86,219,.35);
+      --gold:         #f59e0b;
+      --text:         #f0f4ff;
+      --text2:        rgba(240,244,255,.65);
+      --text3:        rgba(240,244,255,.38);
+      --green:        #34d399;
+      --safe-top:     env(safe-area-inset-top, 0px);
+      --safe-bot:     env(safe-area-inset-bottom, 0px);
+      --radius:       16px;
+    }
+
+    [data-theme="light"] {
+      --bg:           #f0f4ff;
+      --bg2:          #e8eef8;
+      --bg3:          #dce5f5;
+      --surface:      #ffffff;
+      --surface2:     #f5f8ff;
+      --border:       rgba(0,0,0,.08);
+      --accent:       #1a56db;
+      --accent-light: #1648c0;
+      --accent-glow:  rgba(26,86,219,.15);
+      --gold:         #d97706;
+      --text:         #0f1c35;
+      --text2:        rgba(15,28,53,.65);
+      --text3:        rgba(15,28,53,.38);
+      --green:        #059669;
+    }
+
+    html {
+      background: var(--bg);
+      height: 100%;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100dvh;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+      padding-bottom: calc(80px + var(--safe-bot));
+    }
+
+    a { text-decoration: none; color: inherit; }
+    button { cursor: pointer; border: none; background: none; font-family: inherit; }
+
+    /* ── Status bar spacer ───────────────────────────────────────────────── */
+    .status-bar-spacer {
+      height: calc(var(--safe-top) + 8px);
+      background: var(--bg);
+    }
+
+    /* ── Top nav ─────────────────────────────────────────────────────────── */
+    .top-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 20px 10px;
+      background: var(--bg);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+    }
+
+    .nav-plane {
+      width: 34px;
+      height: 34px;
+      background: var(--accent);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 17px;
+      flex-shrink: 0;
+    }
+
+    .nav-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1.2;
+    }
+
+    .nav-subtitle {
+      font-size: 11px;
+      color: var(--text3);
+      font-weight: 400;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .nav-btn {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 17px;
+      transition: background .15s;
+    }
+    .nav-btn:active { background: var(--surface2); }
+
+    /* ── Hero section ────────────────────────────────────────────────────── */
+    .hero {
+      margin: 8px 16px 0;
+      background: linear-gradient(145deg, var(--bg3) 0%, var(--bg2) 100%);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .hero-glow {
+      position: absolute;
+      top: -60px;
+      right: -60px;
+      width: 220px;
+      height: 220px;
+      background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      padding: 22px 20px 20px;
+      position: relative;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: rgba(26,86,219,.2);
+      border: 1px solid rgba(26,86,219,.35);
+      color: #93c5fd;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: .4px;
+      padding: 4px 10px;
+      border-radius: 99px;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+    }
+
+    .hero-badge::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      background: var(--green);
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: .5; transform: scale(.85); }
+    }
+
+    .hero-date {
+      font-size: 13px;
+      color: var(--text3);
+      font-weight: 500;
+      margin-bottom: 6px;
+    }
+
+    .hero-title {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1.25;
+      margin-bottom: 10px;
+    }
+
+    .hero-excerpt {
+      font-size: 13.5px;
+      color: var(--text2);
+      line-height: 1.65;
+      margin-bottom: 20px;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    /* ── Big audio player ────────────────────────────────────────────────── */
+    .big-player {
+      background: rgba(0,0,0,.25);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 16px;
+    }
+
+    .player-label {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .5px;
+      color: var(--text3);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .player-label svg { width: 12px; height: 12px; }
+
+    .player-controls {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+
+    .play-btn-big {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      box-shadow: 0 0 24px var(--accent-glow);
+      transition: transform .12s, box-shadow .12s;
+    }
+
+    .play-btn-big:active { transform: scale(.93); }
+    .play-btn-big.playing { background: #1648c0; }
+
+    .play-btn-big svg { width: 22px; height: 22px; fill: white; }
+
+    .player-info { flex: 1; min-width: 0; }
+
+    .player-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-bottom: 3px;
+    }
+
+    .player-meta {
+      font-size: 12px;
+      color: var(--text3);
+    }
+
+    /* Progress track */
+    .player-progress {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .progress-time {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--text3);
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+      min-width: 32px;
+    }
+
+    .progress-track {
+      flex: 1;
+      height: 4px;
+      background: rgba(255,255,255,.12);
+      border-radius: 99px;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .progress-fill {
+      height: 100%;
+      width: 0%;
+      background: var(--accent-light);
+      border-radius: 99px;
+      transition: width .2s linear;
+      pointer-events: none;
+    }
+
+    .progress-thumb {
+      position: absolute;
+      top: 50%;
+      left: 0%;
+      transform: translate(-50%, -50%);
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: white;
+      box-shadow: 0 1px 4px rgba(0,0,0,.4);
+      opacity: 0;
+      transition: opacity .15s, left .2s linear;
+    }
+
+    .progress-track:hover .progress-thumb,
+    .progress-track:active .progress-thumb { opacity: 1; }
+
+    /* ── Read button ─────────────────────────────────────────────────────── */
+    .hero-read-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      width: 100%;
+      margin-top: 14px;
+      padding: 12px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text2);
+      transition: background .15s;
+    }
+    .hero-read-btn:active { background: var(--surface2); }
+
+    /* ── Section heading ─────────────────────────────────────────────────── */
+    .section-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 24px 20px 12px;
+    }
+
+    .section-head h2 {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .section-count {
+      font-size: 12px;
+      color: var(--text3);
+      font-weight: 500;
+    }
+
+    /* ── Archive list ────────────────────────────────────────────────────── */
+    .archive-list {
+      padding: 0 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .archive-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      transition: border-color .15s;
+    }
+
+    .archive-card:active { border-color: rgba(26,86,219,.4); }
+
+    .archive-card-top {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 14px 16px 12px;
+    }
+
+    .arc-date-badge {
+      width: 44px;
+      height: 44px;
+      background: var(--bg3);
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      border: 1px solid var(--border);
+    }
+
+    .arc-day {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1;
+    }
+
+    .arc-month {
+      font-size: 9px;
+      font-weight: 600;
+      color: var(--text3);
+      text-transform: uppercase;
+      letter-spacing: .4px;
+    }
+
+    .arc-info { flex: 1; min-width: 0; }
+
+    .arc-issue {
+      font-size: 11px;
+      color: var(--accent-light);
+      font-weight: 600;
+      margin-bottom: 3px;
+    }
+
+    .arc-title {
+      font-size: 13.5px;
+      font-weight: 600;
+      color: var(--text);
+      line-height: 1.3;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .arc-play-btn {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: background .15s, border-color .15s;
+    }
+
+    .arc-play-btn:active { transform: scale(.9); }
+    .arc-play-btn.playing { background: var(--accent); border-color: var(--accent); }
+    .arc-play-btn svg { width: 14px; height: 14px; fill: var(--text2); }
+    .arc-play-btn.playing svg { fill: white; }
+
+    /* Mini progress in archive card */
+    .arc-progress {
+      display: none;
+      align-items: center;
+      gap: 8px;
+      padding: 0 16px 12px;
+    }
+
+    .arc-progress.visible { display: flex; }
+
+    .arc-progress-track {
+      flex: 1;
+      height: 3px;
+      background: rgba(255,255,255,.1);
+      border-radius: 99px;
+      overflow: hidden;
+    }
+
+    .arc-progress-fill {
+      height: 100%;
+      width: 0%;
+      background: var(--accent-light);
+      border-radius: 99px;
+      transition: width .25s linear;
+    }
+
+    .arc-progress-time {
+      font-size: 10px;
+      color: var(--text3);
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+    }
+
+    .arc-excerpt {
+      font-size: 12.5px;
+      color: var(--text2);
+      line-height: 1.6;
+      padding: 0 16px 14px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .arc-footer {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding: 0 16px 12px;
+    }
+
+    .arc-read-link {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--accent-light);
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    /* ── Bottom nav bar ──────────────────────────────────────────────────── */
+    .bottom-nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: var(--bg);
+      border-top: 1px solid var(--border);
+      display: flex;
+      padding: 10px 0 calc(10px + var(--safe-bot));
+      z-index: 100;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+    }
+
+    .bot-nav-item {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      padding: 4px 0;
+      font-size: 10px;
+      font-weight: 500;
+      color: var(--text3);
+      transition: color .15s;
+    }
+
+    .bot-nav-item.active { color: var(--accent-light); }
+
+    .bot-nav-item svg {
+      width: 22px;
+      height: 22px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    /* ── Toast / offline indicator ───────────────────────────────────────── */
+    .toast {
+      position: fixed;
+      top: calc(var(--safe-top) + 60px);
+      left: 50%;
+      transform: translateX(-50%) translateY(-10px);
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 99px;
+      padding: 8px 18px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .3s, transform .3s;
+      white-space: nowrap;
+      z-index: 200;
+    }
+    .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+    /* ── Install banner ──────────────────────────────────────────────────── */
+    .install-banner {
+      display: none;
+      margin: 12px 16px 0;
+      background: linear-gradient(135deg, rgba(26,86,219,.15), rgba(26,86,219,.05));
+      border: 1px solid rgba(26,86,219,.3);
+      border-radius: 14px;
+      padding: 14px 16px;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .install-banner.visible { display: flex; }
+
+    .install-icon { font-size: 26px; flex-shrink: 0; }
+
+    .install-text { flex: 1; }
+    .install-text strong { font-size: 13px; font-weight: 700; display: block; margin-bottom: 2px; }
+    .install-text span { font-size: 12px; color: var(--text2); }
+
+    .install-btn {
+      background: var(--accent);
+      color: white;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 8px 14px;
+      border-radius: 10px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .install-dismiss {
+      font-size: 18px;
+      color: var(--text3);
+      padding: 4px;
+      flex-shrink: 0;
+    }
+
+    /* ── Market stats pill row ───────────────────────────────────────────── */
+    .stats-row {
+      display: flex;
+      gap: 8px;
+      padding: 14px 16px 0;
+      overflow-x: auto;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+    .stats-row::-webkit-scrollbar { display: none; }
+
+    .stat-pill {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 10px 14px;
+      flex-shrink: 0;
+      text-align: center;
+      min-width: 88px;
+    }
+
+    .stat-pill-val {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    .stat-pill-val.up { color: var(--green); }
+    .stat-pill-val.warn { color: var(--gold); }
+
+    .stat-pill-label {
+      font-size: 10px;
+      color: var(--text3);
+      font-weight: 500;
+      line-height: 1.3;
+    }
+
+    /* ── Loading skeleton ────────────────────────────────────────────────── */
+    @keyframes shimmer {
+      0% { background-position: -300px 0; }
+      100% { background-position: 300px 0; }
+    }
+    .skeleton {
+      background: linear-gradient(90deg, var(--surface) 25%, var(--surface2) 50%, var(--surface) 75%);
+      background-size: 600px 100%;
+      animation: shimmer 1.4s infinite;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="status-bar-spacer"></div>
+
+<!-- Top Nav -->
+<nav class="top-nav">
+  <div class="nav-brand">
+    <div class="nav-plane">✈</div>
+    <div>
+      <div class="nav-title">MRO Daily</div>
+      <div class="nav-subtitle">Intelligence Briefings</div>
+    </div>
+  </div>
+  <div class="nav-actions">
+    <button class="nav-btn" id="themeBtn" aria-label="Toggle theme" onclick="toggleTheme()">🌙</button>
+    <button class="nav-btn" id="offlineBtn" aria-label="Download for offline" onclick="cacheAll()" title="Download all for offline">⬇</button>
+  </div>
+</nav>
+
+<!-- Install Banner (shown only in browser, not standalone) -->
+<div class="install-banner" id="installBanner">
+  <div class="install-icon">📲</div>
+  <div class="install-text">
+    <strong>Add to Home Screen</strong>
+    <span>Get the app for offline access</span>
+  </div>
+  <button class="install-btn" onclick="triggerInstall()">Install</button>
+  <button class="install-dismiss" onclick="dismissInstall()">×</button>
+</div>
+
+<!-- Market Stats Pills -->
+<div class="stats-row">
+  <div class="stat-pill">
+    <div class="stat-pill-val up">$136B</div>
+    <div class="stat-pill-label">2025 MRO<br>Spend</div>
+  </div>
+  <div class="stat-pill">
+    <div class="stat-pill-val">~$193B</div>
+    <div class="stat-pill-label">2035<br>Forecast</div>
+  </div>
+  <div class="stat-pill">
+    <div class="stat-pill-val warn">30,000</div>
+    <div class="stat-pill-label">Active<br>Aircraft</div>
+  </div>
+  <div class="stat-pill">
+    <div class="stat-pill-val">~13 yrs</div>
+    <div class="stat-pill-label">Fleet Avg<br>Age</div>
+  </div>
+  <div class="stat-pill">
+    <div class="stat-pill-val up">8%</div>
+    <div class="stat-pill-label">YoY<br>Growth</div>
+  </div>
+</div>
+
+<!-- Hero: Today's Issue -->
+<div id="heroSection" style="margin-top:14px"></div>
+
+<!-- Archive -->
+<div class="section-head">
+  <h2>All Briefings</h2>
+  <span class="section-count" id="archiveCount"></span>
+</div>
+<div class="archive-list" id="archiveList"></div>
+
+<!-- Bottom spacing -->
+<div style="height:24px"></div>
+
+<!-- Bottom Nav -->
+<nav class="bottom-nav">
+  <button class="bot-nav-item active">
+    <svg viewBox="0 0 24 24"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z"/><path d="M9 21V12h6v9"/></svg>
+    Today
+  </button>
+  <button class="bot-nav-item" onclick="scrollToArchive()">
+    <svg viewBox="0 0 24 24"><path d="M4 6h16M4 10h16M4 14h16M4 18h10"/></svg>
+    Archive
+  </button>
+  <button class="bot-nav-item" onclick="window.open('../index.html','_blank')">
+    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 3c-2.5 3-4 5.7-4 9s1.5 6 4 9m0-18c2.5 3 4 5.7 4 9s-1.5 6-4 9M3 12h18"/></svg>
+    Website
+  </button>
+</nav>
+
+<!-- Toast -->
+<div class="toast" id="toast"></div>
+
+<script>
+// ── Data: all issues ──────────────────────────────────────────────────────
+const ISSUES = [
+  {
+    slug:    'march-25-2026',
+    audio:   '../posts/march25-2026-email.m4a',
+    day:     25, month: 'MAR', monthFull: 'March', year: 2026,
+    issue:   9,
+    excerpt: 'IBA confirms aircraft engine values remain at historically elevated levels — MRO backlogs and supply chain constraints expected to persist well into 2026–2027. Meanwhile GE Aerospace commits €110M+ to European MRO expansion.',
+  },
+  {
+    slug:    'march-24-2026',
+    audio:   '../posts/march24-2026-email.m4a',
+    day:     24, month: 'MAR', monthFull: 'March', year: 2026,
+    issue:   8,
+    excerpt: 'IBA publishes latest engine value report — persistent MRO backlogs and supply chain constraints keep spare engine values and lease rates elevated. Direct Maintenance wins new Dublin widebody contract with American Airlines.',
+  },
+  {
+    slug:    'march-23-2026',
+    audio:   '../posts/march23-2026-email.m4a',
+    day:     23, month: 'MAR', monthFull: 'March', year: 2026,
+    issue:   7,
+    excerpt: 'SIA Engineering finalises 30% stake acquisition in Arport AME (Fujian) for CNY 129M. FL Technics reports growth outpacing sector average, expanding into new geographies across Europe and Asia.',
+  },
+  {
+    slug:    'march-22-2026',
+    audio:   '../posts/march22-2026-email.m4a',
+    day:     22, month: 'MAR', monthFull: 'March', year: 2026,
+    issue:   6,
+    excerpt: 'Aero Engine Leasing launches with bullish outlook on CFM56 demand. New MRO facility in Punta Cana breaks ground targeting Latin American widebody market.',
+  },
+  {
+    slug:    'march-21-2026',
+    audio:   '../posts/march21-2026-email.m4a',
+    day:     21, month: 'MAR', monthFull: 'March', year: 2026,
+    issue:   5,
+    excerpt: "India's MRO market projected to grow from $4.4B (2025) to $5.7B by 2030 at a 5.4% CAGR — driven by IndiGo and Air India fleet expansion and government MRO hub incentives.",
+  },
+  {
+    slug:    'march-20-2026',
+    audio:   '../posts/march20-2026-email.m4a',
+    day:     20, month: 'MAR', monthFull: 'March', year: 2026,
+    issue:   4,
+    excerpt: 'Oliver Wyman 2026–2036 forecast: global MRO spend reached $136B in 2025 (+8% YoY) and is forecast to approach $193B by end of the 2030s — nearly double the 2019 pre-pandemic baseline.',
+  },
+  {
+    slug:    'march-15-2026',
+    audio:   '../posts/march15-2026-email.m4a',
+    day:     15, month: 'MAR', monthFull: 'March', year: 2026,
+    issue:   3,
+    excerpt: 'Global Aircraft MRO market on robust trajectory driven by aging fleets, record load factors, and new-aircraft delivery backlogs. Asia-Pacific accounts for 50–70% of heavy maintenance work.',
+  },
+  {
+    slug:    'march-14-2026',
+    audio:   '../posts/march14-2026-email.m4a',
+    day:     14, month: 'MAR', monthFull: 'March', year: 2026,
+    issue:   2,
+    excerpt: 'Global MRO market valued at $98.38B in 2026, projections reach $155B by 2035 at 5.19% CAGR. Engine MRO dominates at ~40% of total spend, driven by GTF shop visit surge.',
+  },
+  {
+    slug:    'march-13-2026',
+    audio:   '../posts/march13-2026-email.m4a',
+    day:     13, month: 'MAR', monthFull: 'March', year: 2026,
+    issue:   1,
+    excerpt: 'Commercial Aircraft MRO market estimated at $89.68B in 2026, projected to grow at 4.88–7.2% CAGR through 2033. Supply chain fragility and part shortages remain the dominant operational risk.',
+  },
+];
+
+// ── Audio state ───────────────────────────────────────────────────────────
+let currentAudio = null;
+let currentIssue = null;
+
+function fmtTime(s) {
+  if (isNaN(s)) return '--:--';
+  const m = Math.floor(s / 60);
+  return m + ':' + String(Math.floor(s % 60)).padStart(2, '0');
+}
+
+// ── Render hero ───────────────────────────────────────────────────────────
+function renderHero(issue) {
+  const dateStr = `${issue.monthFull} ${issue.day}, ${issue.year}`;
+  const postUrl = `../posts/${issue.slug}.html`;
+
+  document.getElementById('heroSection').innerHTML = `
+    <div class="hero">
+      <div class="hero-glow"></div>
+      <div class="hero-inner">
+        <div class="hero-badge">Latest Issue · #${issue.issue}</div>
+        <div class="hero-date">${dateStr}</div>
+        <h1 class="hero-title">MRO Market Intelligence Briefing</h1>
+        <p class="hero-excerpt">${issue.excerpt}</p>
+
+        <div class="big-player" id="heroPlayer">
+          <div class="player-label">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 100 18A9 9 0 0012 3zm-2 13V8l7 4-7 4z"/></svg>
+            Audio Briefing — Daniel, en-GB
+          </div>
+          <div class="player-controls">
+            <button class="play-btn-big" id="heroPlayBtn"
+              onclick="toggleHeroAudio('${issue.audio}', '${dateStr}')"
+              aria-label="Play briefing">
+              <svg id="heroPlayIcon" viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+              <svg id="heroPauseIcon" viewBox="0 0 24 24" style="display:none"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+            </button>
+            <div class="player-info">
+              <div class="player-title">Daily Briefing — ${dateStr}</div>
+              <div class="player-meta" id="heroMeta">Tap play to listen · ~2 min</div>
+            </div>
+          </div>
+          <div class="player-progress">
+            <span class="progress-time" id="heroCurrent">0:00</span>
+            <div class="progress-track" id="heroTrack" onclick="seekHero(event)">
+              <div class="progress-fill" id="heroFill"></div>
+              <div class="progress-thumb" id="heroThumb"></div>
+            </div>
+            <span class="progress-time" id="heroDur">--:--</span>
+          </div>
+        </div>
+
+        <a href="${postUrl}" class="hero-read-btn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14,2 14,8 20,8"/></svg>
+          Read full briefing
+        </a>
+      </div>
+    </div>`;
+}
+
+function toggleHeroAudio(src, label) {
+  const btn       = document.getElementById('heroPlayBtn');
+  const playIcon  = document.getElementById('heroPlayIcon');
+  const pauseIcon = document.getElementById('heroPauseIcon');
+  const meta      = document.getElementById('heroMeta');
+  const fill      = document.getElementById('heroFill');
+  const thumb     = document.getElementById('heroThumb');
+  const cur       = document.getElementById('heroCurrent');
+  const dur       = document.getElementById('heroDur');
+
+  // If a different archive card is playing, stop it
+  stopCurrentAudio(false);
+
+  if (currentAudio && currentIssue === 'hero') {
+    if (!currentAudio.paused) {
+      currentAudio.pause();
+      btn.classList.remove('playing');
+      playIcon.style.display = '';
+      pauseIcon.style.display = 'none';
+      meta.textContent = 'Paused';
+      return;
+    } else {
+      currentAudio.play();
+      btn.classList.add('playing');
+      playIcon.style.display = 'none';
+      pauseIcon.style.display = '';
+      meta.textContent = 'Playing…';
+      return;
+    }
+  }
+
+  currentAudio = new Audio(src);
+  currentIssue = 'hero';
+
+  currentAudio.addEventListener('loadedmetadata', () => {
+    dur.textContent = fmtTime(currentAudio.duration);
+    meta.textContent = `${fmtTime(currentAudio.duration)} · Daniel, en-GB`;
+  });
+  currentAudio.addEventListener('timeupdate', () => {
+    const pct = (currentAudio.currentTime / currentAudio.duration) * 100;
+    fill.style.width = pct + '%';
+    thumb.style.left = pct + '%';
+    cur.textContent = fmtTime(currentAudio.currentTime);
+  });
+  currentAudio.addEventListener('ended', () => {
+    btn.classList.remove('playing');
+    playIcon.style.display = '';
+    pauseIcon.style.display = 'none';
+    meta.textContent = 'Finished · tap to replay';
+    fill.style.width = '0%';
+    cur.textContent = '0:00';
+    currentAudio.currentTime = 0;
+  });
+  currentAudio.play();
+  btn.classList.add('playing');
+  playIcon.style.display = 'none';
+  pauseIcon.style.display = '';
+  meta.textContent = 'Loading…';
+}
+
+function seekHero(e) {
+  if (!currentAudio || currentIssue !== 'hero') return;
+  const track = document.getElementById('heroTrack');
+  const rect = track.getBoundingClientRect();
+  const pct = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
+  currentAudio.currentTime = pct * currentAudio.duration;
+}
+
+// ── Render archive ────────────────────────────────────────────────────────
+function renderArchive(issues) {
+  const list = document.getElementById('archiveList');
+  const countEl = document.getElementById('archiveCount');
+  countEl.textContent = `${issues.length} issues`;
+
+  list.innerHTML = issues.map((issue, i) => {
+    const postUrl = `../posts/${issue.slug}.html`;
+    return `
+      <div class="archive-card" id="card-${i}">
+        <a href="${postUrl}" style="display:block">
+          <div class="archive-card-top">
+            <div class="arc-date-badge">
+              <div class="arc-day">${issue.day}</div>
+              <div class="arc-month">${issue.month}</div>
+            </div>
+            <div class="arc-info">
+              <div class="arc-issue">Issue #${issue.issue} · ${issue.monthFull} ${issue.day}, ${issue.year}</div>
+              <div class="arc-title">MRO Market Intelligence Briefing — ${issue.monthFull} ${issue.day}</div>
+            </div>
+          </div>
+          <p class="arc-excerpt">${issue.excerpt}</p>
+        </a>
+        <div class="arc-progress" id="arcProg-${i}">
+          <span class="arc-progress-time" id="arcTime-${i}">0:00</span>
+          <div class="arc-progress-track"><div class="arc-progress-fill" id="arcFill-${i}"></div></div>
+          <span class="arc-progress-time" id="arcDur-${i}">--:--</span>
+        </div>
+        <div class="arc-footer">
+          <button class="arc-play-btn" id="arcBtn-${i}"
+            onclick="toggleArchiveAudio(event, ${i}, '${issue.audio}')"
+            aria-label="Play audio for issue ${issue.issue}">
+            <svg id="arcPlay-${i}" viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+            <svg id="arcPause-${i}" viewBox="0 0 24 24" style="display:none"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+          </button>
+          <a href="${postUrl}" class="arc-read-link" style="margin-left:auto">Read →</a>
+        </div>
+      </div>`;
+  }).join('');
+}
+
+function toggleArchiveAudio(e, idx, src) {
+  e.stopPropagation();
+  const btn     = document.getElementById(`arcBtn-${idx}`);
+  const play    = document.getElementById(`arcPlay-${idx}`);
+  const pause   = document.getElementById(`arcPause-${idx}`);
+  const prog    = document.getElementById(`arcProg-${idx}`);
+  const fill    = document.getElementById(`arcFill-${idx}`);
+  const timeEl  = document.getElementById(`arcTime-${idx}`);
+  const durEl   = document.getElementById(`arcDur-${idx}`);
+
+  // Stop hero if playing
+  if (currentIssue === 'hero' && currentAudio) {
+    currentAudio.pause();
+    document.getElementById('heroPlayBtn')?.classList.remove('playing');
+    const pi = document.getElementById('heroPlayIcon');
+    const pui = document.getElementById('heroPauseIcon');
+    if (pi) pi.style.display = '';
+    if (pui) pui.style.display = 'none';
+    const m = document.getElementById('heroMeta');
+    if (m) m.textContent = 'Paused';
+    currentAudio = null;
+    currentIssue = null;
+  }
+
+  // Stop another archive card
+  if (currentIssue !== null && currentIssue !== 'hero' && currentIssue !== idx) {
+    stopCurrentAudio(true);
+  }
+
+  if (currentAudio && currentIssue === idx) {
+    if (!currentAudio.paused) {
+      currentAudio.pause();
+      btn.classList.remove('playing');
+      play.style.display = '';
+      pause.style.display = 'none';
+      return;
+    } else {
+      currentAudio.play();
+      btn.classList.add('playing');
+      play.style.display = 'none';
+      pause.style.display = '';
+      return;
+    }
+  }
+
+  currentAudio = new Audio(src);
+  currentIssue = idx;
+  prog.classList.add('visible');
+
+  currentAudio.addEventListener('loadedmetadata', () => {
+    durEl.textContent = fmtTime(currentAudio.duration);
+  });
+  currentAudio.addEventListener('timeupdate', () => {
+    const pct = (currentAudio.currentTime / currentAudio.duration) * 100;
+    fill.style.width = pct + '%';
+    timeEl.textContent = fmtTime(currentAudio.currentTime);
+  });
+  currentAudio.addEventListener('ended', () => {
+    btn.classList.remove('playing');
+    play.style.display = '';
+    pause.style.display = 'none';
+    fill.style.width = '0%';
+    timeEl.textContent = '0:00';
+    prog.classList.remove('visible');
+    currentAudio = null;
+    currentIssue = null;
+  });
+
+  currentAudio.play();
+  btn.classList.add('playing');
+  play.style.display = 'none';
+  pause.style.display = '';
+}
+
+function stopCurrentAudio(resetUI) {
+  if (!currentAudio) return;
+  currentAudio.pause();
+  if (resetUI && currentIssue !== null && currentIssue !== 'hero') {
+    const idx = currentIssue;
+    document.getElementById(`arcBtn-${idx}`)?.classList.remove('playing');
+    const p = document.getElementById(`arcPlay-${idx}`);
+    const pu = document.getElementById(`arcPause-${idx}`);
+    if (p) p.style.display = '';
+    if (pu) pu.style.display = 'none';
+    document.getElementById(`arcProg-${idx}`)?.classList.remove('visible');
+  }
+  currentAudio = null;
+  currentIssue = null;
+}
+
+// ── Scroll helper ─────────────────────────────────────────────────────────
+function scrollToArchive() {
+  document.querySelector('.section-head')?.scrollIntoView({ behavior: 'smooth' });
+}
+
+// ── Theme toggle ──────────────────────────────────────────────────────────
+function toggleTheme() {
+  const html = document.documentElement;
+  const isDark = html.getAttribute('data-theme') === 'dark';
+  html.setAttribute('data-theme', isDark ? 'light' : 'dark');
+  document.getElementById('themeBtn').textContent = isDark ? '☀️' : '🌙';
+  localStorage.setItem('mro-theme', isDark ? 'light' : 'dark');
+}
+
+// ── Toast ─────────────────────────────────────────────────────────────────
+function showToast(msg, duration = 2500) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), duration);
+}
+
+// ── Cache all for offline ─────────────────────────────────────────────────
+async function cacheAll() {
+  if (!('caches' in window)) { showToast('Caching not supported'); return; }
+  showToast('⬇ Caching all audio for offline…', 4000);
+  const cache = await caches.open('mro-v1-audio');
+  let count = 0;
+  for (const issue of ISSUES) {
+    try {
+      await cache.add(issue.audio);
+      count++;
+    } catch(e) { /* skip */ }
+  }
+  showToast(`✅ ${count} briefings cached for offline`);
+}
+
+// ── PWA install ───────────────────────────────────────────────────────────
+let deferredPrompt = null;
+
+window.addEventListener('beforeinstallprompt', e => {
+  e.preventDefault();
+  deferredPrompt = e;
+  if (!localStorage.getItem('mro-install-dismissed')) {
+    document.getElementById('installBanner').classList.add('visible');
+  }
+});
+
+function triggerInstall() {
+  if (deferredPrompt) {
+    deferredPrompt.prompt();
+    deferredPrompt.userChoice.then(() => {
+      deferredPrompt = null;
+      document.getElementById('installBanner').classList.remove('visible');
+    });
+  }
+}
+
+function dismissInstall() {
+  document.getElementById('installBanner').classList.remove('visible');
+  localStorage.setItem('mro-install-dismissed', '1');
+}
+
+// Show iOS install hint if in Safari but not standalone
+function checkIOSInstall() {
+  const isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
+  const isStandalone = window.navigator.standalone;
+  if (isIOS && !isStandalone && !localStorage.getItem('mro-install-dismissed')) {
+    document.getElementById('installBanner').classList.add('visible');
+    document.querySelector('.install-btn').textContent = 'How?';
+    document.querySelector('.install-btn').onclick = () => {
+      showToast('Tap Share → "Add to Home Screen"', 4000);
+    };
+  }
+}
+
+// ── Service worker registration ───────────────────────────────────────────
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('./sw.js').then(reg => {
+    reg.addEventListener('updatefound', () => {
+      showToast('📡 New content available — reload to update');
+    });
+  });
+}
+
+// ── Online / offline indicator ────────────────────────────────────────────
+window.addEventListener('offline', () => showToast('📵 You\'re offline — cached content available', 3500));
+window.addEventListener('online',  () => showToast('✅ Back online'));
+
+// ── Init ──────────────────────────────────────────────────────────────────
+(function init() {
+  // Restore theme
+  const saved = localStorage.getItem('mro-theme');
+  if (saved) {
+    document.documentElement.setAttribute('data-theme', saved);
+    document.getElementById('themeBtn').textContent = saved === 'dark' ? '🌙' : '☀️';
+  }
+
+  renderHero(ISSUES[0]);
+  renderArchive(ISSUES.slice(1)); // archive = all except latest
+  checkIOSInstall();
+})();
+</script>
+
+</body>
+</html>
