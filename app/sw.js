@@ -1,7 +1,7 @@
 // MRO Daily Intelligence — Service Worker
 // Handles offline caching for audio + pages
 
-const CACHE_VERSION = 'mro-v2';
+const CACHE_VERSION = 'mro-v3';
 const STATIC_CACHE  = `${CACHE_VERSION}-static`;
 const AUDIO_CACHE   = `${CACHE_VERSION}-audio`;
 
