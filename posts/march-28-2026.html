@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MRO Briefing — March 28, 2026 | MRO Daily Intelligence</title>
+  <meta name="description" content="Alton Aviation Consultancy" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/style.css" />
+  <style>
+    /* ── Audio Player ── */
+    .post-audio-player {
+      background: linear-gradient(135deg,#0f2847 0%,#1a4a8a 100%);
+      border-radius: 14px;
+      padding: 18px 20px;
+      margin: 0 0 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .post-audio-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .6px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.5);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .post-audio-controls {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .post-play-btn {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.15);
+      border: 1px solid rgba(255,255,255,.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      flex-shrink: 0;
+      transition: background .15s;
+    }
+    .post-play-btn:hover { background: rgba(255,255,255,.25); }
+    .post-play-btn svg { fill: white; width: 20px; height: 20px; }
+    .post-audio-info { flex: 1; }
+    .post-audio-title { font-size: 14px; font-weight: 600; color: #fff; margin-bottom: 3px; }
+    .post-audio-meta { font-size: 12px; color: rgba(255,255,255,.5); }
+    .post-audio-progress {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .post-audio-time { font-size: 11px; color: rgba(255,255,255,.5); min-width: 32px; font-variant-numeric: tabular-nums; }
+    .post-audio-track {
+      flex: 1;
+      height: 4px;
+      background: rgba(255,255,255,.2);
+      border-radius: 99px;
+      cursor: pointer;
+      position: relative;
+    }
+    .post-audio-fill {
+      height: 100%;
+      width: 0%;
+      background: #fff;
+      border-radius: 99px;
+      transition: width .2s linear;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <div class="logo">
+          <span class="logo-icon">✈</span>
+          <div>
+            <div class="logo-name">MRO Daily Intelligence</div>
+            <div class="logo-tagline">Aviation Maintenance Market Briefings</div>
+          </div>
+        </div>
+        <nav class="nav">
+          <a href="../index.html" class="nav-link">Latest</a>
+          <a href="../index.html#about" class="nav-link">About</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section class="post-hero">
+    <div class="container">
+      <a href="../index.html" class="post-back">← All Briefings</a>
+      <div class="post-issue-label">Issue #12 &nbsp;·&nbsp; March 28, 2026</div>
+      <h1 class="post-title">Daily MRO Market News Summary — March 28, 2026</h1>
+      <div class="post-meta-row">
+        <div class="post-meta-item"><strong>March 28, 2026</strong></div>
+        <div class="post-meta-item">·</div>
+        <div class="post-meta-item">Source: <strong>Aviation Week Network</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <main class="post-body">
+    <div class="container">
+      <div class="post-grid">
+        <article class="post-content">
+
+          <!-- ── Audio Player ── -->
+          <div class="post-audio-player" id="audioPlayer">
+            <div class="post-audio-label">
+              <svg viewBox="0 0 24 24" fill="white" width="12" height="12"><path d="M12 3a9 9 0 100 18A9 9 0 0012 3zm-2 13V8l7 4-7 4z"/></svg>
+              Audio Briefing &nbsp;·&nbsp; Daniel, en-GB
+            </div>
+            <div class="post-audio-controls">
+              <button class="post-play-btn" id="postPlayBtn" onclick="togglePostAudio()" aria-label="Play audio briefing">
+                <svg id="postPlayIcon" viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+                <svg id="postPauseIcon" viewBox="0 0 24 24" style="display:none"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+              </button>
+              <div class="post-audio-info">
+                <div class="post-audio-title">Daily Briefing — March 28, 2026</div>
+                <div class="post-audio-meta" id="postAudioMeta">Tap to listen · ~2 min</div>
+              </div>
+            </div>
+            <div class="post-audio-progress">
+              <span class="post-audio-time" id="postAudioCur">0:00</span>
+              <div class="post-audio-track" id="postAudioTrack" onclick="seekPostAudio(event)">
+                <div class="post-audio-fill" id="postAudioFill"></div>
+              </div>
+              <span class="post-audio-time" id="postAudioDur">--:--</span>
+            </div>
+          </div>
+
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px"><strong>Date:</strong> Saturday, March 28, 2026</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px"><strong>Source:</strong> APAC News Network, Fiinews / Alton Aviation Consultancy, Business News This Week, Aviation Week Network, Industry Sources</p>
+
+<div class="post-section" id="s1">
+  <div class="post-section-header">
+    <div class="section-number">1</div>
+    <span class="section-icon">📈</span>
+    <h2>Market Updates and Growth Trends</h2>
+  </div>
+<h3>India MRO Market Projected at $5.7B by 2030 — Alton Aviation Report</h3>
+<ul>
+<li><strong>Alton Aviation Consultancy</strong> (Singapore) published a comprehensive analysis of India's MRO market forecasting robust growth through 2030 (Fiinews, March 28)</li>
+<li><strong>Key projections:</strong></li>
+<li>2025 market size: <strong>$4.4 billion</strong></li>
+<li>2030 projected size: <strong>$5.7 billion</strong></li>
+<li>Annual growth rate (USD): <strong>5.4% CAGR</strong></li>
+<li><strong>Fleet growth driving demand:</strong></li>
+<li>Indian airlines to receive <strong>500+ new aircraft</strong> in the next 5 years</li>
+<li>Narrowbody fleet to grow from <strong>700+</strong> to <strong>1,300+ aircraft</strong> by 2030</li>
+<li>Total Indian commercial fleet to exceed <strong>1,800 aircraft</strong> by 2030</li>
+<li><strong>MRO demand structure:</strong> Engine MRO accounts for nearly half of total demand; airframe and modification services show the fastest growth rate</li>
+<li><strong>Policy tailwinds:</strong> Cape Town Convention ratification, relaxed FDI rules, reduced GST and customs duties on aviation components, and GIFT City aviation financing incentives</li>
+<li><strong>Infrastructure pipeline:</strong> Government targeting <strong>200+ airports</strong> by 2030 (100+ new additions), including newly operational Navi Mumbai (Dec 2025), Jewar/Noida (Mar 2026), Dholera ($250M, Dec 2026), and Bhogapuram ($550M, Jun 2026) airports</li>
+<li><strong>Key investments already announced:</strong></li>
+<li><strong>Safran</strong> — €200M LEAP engine MRO facility, Hyderabad</li>
+<li><strong>IndiGo</strong> — Dedicated MRO partnership with Bangalore Airport</li>
+<li><strong>Thales</strong> — New avionics MRO facility in India</li>
+<li><strong>Adani Group</strong> — Acquired Air Works and AAR-Indamer Technics; Embraer E175 final assembly line partnership</li>
+<li><strong>Remaining gaps:</strong> Parts logistics, skilled technician supply, and high-value component (engine) repair capability still need development</li>
+</ul>
+<p style="color:var(--gray-400);font-size:13px;font-style:italic;margin-bottom:8px">Source: Alton Aviation Consultancy / Fiinews, March 28, 2026</p>
+<h3>PM Modi Inaugurates Jewar Airport Phase 1; Announces Rs 1,000 Crore MRO Hub with Akasa Air</h3>
+<ul>
+<li><strong>Prime Minister Narendra Modi</strong> inaugurated <strong>Phase 1 of Noida International Airport (Jewar)</strong> on <strong>Saturday March 28, 2026</strong> — marking a major milestone in India's airport expansion programme (APAC News Network, March 28)</li>
+<li><strong>MRO announcement:</strong> PM Modi announced development of a <strong>Rs 1,000 crore (~$120 million) MRO ecosystem</strong> at Jewar airport, in partnership with <strong>Akasa Air</strong></li>
+<li><strong>Strategic vision:</strong> India aims to reduce its ~85% overseas MRO dependency, retain maintenance revenue domestically, create youth employment, and position the country as a global aircraft maintenance centre</li>
+<li><strong>Jewar Airport context:</strong> Located in Noida, near Delhi — designed to serve as a dual-hub alongside Indira Gandhi International Airport for Delhi NCR, India's largest aviation market</li>
+<li><strong>Akasa Air MRO facility:</strong> Akasa Air's first dedicated MRO base (strategic agreement signed March 27); will anchor the broader Jewar MRO hub ecosystem</li>
+<li><strong>Employment creation:</strong> MRO hub expected to generate significant skilled engineering and technical employment for youth in the Delhi NCR region</li>
+<li><strong>Economic multiplier:</strong> Full operational MRO hub will attract international aircraft to Jewar for maintenance, ensuring foreign-currency maintenance revenue flows into India rather than abroad</li>
+<li><strong>Political significance:</strong> Jewar project backed by both central government and Uttar Pradesh state government (CM Yogi Adityanath); positions UP as India's next major aviation investment destination</li>
+</ul>
+<p style="color:var(--gray-400);font-size:13px;font-style:italic;margin-bottom:8px">Source: APAC News Network / Business News This Week, March 28, 2026</p>
+
+<div class="post-section" id="s2">
+  <div class="post-section-header">
+    <div class="section-number">2</div>
+    <span class="section-icon">🌏</span>
+    <h2>Regional Expansion Activities</h2>
+  </div>
+<h3>India's Airport Infrastructure Buildout Accelerates MRO Real Estate Opportunity</h3>
+<ul>
+<li><strong>Four major Indian airports</strong> now operational or opening in 2026, each representing MRO co-location potential:</li>
+</ul>
+<div class="table-wrapper"><table class="post-table">
+<thead><tr><th>Airport</th><th>Investment</th><th>Status</th><th>MRO Relevance</th></tr></thead><tbody>
+<tr><td>Navi Mumbai International</td><td>Major (TBD)</td><td>Operational Dec 2025</td><td>Adjacent to India's busiest cargo and engineering corridor</td></tr>
+<tr><td>Noida/Jewar International</td><td>Rs 1,000 Cr MRO hub</td><td>Phase 1 inaugurated Mar 28</td><td>Akasa Air anchor MRO tenant; UP government MRO policy</td></tr>
+<tr><td>Dholera International</td><td>$250 million</td><td>Target Dec 2026</td><td>Greenfield; Gujarat industrial corridor access</td></tr>
+<tr><td>Bhogapuram International</td><td>$550 million</td><td>Target Jun 2026</td><td>Andhra Pradesh aviation gateway; serves Vizag region</td></tr>
+</tbody></table></div>
+<ul>
+<li><strong>Greenfield advantage:</strong> New Indian airports are being designed with MRO co-location, bonded warehouse, and customs clearance infrastructure built in — a significant improvement over retrofitting older airports</li>
+</ul>
+<p style="color:var(--gray-400);font-size:13px;font-style:italic;margin-bottom:8px">Source: Alton Aviation Consultancy / Fiinews, March 28, 2026</p>
+
+<div class="post-section" id="s3">
+  <div class="post-section-header">
+    <div class="section-number">3</div>
+    <span class="section-icon">🔗</span>
+    <h2>Supply Chain Developments</h2>
+  </div>
+<h3>India Engine MRO: Capacity Investment Critical as Fleet Doubles</h3>
+<ul>
+<li>Engine MRO remains India's largest single MRO cost category and the segment most dependent on overseas providers (Alton Aviation, March 28)</li>
+<li><strong>Current challenge:</strong> India has minimal indigenous engine overhaul capacity for CFM56, LEAP-1A/1B, and V2500 engines that power its dominant narrowbody fleet</li>
+<li><strong>Investment response:</strong></li>
+<li><strong>Safran's Hyderabad LEAP MRO facility</strong> (€200M) represents the most significant single engine MRO investment in India to date</li>
+<li><strong>Air India/TATA</strong> engineering divisions exploring domestic engine shop capability</li>
+<li><strong>Parts logistics gap:</strong> India's MRO parts supply chain remains fragmented — customs clearance delays and lack of bonded AOG parts warehousing increase turn times versus Singapore or Dubai competitors</li>
+<li><strong>Policy fix in progress:</strong> Reduced import duties on aviation components (implemented in recent budgets) and GIFT City aircraft leasing structures improving overall aviation supply chain economics</li>
+</ul>
+<p style="color:var(--gray-400);font-size:13px;font-style:italic;margin-bottom:8px">Source: Alton Aviation Consultancy, March 28, 2026</p>
+<h3>MRO Americas 2026 (April 21–23, Orlando) — Preview and Key Themes</h3>
+<ul>
+<li><strong>Aviation Week's 30th Annual MRO Americas</strong> will convene <strong>April 21–23</strong> at Orlando's Orange County Convention Center — billed as the world's largest aviation MRO event (EIN Presswire, March 24)</li>
+<li><strong>Scale:</strong> 18,000+ registered attendees; 1,000+ solution providers exhibiting</li>
+<li><strong>Key conference topics:</strong></li>
+<li><strong>Tariffs:</strong> Assessing ongoing industry impact and contingency planning</li>
+<li><strong>AI in Practice:</strong> Cutting through hype to real operational applications</li>
+<li><strong>Long-term Capacity Planning:</strong> Ensuring business stability amid demand surge</li>
+<li><strong>Skills Shortage:</strong> Strategies for a 20%+ workforce gap by 2028</li>
+<li><strong>Supply Chain Collaboration:</strong> Multi-party solutions to parts availability</li>
+<li><strong>Fleet forecast release:</strong> Aviation Week analysts Brian Kough and Daniel Williams to present the <strong>2026–2035 North America Commercial Fleet and MRO Demand Forecast</strong>:</li>
+<li><strong>5,200+</strong> new commercial aircraft deliveries to North America over 10 years</li>
+<li>North America will account for <strong>20%</strong> of the global <strong>$1.6 trillion</strong> MRO demand forecast</li>
+<li>MRO workforce shortfall projected at <strong>20%</strong> by 2028</li>
+<li><strong>New features:</strong> TechHub showcasing cutting-edge innovations; AI-powered attendee matching; curated networking zones</li>
+<li><strong>Conference chair:</strong> David Springer, Senior Director Engineering/Technical Operations, UPS Airlines</li>
+<li><strong>Speaker organizations:</strong> Alaska Airlines, JetBlue, Southwest, United, Boeing, AAR Corp. and more</li>
+<li><strong>Military track:</strong> Concurrent Military Aviation Logistics &amp; Maintenance Symposium (MALMS)</li>
+</ul>
+<p style="color:var(--gray-400);font-size:13px;font-style:italic;margin-bottom:8px">Source: Aviation Week / EIN Presswire, March 24, 2026</p>
+
+<div class="post-section" id="s4">
+  <div class="post-section-header">
+    <div class="section-number">4</div>
+    <span class="section-icon">💡</span>
+    <h2>Technology and Investment News</h2>
+  </div>
+<h3>British Airways Extends 3D Dent Mapping Tool Deployment</h3>
+<ul>
+<li><strong>British Airways</strong> has extended its use of a <strong>3D dent mapping tool</strong> for structural maintenance workflows (Aviation Business News, March 28)</li>
+<li><strong>Capability:</strong> Digital 3D scanning creates precise records of dents, scratches, and surface anomalies — enabling engineers to track damage progression across maintenance cycles and make faster, data-driven repair-or-defer decisions</li>
+<li><strong>Maintenance benefit:</strong> Reduces reliance on subjective manual measurements; creates permanent digital records compatible with OEM damage tolerance documentation</li>
+<li><strong>Industry context:</strong> 3D mapping tools represent the front edge of a broader shift toward digital aircraft records, complementing the AI predictive maintenance frameworks being implemented under the FAA's 2026 AI roadmap</li>
+<li><strong>BA's MRO footprint:</strong> British Airways operates one of Europe's largest in-house engineering and maintenance organizations, with capabilities spanning line maintenance, heavy checks, and component repair</li>
+</ul>
+<p style="color:var(--gray-400);font-size:13px;font-style:italic;margin-bottom:8px">Source: Aviation Business News, March 28, 2026</p>
+<h3>Air India Selects HAECO for Shanghai Line Maintenance <a class="src-link" href="https://www.haeco.com/en/media/press-releases/" target="_blank" rel="noopener">HAECO</a></h3>
+<ul>
+<li><strong>Air India</strong> selected <strong>HAECO Group</strong> as its line maintenance service provider at <strong>Shanghai</strong> (Aviation Business News, March 28)</li>
+<li><strong>Service scope:</strong> Line maintenance covering pre-flight checks, transit maintenance, and AOG support for Air India operations on Shanghai routes</li>
+<li><strong>Strategic context:</strong> Air India's rapid international expansion under Tata Sons ownership has required systematic build-out of overseas line maintenance contracts — Shanghai is among the newest additions</li>
+<li><strong>HAECO significance:</strong> Reinforces HAECO Group's position as a preferred line maintenance provider for Asian-region operations; expands its customer base to include South Asian flag carriers</li>
+</ul>
+<p style="color:var(--gray-400);font-size:13px;font-style:italic;margin-bottom:8px">Source: Aviation Business News, March 28, 2026</p>
+
+<div class="post-section" id="s5">
+  <div class="post-section-header">
+    <div class="section-number">5</div>
+    <span class="section-icon">⚠️</span>
+    <h2>Major Challenges and Solutions</h2>
+  </div>
+<h3>Key Industry Challenges — March 28, 2026 Snapshot</h3>
+<div class="table-wrapper"><table class="post-table">
+<thead><tr><th>Challenge</th><th>Details</th><th>Emerging Solutions</th></tr></thead><tbody>
+<tr><td><strong>India Engine MRO Dependency</strong></td><td>~85% of Indian MRO offshore; engine overhaul entirely dependent on Singapore/Dubai/Europe</td><td>Safran Hyderabad €200M LEAP MRO; Akasa/Jewar anchor investment</td></tr>
+<tr><td><strong>Overseas MRO Revenue Leakage</strong></td><td>Indian airlines paying premium rates to overseas MROs, weakening airline balance sheets</td><td>Rs 1,000 Cr Jewar hub; domestic capacity build targeting revenue retention</td></tr>
+<tr><td><strong>Parts Customs Delays</strong></td><td>Import duties and slow customs clearance extend Indian MRO TAT vs. global competitors</td><td>Recent duty reductions; GIFT City bonded warehouse structures in development</td></tr>
+<tr><td><strong>MRO Workforce for New Airports</strong></td><td>New airports without local maintenance workforce pipeline</td><td>Jewar hub designed with youth employment and skills training mandate</td></tr>
+<tr><td><strong>North America 20% Workforce Gap (2028)</strong></td><td>MRO Americas forecast: 20% shortfall within 2 years against forecast demand surge</td><td>Technology augmentation (AR, robotics, AI), apprenticeship reform, immigration policy</td></tr>
+</tbody></table></div>
+<h3>Industry Solutions This Week</h3>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">1. <strong>Alton Aviation India Report (March 28)</strong> — Comprehensive $4.4B → $5.7B roadmap identifying engine MRO, parts logistics, and workforce as priority investment sectors</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">2. <strong>PM Modi Jewar MRO Announcement (March 28)</strong> — Rs 1,000 Cr government-backed hub with Akasa Air as anchor tenant signals India's transition from policy to execution</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">3. <strong>MRO Americas Preview (April 21–23)</strong> — 18,000+ industry professionals to address tariffs, AI, workforce shortage, and supply chain in Orlando</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">4. <strong>Air India/HAECO Shanghai Agreement</strong> — Systematic line maintenance network build-out supporting Air India's international expansion</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">5. <strong>British Airways 3D Dent Mapping Extension</strong> — Digital structural damage tracking tool supports data-driven maintenance decisions and permanent digital records</p>
+
+<div class="post-section" id="s6">
+  <div class="post-section-header">
+    <div class="section-number">📋</div>
+    <span class="section-icon">⚠️</span>
+    <h2>Key Statistics Summary</h2>
+  </div>
+<div class="table-wrapper"><table class="post-table">
+<thead><tr><th>Metric</th><th>Value</th><th>Source</th></tr></thead><tbody>
+<tr><td>India MRO Market 2025</td><td>$4.4 billion</td><td>Alton Aviation, March 28</td></tr>
+<tr><td>India MRO Market 2030 Forecast</td><td>$5.7 billion</td><td>Alton Aviation, March 28</td></tr>
+<tr><td>India MRO CAGR (2025–2030)</td><td>5.4%</td><td>Alton Aviation, March 28</td></tr>
+<tr><td>India Aircraft Deliveries (5-year)</td><td>500+</td><td>Alton Aviation, March 28</td></tr>
+<tr><td>India Narrowbody Fleet 2030</td><td>1,300+</td><td>Alton Aviation, March 28</td></tr>
+<tr><td>India Total Fleet 2030</td><td>1,800+</td><td>Alton Aviation, March 28</td></tr>
+<tr><td>Engine MRO Share of India Market</td><td>~50%</td><td>Alton Aviation, March 28</td></tr>
+<tr><td>India Overseas MRO Dependency</td><td>~85%</td><td>Multiple Sources</td></tr>
+<tr><td>Jewar MRO Hub Investment</td><td>Rs 1,000 Cr (~$120M)</td><td>APAC News, March 28</td></tr>
+<tr><td>Safran Hyderabad LEAP Investment</td><td>€200 million</td><td>Alton Aviation, March 28</td></tr>
+<tr><td>MRO Americas 2026 Attendees</td><td>18,000+</td><td>Aviation Week</td></tr>
+<tr><td>MRO Americas Exhibitors</td><td>1,000+</td><td>Aviation Week</td></tr>
+<tr><td>NA MRO Share of Global Demand</td><td>20%</td><td>Aviation Week Forecast</td></tr>
+<tr><td>Global MRO 2026–2035 Demand</td><td>$1.6 trillion</td><td>Aviation Week Forecast</td></tr>
+<tr><td>NA New Aircraft Deliveries (10-year)</td><td>5,200+</td><td>Aviation Week Forecast</td></tr>
+<tr><td>MRO Workforce Shortfall by 2028</td><td>20%</td><td>Aviation Week / IATA</td></tr>
+</tbody></table></div>
+
+<div class="post-section" id="s7">
+  <div class="post-section-header">
+    <div class="section-number">📋</div>
+    <span class="section-icon">⚠️</span>
+    <h2>Industry Outlook</h2>
+  </div>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px"><strong>1. India Has Crossed the MRO Investment Threshold.</strong> The combination of PM Modi's Rs 1,000 crore Jewar announcement, Alton Aviation's $5.7B 2030 projection, and Akasa Air's formal MRO facility agreement — all on a single Saturday — marks a qualitative shift in India's MRO narrative. This is no longer a market "with potential" but a market in active capital deployment. The critical execution question now centres on three bottlenecks: engine MRO capability (Safran's Hyderabad facility is necessary but insufficient alone), customs/logistics reform (duty reductions are in progress but bonded warehouse infrastructure lags), and workforce quality (India produces engineering graduates in volume but lacks depth in specialised aircraft maintenance certification pathways).</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px"><strong>2. The MRO Americas Agenda Reflects Global Industry Anxiety.</strong> The April conference agenda — tariffs, AI compliance, workforce shortage, supply chain fragility — reads as a diagnostic of 2026's core MRO tensions. Aviation Week's forecast of a $1.6 trillion cumulative demand opportunity over 10 years alongside a 20% workforce shortfall is the fundamental paradox the industry must solve. Capital is available; certified hands are not. The conference's new TechHub and AI-matching features signal an industry that recognises the answer is technology augmentation, not labour substitution alone.</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px"><strong>3. In-House Maintenance Investment is Accelerating Across Airline Tiers.</strong> From Ryanair's £40M Prestwick expansion to Air India's line maintenance network build-out to Akasa's greenfield MRO facility, airlines are increasingly choosing to internalise maintenance capability rather than rely solely on third-party MROs. The economic logic is compelling: in-house maintenance reduces TAT, eliminates third-party margin, improves fleet availability, and builds proprietary engineering expertise. This trend, if sustained, will progressively redistribute MRO revenue from standalone MRO providers toward airline-internal engineering divisions.</p>
+<p style="color:var(--gray-400);font-size:13px;font-style:italic;margin-bottom:8px">Report compiled from Alton Aviation Consultancy / Fiinews, APAC News Network, Business News This Week, Aviation Business News, Aviation Week (March 24–28, 2026). Published March 28, 2026.</p>
+</div>
+          <nav class="post-nav">
+            <a href="march-27-2026.html" class="post-nav-btn">
+              <div class="post-nav-label">← Previous Issue</div>
+              <div class="post-nav-title">March 27 2026</div>
+            </a>
+            <a href="../index.html" class="post-nav-btn" style="text-align:right">
+              <div class="post-nav-label">All Briefings</div>
+              <div class="post-nav-title">View Archive →</div>
+            </a>
+          </nav>
+        </article>
+
+        <aside class="post-sidebar">
+          <div class="toc-widget">
+            <div class="toc-title">In This Issue</div>
+            <ul class="toc-list">
+              <li><a href="#s1"><span class="toc-num">1</span> Market Updates &amp; Growth</a></li>
+              <li><a href="#s2"><span class="toc-num">2</span> Regional Expansion</a></li>
+              <li><a href="#s3"><span class="toc-num">3</span> Supply Chain</a></li>
+              <li><a href="#s4"><span class="toc-num">4</span> Technology &amp; Investment</a></li>
+              <li><a href="#s5"><span class="toc-num">5</span> Challenges &amp; Solutions</a></li>
+            </ul>
+          </div>
+          <div class="sidebar-widget">
+            <h3 class="widget-title">About This Briefing</h3>
+            <p class="widget-text">Source:</p>
+            <div class="widget-badge">
+              <span class="auto-badge">⚡ Automated Daily at 7:00 AM</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand"><span class="logo-icon">✈</span><span class="footer-name">MRO Daily Intelligence</span></div>
+        <div class="footer-text">Automated briefings sourced from Aviation Week Network. Published daily at 7:00 AM.</div>
+      </div>
+    </div>
+  </footer>
+
+<script>
+  var postAudio = null;
+  var audioSrc  = 'posts/march28-2026-email.m4a';  /* relative from inside posts/ dir */
+
+  /* Fix path: this page is in posts/, so audio is same dir */
+  var audioFile = 'march28-2026-email.m4a';
+
+  function fmtPostTime(s) {
+    if (isNaN(s) || !isFinite(s)) return '--:--';
+    var m = Math.floor(s / 60);
+    return m + ':' + String(Math.floor(s % 60)).padStart(2, '0');
+  }
+
+  function togglePostAudio() {
+    var playIcon  = document.getElementById('postPlayIcon');
+    var pauseIcon = document.getElementById('postPauseIcon');
+    var meta      = document.getElementById('postAudioMeta');
+    var fill      = document.getElementById('postAudioFill');
+    var cur       = document.getElementById('postAudioCur');
+    var dur       = document.getElementById('postAudioDur');
+
+    if (!postAudio) {
+      postAudio = new Audio(audioFile);
+      postAudio.addEventListener('loadedmetadata', function() {
+        dur.textContent = fmtPostTime(postAudio.duration);
+        meta.textContent = fmtPostTime(postAudio.duration) + ' · Daniel, en-GB';
+      });
+      postAudio.addEventListener('timeupdate', function() {
+        var pct = (postAudio.currentTime / postAudio.duration) * 100;
+        fill.style.width = pct + '%';
+        cur.textContent = fmtPostTime(postAudio.currentTime);
+      });
+      postAudio.addEventListener('ended', function() {
+        playIcon.style.display = '';
+        pauseIcon.style.display = 'none';
+        meta.textContent = 'Finished · tap to replay';
+        fill.style.width = '0%';
+        cur.textContent = '0:00';
+        postAudio.currentTime = 0;
+      });
+    }
+
+    if (!postAudio.paused) {
+      postAudio.pause();
+      playIcon.style.display = '';
+      pauseIcon.style.display = 'none';
+      meta.textContent = 'Paused';
+    } else {
+      postAudio.play();
+      playIcon.style.display = 'none';
+      pauseIcon.style.display = '';
+      meta.textContent = 'Playing…';
+    }
+  }
+
+  function seekPostAudio(e) {
+    if (!postAudio) return;
+    var track = document.getElementById('postAudioTrack');
+    var rect  = track.getBoundingClientRect();
+    var pct   = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
+    postAudio.currentTime = pct * postAudio.duration;
+  }
+</script>
+</body>
+</html>
