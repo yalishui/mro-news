@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MRO Briefing — March 27, 2026 | MRO Daily Intelligence</title>
+  <meta name="description" content="UK Minister for Aviation, Maritime and Decarbonisation Keir Mather MP" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/style.css" />
+  <style>
+    /* ── Audio Player ── */
+    .post-audio-player {
+      background: linear-gradient(135deg,#0f2847 0%,#1a4a8a 100%);
+      border-radius: 14px;
+      padding: 18px 20px;
+      margin: 0 0 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .post-audio-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .6px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.5);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .post-audio-controls {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .post-play-btn {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.15);
+      border: 1px solid rgba(255,255,255,.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      flex-shrink: 0;
+      transition: background .15s;
+    }
+    .post-play-btn:hover { background: rgba(255,255,255,.25); }
+    .post-play-btn svg { fill: white; width: 20px; height: 20px; }
+    .post-audio-info { flex: 1; }
+    .post-audio-title { font-size: 14px; font-weight: 600; color: #fff; margin-bottom: 3px; }
+    .post-audio-meta { font-size: 12px; color: rgba(255,255,255,.5); }
+    .post-audio-progress {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .post-audio-time { font-size: 11px; color: rgba(255,255,255,.5); min-width: 32px; font-variant-numeric: tabular-nums; }
+    .post-audio-track {
+      flex: 1;
+      height: 4px;
+      background: rgba(255,255,255,.2);
+      border-radius: 99px;
+      cursor: pointer;
+      position: relative;
+    }
+    .post-audio-fill {
+      height: 100%;
+      width: 0%;
+      background: #fff;
+      border-radius: 99px;
+      transition: width .2s linear;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <div class="logo">
+          <span class="logo-icon">✈</span>
+          <div>
+            <div class="logo-name">MRO Daily Intelligence</div>
+            <div class="logo-tagline">Aviation Maintenance Market Briefings</div>
+          </div>
+        </div>
+        <nav class="nav">
+          <a href="../index.html" class="nav-link">Latest</a>
+          <a href="../index.html#about" class="nav-link">About</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section class="post-hero">
+    <div class="container">
+      <a href="../index.html" class="post-back">← All Briefings</a>
+      <div class="post-issue-label">Issue #11 &nbsp;·&nbsp; March 27, 2026</div>
+      <h1 class="post-title">Daily MRO Market News Summary — March 27, 2026</h1>
+      <div class="post-meta-row">
+        <div class="post-meta-item"><strong>March 27, 2026</strong></div>
+        <div class="post-meta-item">·</div>
+        <div class="post-meta-item">Source: <strong>Aviation Week Network</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <main class="post-body">
+    <div class="container">
+      <div class="post-grid">
+        <article class="post-content">
+
+          <!-- ── Audio Player ── -->
+          <div class="post-audio-player" id="audioPlayer">
+            <div class="post-audio-label">
+              <svg viewBox="0 0 24 24" fill="white" width="12" height="12"><path d="M12 3a9 9 0 100 18A9 9 0 0012 3zm-2 13V8l7 4-7 4z"/></svg>
+              Audio Briefing &nbsp;·&nbsp; Daniel, en-GB
+            </div>
+            <div class="post-audio-controls">
+              <button class="post-play-btn" id="postPlayBtn" onclick="togglePostAudio()" aria-label="Play audio briefing">
+                <svg id="postPlayIcon" viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+                <svg id="postPauseIcon" viewBox="0 0 24 24" style="display:none"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+              </button>
+              <div class="post-audio-info">
+                <div class="post-audio-title">Daily Briefing — March 27, 2026</div>
+                <div class="post-audio-meta" id="postAudioMeta">Tap to listen · ~2 min</div>
+              </div>
+            </div>
+            <div class="post-audio-progress">
+              <span class="post-audio-time" id="postAudioCur">0:00</span>
+              <div class="post-audio-track" id="postAudioTrack" onclick="seekPostAudio(event)">
+                <div class="post-audio-fill" id="postAudioFill"></div>
+              </div>
+              <span class="post-audio-time" id="postAudioDur">--:--</span>
+            </div>
+          </div>
+
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px"><strong>Date:</strong> Friday, March 27, 2026</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px"><strong>Source:</strong> Aviation Week Network, Aviation Business News, Travel Weekly, Acumen Aviation Daily Brief, Oxmaint/FAA, Industry Sources</p>
+
+<div class="post-section" id="s1">
+  <div class="post-section-header">
+    <div class="section-number">1</div>
+    <span class="section-icon">📈</span>
+    <h2>Market Updates and Growth Trends</h2>
+  </div>
+<h3>Jet2 Aviation Minister Visit Highlights UK MRO Workforce Investment</h3>
+<ul>
+<li><strong>UK Minister for Aviation, Maritime and Decarbonisation Keir Mather MP</strong> visited <strong>Jet2.com's</strong> dedicated maintenance hangar at <strong>Leeds Bradford Airport</strong> on March 27, 2026 (Travel Weekly, March 27)</li>
+<li><strong>Facility scale:</strong> Jet2's Leeds Bradford hangar handles <strong>3 aircraft simultaneously</strong>; its Manchester Airport facility accommodates <strong>6 aircraft simultaneously</strong>, reducing reliance on overseas MRO</li>
+<li><strong>Fleet context:</strong> Jet2 operates a fleet of <strong>139 aircraft</strong>, all maintained under a robust in-house engineering model</li>
+<li><strong>Apprenticeships:</strong> Jet2 has created <strong>over 400 apprenticeship positions</strong> across aviation, engineering, operations, IT, commercial, marketing, and finance</li>
+<li><strong>Policy advocacy:</strong> Jet2 executives called on the minister to introduce <strong>higher funding rates for engineering apprentices</strong> under the reformed Growth and Skills Levy, to improve access to aviation careers</li>
+<li><strong>Decarbonisation agenda:</strong> Minister and Jet2 discussed airspace modernisation and the need for a thriving UK Sustainable Aviation Fuel (SAF) industry as critical decarbonisation levers</li>
+<li><strong>Case study:</strong> Minister met engineer Harry Richardson (from minister's own Selby constituency) who completed a 4-year Jet2 engineering apprenticeship in 2023</li>
+<li><strong>Jet2 FlightPath programme:</strong> Referenced as an initiative removing the £100,000+ self-funded pilot training barrier, supporting a pipeline of UK-trained commercial pilots</li>
+</ul>
+<p style="color:var(--gray-400);font-size:13px;font-style:italic;margin-bottom:8px">Source: Travel Weekly, Aviation Business News, March 27, 2026</p>
+<h3>FAA AI Roadmap 2026: New Compliance Requirements for MRO Operators</h3>
+<ul>
+<li><strong>FAA's AI Safety Assurance Framework</strong> is now an active compliance requirement (not a future proposal) as of 2026, affecting all U.S.-certificated MRO operations (Oxmaint/FAA, March 27)</li>
+<li><strong>Framework pillars:</strong></li>
+<li><strong>Algorithm transparency:</strong> All AI models must be explainable, traceable, and fully documented; "black box" outputs cannot pass FAA review</li>
+<li><strong>Human intervention protocols:</strong> Any AI-generated maintenance recommendation requires a documented human review step by a certified technician before action is taken</li>
+<li><strong>Failure mode documentation:</strong> MROs must document how AI tools behave when sensor data is lost, degraded, or contradictory</li>
+<li><strong>Continuous validation:</strong> AI systems must be periodically re-validated against actual outcomes, with performance benchmarks archived for inspection</li>
+<li><strong>Six key compliance requirements:</strong></li>
+</ul>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">1. Digital audit trails linking AI-generated maintenance prompts to timestamped, technician-signed work orders</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">2. IoT/SCADA data source integrity traceable to calibrated equipment</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">3. Current AI tool usage training records for all technicians reviewing or acting on AI recommendations</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">4. Risk classification documentation for all predictive AI prompts</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">5. Change control processes for every AI model update</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">6. AI maintenance anomalies integrated into Safety Management System (SMS) reporting</p>
+<ul>
+<li><strong>Economic case:</strong> Predictive (AI-compliant) maintenance reduces unplanned AOG events by <strong>40%</strong>, cuts repair labour costs by <strong>32%</strong>, reduces audit preparation time by <strong>2.1x</strong>, and saves an average of <strong>$2.4M/year</strong> per operator in avoided AOG costs</li>
+<li><strong>Risk of inaction:</strong> Reactive maintenance costs <strong>4.8x more</strong> per event than planned maintenance; non-compliance risks certification suspension</li>
+</ul>
+<p style="color:var(--gray-400);font-size:13px;font-style:italic;margin-bottom:8px">Source: Oxmaint / FAA AI Safety Assurance Framework, March 27, 2026</p>
+
+<div class="post-section" id="s2">
+  <div class="post-section-header">
+    <div class="section-number">2</div>
+    <span class="section-icon">🌏</span>
+    <h2>Regional Expansion Activities</h2>
+  </div>
+<h3>EirTrade Aviation Receives Planning Permission to Quintuple Knock Facility</h3>
+<ul>
+<li><strong>EirTrade Aviation</strong> (Dublin-headquartered global aviation asset management and trading company) secured <strong>full planning permission</strong> from Mayo County Council to massively expand its facility at <strong>Ireland West Airport Knock</strong> (March 12–13 planning grant, industry coverage March 27)</li>
+<li><strong>Scale of expansion:</strong> Current facility: <strong>2,100 sq m</strong> → New additional facility: <strong>10,500 sq m</strong> → Total: ~<strong>12,600 sq m</strong> (approximately <strong>5x</strong> current size)</li>
+<li><strong>New hangar capability:</strong> Can accommodate one narrowbody aircraft for maintenance and disassembly</li>
+<li><strong>New capabilities added:</strong></li>
+<li><strong>Aircraft disassembly:</strong> Enhanced airframe and engine teardown capacity</li>
+<li><strong>EASA Part 145 line maintenance:</strong> Certified maintenance services for active aircraft operators</li>
+<li><strong>Asset management and trading:</strong> Parts trading, leasing, and on-site inventory management</li>
+<li>Dedicated workshops, packaging areas, engine storage facilities, and high-bay narrow-aisle racking</li>
+<li><strong>Sustainability design:</strong> High-performance building envelope and large-scale solar panel installation planned — targeting performance above environmental and regulatory standards</li>
+<li><strong>Strategic significance:</strong> Consolidates aircraft maintenance, airframe disassembly, and engine teardown into a single location — serving global operators, owners, and lessors seeking integrated end-of-life and active-fleet support</li>
+<li><strong>Ireland West Airport context:</strong> Establishes Knock as an emerging hub for aircraft storage, disassembly, and maintenance activity in Western Europe</li>
+</ul>
+<p style="color:var(--gray-400);font-size:13px;font-style:italic;margin-bottom:8px">Source: AviTrader / EirTrade Aviation Press Release, March 12–13, 2026</p>
+<h3>Akasa Air and Noida International Airport Sign MRO Development Agreement</h3>
+<ul>
+<li><strong>Akasa Air</strong> and <strong>Noida International Airport (Jewar)</strong> signed a strategic agreement to develop <strong>Akasa Air's first dedicated MRO facility</strong> at the airport (Business News This Week, March 28 — announced March 27)</li>
+<li><strong>Facility vision:</strong> Positioned as Akasa Air's primary long-term maintenance hub, leveraging Noida's proximity to Delhi NCR and government-backed MRO-friendly policies in Uttar Pradesh</li>
+<li><strong>Strategic rationale:</strong> Reduces Indian airlines' dependence on overseas MRO (currently ~85% of Indian aircraft sent abroad for heavy maintenance)</li>
+<li><strong>CEO quotes:</strong></li>
+<li><strong>Noida Airport CEO Christoph Schnellmann:</strong> "Akasa's decision validates our vision to develop this airport as a world-class aviation hub and will strengthen India's MRO capability while creating local employment and skills development"</li>
+<li><strong>Akasa Air Founder &amp; CEO Vinay Dube:</strong> "Given the rapid growth of India's aviation market, building strong domestic MRO capacity is crucial. This is a key part of our long-term growth strategy to make Indian aviation more self-reliant"</li>
+<li><strong>Government alignment:</strong> Supported by Indian central government and Uttar Pradesh Chief Minister Yogi Adityanath's investment-friendly industrial policy framework</li>
+<li><strong>Context:</strong> Complements PM Modi's concurrent Rs 1,000 crore (~$120M) MRO hub announcement for Jewar Airport (announced at Phase 1 inauguration, March 28)</li>
+</ul>
+<p style="color:var(--gray-400);font-size:13px;font-style:italic;margin-bottom:8px">Source: Acumen Aviation / Business News This Week, March 27, 2026</p>
+
+<div class="post-section" id="s3">
+  <div class="post-section-header">
+    <div class="section-number">3</div>
+    <span class="section-icon">🔗</span>
+    <h2>Supply Chain Developments</h2>
+  </div>
+<h3>AerFin Sells CF6-80 Engine to Japanese Investor; Mature Engine Market Demand Holds</h3>
+<ul>
+<li><strong>AerFin</strong> (aircraft and engine aftermarket solutions provider) sold a <strong>CF6-80 engine</strong> to a <strong>Japanese investor</strong>, announced March 25 (Aviation Business News, March 27)</li>
+<li><strong>Market signal:</strong> Sustained demand from Japanese investors for mature powerplant assets (CF6-80 powers older 747, 767, and A300 platforms) suggests continued confidence in secondary engine market valuations</li>
+<li><strong>Industry context:</strong> As the GTF and LEAP availability crisis focuses attention on new-generation assets, established engine types continue to attract strategic investment for part-out, lease, or re-delivery</li>
+<li><strong>Additive manufacturing in MRO:</strong> Concurrent feature analysis (March 25) highlights 3D printing transitioning from prototyping to mainstream MRO production, delivering measurable efficiency gains in part replacement turnaround</li>
+</ul>
+<p style="color:var(--gray-400);font-size:13px;font-style:italic;margin-bottom:8px">Source: Aviation Business News, March 25–27, 2026</p>
+<h3>Guangzhou MRO Expo 2026 — Asia's Largest MRO Event Concludes</h3>
+<ul>
+<li><strong>MRO Guangzhou 2026</strong> (3rd Guangzhou International Aviation MRO &amp; Ground Services Expo) ran <strong>March 24–26, 2026</strong> at the Guangzhou Airport Expo Center</li>
+<li><strong>Scale:</strong> Asia's largest MRO-focused exhibition and conference for commercial air transport maintenance, with 280+ exhibitors and 18,000+ visitors expected across the 3-day event</li>
+<li><strong>HNA Technik participation:</strong> Chinese carrier-owned MRO giant <strong>HNA Technik</strong> showcased its latest capabilities and services (Xinhua, March 27)</li>
+<li><strong>Conference themes:</strong> Global perspectives (March 24) and regional supply chain strategies (March 25); China's growing role as an Asia-Pacific MRO hub</li>
+<li><strong>Strategic significance:</strong> Guangzhou MRO Expo serves as Asia's primary commercial MRO deal-making forum, attracting OEMs, lessors, and operators seeking Asia-Pacific partnerships</li>
+</ul>
+<p style="color:var(--gray-400);font-size:13px;font-style:italic;margin-bottom:8px">Source: Xinhua / MRO Guangzhou Event Coverage, March 24–27, 2026</p>
+
+<div class="post-section" id="s4">
+  <div class="post-section-header">
+    <div class="section-number">4</div>
+    <span class="section-icon">💡</span>
+    <h2>Technology and Investment News</h2>
+  </div>
+<h3>NASA Blue Skies 2026 Finalists: Student-Led MRO Innovation Showcased</h3>
+<ul>
+<li><strong>NASA</strong> unveiled <strong>8 finalist student teams</strong> for its <strong>2026 Gateways to Blue Skies</strong> competition theme <strong>"RepAir: Advancing Aircraft Maintenance"</strong> — targeting practical MRO process innovation for the next decade (Immersive Technology / NASA, March 27)</li>
+<li>Each finalist team receives <strong>$9,000</strong> in funding to develop final papers, infographics, and formal presentations ahead of the May 18, 2026 forum at <strong>NASA Langley Research Center</strong></li>
+<li><strong>Key finalist technologies:</strong></li>
+</ul>
+<div class="table-wrapper"><table class="post-table">
+<thead><tr><th>Team</th><th>Technology</th><th>Innovation</th></tr></thead><tbody>
+<tr><td>South Dakota State Univ.</td><td><strong>S.P.I.D.E.R.</strong></td><td>Six-legged robotic platform for enclosed aircraft area inspection — eliminates scaffolding and disassembly</td></tr>
+<tr><td>South Dakota State Univ.</td><td><strong>WINGMAN</strong></td><td>AR safety glasses providing real-time technician guidance and technical data access, replacing paper manuals</td></tr>
+<tr><td>Embry-Riddle / Cecil College</td><td>Smart Mechanic Glasses</td><td>AR glasses for guided maintenance workflows</td></tr>
+<tr><td>UC Irvine</td><td>ASILEAD</td><td>AI-powered aircraft structural health intelligence and lifecycle detection</td></tr>
+<tr><td>Michigan State Univ.</td><td>SENTINEL Network</td><td>Tethered inspection and non-destructive surface evaluation network</td></tr>
+<tr><td>Manhattan College</td><td>AERIS</td><td>Aircraft enhanced resilience and intelligence systems</td></tr>
+<tr><td>Univ. of Maryland Eastern Shore</td><td>APU Sentinel</td><td>APU health monitoring and predictive diagnostics system</td></tr>
+</tbody></table></div>
+<ul>
+<li><strong>Macro significance:</strong> NASA's focus on MRO innovation reflects the industry's $11.3B annual disruption cost (IATA) and 20%+ projected workforce shortage by 2028 — signalling government acknowledgement that technology must supplement human capacity</li>
+<li><strong>Winners:</strong> Top teams receive NASA Aeronautics internship opportunities; forum to be webcast publicly on May 18</li>
+</ul>
+<p style="color:var(--gray-400);font-size:13px;font-style:italic;margin-bottom:8px">Source: Immersive Technology / NASA Gateways to Blue Skies, March 27, 2026</p>
+
+<div class="post-section" id="s5">
+  <div class="post-section-header">
+    <div class="section-number">5</div>
+    <span class="section-icon">⚠️</span>
+    <h2>Major Challenges and Solutions</h2>
+  </div>
+<h3>Key Industry Challenges — March 27, 2026 Snapshot</h3>
+<div class="table-wrapper"><table class="post-table">
+<thead><tr><th>Challenge</th><th>Details</th><th>Emerging Solutions</th></tr></thead><tbody>
+<tr><td><strong>UK Workforce Pipeline</strong></td><td>Aviation engineering apprenticeship funding rates insufficient; 400+ Jet2 apprentices highlight model, but sector-wide gap persists</td><td>Jet2 + minister policy dialogue; Growth &amp; Skills Levy reform advocacy</td></tr>
+<tr><td><strong>FAA AI Compliance Gap</strong></td><td>Most MROs lack digital audit trails and AI model change controls required under 2026 FAA AI framework</td><td>Predictive maintenance platforms with built-in audit trail, risk classification, SMS integration</td></tr>
+<tr><td><strong>Ireland West Disassembly Capacity</strong></td><td>European aircraft end-of-life processing constrained; demand for teardown growing with fleet retirements</td><td>EirTrade Knock 5x expansion adds 10,500 sq m with full EASA Part 145 capability</td></tr>
+<tr><td><strong>India Overseas MRO Dependency</strong></td><td>~85% of Indian aircraft MRO performed abroad — cost, time, and supply-chain risk</td><td>Akasa Air/Noida Airport MRO hub; Jewar Rs 1,000 Cr ecosystem announcement</td></tr>
+<tr><td><strong>Mature Engine Market Liquidity</strong></td><td>CF6/CFM56-era investors seeking asset diversification as newer-engine crisis inflates prices</td><td>AerFin CF6-80 transaction demonstrates continued secondary market activity</td></tr>
+</tbody></table></div>
+<h3>Industry Solutions This Week</h3>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">1. <strong>Jet2 Minister Visit (March 27)</strong> — Policy dialogue on engineering apprenticeship funding to support domestic UK MRO workforce development</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">2. <strong>FAA AI Compliance Framework (March 27)</strong> — Six-requirement compliance checklist now active for U.S. MROs using AI-driven predictive maintenance tools</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">3. <strong>EirTrade Knock 5x Expansion (March 12, industry update March 27)</strong> — 12,600 sq m integrated teardown/MRO/trading facility addresses European aircraft end-of-life capacity gap</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">4. <strong>Akasa Air/Noida Airport MRO Agreement (March 27)</strong> — India's first dedicated MRO hub at Jewar anchors domestic self-sufficiency strategy</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">5. <strong>NASA RepAir Finalists (March 27)</strong> — 8 student teams advancing robotic inspection, AR guidance, AI structural health monitoring to supplement shrinking technician workforce</p>
+
+<div class="post-section" id="s6">
+  <div class="post-section-header">
+    <div class="section-number">📋</div>
+    <span class="section-icon">⚠️</span>
+    <h2>Key Statistics Summary</h2>
+  </div>
+<div class="table-wrapper"><table class="post-table">
+<thead><tr><th>Metric</th><th>Value</th><th>Source</th></tr></thead><tbody>
+<tr><td>Jet2 Fleet Size</td><td>139 aircraft</td><td>Travel Weekly, March 27</td></tr>
+<tr><td>Jet2 Apprenticeships Created</td><td>400+ positions</td><td>Travel Weekly, March 27</td></tr>
+<tr><td>Jet2 Leeds Bradford Hangar Capacity</td><td>3 aircraft simultaneous</td><td>Travel Weekly, March 27</td></tr>
+<tr><td>Jet2 Manchester Hangar Capacity</td><td>6 aircraft simultaneous</td><td>Travel Weekly, March 27</td></tr>
+<tr><td>EirTrade Knock Current Facility</td><td>2,100 sq m</td><td>AviTrader, March 13</td></tr>
+<tr><td>EirTrade Knock New Addition</td><td>10,500 sq m</td><td>AviTrader, March 13</td></tr>
+<tr><td>EirTrade Expansion Multiplier</td><td>~5x</td><td>AviTrader, March 13</td></tr>
+<tr><td>India Overseas MRO Dependency</td><td>~85%</td><td>Multiple Sources</td></tr>
+<tr><td>FAA AI Predictive Maintenance AOG Reduction</td><td>40%</td><td>Oxmaint/FAA, March 27</td></tr>
+<tr><td>FAA AI Labour Cost Reduction</td><td>32%</td><td>Oxmaint/FAA, March 27</td></tr>
+<tr><td>FAA AI Avg. Annual Savings per Operator</td><td>$2.4M</td><td>Oxmaint/FAA, March 27</td></tr>
+<tr><td>Reactive vs. Planned Maintenance Cost Ratio</td><td>4.8x</td><td>Oxmaint/FAA, March 27</td></tr>
+<tr><td>NASA RepAir Finalist Teams</td><td>8 teams</td><td>NASA, March 27</td></tr>
+<tr><td>NASA Team Funding (per team)</td><td>$9,000</td><td>NASA, March 27</td></tr>
+<tr><td>MRO Americas 2026 (Preview)</td><td>April 21–23, Orlando</td><td>Aviation Week</td></tr>
+<tr><td>MRO Americas Expected Attendees</td><td>18,000+</td><td>Aviation Week</td></tr>
+</tbody></table></div>
+
+<div class="post-section" id="s7">
+  <div class="post-section-header">
+    <div class="section-number">📋</div>
+    <span class="section-icon">⚠️</span>
+    <h2>Industry Outlook</h2>
+  </div>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">Three themes define the March 27 MRO landscape:</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px"><strong>1. Workforce Development Moves Up the Policy Agenda.</strong> Jet2's ministerial visit signals that aviation MRO workforce shortages have reached a level where government engagement is required. The combination of a looming 20% workforce shortfall by 2028 (IATA), insufficient apprenticeship funding structures, and record MRO demand creates a genuine structural risk. Jet2's model — 400+ apprentices, dual-site in-house hangars, reduced overseas MRO dependency — demonstrates what scaled domestic engineering investment looks like. The policy ask: higher apprenticeship funding rates and SAF-focused decarbonisation support. Expect similar government-industry dialogues to proliferate across Europe and North America ahead of MRO Americas in April.</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px"><strong>2. AI Compliance is No Longer Optional for U.S. MROs.</strong> The FAA's 2026 AI Safety Assurance Framework transforms AI from a competitive advantage into a compliance obligation. MROs that deployed AI-driven predictive maintenance without documentation, audit trails, or human-in-the-loop protocols are now at risk of certification action. The six-requirement checklist — covering audit trails, data traceability, technician training records, risk classification, change control, and SMS integration — creates a significant operational shift. Operators running digital-first maintenance systems are best positioned; those with paper-based or hybrid operations face the steepest transition burden.</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px"><strong>3. India's MRO Infrastructure Investment Reaches a Tipping Point.</strong> The Akasa Air/Noida Airport agreement, combined with PM Modi's Rs 1,000 crore MRO hub announcement at Jewar's Phase 1 inauguration, signals that India is moving from MRO policy aspiration to infrastructure execution. With 500+ aircraft deliveries due to Indian airlines over the next 5 years and 85% of current MRO work performed abroad, the economic imperative for domestic capacity is undeniable. Safran's €200M Hyderabad investment, IndiGo's Bangalore MRO, Adani's Air Works acquisition, and now Akasa's Jewar hub collectively represent the largest coordinated MRO infrastructure build-out of any single emerging market in 2026.</p>
+<p style="color:var(--gray-400);font-size:13px;font-style:italic;margin-bottom:8px">Report compiled from Travel Weekly, Aviation Business News, Oxmaint/FAA, Acumen Aviation Daily Brief, AviTrader, Xinhua, NASA/Immersive Technology (March 12–27, 2026). Published March 27, 2026.</p>
+</div>
+          <nav class="post-nav">
+            <a href="march-26-2026.html" class="post-nav-btn">
+              <div class="post-nav-label">← Previous Issue</div>
+              <div class="post-nav-title">March 26 2026</div>
+            </a>
+            <a href="../index.html" class="post-nav-btn" style="text-align:right">
+              <div class="post-nav-label">All Briefings</div>
+              <div class="post-nav-title">View Archive →</div>
+            </a>
+          </nav>
+        </article>
+
+        <aside class="post-sidebar">
+          <div class="toc-widget">
+            <div class="toc-title">In This Issue</div>
+            <ul class="toc-list">
+              <li><a href="#s1"><span class="toc-num">1</span> Market Updates &amp; Growth</a></li>
+              <li><a href="#s2"><span class="toc-num">2</span> Regional Expansion</a></li>
+              <li><a href="#s3"><span class="toc-num">3</span> Supply Chain</a></li>
+              <li><a href="#s4"><span class="toc-num">4</span> Technology &amp; Investment</a></li>
+              <li><a href="#s5"><span class="toc-num">5</span> Challenges &amp; Solutions</a></li>
+            </ul>
+          </div>
+          <div class="sidebar-widget">
+            <h3 class="widget-title">About This Briefing</h3>
+            <p class="widget-text">Source:</p>
+            <div class="widget-badge">
+              <span class="auto-badge">⚡ Automated Daily at 7:00 AM</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand"><span class="logo-icon">✈</span><span class="footer-name">MRO Daily Intelligence</span></div>
+        <div class="footer-text">Automated briefings sourced from Aviation Week Network. Published daily at 7:00 AM.</div>
+      </div>
+    </div>
+  </footer>
+
+<script>
+  var postAudio = null;
+  var audioSrc  = 'posts/march27-2026-email.m4a';  /* relative from inside posts/ dir */
+
+  /* Fix path: this page is in posts/, so audio is same dir */
+  var audioFile = 'march27-2026-email.m4a';
+
+  function fmtPostTime(s) {
+    if (isNaN(s) || !isFinite(s)) return '--:--';
+    var m = Math.floor(s / 60);
+    return m + ':' + String(Math.floor(s % 60)).padStart(2, '0');
+  }
+
+  function togglePostAudio() {
+    var playIcon  = document.getElementById('postPlayIcon');
+    var pauseIcon = document.getElementById('postPauseIcon');
+    var meta      = document.getElementById('postAudioMeta');
+    var fill      = document.getElementById('postAudioFill');
+    var cur       = document.getElementById('postAudioCur');
+    var dur       = document.getElementById('postAudioDur');
+
+    if (!postAudio) {
+      postAudio = new Audio(audioFile);
+      postAudio.addEventListener('loadedmetadata', function() {
+        dur.textContent = fmtPostTime(postAudio.duration);
+        meta.textContent = fmtPostTime(postAudio.duration) + ' · Daniel, en-GB';
+      });
+      postAudio.addEventListener('timeupdate', function() {
+        var pct = (postAudio.currentTime / postAudio.duration) * 100;
+        fill.style.width = pct + '%';
+        cur.textContent = fmtPostTime(postAudio.currentTime);
+      });
+      postAudio.addEventListener('ended', function() {
+        playIcon.style.display = '';
+        pauseIcon.style.display = 'none';
+        meta.textContent = 'Finished · tap to replay';
+        fill.style.width = '0%';
+        cur.textContent = '0:00';
+        postAudio.currentTime = 0;
+      });
+    }
+
+    if (!postAudio.paused) {
+      postAudio.pause();
+      playIcon.style.display = '';
+      pauseIcon.style.display = 'none';
+      meta.textContent = 'Paused';
+    } else {
+      postAudio.play();
+      playIcon.style.display = 'none';
+      pauseIcon.style.display = '';
+      meta.textContent = 'Playing…';
+    }
+  }
+
+  function seekPostAudio(e) {
+    if (!postAudio) return;
+    var track = document.getElementById('postAudioTrack');
+    var rect  = track.getBoundingClientRect();
+    var pct   = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
+    postAudio.currentTime = pct * postAudio.duration;
+  }
+</script>
+</body>
+</html>
