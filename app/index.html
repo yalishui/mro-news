@@ -1134,7 +1134,7 @@ function showToast(msg, duration = 2500) {
 async function cacheAll() {
   if (!('caches' in window)) { showToast('Caching not supported'); return; }
   showToast('⬇ Caching all audio for offline…', 4000);
-  const cache = await caches.open('mro-v1-audio');
+  const cache = await caches.open('mro-v4-audio');
   let count = 0;
   for (const issue of ISSUES) {
     try {
