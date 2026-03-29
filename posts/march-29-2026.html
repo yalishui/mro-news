@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MRO Briefing — March 29, 2026 | MRO Daily Intelligence</title>
+  <meta name="description" content="FL Technics" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/style.css" />
+  <style>
+    /* ── Audio Player ── */
+    .post-audio-player {
+      background: linear-gradient(135deg,#0f2847 0%,#1a4a8a 100%);
+      border-radius: 14px;
+      padding: 18px 20px;
+      margin: 0 0 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .post-audio-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .6px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.5);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .post-audio-controls {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .post-play-btn {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.15);
+      border: 1px solid rgba(255,255,255,.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      flex-shrink: 0;
+      transition: background .15s;
+    }
+    .post-play-btn:hover { background: rgba(255,255,255,.25); }
+    .post-play-btn svg { fill: white; width: 20px; height: 20px; }
+    .post-audio-info { flex: 1; }
+    .post-audio-title { font-size: 14px; font-weight: 600; color: #fff; margin-bottom: 3px; }
+    .post-audio-meta { font-size: 12px; color: rgba(255,255,255,.5); }
+    .post-audio-progress {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .post-audio-time { font-size: 11px; color: rgba(255,255,255,.5); min-width: 32px; font-variant-numeric: tabular-nums; }
+    .post-audio-track {
+      flex: 1;
+      height: 4px;
+      background: rgba(255,255,255,.2);
+      border-radius: 99px;
+      cursor: pointer;
+      position: relative;
+    }
+    .post-audio-fill {
+      height: 100%;
+      width: 0%;
+      background: #fff;
+      border-radius: 99px;
+      transition: width .2s linear;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <div class="logo">
+          <span class="logo-icon">✈</span>
+          <div>
+            <div class="logo-name">MRO Daily Intelligence</div>
+            <div class="logo-tagline">Aviation Maintenance Market Briefings</div>
+          </div>
+        </div>
+        <nav class="nav">
+          <a href="../index.html" class="nav-link">Latest</a>
+          <a href="../index.html#about" class="nav-link">About</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section class="post-hero">
+    <div class="container">
+      <a href="../index.html" class="post-back">← All Briefings</a>
+      <div class="post-issue-label">Issue #13 &nbsp;·&nbsp; March 29, 2026</div>
+      <h1 class="post-title">Daily MRO Market News Summary — March 29, 2026</h1>
+      <div class="post-meta-row">
+        <div class="post-meta-item"><strong>March 29, 2026</strong></div>
+        <div class="post-meta-item">·</div>
+        <div class="post-meta-item">Source: <strong>Aviation Week Network</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <main class="post-body">
+    <div class="container">
+      <div class="post-grid">
+        <article class="post-content">
+
+          <!-- ── Audio Player ── -->
+          <div class="post-audio-player" id="audioPlayer">
+            <div class="post-audio-label">
+              <svg viewBox="0 0 24 24" fill="white" width="12" height="12"><path d="M12 3a9 9 0 100 18A9 9 0 0012 3zm-2 13V8l7 4-7 4z"/></svg>
+              Audio Briefing &nbsp;·&nbsp; Daniel, en-GB
+            </div>
+            <div class="post-audio-controls">
+              <button class="post-play-btn" id="postPlayBtn" onclick="togglePostAudio()" aria-label="Play audio briefing">
+                <svg id="postPlayIcon" viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+                <svg id="postPauseIcon" viewBox="0 0 24 24" style="display:none"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+              </button>
+              <div class="post-audio-info">
+                <div class="post-audio-title">Daily Briefing — March 29, 2026</div>
+                <div class="post-audio-meta" id="postAudioMeta">Tap to listen · ~2 min</div>
+              </div>
+            </div>
+            <div class="post-audio-progress">
+              <span class="post-audio-time" id="postAudioCur">0:00</span>
+              <div class="post-audio-track" id="postAudioTrack" onclick="seekPostAudio(event)">
+                <div class="post-audio-fill" id="postAudioFill"></div>
+              </div>
+              <span class="post-audio-time" id="postAudioDur">--:--</span>
+            </div>
+          </div>
+
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px"><strong>Date:</strong> Sunday, March 29, 2026</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px"><strong>Source:</strong> The Silicon Review, Aviation Guide, Briefing Wire, NASA / Immersive Technology, Aviation Week Network, Industry Sources</p>
+
+<div class="post-section" id="s1">
+  <div class="post-section-header">
+    <div class="section-number">1</div>
+    <span class="section-icon">📈</span>
+    <h2>Market Updates and Growth Trends</h2>
+  </div>
+<h3>FL Technics Outpaces Global MRO Sector Growth — $680M Target for 2026</h3>
+<ul>
+<li><strong>FL Technics</strong> (independent global MRO provider, Vilnius-headquartered) is growing at nearly <strong>6x the global MRO industry average</strong>, according to a comprehensive company profile published this week (The Silicon Review, March 24)</li>
+<li><strong>Financial performance:</strong></li>
+<li><strong>2016 revenue:</strong> $105.3 million</li>
+<li><strong>2025 revenue:</strong> $405.2 million (<strong>~4x growth</strong> in under a decade)</li>
+<li><strong>2017–2025 CAGR:</strong> <strong>16%</strong> vs. global MRO industry average of just <strong>2.7%</strong></li>
+<li><strong>Market share:</strong> Doubled from <strong>0.2% (2017)</strong> to <strong>0.4% (2025)</strong></li>
+<li><strong>Customer base:</strong> Grew from <strong>792</strong> (2016) to <strong>1,433</strong> customers (2025)</li>
+<li><strong>2026 revenue target:</strong> <strong>$680 million</strong></li>
+<li><strong>2030 target:</strong> <strong>$1 billion</strong> in annual revenue</li>
+<li><strong>Strategic approach:</strong> Focus on underserved aviation markets across Asia, EMEA, and Americas; expanding line and base maintenance alongside wheels-and-brakes services and component trading</li>
+<li><strong>JOB AIR Technic acquisition:</strong> Recent acquisition strengthens FL Technics' European MRO network with Central European base maintenance capability</li>
+</ul>
+<p style="color:var(--gray-400);font-size:13px;font-style:italic;margin-bottom:8px">Source: The Silicon Review, March 24, 2026</p>
+<h3>FL Technics Launches $70M Punta Cana MRO Facility — Americas Expansion Anchor</h3>
+<ul>
+<li><strong>FL Technics</strong> announced a <strong>$70 million strategic investment</strong> in a new MRO facility at <strong>Punta Cana, Dominican Republic</strong> — its flagship Americas expansion project</li>
+<li><strong>Facility scope:</strong> Serving <strong>Airbus A320-family</strong> and <strong>Boeing 737 NG/MAX</strong> operators across North America, Central America, and South America</li>
+<li><strong>Three-phase build-out:</strong></li>
+<li><strong>Phase 1:</strong> 20,000 sq m hangar with <strong>5 maintenance bays</strong> + 52,000 sq m total building footprint</li>
+<li><strong>Phase 2:</strong> Scale to <strong>12 maintenance bays</strong></li>
+<li><strong>Phase 3:</strong> Full build-out to <strong>20 maintenance bays</strong> — targeting recognition as one of Latin America's largest MRO facilities</li>
+<li><strong>Strategic rationale:</strong> Latin America represents one of the fastest-growing aviation regions with historically limited dedicated MRO infrastructure; proximity to North American operators reduces ferry costs</li>
+<li><strong>Complementary expansion:</strong> FL Technics also scaling wheels-and-brakes capabilities and component trading in Asia and the Americas</li>
+</ul>
+<p style="color:var(--gray-400);font-size:13px;font-style:italic;margin-bottom:8px">Source: The Silicon Review, March 24, 2026</p>
+<h3>Global MRO Market Competitive Landscape: Highly Fragmented, Led by Diversified Giants</h3>
+<ul>
+<li>The global aviation MRO market is <strong>highly fragmented</strong> — the top 10 providers collectively account for just <strong>7% of total market revenue</strong> (Aviation Guide, March 2026)</li>
+<li><strong>Top providers by market share (2024):</strong></li>
+</ul>
+<div class="table-wrapper"><table class="post-table">
+<thead><tr><th>Rank</th><th>Provider</th><th>Market Share</th></tr></thead><tbody>
+<tr><td>1–7 (tied)</td><td>Lufthansa Technik, Airbus SE, Raytheon Technologies, GE Aerospace, Air France-KLM E&amp;M, AAR Corp / HAECO Americas, Delta Air Lines TechOps</td><td>~1% each</td></tr>
+<tr><td>8</td><td>SR Technics</td><td>~1%</td></tr>
+<tr><td>9</td><td>MTU Aero Engines</td><td>~0.5%</td></tr>
+<tr><td>10</td><td>SIA Engineering</td><td>~0.4%</td></tr>
+</tbody></table></div>
+<ul>
+<li><strong>Market structure insight:</strong> The 93% "long tail" is served by hundreds of regional MRO providers, airline in-house maintenance units, and specialized component repair shops — creating significant consolidation opportunity</li>
+<li><strong>Technology differentiation:</strong> AI-driven predictive maintenance, digital twins, and IoT-based fleet health monitoring are now primary competitive differentiators alongside cost, geography, and certification scope</li>
+<li><strong>AI in practice:</strong> Honeywell Forge Performance+ for Aerospace (launched April 2024) cited as leading cloud-based AI platform integrating predictive maintenance, site optimization, and workforce intelligence</li>
+</ul>
+<p style="color:var(--gray-400);font-size:13px;font-style:italic;margin-bottom:8px">Source: Aviation Guide / The Business Research Company, March 2026</p>
+
+<div class="post-section" id="s2">
+  <div class="post-section-header">
+    <div class="section-number">2</div>
+    <span class="section-icon">🌏</span>
+    <h2>Regional Expansion Activities</h2>
+  </div>
+<h3>Week in Review: India's MRO Week (March 24–29, 2026)</h3>
+<ul>
+<li>India dominated global MRO headlines across the full week, with multiple coordinated announcements representing the most concentrated MRO investment activity in any single market in 2026:</li>
+</ul>
+<div class="table-wrapper"><table class="post-table">
+<thead><tr><th>Date</th><th>Event</th><th>Significance</th></tr></thead><tbody>
+<tr><td>Mar 24–26</td><td>MRO Guangzhou 2026</td><td>Asia's largest MRO expo; China market visibility</td></tr>
+<tr><td>Mar 25</td><td>MBRAH-Lufthansa Technik Dubai Center opens</td><td>Middle East MRO infrastructure milestone</td></tr>
+<tr><td>Mar 27</td><td>Akasa Air/Noida Airport MRO agreement signed</td><td>India's first Jewar-based dedicated MRO facility</td></tr>
+<tr><td>Mar 28</td><td>PM Modi inaugurates Jewar Airport Phase 1</td><td>Rs 1,000 Cr MRO hub formally announced</td></tr>
+<tr><td>Mar 28</td><td>Alton Aviation $5.7B India MRO forecast published</td><td>Independent validation of India's growth trajectory</td></tr>
+</tbody></table></div>
+<ul>
+<li><strong>Collective investment signal:</strong> India is now the single largest emerging MRO market by new investment commitment velocity — ahead of Southeast Asia and the Middle East on 2026 deal flow</li>
+</ul>
+<h3>Amsterdam Schiphol Taxiway Maintenance — Major European Infrastructure Renewal</h3>
+<ul>
+<li><strong>Amsterdam Airport Schiphol</strong> is conducting a major <strong>taxiway maintenance and upgrade programme</strong> running from <strong>March through June 2026</strong>, focusing on renewal of aging airfield infrastructure (Acumen Aviation, March 27)</li>
+<li><strong>Scope:</strong> Replacing and resurfacing critical taxiway sections used for aircraft ground movement — improving structural integrity, drainage, and friction characteristics</li>
+<li><strong>Operational impact:</strong> Major hub managing 500+ daily movements; maintenance phasing requires careful coordination to maintain capacity</li>
+<li><strong>Safety and efficiency rationale:</strong> Aging taxiway infrastructure at high-cycle European hubs creates foreign object debris (FOD) risk and uneven surfaces that can cause aircraft undercarriage wear and ground handling incidents</li>
+<li><strong>Precedent:</strong> Schiphol investment is part of a broader European airport infrastructure renewal cycle — Brussels, Frankfurt, and Madrid have all announced or completed runway/taxiway upgrade programmes in 2025–2026</li>
+</ul>
+<p style="color:var(--gray-400);font-size:13px;font-style:italic;margin-bottom:8px">Source: Acumen Aviation Daily Brief, March 27, 2026</p>
+
+<div class="post-section" id="s3">
+  <div class="post-section-header">
+    <div class="section-number">3</div>
+    <span class="section-icon">🔗</span>
+    <h2>Supply Chain Developments</h2>
+  </div>
+<h3>MRO Americas 2026 Technology Preview: Kaijo Ultrasonic Cleaning Systems</h3>
+<ul>
+<li><strong>Kaijo Corporation</strong> will showcase its advanced <strong>ultrasonic cleaning technologies</strong> at <strong>MRO Americas 2026</strong> (Orlando, April 21–23), with a pre-event preview published this week (EIN Presswire / AFV News, March 24)</li>
+<li><strong>Application:</strong> Ultrasonic cleaning for precision aircraft components including fuel injector nozzles, hydraulic actuators, bearings, and avionics — enabling deep contamination removal without abrasive contact</li>
+<li><strong>MRO relevance:</strong> Ultrasonic systems can significantly reduce cleaning turnaround time versus manual or chemical cleaning, support tighter cleanliness standards for engine component overhaul, and extend serviceable life of reusable parts</li>
+<li><strong>MRO Americas context:</strong> 30th anniversary edition of the world's largest aviation MRO event; 17,000+ attendees, 1,000+ exhibitors — represents full cross-section of current MRO technology investment</li>
+</ul>
+<p style="color:var(--gray-400);font-size:13px;font-style:italic;margin-bottom:8px">Source: EIN Presswire / AFV News, March 24, 2026</p>
+<h3>Additive Manufacturing Transitions to Mainstream MRO Production</h3>
+<ul>
+<li>A featured analysis this week (Aviation Business News, March 25) documents the maturation of <strong>3D printing / additive manufacturing</strong> from niche prototyping tool to mainstream MRO production method</li>
+<li><strong>Key applications now in regular production:</strong></li>
+<li>Non-structural aircraft interior components (brackets, panels, ducts)</li>
+<li>Tooling, jigs, and fixtures for maintenance operations</li>
+<li>Prototype replacement parts for obsolete components with depleted supply</li>
+<li>Complex ducting and manifolds for HVAC and environmental control systems</li>
+<li><strong>Cost and time benefits:</strong> On-demand printing eliminates minimum order quantities, reduces warehouse stock requirements, and compresses part delivery from weeks to hours for certain component categories</li>
+<li><strong>Certification progress:</strong> FAA and EASA have issued initial guidelines for additively manufactured parts in non-critical applications; OEM-approved digital part libraries are expanding</li>
+<li><strong>Limitations:</strong> High-stress, flight-critical components (structural, engine hot section) remain beyond current certification frameworks for additive processes</li>
+</ul>
+<p style="color:var(--gray-400);font-size:13px;font-style:italic;margin-bottom:8px">Source: Aviation Business News, March 25, 2026</p>
+
+<div class="post-section" id="s4">
+  <div class="post-section-header">
+    <div class="section-number">4</div>
+    <span class="section-icon">💡</span>
+    <h2>Technology and Investment News</h2>
+  </div>
+<h3>Week-End Synthesis: Four Converging Technology Trends Reshaping MRO in 2026</h3>
+<p style="color:var(--gray-400);font-size:13px;font-style:italic;margin-bottom:8px">1. AI Compliance Becomes a Regulatory Imperative</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">The FAA's 2026 AI Safety Assurance Framework (detailed March 27) transforms AI-driven predictive maintenance from competitive advantage to compliance requirement. The six-point framework — covering algorithm transparency, human oversight, failure documentation, continuous validation, change control, and SMS integration — affects every U.S.-certificated MRO using AI tools. Combined with the <strong>40% AOG reduction</strong> and <strong>$2.4M/year savings</strong> demonstrated by compliant predictive maintenance systems, the economic and regulatory case for AI investment is now unambiguous.</p>
+<p style="color:var(--gray-400);font-size:13px;font-style:italic;margin-bottom:8px">2. Robotics and AR Entering Inspection Workflows</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">NASA's RepAir finalist technologies (announced March 27) demonstrate the next wave of MRO automation: autonomous robotic platforms for enclosed-space inspection, AR glasses replacing paper manuals, and AI structural health monitoring systems. These technologies directly target the industry's 20% workforce shortfall projected by 2028 — augmenting technician capacity rather than substituting it. NASA's involvement signals government recognition that MRO innovation requires structured investment, not just market-driven R&amp;D.</p>
+<p style="color:var(--gray-400);font-size:13px;font-style:italic;margin-bottom:8px">3. Digital Records Architecture Becoming Standard</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">British Airways' 3D dent mapping extension (March 28) and industry-wide adoption of AI audit trail requirements point toward a fully digital aircraft records architecture as the emerging norm. The shift from paper-based maintenance logs to timestamped, technician-signed digital work orders is now being driven simultaneously by regulatory requirements (FAA), operational efficiency (faster audit preparation), and safety management (real-time SMS integration).</p>
+<p style="color:var(--gray-400);font-size:13px;font-style:italic;margin-bottom:8px">4. Independent MRO Providers Gaining Scale Through Geographic Expansion</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">FL Technics' $70M Punta Cana investment and 16% historical CAGR demonstrate that focused geographic expansion into underserved markets can generate growth rates 6x the industry average. As the top 10 MRO providers hold just 7% combined market share, the structural fragmentation of the market continues to reward aggressive regional players with the capital and certification breadth to serve underserved corridors.</p>
+
+<div class="post-section" id="s5">
+  <div class="post-section-header">
+    <div class="section-number">5</div>
+    <span class="section-icon">⚠️</span>
+    <h2>Major Challenges and Solutions</h2>
+  </div>
+<h3>Key Industry Challenges — March 29, 2026 Snapshot</h3>
+<div class="table-wrapper"><table class="post-table">
+<thead><tr><th>Challenge</th><th>Details</th><th>Emerging Solutions</th></tr></thead><tbody>
+<tr><td><strong>MRO Market Fragmentation</strong></td><td>Top 10 providers hold only 7% combined share; inconsistent quality and capacity across the long tail</td><td>FL Technics and similar independents scaling through acquisition (JOB AIR Technic) and greenfield investment (Punta Cana)</td></tr>
+<tr><td><strong>Americas MRO Capacity Gap</strong></td><td>Latin America historically underserved for narrowbody maintenance</td><td>FL Technics $70M Punta Cana facility (5→12→20 bays across 3 phases)</td></tr>
+<tr><td><strong>AI Compliance Without Infrastructure</strong></td><td>Most MROs lack digital audit trails, SMS-integrated AI anomaly reporting</td><td>Predictive maintenance platforms with built-in FAA compliance architecture</td></tr>
+<tr><td><strong>Workforce Shortage (2028 horizon)</strong></td><td>20% projected shortfall against surging demand</td><td>Robotic inspection, AR-guided maintenance, NASA RepAir technologies</td></tr>
+<tr><td><strong>Infrastructure Asset Aging</strong></td><td>European airport taxiways/runways require significant renewal investment</td><td>Schiphol Mar–Jun taxiway programme; broader EU airport infrastructure renewal cycle</td></tr>
+</tbody></table></div>
+<h3>Weekly Synthesis: March 23–29, 2026 Highlights</h3>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">Looking across the full week, five major storylines defined the MRO landscape:</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">1. <strong>Ryanair Prestwick £40M expansion</strong> (announced March 23) — Europe's largest low-cost carrier doubling its heavy maintenance capacity and adding 450 jobs</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">2. <strong>MRO Guangzhou 2026</strong> (March 24–26) — Asia's largest MRO event concluded, reinforcing China/Asia-Pacific as a primary MRO growth market</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">3. <strong>India MRO Week</strong> (March 25–28) — MBRAH-Lufthansa Technik Dubai; EirTrade Knock expansion; Akasa Air/Noida agreement; Jewar inauguration; Alton $5.7B forecast — five complementary announcements</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">4. <strong>FAA AI Compliance Framework</strong> (March 27) — Active 2026 compliance requirement transforming AI from option to obligation for U.S. MROs</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">5. <strong>FL Technics Americas Expansion</strong> (March 24–29) — $70M Punta Cana facility signals Latin America's emergence as the next MRO growth frontier</p>
+
+<div class="post-section" id="s6">
+  <div class="post-section-header">
+    <div class="section-number">📋</div>
+    <span class="section-icon">⚠️</span>
+    <h2>Key Statistics Summary</h2>
+  </div>
+<div class="table-wrapper"><table class="post-table">
+<thead><tr><th>Metric</th><th>Value</th><th>Source</th></tr></thead><tbody>
+<tr><td>FL Technics 2016 Revenue</td><td>$105.3M</td><td>Silicon Review, March 24</td></tr>
+<tr><td>FL Technics 2025 Revenue</td><td>$405.2M</td><td>Silicon Review, March 24</td></tr>
+<tr><td>FL Technics 2017–2025 CAGR</td><td>16%</td><td>Silicon Review, March 24</td></tr>
+<tr><td>FL Technics vs. Industry Growth</td><td>~6x faster</td><td>Silicon Review, March 24</td></tr>
+<tr><td>FL Technics Market Share 2025</td><td>0.4%</td><td>Silicon Review, March 24</td></tr>
+<tr><td>FL Technics 2026 Revenue Target</td><td>$680M</td><td>Silicon Review, March 24</td></tr>
+<tr><td>FL Technics 2030 Revenue Target</td><td>$1 billion</td><td>Silicon Review, March 24</td></tr>
+<tr><td>FL Technics Customer Base 2025</td><td>1,433</td><td>Silicon Review, March 24</td></tr>
+<tr><td>Punta Cana Investment</td><td>$70 million</td><td>Silicon Review, March 24</td></tr>
+<tr><td>Punta Cana Phase 1 Bays</td><td>5</td><td>Silicon Review, March 24</td></tr>
+<tr><td>Punta Cana Phase 3 Bays (target)</td><td>20</td><td>Silicon Review, March 24</td></tr>
+<tr><td>Global MRO Top 10 Combined Share</td><td>7%</td><td>Aviation Guide, March 2026</td></tr>
+<tr><td>Lufthansa Technik Market Share</td><td>~1%</td><td>Aviation Guide, March 2026</td></tr>
+<tr><td>GE Aerospace Market Share</td><td>~1%</td><td>Aviation Guide, March 2026</td></tr>
+<tr><td>MRO Americas 2026 Attendees</td><td>17,000–18,000+</td><td>Aviation Week / EIN Presswire</td></tr>
+</tbody></table></div>
+
+<div class="post-section" id="s7">
+  <div class="post-section-header">
+    <div class="section-number">📋</div>
+    <span class="section-icon">⚠️</span>
+    <h2>Industry Outlook</h2>
+  </div>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px"><strong>Looking Ahead to Q2 2026:</strong> The upcoming week (March 30 onward) opens the final push to MRO Americas (April 21–23) — the industry's most important annual convening. Expect a steady flow of pre-conference announcements: new airline-MRO contracts, technology partnership deals, and market forecast updates designed to generate buzz ahead of Orlando. Key watchpoints include further GTF/LEAP shop capacity updates, any tariff-related supply chain responses from North American carriers, and additional India MRO facility groundbreakings as government-supported commitments move into execution.</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">The fundamental tension heading into Q2 remains unchanged: record MRO demand, insufficient certified capacity, a tightening technician workforce, and supply chain fragility — offset by the largest coordinated wave of MRO investment capital in the industry's history. Whether new facilities come online fast enough to meet the demand curve will define aviation's operational performance through 2027 and beyond.</p>
+<p style="color:var(--gray-400);font-size:13px;font-style:italic;margin-bottom:8px">Report compiled from The Silicon Review, Aviation Guide / The Business Research Company, EIN Presswire / AFV News, Acumen Aviation, Aviation Business News (March 24–29, 2026). Published March 29, 2026.</p>
+</div>
+          <nav class="post-nav">
+            <a href="march-28-2026.html" class="post-nav-btn">
+              <div class="post-nav-label">← Previous Issue</div>
+              <div class="post-nav-title">March 28 2026</div>
+            </a>
+            <a href="../index.html" class="post-nav-btn" style="text-align:right">
+              <div class="post-nav-label">All Briefings</div>
+              <div class="post-nav-title">View Archive →</div>
+            </a>
+          </nav>
+        </article>
+
+        <aside class="post-sidebar">
+          <div class="toc-widget">
+            <div class="toc-title">In This Issue</div>
+            <ul class="toc-list">
+              <li><a href="#s1"><span class="toc-num">1</span> Market Updates &amp; Growth</a></li>
+              <li><a href="#s2"><span class="toc-num">2</span> Regional Expansion</a></li>
+              <li><a href="#s3"><span class="toc-num">3</span> Supply Chain</a></li>
+              <li><a href="#s4"><span class="toc-num">4</span> Technology &amp; Investment</a></li>
+              <li><a href="#s5"><span class="toc-num">5</span> Challenges &amp; Solutions</a></li>
+            </ul>
+          </div>
+          <div class="sidebar-widget">
+            <h3 class="widget-title">About This Briefing</h3>
+            <p class="widget-text">Source:</p>
+            <div class="widget-badge">
+              <span class="auto-badge">⚡ Automated Daily at 7:00 AM</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand"><span class="logo-icon">✈</span><span class="footer-name">MRO Daily Intelligence</span></div>
+        <div class="footer-text">Automated briefings sourced from Aviation Week Network. Published daily at 7:00 AM.</div>
+      </div>
+    </div>
+  </footer>
+
+<script>
+  var postAudio = null;
+  var audioSrc  = 'posts/march29-2026-email.m4a';  /* relative from inside posts/ dir */
+
+  /* Fix path: this page is in posts/, so audio is same dir */
+  var audioFile = 'march29-2026-email.m4a';
+
+  function fmtPostTime(s) {
+    if (isNaN(s) || !isFinite(s)) return '--:--';
+    var m = Math.floor(s / 60);
+    return m + ':' + String(Math.floor(s % 60)).padStart(2, '0');
+  }
+
+  function togglePostAudio() {
+    var playIcon  = document.getElementById('postPlayIcon');
+    var pauseIcon = document.getElementById('postPauseIcon');
+    var meta      = document.getElementById('postAudioMeta');
+    var fill      = document.getElementById('postAudioFill');
+    var cur       = document.getElementById('postAudioCur');
+    var dur       = document.getElementById('postAudioDur');
+
+    if (!postAudio) {
+      postAudio = new Audio(audioFile);
+      postAudio.addEventListener('loadedmetadata', function() {
+        dur.textContent = fmtPostTime(postAudio.duration);
+        meta.textContent = fmtPostTime(postAudio.duration) + ' · Daniel, en-GB';
+      });
+      postAudio.addEventListener('timeupdate', function() {
+        var pct = (postAudio.currentTime / postAudio.duration) * 100;
+        fill.style.width = pct + '%';
+        cur.textContent = fmtPostTime(postAudio.currentTime);
+      });
+      postAudio.addEventListener('ended', function() {
+        playIcon.style.display = '';
+        pauseIcon.style.display = 'none';
+        meta.textContent = 'Finished · tap to replay';
+        fill.style.width = '0%';
+        cur.textContent = '0:00';
+        postAudio.currentTime = 0;
+      });
+    }
+
+    if (!postAudio.paused) {
+      postAudio.pause();
+      playIcon.style.display = '';
+      pauseIcon.style.display = 'none';
+      meta.textContent = 'Paused';
+    } else {
+      postAudio.play();
+      playIcon.style.display = 'none';
+      pauseIcon.style.display = '';
+      meta.textContent = 'Playing…';
+    }
+  }
+
+  function seekPostAudio(e) {
+    if (!postAudio) return;
+    var track = document.getElementById('postAudioTrack');
+    var rect  = track.getBoundingClientRect();
+    var pct   = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
+    postAudio.currentTime = pct * postAudio.duration;
+  }
+</script>
+</body>
+</html>
