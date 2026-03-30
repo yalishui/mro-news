@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MRO Briefing — March 30, 2026 | MRO Daily Intelligence</title>
+  <meta name="description" content="IBA Group" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/style.css" />
+  <style>
+    /* ── Audio Player ── */
+    .post-audio-player {
+      background: linear-gradient(135deg,#0f2847 0%,#1a4a8a 100%);
+      border-radius: 14px;
+      padding: 18px 20px;
+      margin: 0 0 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .post-audio-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .6px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.5);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .post-audio-controls {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .post-play-btn {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.15);
+      border: 1px solid rgba(255,255,255,.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      flex-shrink: 0;
+      transition: background .15s;
+    }
+    .post-play-btn:hover { background: rgba(255,255,255,.25); }
+    .post-play-btn svg { fill: white; width: 20px; height: 20px; }
+    .post-audio-info { flex: 1; }
+    .post-audio-title { font-size: 14px; font-weight: 600; color: #fff; margin-bottom: 3px; }
+    .post-audio-meta { font-size: 12px; color: rgba(255,255,255,.5); }
+    .post-audio-progress {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .post-audio-time { font-size: 11px; color: rgba(255,255,255,.5); min-width: 32px; font-variant-numeric: tabular-nums; }
+    .post-audio-track {
+      flex: 1;
+      height: 4px;
+      background: rgba(255,255,255,.2);
+      border-radius: 99px;
+      cursor: pointer;
+      position: relative;
+    }
+    .post-audio-fill {
+      height: 100%;
+      width: 0%;
+      background: #fff;
+      border-radius: 99px;
+      transition: width .2s linear;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <div class="logo">
+          <span class="logo-icon">✈</span>
+          <div>
+            <div class="logo-name">MRO Daily Intelligence</div>
+            <div class="logo-tagline">Aviation Maintenance Market Briefings</div>
+          </div>
+        </div>
+        <nav class="nav">
+          <a href="../index.html" class="nav-link">Latest</a>
+          <a href="../index.html#about" class="nav-link">About</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section class="post-hero">
+    <div class="container">
+      <a href="../index.html" class="post-back">← All Briefings</a>
+      <div class="post-issue-label">Issue #14 &nbsp;·&nbsp; March 30, 2026</div>
+      <h1 class="post-title">Daily MRO Market News Summary — March 30, 2026</h1>
+      <div class="post-meta-row">
+        <div class="post-meta-item"><strong>March 30, 2026</strong></div>
+        <div class="post-meta-item">·</div>
+        <div class="post-meta-item">Source: <strong>Aviation Week Network</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <main class="post-body">
+    <div class="container">
+      <div class="post-grid">
+        <article class="post-content">
+
+          <!-- ── Audio Player ── -->
+          <div class="post-audio-player" id="audioPlayer">
+            <div class="post-audio-label">
+              <svg viewBox="0 0 24 24" fill="white" width="12" height="12"><path d="M12 3a9 9 0 100 18A9 9 0 0012 3zm-2 13V8l7 4-7 4z"/></svg>
+              Audio Briefing &nbsp;·&nbsp; Daniel, en-GB
+            </div>
+            <div class="post-audio-controls">
+              <button class="post-play-btn" id="postPlayBtn" onclick="togglePostAudio()" aria-label="Play audio briefing">
+                <svg id="postPlayIcon" viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+                <svg id="postPauseIcon" viewBox="0 0 24 24" style="display:none"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+              </button>
+              <div class="post-audio-info">
+                <div class="post-audio-title">Daily Briefing — March 30, 2026</div>
+                <div class="post-audio-meta" id="postAudioMeta">Tap to listen · ~2 min</div>
+              </div>
+            </div>
+            <div class="post-audio-progress">
+              <span class="post-audio-time" id="postAudioCur">0:00</span>
+              <div class="post-audio-track" id="postAudioTrack" onclick="seekPostAudio(event)">
+                <div class="post-audio-fill" id="postAudioFill"></div>
+              </div>
+              <span class="post-audio-time" id="postAudioDur">--:--</span>
+            </div>
+          </div>
+
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px"><strong>Date:</strong> Monday, March 30, 2026</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px"><strong>Source:</strong> Aviation Week Network, Lufthansa Technik, AFI KLM E&amp;M, MRO Business Today, AviTrader, IBA Group, Embraer / Aviation Analysis, AeroTime, Centre for Aviation</p>
+
+<div class="post-section" id="s1">
+  <div class="post-section-header">
+    <div class="section-number">1</div>
+    <span class="section-icon">📈</span>
+    <h2>Market Updates and Growth Trends</h2>
+  </div>
+<h3>IBA: Engine Shortages and MRO Backlog Keep Values and Lease Rates Elevated</h3>
+<ul>
+<li><strong>IBA Group</strong> (aviation market intelligence and consulting) published a detailed market update on <strong>March 24</strong> confirming that persistent <strong>MRO backlogs and supply chain constraints</strong> continue to keep aircraft engine values and lease rates at elevated levels across all segments</li>
+<li><strong>Narrowbody engines:</strong></li>
+<li><strong>CFM56-5B and CFM56-7B</strong> values have stabilised after ~18 months of increases, suggesting a plateau — but no near-term correction expected</li>
+<li><strong>V2500-A5</strong> demand remains strong; traded values between <strong>$11M–$13M</strong></li>
+<li><strong>LEAP and PW1100G</strong> (next-gen narrowbody) still facing <strong>short time-on-wing</strong> challenges driving persistently high AOG counts and sustained demand for spare engines</li>
+<li>IBA flagged upcoming <strong>CFM LEAP Advantage</strong> and <strong>Hot Section Plus (HS+)</strong> upgrade programmes as future value catalysts</li>
+<li><strong>Widebody engines:</strong></li>
+<li><strong>Boeing 777-300ER</strong> engine full-life values have risen significantly since 2023, now exceeding <strong>$32M</strong>; short-term lease rates at <strong>$170,000–$185,000/month</strong></li>
+<li><strong>Trent 700</strong> (A330ceo) post-overhaul values rising sharply — half-life values tracking upward with the broader market</li>
+<li><strong>Regional/turboprop engines:</strong></li>
+<li><strong>CF34-8E</strong> values supported by North American scope clauses limiting E175-E2 deliveries</li>
+<li><strong>PW127M</strong> (ATR) values under upward pressure due to key component shortages</li>
+<li><strong>IBA outlook:</strong> Demand for serviceable engines continues to exceed supply; MRO demand, supply chain constraints, and aircraft delivery delays will remain key value drivers throughout H1 2026</li>
+</ul>
+<p style="color:var(--gray-400);font-size:13px;font-style:italic;margin-bottom:8px">Source: IBA Group, March 24, 2026</p>
+
+<div class="post-section" id="s2">
+  <div class="post-section-header">
+    <div class="section-number">2</div>
+    <span class="section-icon">🌏</span>
+    <h2>Regional Expansion Activities</h2>
+  </div>
+<h3>Lufthansa Technik LTCS Opens 25,000 sq ft Tulsa Facility — Americas MRO Hub Milestone <a class="src-link" href="https://www.lufthansa-technik.com/en/press-releases" target="_blank" rel="noopener">LHT</a></h3>
+<ul>
+<li><strong>Lufthansa Technik Component Services (LTCS)</strong> officially opened a new <strong>25,000 sq ft state-of-the-art facility</strong> at <strong>Tulsa International Airport, Oklahoma</strong> on March 26–27 — its <strong>third building</strong> at the campus and the first major milestone in a <strong>two-phase expansion plan</strong></li>
+<li><strong>New capabilities added:</strong></li>
+<li><strong>90 new workstations</strong> across upgraded avionics and component repair shops</li>
+<li>New <strong>Integrated Drive Generator (IDG)</strong> repair and overhaul capability for <strong>Airbus A320ceo/neo</strong> and <strong>Boeing 737NG/MAX</strong> aircraft — a strategically important addition given the high cycle volumes of these fleets</li>
+<li>Expanded administrative and logistics areas integrated with existing hydraulics, pneumatics, fuel systems, emergency equipment, and galley component shops</li>
+<li><strong>Phase 2 planned:</strong> LTCS has announced intent to <strong>more than double</strong> the new building's footprint, adding capacity in pneumatics and complex avionics</li>
+<li><strong>Strategic context:</strong> Tulsa serves as LTCS's Americas gateway, integrated into Lufthansa Technik's global network (Hamburg, Frankfurt, Shenzhen); 24/7 parts availability supported by regional strategic inventory positions</li>
+<li><strong>Official statements:</strong></li>
+<li>LTCS MD <strong>Tobias Baumgart</strong>: <em>"This investment reflects our 'think local, act local' strategy — we are here for the long term."</em></li>
+<li>LHT COO <strong>Harald Gloy</strong>: <em>"The Americas is a key market; this expansion reaffirms our commitment to world-class technical service."</em></li>
+<li>Oklahoma Commerce CEO <strong>John Budd</strong>: <em>"This cements Oklahoma's position as a leading Americas aerospace MRO hub."</em></li>
+</ul>
+<p style="color:var(--gray-400);font-size:13px;font-style:italic;margin-bottom:8px">Source: Lufthansa Technik press release, March 26, 2026; Tulsa Chamber, AirwaysMag, AviTrader, March 27–28, 2026</p>
+<h3>Philippine Airlines and AFI KLM E&amp;M Renew Long-Term GE90 Engine Partnership <a class="src-link" href="https://engineering.klm.com/press-releases/" target="_blank" rel="noopener">AFI KLM E&M</a></h3>
+<ul>
+<li><strong>Philippine Airlines (PAL)</strong> and <strong>Air France Industries KLM Engineering &amp; Maintenance (AFI KLM E&amp;M)</strong> announced the <strong>renewal and extension</strong> of their long-term maintenance agreement covering PAL's <strong>GE90 engines</strong> (powering its Boeing 777 widebody fleet)</li>
+<li><strong>Agreement scope:</strong></li>
+<li>Full shop visit maintenance (overhaul), predictive maintenance, and spare parts support</li>
+<li>Multi-year term extension reflecting PAL's continued long-haul fleet strategy</li>
+<li>Builds on an already established partnership as PAL's 777 fleet enters a more mature phase of its lifecycle</li>
+<li><strong>Strategic significance:</strong> GE90 is the most powerful commercial aircraft engine ever built; shop visits are complex, lengthy, and expensive — long-term MRO partnerships provide cost predictability and slot security in a constrained overhaul market</li>
+<li><strong>Market context:</strong> Engine MRO capacity for large widebody powerplants remains particularly tight; securing dedicated shop visit slots via multi-year agreements is a competitive priority for carriers operating 777-200ER/300ER fleets</li>
+</ul>
+<p style="color:var(--gray-400);font-size:13px;font-style:italic;margin-bottom:8px">Source: AFI KLM E&amp;M press release / Aviation News Online / Centre for Aviation, March 26–27, 2026</p>
+
+<div class="post-section" id="s3">
+  <div class="post-section-header">
+    <div class="section-number">3</div>
+    <span class="section-icon">🔗</span>
+    <h2>Fleet Renewal and Engine MRO Implications</h2>
+  </div>
+<h3>Finnair Orders Up to 46 Embraer E195-E2s with Pratt &amp; Whitney Engine Support Package <a class="src-link" href="https://aviationweek.com/mro/aircraft-propulsion" target="_blank" rel="noopener">Aviation Week</a></h3>
+<ul>
+<li><strong>Finnair</strong> announced a major fleet renewal order for <strong>up to 46 Embraer E195-E2</strong> regional jets (30 firm + 16 options + 12 purchase rights), announced March 23 — described by CEO <strong>Turkka Kuusisto</strong> as <em>"one of the largest investments in Finnair's 102-year history"</em></li>
+<li><strong>MRO implications:</strong></li>
+<li>The order includes a comprehensive <strong>long-term engine support agreement with Pratt &amp; Whitney (RTX)</strong> covering spare engines and maintenance services for the <strong>PW1900G Geared Turbofan (GTF)</strong> engines</li>
+<li>The E195-E2 will replace Finnair's older narrowbody fleet (Airbus A320/321ceo aircraft also being retired), simplifying the maintenance base and transitioning to a single GTF powerplant type for regional operations</li>
+<li><strong>P&amp;W GTF support infrastructure</strong> in Europe is well-established, with existing MRO agreements across Lufthansa Technik, MTU Maintenance, and other network shops</li>
+<li><strong>Fleet transition context:</strong> Finnair is simultaneously phasing out A320/321ceo aircraft — creating a near-term maintenance wind-down opportunity for legacy CFM56 and IAE V2500 shops currently supporting those types</li>
+<li><strong>Regional market signal:</strong> The E195-E2's strong order momentum in 2025–2026 (also selected by airlines across Europe and Latin America) continues to drive demand for PW1900G MRO capacity build-out</li>
+</ul>
+<p style="color:var(--gray-400);font-size:13px;font-style:italic;margin-bottom:8px">Source: Embraer, AeroTime, Aviation Analysis, MRO Business Today, March 23–25, 2026</p>
+
+<div class="post-section" id="s4">
+  <div class="post-section-header">
+    <div class="section-number">4</div>
+    <span class="section-icon">💡</span>
+    <h2>Contract Awards and Partnerships</h2>
+  </div>
+<h3>American Airlines / Magnetic Line (Direct Maintenance): Dublin Widebody Line Maintenance <a class="src-link" href="https://aviationweek.com/mro/supply-chain/magnetic-expands-cfm-engine-mro-face-testing-parts-bottlenecks" target="_blank" rel="noopener">Aviation Week</a></h3>
+<ul>
+<li><strong>Direct Maintenance</strong>, operating under the <strong>Magnetic Line</strong> brand, signed a <strong>line maintenance agreement with American Airlines</strong> for its <strong>Boeing 777 and 787</strong> operations at <strong>Dublin Airport</strong> — contract effective from <strong>January 1, 2026</strong> (announced March 25–26)</li>
+<li><strong>Scope:</strong> Comprehensive technical handling including <strong>ETOPS support</strong>, routine line checks, and AOG response for AA's transatlantic widebody operations at DUB</li>
+<li><strong>Expansion:</strong> Magnetic Line expanding its Dublin team and relocating to a larger facility to accommodate the new scope</li>
+<li><strong>Significance:</strong> American Airlines operates significant transatlantic flying through Dublin; securing dedicated ETOPS-capable line maintenance support at a key diversion/stopover hub is a critical operational risk management decision</li>
+</ul>
+<p style="color:var(--gray-400);font-size:13px;font-style:italic;margin-bottom:8px">Source: Direct Maintenance / MRO Business Today / AviTrader, March 25–26, 2026</p>
+<h3>Philippine Airlines / AFI KLM E&amp;M: GE90 Engine MRO Extension <a class="src-link" href="https://engineering.klm.com/press-releases/" target="_blank" rel="noopener">AFI KLM E&M</a></h3>
+<p style="color:var(--gray-400);font-size:13px;font-style:italic;margin-bottom:8px">(See Section 2 above for full detail)</p>
+
+<div class="post-section" id="s5">
+  <div class="post-section-header">
+    <div class="section-number">5</div>
+    <span class="section-icon">⚠️</span>
+    <h2>Supply Chain and Technology Developments</h2>
+  </div>
+<h3>Aviation Week March 2026 Roundup: Key Deals and Milestones <a class="src-link" href="https://aviationweek.com/mro" target="_blank" rel="noopener">Aviation Week</a></h3>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">Additional deals logged in Aviation Week's rolling March 2026 update include:</p>
+<div class="table-wrapper"><table class="post-table">
+<thead><tr><th>Date</th><th>Deal / Event</th><th>Significance</th></tr></thead><tbody>
+<tr><td>Mar 27</td><td>Rising Aviation High School wins Verticon aerospace maintenance competition (Atlanta)</td><td>Workforce pipeline: first-time entrant defeats 22 industry/academic teams</td></tr>
+<tr><td>Mar 26</td><td>Sunvair acquires Med-Craft (Miami) — pneumatics, hydraulics, electromechanical, water/waste systems</td><td>Component MRO consolidation in Americas</td></tr>
+<tr><td>Mar 25</td><td>Magnetic Engines completes 2nd LPT main module field replacement (Verona, Italy)</td><td>On-wing capability advancement for CFM engine LPT work</td></tr>
+<tr><td>Mar 25</td><td>ATEQ Aviation acquires CCX Technologies T-RX avionics tester</td><td>Expanded compliance test coverage for avionics MRO</td></tr>
+<tr><td>Mar 24</td><td>Aviaheads receives CAMO approval (Estonian ECAA) for A320ceo, A330, B737</td><td>Eastern European CAMO capacity expansion</td></tr>
+</tbody></table></div>
+<p style="color:var(--gray-400);font-size:13px;font-style:italic;margin-bottom:8px">Source: Aviation Week Network, March 2026 Rolling Daily Updates</p>
+<h3>MRO Americas 2026: Industry Counts Down to Orlando (April 21–23)</h3>
+<ul>
+<li>With <strong>MRO Americas</strong> just <strong>three weeks away</strong> (Orlando, April 21–23), the industry is entering peak pre-conference announcement season</li>
+<li>The <strong>30th anniversary edition</strong> of the world's largest aviation MRO trade show is expected to draw <strong>17,000+ attendees</strong> and <strong>1,000+ exhibitors</strong></li>
+<li><strong>Pre-conference signals:</strong></li>
+<li>Oliver Wyman presenting updated <strong>2026 MRO market forecast</strong> — expected to revise global MRO spend projections upward given continued demand strength</li>
+<li>Engine OEMs (GE Aerospace, CFM International, Pratt &amp; Whitney, Rolls-Royce) expected to announce shop capacity expansions and new airline partnerships</li>
+<li>Digitisation and AI vendors (EmpowerMX, IFS, TRAX, Amos) competing to announce major airline software wins</li>
+<li>Sustainability / SAF-related MRO capability announcements from leading airframe MROs</li>
+<li><strong>Key themes expected at MRO Americas 2026:</strong></li>
+</ul>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">1. GTF engine MRO capacity — shop visit slot availability and wait time reductions</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">2. AI and predictive maintenance compliance (post-FAA framework)</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">3. Workforce development and apprenticeship programmes</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">4. Sustainability: SAF compatibility checks, weight reduction modifications</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">5. Digital records and paperless maintenance</p>
+<p style="color:var(--gray-400);font-size:13px;font-style:italic;margin-bottom:8px">Source: Aviation Week / Oliver Wyman / MRO Americas event collateral, March 2026</p>
+
+<div class="post-section" id="s6">
+  <div class="post-section-header">
+    <div class="section-number">📋</div>
+    <span class="section-icon">⚠️</span>
+    <h2>Major Challenges and Outlook</h2>
+  </div>
+<h3>Key Industry Challenges — March 30, 2026 Snapshot</h3>
+<div class="table-wrapper"><table class="post-table">
+<thead><tr><th>Challenge</th><th>Current Status</th><th>Emerging Response</th></tr></thead><tbody>
+<tr><td><strong>Engine MRO Backlog</strong></td><td>Shop visit wait times remain 12–18 months for CFM56, LEAP, GTF types</td><td>LHT Tulsa expansion; new AFI KLM partnerships; P&amp;W GTF capacity ramp</td></tr>
+<tr><td><strong>Widebody Engine Values</strong></td><td>777/GE90 lease rates at $170K–$185K/month; Trent 700 post-OH values rising</td><td>Long-term engine deals (PAL/AFI KLM) locking in slot access</td></tr>
+<tr><td><strong>GTF Time-on-Wing</strong></td><td>LEAP and PW1100G short ToW driving high AOG rates</td><td>P&amp;W Advantage + HS+ upgrades; GTF shop capacity investment</td></tr>
+<tr><td><strong>Narrowbody Fleet Renewal</strong></td><td>Finnair, others retiring CFM56/V2500 fleets → transitional MRO demand spike</td><td>Legacy engine shops absorbing near-term overhaul wave; new GTF MRO buildout</td></tr>
+<tr><td><strong>Workforce Pipeline</strong></td><td>20% shortfall projected by 2028</td><td>High school competition wins (Verticon); apprenticeship growth; AR-assisted maintenance</td></tr>
+<tr><td><strong>Americas Component MRO Capacity</strong></td><td>Americas underserved for widebody and component repair</td><td>LTCS Tulsa Phase 2 doubling; Sunvair/Med-Craft consolidation</td></tr>
+</tbody></table></div>
+<h3>Week Ahead: March 30 – April 3, 2026</h3>
+<ul>
+<li><strong>MRO Americas pre-conference announcements</strong> expected to accelerate — watch for engine OEM capacity updates, airline software deals, and new component MRO partnerships</li>
+<li><strong>India MRO momentum</strong> continuing: Akasa Air/Noida facility groundbreaking timeline expected to be formalised following the March 28 PM Modi inauguration</li>
+<li><strong>LEAP and GTF shop capacity updates</strong> from CFM International and Pratt &amp; Whitney likely ahead of MRO Americas</li>
+<li><strong>Tariff/supply chain watch:</strong> North American MROs monitoring any aerospace-related trade policy developments that could affect parts sourcing costs from EU and Asian suppliers</li>
+</ul>
+
+<div class="post-section" id="s7">
+  <div class="post-section-header">
+    <div class="section-number">📋</div>
+    <span class="section-icon">⚠️</span>
+    <h2>Key Statistics Summary</h2>
+  </div>
+<div class="table-wrapper"><table class="post-table">
+<thead><tr><th>Metric</th><th>Value</th><th>Source</th></tr></thead><tbody>
+<tr><td>GE90 engine lease rate (short-term)</td><td>$170,000–$185,000/month</td><td>IBA, March 24</td></tr>
+<tr><td>777-300ER engine full-life value</td><td>>$32M</td><td>IBA, March 24</td></tr>
+<tr><td>V2500-A5 traded value</td><td>$11M–$13M</td><td>IBA, March 24</td></tr>
+<tr><td>LTCS Tulsa new facility size</td><td>25,000 sq ft</td><td>LHT press release, March 26</td></tr>
+<tr><td>LTCS Tulsa new workstations</td><td>90</td><td>LHT press release, March 26</td></tr>
+<tr><td>Finnair E195-E2 firm order</td><td>30 aircraft (up to 46 total)</td><td>Embraer, March 23</td></tr>
+<tr><td>MRO Americas 2026 expected attendees</td><td>17,000+</td><td>Aviation Week</td></tr>
+<tr><td>MRO Americas 2026 expected exhibitors</td><td>1,000+</td><td>Aviation Week</td></tr>
+<tr><td>MRO Americas 2026 anniversary</td><td>30th edition</td><td>Aviation Week</td></tr>
+</tbody></table></div>
+
+<div class="post-section" id="s8">
+  <div class="post-section-header">
+    <div class="section-number">📋</div>
+    <span class="section-icon">⚠️</span>
+    <h2>Industry Outlook</h2>
+  </div>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px"><strong>Entering Q2 2026:</strong> The final stretch to MRO Americas is now in motion. This week marks the beginning of peak deal-announcement season as companies position their news flow ahead of Orlando. The LTCS Tulsa opening and the Philippine Airlines/AFI KLM GE90 renewal both underscore the same structural theme: in a market where MRO capacity is structurally constrained across all aircraft types, long-term partnerships and physical infrastructure investment are the primary competitive moats.</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">The IBA engine values report reinforces that the fundamental supply-demand imbalance — too many aircraft needing shop visits, too few certified slots available — will persist through at least H2 2026. Airlines that locked in multi-year engine MRO agreements in 2024–2025 are now seeing tangible competitive advantages in operational reliability and cost predictability versus those navigating the spot market.</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">With MRO Americas three weeks out, the industry enters its highest-visibility period of the year. Expect the pace of announcements to intensify daily through April 20.</p>
+<p style="color:var(--gray-400);font-size:13px;font-style:italic;margin-bottom:8px">Report compiled from Aviation Week Network (March 2026 Rolling Updates), Lufthansa Technik press release, AFI KLM E&amp;M press release, MRO Business Today, AviTrader, IBA Group, Embraer / Aviation Analysis, AeroTime, Centre for Aviation (March 23–30, 2026). Published March 30, 2026.</p>
+</div>
+          <nav class="post-nav">
+            <a href="march-29-2026.html" class="post-nav-btn">
+              <div class="post-nav-label">← Previous Issue</div>
+              <div class="post-nav-title">March 29 2026</div>
+            </a>
+            <a href="../index.html" class="post-nav-btn" style="text-align:right">
+              <div class="post-nav-label">All Briefings</div>
+              <div class="post-nav-title">View Archive →</div>
+            </a>
+          </nav>
+        </article>
+
+        <aside class="post-sidebar">
+          <div class="toc-widget">
+            <div class="toc-title">In This Issue</div>
+            <ul class="toc-list">
+              <li><a href="#s1"><span class="toc-num">1</span> Market Updates &amp; Growth</a></li>
+              <li><a href="#s2"><span class="toc-num">2</span> Regional Expansion</a></li>
+              <li><a href="#s3"><span class="toc-num">3</span> Supply Chain</a></li>
+              <li><a href="#s4"><span class="toc-num">4</span> Technology &amp; Investment</a></li>
+              <li><a href="#s5"><span class="toc-num">5</span> Challenges &amp; Solutions</a></li>
+            </ul>
+          </div>
+          <div class="sidebar-widget">
+            <h3 class="widget-title">About This Briefing</h3>
+            <p class="widget-text">Source:</p>
+            <div class="widget-badge">
+              <span class="auto-badge">⚡ Automated Daily at 7:00 AM</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand"><span class="logo-icon">✈</span><span class="footer-name">MRO Daily Intelligence</span></div>
+        <div class="footer-text">Automated briefings sourced from Aviation Week Network. Published daily at 7:00 AM.</div>
+      </div>
+    </div>
+  </footer>
+
+<script>
+  var postAudio = null;
+  var audioSrc  = 'posts/march30-2026-email.m4a';  /* relative from inside posts/ dir */
+
+  /* Fix path: this page is in posts/, so audio is same dir */
+  var audioFile = 'march30-2026-email.m4a';
+
+  function fmtPostTime(s) {
+    if (isNaN(s) || !isFinite(s)) return '--:--';
+    var m = Math.floor(s / 60);
+    return m + ':' + String(Math.floor(s % 60)).padStart(2, '0');
+  }
+
+  function togglePostAudio() {
+    var playIcon  = document.getElementById('postPlayIcon');
+    var pauseIcon = document.getElementById('postPauseIcon');
+    var meta      = document.getElementById('postAudioMeta');
+    var fill      = document.getElementById('postAudioFill');
+    var cur       = document.getElementById('postAudioCur');
+    var dur       = document.getElementById('postAudioDur');
+
+    if (!postAudio) {
+      postAudio = new Audio(audioFile);
+      postAudio.addEventListener('loadedmetadata', function() {
+        dur.textContent = fmtPostTime(postAudio.duration);
+        meta.textContent = fmtPostTime(postAudio.duration) + ' · Daniel, en-GB';
+      });
+      postAudio.addEventListener('timeupdate', function() {
+        var pct = (postAudio.currentTime / postAudio.duration) * 100;
+        fill.style.width = pct + '%';
+        cur.textContent = fmtPostTime(postAudio.currentTime);
+      });
+      postAudio.addEventListener('ended', function() {
+        playIcon.style.display = '';
+        pauseIcon.style.display = 'none';
+        meta.textContent = 'Finished · tap to replay';
+        fill.style.width = '0%';
+        cur.textContent = '0:00';
+        postAudio.currentTime = 0;
+      });
+    }
+
+    if (!postAudio.paused) {
+      postAudio.pause();
+      playIcon.style.display = '';
+      pauseIcon.style.display = 'none';
+      meta.textContent = 'Paused';
+    } else {
+      postAudio.play();
+      playIcon.style.display = 'none';
+      pauseIcon.style.display = '';
+      meta.textContent = 'Playing…';
+    }
+  }
+
+  function seekPostAudio(e) {
+    if (!postAudio) return;
+    var track = document.getElementById('postAudioTrack');
+    var rect  = track.getBoundingClientRect();
+    var pct   = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
+    postAudio.currentTime = pct * postAudio.duration;
+  }
+</script>
+</body>
+</html>
