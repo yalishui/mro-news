@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MRO Briefing — March 31, 2026 | MRO Daily Intelligence</title>
+  <meta name="description" content="Headline outlook:" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/style.css" />
+  <style>
+    /* ── Audio Player ── */
+    .post-audio-player {
+      background: linear-gradient(135deg,#0f2847 0%,#1a4a8a 100%);
+      border-radius: 14px;
+      padding: 18px 20px;
+      margin: 0 0 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .post-audio-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .6px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.5);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .post-audio-controls {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .post-play-btn {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.15);
+      border: 1px solid rgba(255,255,255,.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      flex-shrink: 0;
+      transition: background .15s;
+    }
+    .post-play-btn:hover { background: rgba(255,255,255,.25); }
+    .post-play-btn svg { fill: white; width: 20px; height: 20px; }
+    .post-audio-info { flex: 1; }
+    .post-audio-title { font-size: 14px; font-weight: 600; color: #fff; margin-bottom: 3px; }
+    .post-audio-meta { font-size: 12px; color: rgba(255,255,255,.5); }
+    .post-audio-progress {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .post-audio-time { font-size: 11px; color: rgba(255,255,255,.5); min-width: 32px; font-variant-numeric: tabular-nums; }
+    .post-audio-track {
+      flex: 1;
+      height: 4px;
+      background: rgba(255,255,255,.2);
+      border-radius: 99px;
+      cursor: pointer;
+      position: relative;
+    }
+    .post-audio-fill {
+      height: 100%;
+      width: 0%;
+      background: #fff;
+      border-radius: 99px;
+      transition: width .2s linear;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <div class="logo">
+          <span class="logo-icon">✈</span>
+          <div>
+            <div class="logo-name">MRO Daily Intelligence</div>
+            <div class="logo-tagline">Aviation Maintenance Market Briefings</div>
+          </div>
+        </div>
+        <nav class="nav">
+          <a href="../index.html" class="nav-link">Latest</a>
+          <a href="../index.html#about" class="nav-link">About</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section class="post-hero">
+    <div class="container">
+      <a href="../index.html" class="post-back">← All Briefings</a>
+      <div class="post-issue-label">Issue #15 &nbsp;·&nbsp; March 31, 2026</div>
+      <h1 class="post-title">Daily MRO Market News Summary — March 31, 2026</h1>
+      <div class="post-meta-row">
+        <div class="post-meta-item"><strong>March 31, 2026</strong></div>
+        <div class="post-meta-item">·</div>
+        <div class="post-meta-item">Source: <strong>Aviation Week Network</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <main class="post-body">
+    <div class="container">
+      <div class="post-grid">
+        <article class="post-content">
+
+          <!-- ── Audio Player ── -->
+          <div class="post-audio-player" id="audioPlayer">
+            <div class="post-audio-label">
+              <svg viewBox="0 0 24 24" fill="white" width="12" height="12"><path d="M12 3a9 9 0 100 18A9 9 0 0012 3zm-2 13V8l7 4-7 4z"/></svg>
+              Audio Briefing &nbsp;·&nbsp; Daniel, en-GB
+            </div>
+            <div class="post-audio-controls">
+              <button class="post-play-btn" id="postPlayBtn" onclick="togglePostAudio()" aria-label="Play audio briefing">
+                <svg id="postPlayIcon" viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+                <svg id="postPauseIcon" viewBox="0 0 24 24" style="display:none"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+              </button>
+              <div class="post-audio-info">
+                <div class="post-audio-title">Daily Briefing — March 31, 2026</div>
+                <div class="post-audio-meta" id="postAudioMeta">Tap to listen · ~2 min</div>
+              </div>
+            </div>
+            <div class="post-audio-progress">
+              <span class="post-audio-time" id="postAudioCur">0:00</span>
+              <div class="post-audio-track" id="postAudioTrack" onclick="seekPostAudio(event)">
+                <div class="post-audio-fill" id="postAudioFill"></div>
+              </div>
+              <span class="post-audio-time" id="postAudioDur">--:--</span>
+            </div>
+          </div>
+
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px"><strong>Date:</strong> Tuesday, March 31, 2026</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px"><strong>Source:</strong> AviTrader, Safran Group, MRO Business Today, Aviation Today, LiveMint, The Hindu Business Line, Airport-Suppliers.com, ASDNews, Oliver Wyman / ARSA, Safefly.aero, LinkedIn / Atlantic Jet Partners</p>
+
+<div class="post-section" id="s1">
+  <div class="post-section-header">
+    <div class="section-number">1</div>
+    <span class="section-icon">📈</span>
+    <h2>Market Updates and Growth Trends</h2>
+  </div>
+<h3>Oliver Wyman / ARSA 2026–2036 Global Fleet &amp; MRO Market Forecast: Demand Stronger Than Ever, Market Structurally Strained <a class="src-link" href="https://www.oliverwyman.com/our-expertise/insights/2026/feb/global-fleet-and-mro-market-forecast-2026-2036.html" target="_blank" rel="noopener">Oliver Wyman</a></h3>
+<ul>
+<li>The <strong>Aeronautical Repair Station Association (ARSA)</strong> and <strong>Oliver Wyman Vector</strong> released the <strong>2026 Global Fleet &amp; MRO Market Forecast</strong> (26th annual edition) in mid-March — the most closely watched annual benchmark in the industry</li>
+<li><strong>Headline outlook:</strong> Global commercial MRO spend is forecast to <strong>grow strongly through 2036</strong>, driven by record passenger demand, an aging in-service fleet, and persistently delayed OEM deliveries that force airlines to extend the life of existing aircraft</li>
+<li><strong>Key structural themes flagged by Oliver Wyman:</strong></li>
+<li><strong>"Supply chain throttling" remains the dominant constraint</strong> — not demand softness — with shop visit queues, parts lead times, and certified technician shortages all acting as simultaneous bottlenecks</li>
+<li><strong>GTF (Pratt &amp; Whitney PW1100G) and LEAP engine MRO</strong> remain the most acute pressure points: average shop visit turnaround times for GTF engines have stretched from ~60 days (pre-pandemic baseline) to <strong>~300 days in 2026</strong>, according to independent industry analysis</li>
+<li><strong>Engine MRO</strong> is forecast to be the fastest-growing sub-segment, driven by the maturing narrowbody fleets and continued in-service issues with next-generation powerplants</li>
+<li><strong>Airframe MRO</strong> demand supported by extended aircraft retirement ages as OEM delivery deferrals push airlines to operate older widebodies and narrowbodies beyond planned retirement</li>
+<li><strong>Component and avionics MRO</strong> growing steadily, with increased demand for line-replaceable unit (LRU) repair driven by avionics modernisation mandates</li>
+<li><strong>Fleet forecast highlights:</strong></li>
+<li>Global commercial fleet expected to cross <strong>35,000 aircraft</strong> by 2030, versus ~27,000 today</li>
+<li>Aircraft delivery backlogs exceeding <strong>17,000 units</strong> globally continue to sustain demand for maintenance of in-service fleets</li>
+<li>Narrowbody production shortfalls: OEM delivery shortfalls estimated at <strong>5,300+ units</strong> versus scheduled deliveries through 2025–2026</li>
+<li><strong>ARSA comment:</strong> The 2026 report describes the maintenance community's <em>"continued resilience in the face of unprecedented supply chain pressures"</em> — acknowledging the industry is simultaneously absorbing record volumes of shop visits while navigating parts shortages and labour constraints</li>
+</ul>
+<p style="color:var(--gray-400);font-size:13px;font-style:italic;margin-bottom:8px">Source: ARSA / Oliver Wyman Global Fleet &amp; MRO Market Forecast 2026–2036, released March 16, 2026; ATEC-AMT, March 25, 2026</p>
+
+<div class="post-section" id="s2">
+  <div class="post-section-header">
+    <div class="section-number">2</div>
+    <span class="section-icon">🌏</span>
+    <h2>Manufacturing and Supply Chain Investment</h2>
+  </div>
+<h3>Safran Establishes €125M Wallonia Compressor Components Subsidiary — Strategic Supply Chain Reinforcement <a class="src-link" href="https://www.safran-group.com/pressroom" target="_blank" rel="noopener">Safran</a></h3>
+<ul>
+<li><strong>Safran Aero Boosters</strong> announced on <strong>March 27, 2026</strong> the creation of a <strong>new subsidiary in Wallonia, Belgium</strong>, to manufacture <strong>aircraft engine compressor components</strong> — representing an investment of <strong>€125 million</strong> in partnership with Belgian and Walloon public authorities</li>
+<li><strong>What is being built:</strong></li>
+<li>A dedicated industrial site producing <strong>low-pressure compressor (LPC) blades and structural components</strong> for aircraft engines, including next-generation powerplants</li>
+<li>Safran Aero Boosters is the primary supplier of <strong>LPC modules for CFM International's LEAP engine</strong> (used on A320neo and 737 MAX), making this investment a direct capacity reinforcement for the world's best-selling engine programme</li>
+<li>The new plant will be operated as a joint-venture subsidiary, leveraging Wallonia's existing aerospace industrial ecosystem (including SONACA, Thales Alenia Space Belgium, and Safran's existing Liège/Milmort operations)</li>
+<li><strong>Strategic rationale:</strong></li>
+<li><strong>LEAP engine deliveries accelerating</strong> — CFM International targeting 2,000+ LEAP deliveries per year in 2026–2027, requiring a step-change in LPC component supply</li>
+<li>Safran Aero Boosters' existing Belgian facilities running at near-capacity; new dedicated subsidiary protects the supply chain while preserving quality and IP within the Safran ecosystem</li>
+<li>Public partnership with Walloon regional government provides co-investment support, reflecting the region's commitment to aerospace manufacturing competitiveness</li>
+<li><strong>Key figures:</strong></li>
+<li>Investment: <strong>€125 million</strong> (total project cost including facility, equipment, and ramp-up)</li>
+<li>New jobs: Several hundred expected over the programme ramp-up period (Wallonian government statement)</li>
+<li>Timeline: Construction and qualification expected to reach production readiness by <strong>2027–2028</strong></li>
+<li><strong>MRO supply chain significance:</strong> More LPC components in the supply chain directly reduces lead times for LEAP engine shop visits — helping to ease the chronic parts shortages that are currently extending GTF/LEAP MRO turnaround times to record levels</li>
+</ul>
+<p style="color:var(--gray-400);font-size:13px;font-style:italic;margin-bottom:8px">Source: Safran Group press release, March 27, 2026; AviTrader, March 30, 2026; MRO Business Today, March 28, 2026</p>
+
+<div class="post-section" id="s3">
+  <div class="post-section-header">
+    <div class="section-number">3</div>
+    <span class="section-icon">🔗</span>
+    <h2>Regional Aviation and MRO Development</h2>
+  </div>
+<h3>India–EU Aviation Production Pact: Tata-Airbus H125 Assembly Line Signals India's Manufacturing Ambitions</h3>
+<ul>
+<li><strong>India and the European Union</strong> signed a <strong>Working Arrangement on Industrial Aviation Production</strong> on <strong>March 23, 2026</strong> (published by the EU on March 27), formalising a framework agreement between <strong>India's DGCA</strong> and <strong>EASA</strong> to harmonise aviation safety and production standards</li>
+<li><strong>Tata-Airbus milestone:</strong></li>
+<li>The <strong>Tata-Airbus H125 helicopter assembly line</strong> in <strong>Karnataka (Tumakuru facility)</strong> is confirmed to become <strong>operational in April 2026</strong> — the first commercial helicopter assembly line in India, producing Airbus H125 single-engine turbine helicopters under the <code>Make in India</code> programme</li>
+<li>The H125 assembly marks a milestone in transitioning India from an aviation services importer to a manufacturing participant</li>
+<li><strong>MRO policy implications:</strong></li>
+<li>The India-EU production pact establishes a bilateral regulatory framework intended to streamline <strong>maintenance approvals, component certifications, and airworthiness validation</strong> between Indian and European authorities</li>
+<li>This directly addresses a long-standing friction point for Indian MRO operators seeking EASA recognition for maintenance work performed on European-registered or European-operated aircraft</li>
+<li><strong>DGCA–EASA alignment</strong> is expected to enable more Indian MRO providers to seek dual approvals, opening the door to regional MRO export services</li>
+<li><strong>India aircraft supply bottleneck context:</strong></li>
+<li>India's Civil Aviation Minister <strong>K. Rammohan Naidu</strong> publicly acknowledged on March 30 that while <strong>1,700 new aircraft are on order</strong>, supply chain constraints mean deliveries cannot keep pace with demand — forcing carriers like <strong>IndiGo, Air India, and SpiceJet</strong> to extend the operational life of existing fleets</li>
+<li>This directly translates to <strong>elevated domestic MRO demand</strong>: older aircraft need more frequent and complex maintenance, and the shortage of new aircraft means MRO is even more operationally critical than usual</li>
+<li>MRO Business Today estimated that India's fleet-growth story is entering a <strong>"maintenance intensity" phase</strong> — where the gap between fleet ambition and actual deliveries sustains an outsized, multi-year MRO demand pipeline</li>
+</ul>
+<p style="color:var(--gray-400);font-size:13px;font-style:italic;margin-bottom:8px">Source: Aviation Today, LiveMint, The Hindu Business Line, MRO Business Today, March 27–30, 2026</p>
+
+<div class="post-section" id="s4">
+  <div class="post-section-header">
+    <div class="section-number">4</div>
+    <span class="section-icon">💡</span>
+    <h2>Conference and Event Wrap-Up</h2>
+  </div>
+<h3>MRO Central Asia 2026 (Tashkent, March 25–26): Region's Largest MRO Platform Sets New Attendance Record</h3>
+<ul>
+<li><strong>MRO Central Asia 2026</strong>, held March 25–26 at the <strong>Azimut Grand Hotel Tashkent, Uzbekistan</strong>, concluded as the <strong>largest dedicated MRO platform</strong> in the Central Asia / Eurasia / Caspian / Caucasus region</li>
+<li><strong>Growth metrics:</strong></li>
+<li>Attendance and exhibitor participation grew <strong>almost threefold</strong> compared to previous editions — the most significant year-over-year expansion in the event's history</li>
+<li>Attracted <strong>airline operators, MRO providers, regulators, and component suppliers</strong> from across Central Asia, Turkey, Russia (limited), the Caucasus, and international players seeking regional market entry</li>
+<li><strong>Strategic themes from the conference:</strong></li>
+<li><strong>Regulatory harmonisation</strong> between Central Asian CAAs (particularly Uzbekistan's UCAB and Kazakhstan's CAAK) and EASA/FAA remains a critical enabler for regional MRO development</li>
+<li><strong>Uzbekistan's emerging MRO ecosystem</strong> highlighted — Tashkent Airport infrastructure investments and Uzbekistan Airways' maintenance division positioning for third-party MRO services</li>
+<li><strong>Digital transformation and workforce development</strong> cited as twin priorities for regional operators managing aging Soviet-era fleet transitions alongside new narrowbody introductions</li>
+<li>Growing interest from <strong>Turkish MRO providers</strong> (Turkish Technic, Havelsan) in establishing Central Asian partnerships and satellite operations</li>
+<li><strong>Market context:</strong> Central Asian aviation is one of the fastest-growing sub-regions globally, driven by tourism growth (particularly Uzbekistan, Kazakhstan, Georgia), network expansion by low-cost carriers, and fleet modernisation programmes — all translating into a growing pipeline of MRO demand previously served almost entirely by European or Russian providers</li>
+</ul>
+<p style="color:var(--gray-400);font-size:13px;font-style:italic;margin-bottom:8px">Source: Airport-Suppliers.com / Airline-Suppliers.com post-event report, March 27, 2026; AJW Group event page; MRO Central Asia official communications</p>
+
+<div class="post-section" id="s5">
+  <div class="post-section-header">
+    <div class="section-number">5</div>
+    <span class="section-icon">⚠️</span>
+    <h2>Leadership and Operations</h2>
+  </div>
+<h3>Atlantic Jet Partners Appoints Steve Takacs as VP of Maintenance / GM of Sky Aircraft Maintenance</h3>
+<ul>
+<li><strong>Atlantic Jet Partners</strong> announced the appointment of <strong>Steve Takacs</strong> as <strong>VP of Maintenance and General Manager of Sky Aircraft Maintenance (SAM)</strong> — its North Carolina-based MRO division operating at <strong>Davidson County Executive Airport (KEXX)</strong>, Lexington, NC</li>
+<li><strong>Role scope:</strong> Takacs will lead all maintenance operations, safety management, and quality standards for Sky Aircraft Maintenance as the facility continues its rapid expansion</li>
+<li><strong>Background:</strong> Takacs brings hands-on leadership experience in high-performance aviation maintenance organisations; described by Atlantic Jet Partners COO <strong>Joe Rizzo</strong> as <em>"a leader who understands what it takes to run a high-performing maintenance organization"</em></li>
+<li><strong>Growth context:</strong> Sky Aircraft Maintenance has been on an accelerated growth trajectory at KEXX — the facility has been expanding its capabilities and team to position KEXX as a growing business aviation MRO hub in the US Southeast</li>
+<li><strong>Significance:</strong> The appointment reflects broader trends in the business aviation MRO sector, where smaller regional shops are professionalising their leadership structures to compete for market share as demand for business jet maintenance outpaces supply of qualified operators</li>
+</ul>
+<p style="color:var(--gray-400);font-size:13px;font-style:italic;margin-bottom:8px">Source: Atlantic Jet Partners press release, March 30, 2026; LinkedIn / Sky Aircraft Maintenance</p>
+
+<div class="post-section" id="s6">
+  <div class="post-section-header">
+    <div class="section-number">📋</div>
+    <span class="section-icon">⚠️</span>
+    <h2>Q1 2026 MRO Industry Wrap-Up: Key Themes and the Road to MRO Americas</h2>
+  </div>
+<h3>Q1 2026 in Review — The Quarter That Set the Tone for the Year</h3>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">As <strong>Q1 2026 closes today (March 31)</strong>, the MRO industry ends the quarter having confirmed several structural trends that will define the rest of the year:</p>
+<div class="table-wrapper"><table class="post-table">
+<thead><tr><th>Theme</th><th>Q1 2026 Developments</th><th>Outlook Entering Q2</th></tr></thead><tbody>
+<tr><td><strong>Engine MRO Bottleneck</strong></td><td>GTF shop visits stretching to 300 days; IBA confirms GE90/Trent 700/V2500 values elevated</td><td>Safran €125M Belgium investment; P&amp;W ramp; capacity relief not before 2027</td></tr>
+<tr><td><strong>OEM Delivery Shortfalls</strong></td><td>17,000+ aircraft backlog; 5,300+ delivery shortfalls; India civil aviation minister confirms supply crunch</td><td>Airlines extending aging fleets → sustained MRO intensity spike</td></tr>
+<tr><td><strong>Geographic Expansion</strong></td><td>FL Technics Punta Cana $70M; LHT LTCS Tulsa 25,000 sq ft; MRO Central Asia 3× growth</td><td>MRO Americas expected to bring Q2 wave of capacity announcements</td></tr>
+<tr><td><strong>India MRO Momentum</strong></td><td>Modi Noida MRO hub + Tata-Airbus H125 assembly; India-EU DGCA-EASA pact</td><td>April 2026: H125 assembly line goes live; Noida timeline formalisation</td></tr>
+<tr><td><strong>Supply Chain Investment</strong></td><td>Safran Belgium €125M; Safran Landing Systems/Titan India pact</td><td>Multiple MRO Americas pre-show announcements expected from suppliers</td></tr>
+<tr><td><strong>Market Intelligence</strong></td><td>Oliver Wyman / ARSA 2026–2036 forecast: structurally strained market; demand remains robust</td><td>Record MRO Americas attendance (17,000+); all eyes on April 21–23</td></tr>
+</tbody></table></div>
+<h3>MRO Americas 2026: T-21 Days</h3>
+<ul>
+<li><strong>MRO Americas 2026</strong> opens in <strong>Orlando, Florida</strong> on <strong>April 21, 2026</strong> — the <strong>30th anniversary edition</strong> of the world's largest aviation maintenance trade show</li>
+<li>The final three weeks before the show are traditionally the industry's most active news period — expect daily announcements covering:</li>
+<li><strong>Engine OEM capacity expansions</strong> (GE Aerospace, CFM, P&amp;W, Rolls-Royce)</li>
+<li><strong>Software and digital transformation wins</strong> (EmpowerMX, IFS, TRAX, AMOS MRO)</li>
+<li><strong>New airline MRO partnerships</strong> (airframe, engine, and component)</li>
+<li><strong>Workforce development initiatives</strong> and apprenticeship programme launches</li>
+<li><strong>Sustainability commitments</strong>: SAF maintenance compatibility, weight-reduction mods</li>
+<li><strong>Oliver Wyman</strong> will present its full 2026–2036 MRO Market Forecast at the show — expected to be the most closely watched session on the conference programme</li>
+</ul>
+<p style="color:var(--gray-400);font-size:13px;font-style:italic;margin-bottom:8px">Source: Aviation Week / MRO Americas official collateral; Oliver Wyman forecast data</p>
+
+<div class="post-section" id="s7">
+  <div class="post-section-header">
+    <div class="section-number">📋</div>
+    <span class="section-icon">⚠️</span>
+    <h2>Key Statistics Summary</h2>
+  </div>
+<div class="table-wrapper"><table class="post-table">
+<thead><tr><th>Metric</th><th>Value</th><th>Source</th></tr></thead><tbody>
+<tr><td>Global aircraft delivery backlog</td><td>17,000+ units</td><td>Oliver Wyman / ARSA, 2026</td></tr>
+<tr><td>OEM delivery shortfall (cumulative)</td><td>5,300+ units</td><td>Safefly.aero, March 24</td></tr>
+<tr><td>GTF engine average shop visit time</td><td>~300 days (vs. 60 days baseline)</td><td>Industry analysis, March 2026</td></tr>
+<tr><td>Safran Belgium investment</td><td>€125 million</td><td>Safran Group, March 27</td></tr>
+<tr><td>India aircraft on order</td><td>1,700+</td><td>Civil Aviation Minister Naidu, March 30</td></tr>
+<tr><td>MRO Central Asia 2026 attendance growth</td><td>~3× prior editions</td><td>Airport-Suppliers.com, March 27</td></tr>
+<tr><td>MRO Americas 2026 expected attendance</td><td>17,000+</td><td>Aviation Week</td></tr>
+<tr><td>MRO Americas 2026 anniversary</td><td>30th edition</td><td>Aviation Week</td></tr>
+<tr><td>Days to MRO Americas 2026 (April 21)</td><td>21 days</td><td>—</td></tr>
+</tbody></table></div>
+
+<div class="post-section" id="s8">
+  <div class="post-section-header">
+    <div class="section-number">📋</div>
+    <span class="section-icon">⚠️</span>
+    <h2>Industry Outlook</h2>
+  </div>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px"><strong>Closing Q1, Opening Q2:</strong> March 31, 2026 marks the end of the first quarter — and the MRO industry is entering Q2 in arguably the strongest demand environment in its history, while simultaneously facing the most structurally constrained supply picture in at least a decade.</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">The Oliver Wyman / ARSA forecast crystallises the core paradox: global MRO spend will be larger than ever over the next decade, but the industry's ability to deliver that maintenance — on time, at quality, at scale — remains fundamentally limited by parts lead times, certified technician shortages, and OEM component supply constraints. Safran's €125 million Belgium investment is a direct, high-conviction bet on solving one piece of that puzzle for LEAP engine LPC components. It won't be the last such investment announced in 2026.</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">Meanwhile, India's combination of a government-backed MRO hub strategy, a new DGCA-EASA production pact, and the imminent Tata-Airbus assembly line launch signals that the country's long-anticipated rise as a major MRO destination is moving from aspiration to execution. With 1,700+ aircraft on order and supply chain constraints forcing extended fleet operations, India's domestic MRO demand alone justifies the investment wave underway.</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">All eyes now turn to MRO Americas (April 21–23, Orlando) — where the industry will spend three days processing Q1's themes and signalling its Q2 priorities. The 30th anniversary show is expected to be the largest in the event's history.</p>
+<p style="color:var(--gray-400);font-size:13px;font-style:italic;margin-bottom:8px">Report compiled from AviTrader, Safran Group, MRO Business Today, Aviation Today, LiveMint, The Hindu Business Line, Airport-Suppliers.com, ASDNews, Oliver Wyman / ARSA, Safefly.aero, Atlantic Jet Partners (March 25–31, 2026). Published March 31, 2026.</p>
+</div>
+          <nav class="post-nav">
+            <a href="march-30-2026.html" class="post-nav-btn">
+              <div class="post-nav-label">← Previous Issue</div>
+              <div class="post-nav-title">March 30 2026</div>
+            </a>
+            <a href="../index.html" class="post-nav-btn" style="text-align:right">
+              <div class="post-nav-label">All Briefings</div>
+              <div class="post-nav-title">View Archive →</div>
+            </a>
+          </nav>
+        </article>
+
+        <aside class="post-sidebar">
+          <div class="toc-widget">
+            <div class="toc-title">In This Issue</div>
+            <ul class="toc-list">
+              <li><a href="#s1"><span class="toc-num">1</span> Market Updates &amp; Growth</a></li>
+              <li><a href="#s2"><span class="toc-num">2</span> Regional Expansion</a></li>
+              <li><a href="#s3"><span class="toc-num">3</span> Supply Chain</a></li>
+              <li><a href="#s4"><span class="toc-num">4</span> Technology &amp; Investment</a></li>
+              <li><a href="#s5"><span class="toc-num">5</span> Challenges &amp; Solutions</a></li>
+            </ul>
+          </div>
+          <div class="sidebar-widget">
+            <h3 class="widget-title">About This Briefing</h3>
+            <p class="widget-text">Source:</p>
+            <div class="widget-badge">
+              <span class="auto-badge">⚡ Automated Daily at 7:00 AM</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand"><span class="logo-icon">✈</span><span class="footer-name">MRO Daily Intelligence</span></div>
+        <div class="footer-text">Automated briefings sourced from Aviation Week Network. Published daily at 7:00 AM.</div>
+      </div>
+    </div>
+  </footer>
+
+<script>
+  var postAudio = null;
+  var audioSrc  = 'posts/march31-2026-email.m4a';  /* relative from inside posts/ dir */
+
+  /* Fix path: this page is in posts/, so audio is same dir */
+  var audioFile = 'march31-2026-email.m4a';
+
+  function fmtPostTime(s) {
+    if (isNaN(s) || !isFinite(s)) return '--:--';
+    var m = Math.floor(s / 60);
+    return m + ':' + String(Math.floor(s % 60)).padStart(2, '0');
+  }
+
+  function togglePostAudio() {
+    var playIcon  = document.getElementById('postPlayIcon');
+    var pauseIcon = document.getElementById('postPauseIcon');
+    var meta      = document.getElementById('postAudioMeta');
+    var fill      = document.getElementById('postAudioFill');
+    var cur       = document.getElementById('postAudioCur');
+    var dur       = document.getElementById('postAudioDur');
+
+    if (!postAudio) {
+      postAudio = new Audio(audioFile);
+      postAudio.addEventListener('loadedmetadata', function() {
+        dur.textContent = fmtPostTime(postAudio.duration);
+        meta.textContent = fmtPostTime(postAudio.duration) + ' · Daniel, en-GB';
+      });
+      postAudio.addEventListener('timeupdate', function() {
+        var pct = (postAudio.currentTime / postAudio.duration) * 100;
+        fill.style.width = pct + '%';
+        cur.textContent = fmtPostTime(postAudio.currentTime);
+      });
+      postAudio.addEventListener('ended', function() {
+        playIcon.style.display = '';
+        pauseIcon.style.display = 'none';
+        meta.textContent = 'Finished · tap to replay';
+        fill.style.width = '0%';
+        cur.textContent = '0:00';
+        postAudio.currentTime = 0;
+      });
+    }
+
+    if (!postAudio.paused) {
+      postAudio.pause();
+      playIcon.style.display = '';
+      pauseIcon.style.display = 'none';
+      meta.textContent = 'Paused';
+    } else {
+      postAudio.play();
+      playIcon.style.display = 'none';
+      pauseIcon.style.display = '';
+      meta.textContent = 'Playing…';
+    }
+  }
+
+  function seekPostAudio(e) {
+    if (!postAudio) return;
+    var track = document.getElementById('postAudioTrack');
+    var rect  = track.getBoundingClientRect();
+    var pct   = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
+    postAudio.currentTime = pct * postAudio.duration;
+  }
+</script>
+</body>
+</html>
