@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MRO Briefing — April 2, 2026 | MRO Daily Intelligence</title>
+  <meta name="description" content="MRO Americas 2026" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/style.css" />
+  <style>
+    /* ── Audio Player ── */
+    .post-audio-player {
+      background: linear-gradient(135deg,#0f2847 0%,#1a4a8a 100%);
+      border-radius: 14px;
+      padding: 18px 20px;
+      margin: 0 0 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .post-audio-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .6px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.5);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .post-audio-controls {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .post-play-btn {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.15);
+      border: 1px solid rgba(255,255,255,.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      flex-shrink: 0;
+      transition: background .15s;
+    }
+    .post-play-btn:hover { background: rgba(255,255,255,.25); }
+    .post-play-btn svg { fill: white; width: 20px; height: 20px; }
+    .post-audio-info { flex: 1; }
+    .post-audio-title { font-size: 14px; font-weight: 600; color: #fff; margin-bottom: 3px; }
+    .post-audio-meta { font-size: 12px; color: rgba(255,255,255,.5); }
+    .post-audio-progress {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .post-audio-time { font-size: 11px; color: rgba(255,255,255,.5); min-width: 32px; font-variant-numeric: tabular-nums; }
+    .post-audio-track {
+      flex: 1;
+      height: 4px;
+      background: rgba(255,255,255,.2);
+      border-radius: 99px;
+      cursor: pointer;
+      position: relative;
+    }
+    .post-audio-fill {
+      height: 100%;
+      width: 0%;
+      background: #fff;
+      border-radius: 99px;
+      transition: width .2s linear;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <div class="logo">
+          <span class="logo-icon">✈</span>
+          <div>
+            <div class="logo-name">MRO Daily Intelligence</div>
+            <div class="logo-tagline">Aviation Maintenance Market Briefings</div>
+          </div>
+        </div>
+        <nav class="nav">
+          <a href="../index.html" class="nav-link">Latest</a>
+          <a href="../index.html#about" class="nav-link">About</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section class="post-hero">
+    <div class="container">
+      <a href="../index.html" class="post-back">← All Briefings</a>
+      <div class="post-issue-label">Issue #16 &nbsp;·&nbsp; April 2, 2026</div>
+      <h1 class="post-title">Daily MRO Market News Summary — April 2, 2026</h1>
+      <div class="post-meta-row">
+        <div class="post-meta-item"><strong>April 2, 2026</strong></div>
+        <div class="post-meta-item">·</div>
+        <div class="post-meta-item">Source: <strong>Aviation Week Network</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <main class="post-body">
+    <div class="container">
+      <div class="post-grid">
+        <article class="post-content">
+
+          <!-- ── Audio Player ── -->
+          <div class="post-audio-player" id="audioPlayer">
+            <div class="post-audio-label">
+              <svg viewBox="0 0 24 24" fill="white" width="12" height="12"><path d="M12 3a9 9 0 100 18A9 9 0 0012 3zm-2 13V8l7 4-7 4z"/></svg>
+              Audio Briefing &nbsp;·&nbsp; Daniel, en-GB
+            </div>
+            <div class="post-audio-controls">
+              <button class="post-play-btn" id="postPlayBtn" onclick="togglePostAudio()" aria-label="Play audio briefing">
+                <svg id="postPlayIcon" viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+                <svg id="postPauseIcon" viewBox="0 0 24 24" style="display:none"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+              </button>
+              <div class="post-audio-info">
+                <div class="post-audio-title">Daily Briefing — April 2, 2026</div>
+                <div class="post-audio-meta" id="postAudioMeta">Tap to listen · ~2 min</div>
+              </div>
+            </div>
+            <div class="post-audio-progress">
+              <span class="post-audio-time" id="postAudioCur">0:00</span>
+              <div class="post-audio-track" id="postAudioTrack" onclick="seekPostAudio(event)">
+                <div class="post-audio-fill" id="postAudioFill"></div>
+              </div>
+              <span class="post-audio-time" id="postAudioDur">--:--</span>
+            </div>
+          </div>
+
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px"><strong>Date:</strong> Thursday, April 2, 2026</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px"><strong>Source:</strong> Aviation Week Network, AeronauticsMagazine.com, AirlineGeeks.com, RTX/Pratt &amp; Whitney, Boeing Global Services, GE Aerospace, CAPA, MRO Business Today, LufthansaTechnik.com, Aviation Week MRO Americas</p>
+
+<div class="post-section" id="s1">
+  <div class="post-section-header">
+    <div class="section-number">1</div>
+    <span class="section-icon">📈</span>
+    <h2>Market Updates and Growth Trends</h2>
+  </div>
+<h3>MRO Americas 2026: T-19 Days to the 30th Anniversary Show — Industry in Strongest Demand Environment in History</h3>
+<ul>
+<li><strong>MRO Americas 2026</strong> opens in <strong>Orlando, Florida</strong> on <strong>April 21–23</strong> — the <strong>30th anniversary edition</strong> of the world's largest aviation maintenance trade show, at the Orange County Convention Center (OCCC)</li>
+<li><strong>Expected attendance: 17,000+</strong> professionals from <strong>93+ countries</strong>; <strong>1,000+ exhibitors</strong> confirmed</li>
+<li>New for the 30th anniversary edition:</li>
+<li><strong>MRO Tech Pitchfest</strong> — first-ever startup pitch competition on the show floor</li>
+<li><strong>Technology Theater</strong> with live solution demonstrations</li>
+<li><strong>Micro-communities</strong> for targeted peer discussions</li>
+<li><strong>AI in Maintenance</strong> as the dominant conference theme, including real-world deployment case studies</li>
+<li>Aviation Week is commemorating <strong>30 years of MRO Americas</strong> — the inaugural event was held at a Dallas hotel ballroom in <strong>1996</strong>, convened by Lee Ann Shay and the Aviation Week editorial team; that first gathering helped establish the term "MRO" as the industry's standard taxonomy and brought together the major aftermarket stakeholders for the first time in a dedicated forum</li>
+</ul>
+<h3>MRO Industry Q2 2026 Outlook: Record Demand Meets Structural Constraint</h3>
+<ul>
+<li>Global commercial MRO spend tracking at <strong>record levels</strong> heading into Q2 2026, with demand driven by:</li>
+<li>Aging in-service fleet extending beyond planned retirement ages due to OEM delivery shortfalls (17,000+ aircraft backlog; 5,300+ cumulative delivery shortfall through 2025–26)</li>
+<li>Post-COVID passenger traffic running at and above 2019 levels in most regions</li>
+<li>Engine MRO remaining the most acute bottleneck, with GTF average shop visit times still at <strong>~300 days</strong> versus ~60 days pre-pandemic</li>
+<li><strong>MRO Global Market Forecast 2026–2034:</strong> Industry analysts project the global aviation MRO market will reach <strong>$61.5 billion by 2033</strong>, growing at ~6.5% CAGR from approximately $36 billion in 2026</li>
+<li><strong>Key structural constraint:</strong> Demand is not the problem; the binding constraint is the industry's collective ability to deliver maintenance on time and at scale, limited by certified technician shortages, parts lead times, and shop-visit capacity ceilings</li>
+</ul>
+<p style="color:var(--gray-400);font-size:13px;font-style:italic;margin-bottom:8px">Source: Aviation Week Network, DataInsightsMarket, Oliver Wyman / ARSA Global Fleet &amp; MRO Market Forecast, April 2026</p>
+
+<div class="post-section" id="s2">
+  <div class="post-section-header">
+    <div class="section-number">2</div>
+    <span class="section-icon">🌏</span>
+    <h2>Regional Expansion Activities</h2>
+  </div>
+<h3>easyJet CEO Sets 50% In-House Heavy Maintenance Target — Plans Acquisition of Adria Tehnika Facility in Slovenia</h3>
+<ul>
+<li><strong>easyJet CEO Kenton Jarvis</strong> confirmed on <strong>March 31, 2026</strong> (Brussels) that the airline is actively targeting a <strong>50% in-house heavy maintenance</strong> ratio — up from the current <strong>25%</strong> — as a strategic lever to:</li>
+<li>Reduce dependency on third-party MRO providers during periods of capacity shortage</li>
+<li>Create internal cost benchmarks to pressure external suppliers on pricing</li>
+<li>Integrate predictive maintenance capabilities more tightly with scheduling</li>
+<li><strong>Adria Tehnika acquisition:</strong> easyJet is finalising the purchase of the <strong>Adria Tehnika heavy maintenance facility</strong> at <strong>Ljubljana Brnik Airport, Slovenia</strong> — a five-bay heavy check hangar that has supported easyJet's Airbus fleet for years; the deal (announced December 2025) is expected to close <strong>early Q2 2026</strong>, subject to regulatory approval</li>
+<li><strong>easyJet's existing in-house MRO footprint:</strong></li>
+<li><strong>Malta facility</strong> (acquired from SR Technics, completed May 2024): accommodates heavy maintenance for the airline's 340+ aircraft fleet with a 400+ workforce</li>
+<li>With Adria Tehnika added, easyJet will control two dedicated heavy maintenance hangars, supporting the push toward 50% insourcing</li>
+<li><strong>Engine overhaul stance:</strong> Despite the insourcing trend, easyJet has <strong>no immediate plans</strong> to perform its own engine overhaul work — CEO Jarvis acknowledged the logic of rival <strong>Ryanair's</strong> engine self-service strategy but described it as "not our priority" for now</li>
+<li><strong>Industry significance:</strong> easyJet's insourcing push is part of a wider trend among LCCs reassessing their make-vs-buy calculus as third-party MRO capacity remains tight and costs elevated</li>
+</ul>
+<p style="color:var(--gray-400);font-size:13px;font-style:italic;margin-bottom:8px">Source: Aviation Week Network (Victoria Moores), March 31–April 1, 2026; CAPA Centre for Aviation, April 1, 2026</p>
+<h3>Lufthansa Technik Component Services Opens Third Tulsa Building — Americas MRO Footprint Strengthened <a class="src-link" href="https://www.lufthansa-technik.com/en/press-releases" target="_blank" rel="noopener">LHT</a></h3>
+<ul>
+<li><strong>Lufthansa Technik Component Services (LTCS)</strong> opened a new <strong>25,000 sq ft</strong> facility in <strong>Tulsa, Oklahoma</strong> — the <strong>third building</strong> on its Tulsa campus (announced March 30, 2026)</li>
+<li><strong>New facility features:</strong></li>
+<li><strong>90 new workstations</strong></li>
+<li>Upgraded <strong>avionics workshop</strong></li>
+<li>Expanded <strong>administrative support</strong> for Americas-wide MRO operations</li>
+<li><strong>Initial service scope (Phase 1):</strong></li>
+<li><strong>Integrated Drive Generator (IDG)</strong> overhaul for: <strong>A320ceo, A320neo, B737 NG, B737 MAX</strong> — covering the most widely operated narrowbody families globally</li>
+<li><strong>Phase 2 expansion (planned):</strong></li>
+<li>Additional space and capabilities in <strong>pneumatic systems</strong> and <strong>complex avionics repair</strong></li>
+<li>Renovation of both existing campus buildings</li>
+<li><strong>Global network integration:</strong> Fully integrated with LTCS's main component centres in <strong>Hamburg, Frankfurt,</strong> and <strong>Shenzhen (China)</strong></li>
+<li><strong>LTCS COO Harald Gloy:</strong> "The Americas is a key market for global MRO services. This expansion reinforces our long-term presence and our commitment to delivering world-class technical services."</li>
+<li><strong>Context:</strong> Lufthansa Technik reported a <strong>record €8 billion revenue</strong> in FY2025 (announced March 7, 2026) and unveiled a <strong>€2 billion global MRO expansion plan</strong> covering Germany, Portugal, Canada, and the Americas</li>
+</ul>
+<p style="color:var(--gray-400);font-size:13px;font-style:italic;margin-bottom:8px">Source: AirlineGeeks.com (Zach Vasile), March 30, 2026; Aviation Week Network, March 28, 2026</p>
+<h3>MRO Greater China 2026: Inaugural Beijing Show Confirmed for May 26–28 — China's First Major MRO Platform</h3>
+<ul>
+<li>The <strong>inaugural MRO Greater China Conference &amp; Exhibition</strong> is confirmed for <strong>May 26–28, 2026</strong> at the <strong>Capital International Exhibition Center, Beijing</strong></li>
+<li><strong>Co-hosted by:</strong> <strong>Aviation Week Network (AWN)</strong> and <strong>China Aviation Supplies Holding Co. (CAS)</strong> — bringing together AWN's global MRO event infrastructure with CAS's deep penetration across China's airline, MRO, and supply chain ecosystem</li>
+<li><strong>Scale:</strong> 200+ domestic and international solution providers; targeted at China's <strong>4,000+ commercial aircraft fleet</strong> and the <strong>fastest-growing MRO demand region</strong> globally</li>
+<li><strong>Strategic timing:</strong> The show launches just 33 days after MRO Americas closes — positioning China as the next major growth chapter for the industry in 2026</li>
+<li><strong>Key themes:</strong> Fleet digitalisation, domestic parts localisation, CAAC regulatory reform, narrowbody engine MRO capacity, and China's ambition to build internationally competitive MRO capabilities</li>
+<li><strong>T-54 days</strong> from today (April 2) until MRO Greater China opens</li>
+</ul>
+<p style="color:var(--gray-400);font-size:13px;font-style:italic;margin-bottom:8px">Source: Aviation Week Network / Aviation Week MRO Greater China official site, April 2026</p>
+
+<div class="post-section" id="s3">
+  <div class="post-section-header">
+    <div class="section-number">3</div>
+    <span class="section-icon">🔗</span>
+    <h2>Supply Chain Developments</h2>
+  </div>
+<h3>Airbus Launches Damages Claim Against Pratt &amp; Whitney Over GTF Engine Shortages — "Glider" Backlog Exceeds Industry Tolerance <a class="src-link" href="https://aviationweek.com/mro/aircraft-propulsion" target="_blank" rel="noopener">Aviation Week</a></h3>
+<ul>
+<li><strong>Airbus SE</strong> formally launched a <strong>damages claim</strong> against <strong>Pratt &amp; Whitney (RTX)</strong> in <strong>March 2026</strong> — the most significant OEM-supplier legal confrontation in commercial aviation since the pandemic</li>
+<li><strong>Core dispute:</strong> The <strong>PW1000G Geared Turbofan (GTF)</strong> engine's prolonged supply crisis, rooted in a <strong>powder metal contamination defect</strong> disclosed mid-2023 requiring ~1,200 engine recalls, with repair timelines far exceeding initial commitments</li>
+<li><strong>Airbus's documented impact:</strong></li>
+<li>Hundreds of <strong>"glider" aircraft</strong> — completed A320neo and A220 fuselages awaiting engine installation — unable to be delivered</li>
+<li>Airbus Q1 2026 deliveries: <strong>54 aircraft</strong> vs. <strong>65 aircraft</strong> in Q1 2025 — a <strong>~20% year-over-year decline</strong></li>
+<li>Airbus's target of <strong>75 aircraft/month</strong> for the A320neo family pushed back to <strong>late 2027</strong></li>
+<li>Airbus stock down <strong>~20%</strong> in 2026 to date</li>
+<li>Airbus has paid "hundreds of millions of dollars" in delay penalties to airline customers</li>
+<li><strong>Pratt &amp; Whitney's position:</strong></li>
+<li>RTX paid approximately <strong>$1 billion</strong> in GTF-related compensation charges in 2025</li>
+<li>P&amp;W maintains it has been prioritising MRO throughput on grounded fleet before new engine deliveries — which Airbus disputes</li>
+<li>P&amp;W's <strong>GTF Enhancement Programme</strong> targets <strong>90–95% improvement in engine durability</strong> via 35 component upgrades, with completion of in-service fleet upgrades expected through 2026</li>
+<li><strong>Affected aircraft:</strong> The A220 series is <strong>entirely dependent</strong> on P&amp;W PW1500G engines; ~40% of A320neo aircraft use GTF (vs. 60% CFM LEAP-1A)</li>
+<li><strong>Industry-wide MRO implication:</strong> The legal dispute highlights the systemic risk when a single OEM supplier becomes a structural bottleneck for both new-aircraft delivery AND in-service MRO support simultaneously</li>
+</ul>
+<p style="color:var(--gray-400);font-size:13px;font-style:italic;margin-bottom:8px">Source: AeronauticsMagazine.com (Marius Bujor), March 31, 2026; RTX investor relations</p>
+<h3>Boeing Global Services Invests in AI, USM, and Inventory to Counter Persistent Supply Chain Gaps</h3>
+<ul>
+<li><strong>Boeing Global Services (BGS)</strong> told Aviation Week (March 31, 2026) that while the supply chain is <strong>"starting to stabilise,"</strong> a full recovery to <strong>pre-pandemic benchmarks is unlikely before 2030</strong></li>
+<li><strong>Key supply chain pressures Boeing identified:</strong></li>
+<li>Supplier capacity limitations constraining demand fulfilment</li>
+<li>Unexpected shortages from obsolescence, non-conforming parts, and sub-component gaps within OEM supply chains</li>
+<li><strong>BGS's three-pronged response:</strong></li>
+</ul>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">1. <strong>AI and Data Analytics:</strong></p>
+<ul>
+<li><strong>Parts Planning Hub</strong>: data-driven collaborative tool improving demand forecasting accuracy for spare parts</li>
+<li><strong>Landing gear analytics tool</strong>: uses aircraft health monitoring data to predict component replacement needs ahead of shop visits</li>
+</ul>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">2. <strong>Inventory and Logistics Expansion:</strong></p>
+<ul>
+<li>Increased investment in transactional spares, component repair, and exchange programmes</li>
+<li>Expanding global warehouse network — moving stock closer to airline and MRO customers</li>
+</ul>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">3. <strong>Used Serviceable Material (USM) Market:</strong></p>
+<ul>
+<li>BGS projects the USM market will grow at <strong>~10% per year</strong></li>
+<li>USM enables operators to optimise maintenance strategies, reduce costs, and sustain airworthiness without sacrificing quality standards</li>
+<li>Particularly critical for airlines managing extended fleet life beyond original retirement plans</li>
+<li><strong>Upcoming coverage:</strong> Full BGS and major component OEM aftermarket strategy analysis to be published in the next edition of <strong>Inside MRO</strong> (Aviation Week)</li>
+</ul>
+<p style="color:var(--gray-400);font-size:13px;font-style:italic;margin-bottom:8px">Source: Aviation Week Network (Alex Derber), March 31, 2026</p>
+<h3>Southwest Airlines Faces CFM56 and LEAP-1B Spare Engine Crunch — H2 2026 HPT Wave Looming</h3>
+<ul>
+<li><strong>Southwest Airlines</strong> outlined its near-term engine MRO challenge in an April 1, 2026 Aviation Week interview with VP of Maintenance Ken Barone</li>
+<li><strong>Southwest's engine portfolio:</strong> ~800 engines across <strong>CFM56-7B</strong> (737-700/800) and <strong>LEAP-1B</strong> (737 MAX)</li>
+<li><strong>Two convergent MRO waves in H2 2026:</strong></li>
+<li><strong>CFM56 P04 HPT blade inspection programme</strong> — a wave of high-pressure turbine blade replacements creating simultaneous shop visit demand across multiple fleets</li>
+<li><strong>LEAP-1B Stage 1 HPT disc life limit</strong> (≤10,000 cycles) — disc replacement requirements triggering new engine inductions across the growing MAX fleet</li>
+<li><strong>Southwest's spare engine concern:</strong> "Spare engine availability is one of our most significant worries heading into the second half of the year" — availability of on-wing spares is critical to maintaining aircraft readiness</li>
+<li><strong>MRO partner network:</strong> Southwest relies on <strong>StandardAero, SR Technics, Lufthansa Technik, MTU Maintenance</strong> for engine overhaul alongside CFM's and GE Aerospace's own PBH (power-by-the-hour) arrangements</li>
+<li><strong>MAX transition update:</strong> Boeing 737 MAX 7 certification expected in <strong>2026</strong>, with Southwest planning entry into service in <strong>2027</strong></li>
+<li><strong>Financial strength as buffer:</strong> Southwest owns <strong>88% of its airframes and engines</strong> outright — providing strategic flexibility in fleet and engine management unavailable to highly-leased carriers</li>
+</ul>
+<p style="color:var(--gray-400);font-size:13px;font-style:italic;margin-bottom:8px">Source: Aviation Week Network (Lee Ann Shay, James Pozzi), April 1, 2026</p>
+
+<div class="post-section" id="s4">
+  <div class="post-section-header">
+    <div class="section-number">4</div>
+    <span class="section-icon">💡</span>
+    <h2>Technology and Investment News</h2>
+  </div>
+<h3>Pratt &amp; Whitney Deploys Robotics at Eagle Services Asia to Accelerate GTF AOG Recovery <a class="src-link" href="https://aviationweek.com/mro/aircraft-propulsion" target="_blank" rel="noopener">Aviation Week</a></h3>
+<ul>
+<li><strong>Pratt &amp; Whitney</strong> has deployed <strong>robotics and automation technology</strong> at its <strong>Eagle Services Asia (ESA)</strong> MRO facility in Singapore to accelerate GTF engine shop visit turnaround</li>
+<li><strong>Robot application:</strong></li>
+<li>Camera-equipped robots perform <strong>automated engine inspection and documentation</strong> as engines check in to the facility ahead of disassembly — reducing manual inspection time and capturing more granular condition data</li>
+<li>Automation enabling faster <strong>work-scoping decisions</strong> at induction, accelerating the path from engine arrival to disassembly and repair</li>
+<li><strong>Target:</strong> Reducing GTF shop visit cycle times from the current ~300-day industry average</li>
+<li><strong>Context:</strong> P&amp;W's Columbus, Georgia facility also received a <strong>$70 million expansion</strong> (completed early 2026) adding 81,000 sq ft of GTF MRO capacity — boosting that centre's annual throughput by <strong>25%+</strong></li>
+<li>Additionally, RTX announced in <strong>February 2026</strong> a <strong>$200 million investment</strong> to add a <strong>seventh isothermal forging press</strong> at Columbus — targeting <strong>30% higher output</strong> of critical GTF and F135 engine rotating components (disc and compressor blades); operational <strong>2028</strong></li>
+</ul>
+<p style="color:var(--gray-400);font-size:13px;font-style:italic;margin-bottom:8px">Source: Aviation Week Network, February–April 2026; RTX press release, February 24, 2026</p>
+<h3>GE Aerospace's $300M Singapore Expansion: AI Centre of Excellence Targets 21-Day Engine Turnaround by 2028 <a class="src-link" href="https://www.geaerospace.com/news" target="_blank" rel="noopener">GE Aerospace</a></h3>
+<ul>
+<li><strong>GE Aerospace</strong> is executing a <strong>$300 million multi-year investment</strong> at its Singapore engine repair hub — announced February 4, 2026 in partnership with the <strong>Singapore Economic Development Board (EDB)</strong></li>
+<li><strong>AI Centre of Excellence for MRO:</strong></li>
+<li>Developing AI-driven diagnostic and repair process optimisation — targeting reduction of engine MRO cycle time from <strong>~40 days to ~21 days</strong> by <strong>2028</strong></li>
+<li>Integrating robotics, machine learning-based inspection algorithms, and automated documentation into the shop floor workflow</li>
+<li><strong>STAC (Singapore Technology &amp; Aerospace Centre) Laureate Award:</strong> GE's manufacturing AI/robotics team won Aviation Week's <strong>2026 Laureate Award</strong> (announced March 23, 2026) — recognising manufacturing excellence and pointing toward MRO's AI-automation future</li>
+<li><strong>Strategic importance:</strong> Singapore is GE Aerospace's largest engine MRO hub outside the United States; the expansion comes as GE's GE9X, GE90, and LEAP engine overhaul volumes accelerate</li>
+</ul>
+<p style="color:var(--gray-400);font-size:13px;font-style:italic;margin-bottom:8px">Source: GE Aerospace press release, February 4, 2026; Aviation Week Laureate Awards, March 23, 2026</p>
+<h3>FAA Launches Rulemaking to Recognise Foreign Maintenance Certificates — Bilateral Agreement Framework to Cut Duplicate Audits</h3>
+<ul>
+<li>The <strong>FAA</strong> has formally initiated a <strong>rulemaking process</strong> (published March 31, 2026) to enable recognition of <strong>non-U.S. maintenance organisation certificates</strong> through bilateral aviation safety agreements</li>
+<li><strong>Core change:</strong> Under the proposed framework, the FAA could directly accept <strong>EASA-certificated, Transport Canada-certificated,</strong> and other bilaterally agreed MRO organisations' approvals — eliminating the need for a full separate FAA approval process</li>
+<li><strong>Industry benefit:</strong> Significantly reduces duplicative regulatory audit burden and cost for non-U.S. MRO providers seeking access to the US market — a long-sought reform by ARSA and international MRO associations</li>
+<li><strong>Current status:</strong> Rule in early-to-mid rulemaking stage; exact timeline for implementation not yet disclosed</li>
+<li><strong>Workforce context:</strong> The FAA simultaneously projects demand for <strong>190,000 new certified aviation mechanics by 2037</strong> — with training pipeline currently insufficient to close the gap; the foreign certificate recognition rule is seen as one tool for addressing skilled-labour scarcity by expanding the accessible workforce pool</li>
+</ul>
+<p style="color:var(--gray-400);font-size:13px;font-style:italic;margin-bottom:8px">Source: Aviation Week Network (Sean Broderick), March 31, 2026; Aviation Technician Shortage analysis, OxMaint, March 2026</p>
+
+<div class="post-section" id="s5">
+  <div class="post-section-header">
+    <div class="section-number">5</div>
+    <span class="section-icon">⚠️</span>
+    <h2>Major Challenges and Solutions</h2>
+  </div>
+<h3>Challenge: MRO Workforce Shortage — FAA Projects 190,000 New Mechanics Needed by 2037</h3>
+<ul>
+<li>The aviation MRO industry faces a <strong>structural workforce crisis</strong> that hiring budgets alone cannot resolve:</li>
+<li><strong>Demand side:</strong> FAA projects 190,000 new certified A&amp;P mechanics needed by 2037; global estimates put the shortfall at 300,000+ technicians across commercial, business, and military aviation</li>
+<li><strong>Supply side:</strong> Aviation mechanic school enrollments recovering post-COVID but still ~30% below 2019 levels; training-to-certification cycle takes 18–24 months minimum</li>
+<li><strong>Retention challenge:</strong> Experienced technicians leaving MRO for manufacturing roles offering comparable pay without the shift/rotational schedule burden</li>
+<li><strong>MRO sector responses in Q1–Q2 2026:</strong></li>
+<li><strong>India:</strong> Aviation Maintenance Engineering (AME) institute launches <strong>apprentice AME programme with IndiGo</strong> — first major carrier-sponsored AME training pipeline in India's domestic MRO sector</li>
+<li><strong>Scandinavia:</strong> Revitalised SAS (post-restructuring) reports early success with <strong>predictive maintenance programmes</strong> that reduce unscheduled maintenance events — partially offsetting technician shortage by reducing emergency work volume</li>
+<li><strong>MRO Americas 2026:</strong> Dedicated sessions on mentorship, high-school-to-MRO pipeline, and "soft skills gap" among new-hire technicians — reflecting industry recognition that workforce development is an existential issue, not just an HR challenge</li>
+<li><strong>High school MRO competition finding (Aviation Week, April 2026):</strong> Aviation Week coverage highlighted that <strong>high-school students in MRO skills competitions</strong> are performing at parity with or exceeding professionals in certain standardised tasks — suggesting that the next generation of technicians is emerging from non-traditional pathways</li>
+</ul>
+<p style="color:var(--gray-400);font-size:13px;font-style:italic;margin-bottom:8px">Source: Aviation Week Network; OxMaint Aviation Technician Shortage 2026 analysis; MRO Business Today, April 1, 2026</p>
+<h3>Challenge: USM Market Expansion vs. OEM Spare Parts Strategy</h3>
+<ul>
+<li>The <strong>Used Serviceable Material (USM) market</strong> is accelerating as airlines and MROs seek cost-effective alternatives to new OEM spares, which face long lead times and elevated prices:</li>
+<li><strong>Boeing Global Services</strong> projecting USM market growing at <strong>~10% annually</strong>; expanding its own USM consignment and resale capabilities</li>
+<li><strong>AerSale</strong> (a leading independent USM trader) has flagged rising <strong>asset acquisition costs</strong> as competition for used aircraft and engine teardowns intensifies — reflecting the market's maturation</li>
+<li><strong>Setna iO acquires J&amp;C Aero</strong> — expanding cabin interior component services capabilities, reflecting the growing importance of cabin MRO as airlines refresh interiors without awaiting new aircraft delivery</li>
+<li><strong>OEM vs. PMA/USM tension:</strong> Southwest Airlines confirmed it <strong>has no plans to use PMA (Parts Manufacturer Approval) parts</strong> — maintaining an OEM-only strategy; but the broader industry trend is toward mixed strategies as lead times for OEM parts extend beyond operator tolerances</li>
+</ul>
+<p style="color:var(--gray-400);font-size:13px;font-style:italic;margin-bottom:8px">Source: Aviation Week MRO Inside Briefs March–April 2026; Boeing Global Services, March 31, 2026; ePlane AI analysis</p>
+<h3>Challenge: Engine Shop Visit Backlog — Systemic Constraints Not Resolving Before 2027</h3>
+<div class="table-wrapper"><table class="post-table">
+<thead><tr><th>Engine Programme</th><th>Key 2026 Issue</th><th>Expected Relief</th></tr></thead><tbody>
+<tr><td><strong>P&amp;W GTF PW1100G</strong></td><td>~300-day shop visit times; Airbus legal dispute over delivery priority</td><td>P&amp;W Columbus +25% capacity (2026); upgrade programme through 2026</td></tr>
+<tr><td><strong>CFM56-7B</strong></td><td>P04 HPT blade inspection wave H2 2026</td><td>Gradual GE Aerospace network expansion</td></tr>
+<tr><td><strong>CFM LEAP-1B</strong></td><td>Stage 1 HPT disc life limit (≤10,000 cycles) creating new induction wave</td><td>CFM network expansion ongoing; Safran Belgium €125M LPC supply 2027–28</td></tr>
+<tr><td><strong>GE9X / GE90</strong></td><td>Maturing widebody fleets; GE Singapore $300M expansion underway</td><td>AI/automation targets 21-day cycle by 2028</td></tr>
+</tbody></table></div>
+<p style="color:var(--gray-400);font-size:13px;font-style:italic;margin-bottom:8px">Source: Aviation Week, Southwest Airlines, RTX, GE Aerospace, Safran Group, April 2026</p>
+
+<div class="post-section" id="s6">
+  <div class="post-section-header">
+    <div class="section-number">📋</div>
+    <span class="section-icon">⚠️</span>
+    <h2>Key Statistics Summary</h2>
+  </div>
+<div class="table-wrapper"><table class="post-table">
+<thead><tr><th>Metric</th><th>Value</th><th>Source</th></tr></thead><tbody>
+<tr><td>MRO Americas 2026 expected attendance</td><td>17,000+</td><td>Aviation Week</td></tr>
+<tr><td>MRO Americas 2026 anniversary</td><td>30th edition</td><td>Aviation Week</td></tr>
+<tr><td>Days to MRO Americas 2026 (April 21)</td><td><strong>19 days</strong></td><td>—</td></tr>
+<tr><td>MRO Greater China inaugural show</td><td>May 26–28, Beijing</td><td>Aviation Week / CAS</td></tr>
+<tr><td>Global MRO market size (2026 est.)</td><td>~$36 billion</td><td>DataInsightsMarket</td></tr>
+<tr><td>Global MRO market projected (2033)</td><td>$61.5 billion</td><td>DataInsightsMarket</td></tr>
+<tr><td>Airbus Q1 2026 deliveries vs. Q1 2025</td><td>54 vs. 65 aircraft (-20%)</td><td>AeronauticsMagazine</td></tr>
+<tr><td>GTF average shop visit time (current)</td><td>~300 days (vs. 60-day baseline)</td><td>Industry analysis</td></tr>
+<tr><td>easyJet current in-house heavy MRO</td><td>25% (targeting 50%)</td><td>Aviation Week / CAPA</td></tr>
+<tr><td>LTCS new Tulsa facility size</td><td>25,000 sq ft (3rd building)</td><td>AirlineGeeks</td></tr>
+<tr><td>Boeing USM market growth forecast</td><td>~10% per year</td><td>Boeing Global Services</td></tr>
+<tr><td>FAA new mechanics needed by 2037</td><td>190,000</td><td>FAA / OxMaint</td></tr>
+<tr><td>P&amp;W Columbus GTF MRO expansion</td><td>$70M, +25% throughput</td><td>RTX</td></tr>
+<tr><td>P&amp;W Columbus new forging press</td><td>$200M investment, 2028</td><td>RTX</td></tr>
+<tr><td>GE Aerospace Singapore expansion</td><td>$300M, targets 21-day cycle</td><td>GE Aerospace</td></tr>
+</tbody></table></div>
+
+<div class="post-section" id="s7">
+  <div class="post-section-header">
+    <div class="section-number">📋</div>
+    <span class="section-icon">⚠️</span>
+    <h2>Industry Outlook</h2>
+  </div>
+<p style="color:var(--gray-400);font-size:13px;font-style:italic;margin-bottom:8px">Q2 2026 Opens with Legal Escalation and Structural Pressure — But Also Acceleration:</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">April 2, 2026 finds the MRO industry entering Q2 with a backdrop of escalating legal tension (Airbus vs. Pratt &amp; Whitney), persistent supply chain constraints, and a workforce shortfall that will take years to close. Yet simultaneously, the pace of investment, capacity expansion, and technology deployment in 2026 is unprecedented.</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">Three themes dominate the next 19 days before MRO Americas opens:</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">1. <strong>Legal and commercial pressure from Airbus–P&amp;W dispute</strong> will force RTX to accelerate its delivery prioritisation commitments and GTF MRO throughput — positive for the overall GTF in-service fleet but creating ongoing delivery drama for new A220 and A320neo operators.</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">2. <strong>In-sourcing vs. outsourcing realignment</strong> — easyJet's 50% in-house target joins Ryanair as evidence that LCCs with scale are increasingly moving to vertical integration of maintenance, while smaller regional operators rely more on OEM-supported programmes (Embraer's E-Jet support model).</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">3. <strong>Technology investment as the long-term solution</strong> — GE Aerospace's AI-driven 21-day cycle target in Singapore, P&amp;W's robotics deployment at Eagle Services Asia, and Boeing's AI-powered Parts Planning Hub collectively signal that MRO's structural constraints will ultimately be solved by automation and predictive intelligence — but the timeline stretches to 2027–2028, not 2026.</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">MRO Americas (April 21–23) is now 19 days away. All eyes will be on what GE Aerospace, CFM/Safran, P&amp;W/RTX, and the major MRO integrators announce in the pre-show window.</p>
+<p style="color:var(--gray-400);font-size:13px;font-style:italic;margin-bottom:8px">Report compiled from Aviation Week Network, AeronauticsMagazine.com, AirlineGeeks.com, RTX/Pratt &amp; Whitney, Boeing Global Services, GE Aerospace, CAPA Centre for Aviation, MRO Business Today, Lufthansa Technik, Aviation Week MRO Americas (March 31–April 2, 2026). Published April 2, 2026.</p>
+</div>
+          <nav class="post-nav">
+            <a href="march-31-2026.html" class="post-nav-btn">
+              <div class="post-nav-label">← Previous Issue</div>
+              <div class="post-nav-title">March 31 2026</div>
+            </a>
+            <a href="../index.html" class="post-nav-btn" style="text-align:right">
+              <div class="post-nav-label">All Briefings</div>
+              <div class="post-nav-title">View Archive →</div>
+            </a>
+          </nav>
+        </article>
+
+        <aside class="post-sidebar">
+          <div class="toc-widget">
+            <div class="toc-title">In This Issue</div>
+            <ul class="toc-list">
+              <li><a href="#s1"><span class="toc-num">1</span> Market Updates &amp; Growth</a></li>
+              <li><a href="#s2"><span class="toc-num">2</span> Regional Expansion</a></li>
+              <li><a href="#s3"><span class="toc-num">3</span> Supply Chain</a></li>
+              <li><a href="#s4"><span class="toc-num">4</span> Technology &amp; Investment</a></li>
+              <li><a href="#s5"><span class="toc-num">5</span> Challenges &amp; Solutions</a></li>
+            </ul>
+          </div>
+          <div class="sidebar-widget">
+            <h3 class="widget-title">About This Briefing</h3>
+            <p class="widget-text">Source:</p>
+            <div class="widget-badge">
+              <span class="auto-badge">⚡ Automated Daily at 7:00 AM</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand"><span class="logo-icon">✈</span><span class="footer-name">MRO Daily Intelligence</span></div>
+        <div class="footer-text">Automated briefings sourced from Aviation Week Network. Published daily at 7:00 AM.</div>
+      </div>
+    </div>
+  </footer>
+
+<script>
+  var postAudio = null;
+  var audioSrc  = 'posts/april2-2026-email.m4a';  /* relative from inside posts/ dir */
+
+  /* Fix path: this page is in posts/, so audio is same dir */
+  var audioFile = 'april2-2026-email.m4a';
+
+  function fmtPostTime(s) {
+    if (isNaN(s) || !isFinite(s)) return '--:--';
+    var m = Math.floor(s / 60);
+    return m + ':' + String(Math.floor(s % 60)).padStart(2, '0');
+  }
+
+  function togglePostAudio() {
+    var playIcon  = document.getElementById('postPlayIcon');
+    var pauseIcon = document.getElementById('postPauseIcon');
+    var meta      = document.getElementById('postAudioMeta');
+    var fill      = document.getElementById('postAudioFill');
+    var cur       = document.getElementById('postAudioCur');
+    var dur       = document.getElementById('postAudioDur');
+
+    if (!postAudio) {
+      postAudio = new Audio(audioFile);
+      postAudio.addEventListener('loadedmetadata', function() {
+        dur.textContent = fmtPostTime(postAudio.duration);
+        meta.textContent = fmtPostTime(postAudio.duration) + ' · Daniel, en-GB';
+      });
+      postAudio.addEventListener('timeupdate', function() {
+        var pct = (postAudio.currentTime / postAudio.duration) * 100;
+        fill.style.width = pct + '%';
+        cur.textContent = fmtPostTime(postAudio.currentTime);
+      });
+      postAudio.addEventListener('ended', function() {
+        playIcon.style.display = '';
+        pauseIcon.style.display = 'none';
+        meta.textContent = 'Finished · tap to replay';
+        fill.style.width = '0%';
+        cur.textContent = '0:00';
+        postAudio.currentTime = 0;
+      });
+    }
+
+    if (!postAudio.paused) {
+      postAudio.pause();
+      playIcon.style.display = '';
+      pauseIcon.style.display = 'none';
+      meta.textContent = 'Paused';
+    } else {
+      postAudio.play();
+      playIcon.style.display = 'none';
+      pauseIcon.style.display = '';
+      meta.textContent = 'Playing…';
+    }
+  }
+
+  function seekPostAudio(e) {
+    if (!postAudio) return;
+    var track = document.getElementById('postAudioTrack');
+    var rect  = track.getBoundingClientRect();
+    var pct   = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
+    postAudio.currentTime = pct * postAudio.duration;
+  }
+</script>
+</body>
+</html>
