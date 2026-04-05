@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MRO Briefing — April 1, 2026 | MRO Daily Intelligence</title>
+  <meta name="description" content="Aviation Week Network" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/style.css" />
+  <style>
+    /* ── Audio Player ── */
+    .post-audio-player {
+      background: linear-gradient(135deg,#0f2847 0%,#1a4a8a 100%);
+      border-radius: 14px;
+      padding: 18px 20px;
+      margin: 0 0 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .post-audio-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .6px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.5);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .post-audio-controls {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .post-play-btn {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.15);
+      border: 1px solid rgba(255,255,255,.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      flex-shrink: 0;
+      transition: background .15s;
+    }
+    .post-play-btn:hover { background: rgba(255,255,255,.25); }
+    .post-play-btn svg { fill: white; width: 20px; height: 20px; }
+    .post-audio-info { flex: 1; }
+    .post-audio-title { font-size: 14px; font-weight: 600; color: #fff; margin-bottom: 3px; }
+    .post-audio-meta { font-size: 12px; color: rgba(255,255,255,.5); }
+    .post-audio-progress {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .post-audio-time { font-size: 11px; color: rgba(255,255,255,.5); min-width: 32px; font-variant-numeric: tabular-nums; }
+    .post-audio-track {
+      flex: 1;
+      height: 4px;
+      background: rgba(255,255,255,.2);
+      border-radius: 99px;
+      cursor: pointer;
+      position: relative;
+    }
+    .post-audio-fill {
+      height: 100%;
+      width: 0%;
+      background: #fff;
+      border-radius: 99px;
+      transition: width .2s linear;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <div class="logo">
+          <span class="logo-icon">✈</span>
+          <div>
+            <div class="logo-name">MRO Daily Intelligence</div>
+            <div class="logo-tagline">Aviation Maintenance Market Briefings</div>
+          </div>
+        </div>
+        <nav class="nav">
+          <a href="../index.html" class="nav-link">Latest</a>
+          <a href="../index.html#about" class="nav-link">About</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section class="post-hero">
+    <div class="container">
+      <a href="../index.html" class="post-back">← All Briefings</a>
+      <div class="post-issue-label">Issue #18 &nbsp;·&nbsp; April 1, 2026</div>
+      <h1 class="post-title">Daily MRO Market News Summary — April 1, 2026</h1>
+      <div class="post-meta-row">
+        <div class="post-meta-item"><strong>April 1, 2026</strong></div>
+        <div class="post-meta-item">·</div>
+        <div class="post-meta-item">Source: <strong>Aviation Week Network</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <main class="post-body">
+    <div class="container">
+      <div class="post-grid">
+        <article class="post-content">
+
+          <!-- ── Audio Player ── -->
+          <div class="post-audio-player" id="audioPlayer">
+            <div class="post-audio-label">
+              <svg viewBox="0 0 24 24" fill="white" width="12" height="12"><path d="M12 3a9 9 0 100 18A9 9 0 0012 3zm-2 13V8l7 4-7 4z"/></svg>
+              Audio Briefing &nbsp;·&nbsp; Daniel, en-GB
+            </div>
+            <div class="post-audio-controls">
+              <button class="post-play-btn" id="postPlayBtn" onclick="togglePostAudio()" aria-label="Play audio briefing">
+                <svg id="postPlayIcon" viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+                <svg id="postPauseIcon" viewBox="0 0 24 24" style="display:none"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+              </button>
+              <div class="post-audio-info">
+                <div class="post-audio-title">Daily Briefing — April 1, 2026</div>
+                <div class="post-audio-meta" id="postAudioMeta">Tap to listen · ~2 min</div>
+              </div>
+            </div>
+            <div class="post-audio-progress">
+              <span class="post-audio-time" id="postAudioCur">0:00</span>
+              <div class="post-audio-track" id="postAudioTrack" onclick="seekPostAudio(event)">
+                <div class="post-audio-fill" id="postAudioFill"></div>
+              </div>
+              <span class="post-audio-time" id="postAudioDur">--:--</span>
+            </div>
+          </div>
+
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px"><strong>Date:</strong> Wednesday, April 1, 2026</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px"><strong>Source:</strong> Aviation Week Network, MRO Business Today, National Today / Aviation Week, Klagenfurt Airport / Solinair, AerFin, DASI / Mesa Airlines, StandardAero</p>
+
+<div class="post-section" id="s1">
+  <div class="post-section-header">
+    <div class="section-number">1</div>
+    <span class="section-icon">📈</span>
+    <h2>Market Updates and Growth Trends</h2>
+  </div>
+<h3>MRO Americas Celebrates 30 Years — Conference Countdown: 3 Weeks Out</h3>
+<ul>
+<li><strong>Aviation Week Network</strong> marks the 30th anniversary of the MRO Americas conference (National Today / Aviation Week, April 1)</li>
+<li>The inaugural <strong>MRO '96</strong> was held in a Dallas hotel ballroom in 1996, introducing the term "MRO" to mainstream aviation vocabulary</li>
+<li>From that small gathering, the conference has grown into the <strong>world's largest aviation aftermarket event</strong>, now drawing thousands of industry professionals annually</li>
+<li><strong>MRO Americas 2026</strong> (Orlando, FL, April 21–23) is now <strong>T-21 days out</strong> with pre-conference announcements accelerating</li>
+<li>Aviation Week is preparing a special 30th-anniversary editorial retrospective for the Orlando event, examining how MRO evolved from niche afterthought to a <strong>$136B+ global industry</strong></li>
+<li><strong>Why it matters:</strong> The conference timing coincides with peak MRO demand forecasts; senior procurement and engineering executives from all major carriers will be present in Orlando</li>
+</ul>
+
+<div class="post-section" id="s2">
+  <div class="post-section-header">
+    <div class="section-number">2</div>
+    <span class="section-icon">🌏</span>
+    <h2>Fleet &amp; Component Deals</h2>
+  </div>
+<h3>DASI Acquires Mesa Airlines CRJ Fleet Inventory to Support Republic Airways Merger</h3>
+<ul>
+<li><strong>DASI</strong> (Miami-based aviation inventory and logistics solutions provider) signed an agreement with <strong>Mesa Airlines</strong> to support its fleet transition and integration into <strong>Republic Airways</strong> (Aviation Week, April 1)</li>
+<li>As part of the deal, DASI acquired <strong>the entire spare parts inventory</strong> covering Mesa's full <strong>CRJ700 and CRJ900 fleet</strong></li>
+<li>Mesa Airlines is in the process of winding down independent operations and merging its regional flying operations under Republic Airways</li>
+<li>The inventory acquisition covers rotable components, expendable parts, and potentially tooling associated with the CRJ program</li>
+<li><strong>DASI's role:</strong> Will manage redistribution of the Mesa inventory into DASI's customer network, making parts available to other CRJ operators globally</li>
+<li><strong>Why it matters:</strong> As regional carriers consolidate, significant pools of serviceable parts become available — DASI's move positions it as a key redistributor of CRJ assets in a market where the CRJ is still widely operated by 30+ airlines worldwide</li>
+</ul>
+<h3>AerFin Acquires Fourth Japan Airlines 777-300ER for Teardown</h3>
+<ul>
+<li><strong>AerFin</strong> (UK-based aircraft asset specialist) acquired its <strong>fourth Boeing 777-300ER</strong> previously operated by <strong>Japan Airlines</strong>, adding to its growing 777 teardown and parts trading programme (Aviation Week, April 1)</li>
+<li>The aircraft joins three other ex-JAL 777-300ERs that AerFin has processed, significantly deepening its inventory of GE90-115B parts, APU components, and airframe consumables</li>
+<li><strong>AerFin strategy:</strong> The company has identified ex-JAL and ex-Emirates 777-300ERs as a reliable source of high-quality, well-documented components; JAL's stringent maintenance standards mean teardown yields premium serviceable parts</li>
+<li><strong>Why it matters:</strong> GE90-115B shop visit cycle times remain extended due to capacity constraints; operators are increasingly turning to USM (used serviceable material) from well-maintained teardowns to bridge the gap — AerFin's fourth JAL teardown adds meaningful supply to a tight market</li>
+</ul>
+
+<div class="post-section" id="s3">
+  <div class="post-section-header">
+    <div class="section-number">3</div>
+    <span class="section-icon">🔗</span>
+    <h2>Facility &amp; Network Expansions</h2>
+  </div>
+<h3>Solinair Expands to Klagenfurt Airport — Grows MRO Footprint in Central Europe</h3>
+<ul>
+<li><strong>Solinair</strong> (Slovenian MRO provider, part of Adria Airways Engineering heritage) has expanded its operations to <strong>Klagenfurt Airport</strong> (Klagenfurt, Austria), growing its Central European MRO presence (MRO Business Today, April 1)</li>
+<li>The new Klagenfurt base is Solinair's <strong>second Austrian location</strong> and adds line and base maintenance capacity for narrowbody aircraft</li>
+<li>Solinair currently holds EASA Part 145 approval and services primarily <strong>A320-family and CRJ</strong> aircraft for European regional carriers</li>
+<li>The Klagenfurt expansion is driven by growing demand from carriers operating in the Central European leisure and charter market</li>
+<li><strong>Why it matters:</strong> Central Europe remains underserved for quality, competitively priced base maintenance — Solinair's expansion is a direct response to demand from Austrian, Slovenian, and Balkan-based operators</li>
+</ul>
+<h3>StandardAero Expands Agreement with Robinson Helicopter Company <a class="src-link" href="https://www.standardaero.com/news/" target="_blank" rel="noopener">StandardAero</a></h3>
+<ul>
+<li><strong>StandardAero</strong>, one of the world's largest independent MRO providers, has expanded its authorised service agreement with <strong>Robinson Helicopter Company</strong> (Robinson Helicopter / StandardAero, April 2026)</li>
+<li>The expanded agreement broadens StandardAero's approved scope for Robinson R44 and R66 helicopter maintenance, allowing more locations within StandardAero's network to service Robinson products</li>
+<li><strong>Why it matters:</strong> Helicopter MRO is a growing segment as offshore, EMS, and SAR operators seek consolidated maintenance solutions from providers with both fixed-wing and rotary capabilities</li>
+</ul>
+
+<div class="post-section" id="s4">
+  <div class="post-section-header">
+    <div class="section-number">4</div>
+    <span class="section-icon">💡</span>
+    <h2>Industry Outlook</h2>
+  </div>
+<h3>MRO Americas 2026 Pre-Conference Signal: Demand Side Strong, Capacity Still the Constraint</h3>
+<ul>
+<li>Pre-conference briefings and press releases being issued ahead of Orlando indicate consistent industry messaging: <strong>demand for MRO services is robust and accelerating</strong>, but <strong>capacity — shop slots, skilled labour, certified parts — remains the binding constraint</strong></li>
+<li>Key themes expected at MRO Americas 2026:</li>
+<li><strong>GTF engine workscope management</strong> — P&amp;W's accelerated inspection programme and its MRO network implications</li>
+<li><strong>AI and digital maintenance tools</strong> — from Boeing's Skywise (now a standalone Airbus subsidiary) to airline-side predictive maintenance deployments</li>
+<li><strong>Workforce pipeline</strong> — apprenticeship and technician training programmes across North America and Europe</li>
+<li><strong>Sustainability and green MRO</strong> — SAF compatibility, green cleaning technologies, and lifecycle extension vs retirement decisions</li>
+<li><strong>Why it matters:</strong> MRO Americas sets the tone for the second half of the year; procurement decisions, partnerships, and strategic announcements traditionally cluster around the event window (April–May)</li>
+</ul>
+
+<div class="post-section" id="s5">
+  <div class="post-section-header">
+    <div class="section-number">5</div>
+    <span class="section-icon">⚠️</span>
+    <h2>Analyst Note</h2>
+  </div>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">The Mesa/DASI deal and the AerFin/JAL teardown both point to the same underlying dynamic: <strong>accelerating fleet consolidation and retirements are freeing up significant used parts inventory</strong> precisely when new-build delays and shop capacity constraints are pushing operators toward USM solutions. Expect this trend to continue through 2026–2027 as ageing A330, 777-200ER, and CRJ fleets accelerate toward teardown.</p>
+<p style="color:var(--gray-400);font-size:13px;font-style:italic;margin-bottom:8px">Sources: Aviation Week MRO Rolling Updates (April 2026), MRO Business Today, National Today / Aviation Week 30th Anniversary Feature, AerFin press release, DASI / Mesa Airlines announcement, Klagenfurt Airport / Solinair, StandardAero.</p>
+</div>
+          <nav class="post-nav">
+            <a href="march-31-2026.html" class="post-nav-btn">
+              <div class="post-nav-label">← Previous Issue</div>
+              <div class="post-nav-title">March 31 2026</div>
+            </a>
+            <a href="april-2-2026.html" class="post-nav-btn" style="text-align:right">
+              <div class="post-nav-label">Next Issue →</div>
+              <div class="post-nav-title">April 2 2026</div>
+            </a>
+          </nav>
+        </article>
+
+        <aside class="post-sidebar">
+          <div class="toc-widget">
+            <div class="toc-title">In This Issue</div>
+            <ul class="toc-list">
+              <li><a href="#s1"><span class="toc-num">1</span> Market Updates &amp; Growth</a></li>
+              <li><a href="#s2"><span class="toc-num">2</span> Regional Expansion</a></li>
+              <li><a href="#s3"><span class="toc-num">3</span> Supply Chain</a></li>
+              <li><a href="#s4"><span class="toc-num">4</span> Technology &amp; Investment</a></li>
+              <li><a href="#s5"><span class="toc-num">5</span> Challenges &amp; Solutions</a></li>
+            </ul>
+          </div>
+          <div class="sidebar-widget">
+            <h3 class="widget-title">About This Briefing</h3>
+            <p class="widget-text">Source:</p>
+            <div class="widget-badge">
+              <span class="auto-badge">⚡ Automated Daily at 7:00 AM</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand"><span class="logo-icon">✈</span><span class="footer-name">MRO Daily Intelligence</span></div>
+        <div class="footer-text">Automated briefings sourced from Aviation Week Network. Published daily at 7:00 AM.</div>
+      </div>
+    </div>
+  </footer>
+
+<script>
+  var postAudio = null;
+  var audioSrc  = 'posts/april1-2026-email.m4a';  /* relative from inside posts/ dir */
+
+  /* Fix path: this page is in posts/, so audio is same dir */
+  var audioFile = 'april1-2026-email.m4a';
+
+  function fmtPostTime(s) {
+    if (isNaN(s) || !isFinite(s)) return '--:--';
+    var m = Math.floor(s / 60);
+    return m + ':' + String(Math.floor(s % 60)).padStart(2, '0');
+  }
+
+  function togglePostAudio() {
+    var playIcon  = document.getElementById('postPlayIcon');
+    var pauseIcon = document.getElementById('postPauseIcon');
+    var meta      = document.getElementById('postAudioMeta');
+    var fill      = document.getElementById('postAudioFill');
+    var cur       = document.getElementById('postAudioCur');
+    var dur       = document.getElementById('postAudioDur');
+
+    if (!postAudio) {
+      postAudio = new Audio(audioFile);
+      postAudio.addEventListener('loadedmetadata', function() {
+        dur.textContent = fmtPostTime(postAudio.duration);
+        meta.textContent = fmtPostTime(postAudio.duration) + ' · Daniel, en-GB';
+      });
+      postAudio.addEventListener('timeupdate', function() {
+        var pct = (postAudio.currentTime / postAudio.duration) * 100;
+        fill.style.width = pct + '%';
+        cur.textContent = fmtPostTime(postAudio.currentTime);
+      });
+      postAudio.addEventListener('ended', function() {
+        playIcon.style.display = '';
+        pauseIcon.style.display = 'none';
+        meta.textContent = 'Finished · tap to replay';
+        fill.style.width = '0%';
+        cur.textContent = '0:00';
+        postAudio.currentTime = 0;
+      });
+    }
+
+    if (!postAudio.paused) {
+      postAudio.pause();
+      playIcon.style.display = '';
+      pauseIcon.style.display = 'none';
+      meta.textContent = 'Paused';
+    } else {
+      postAudio.play();
+      playIcon.style.display = 'none';
+      pauseIcon.style.display = '';
+      meta.textContent = 'Playing…';
+    }
+  }
+
+  function seekPostAudio(e) {
+    if (!postAudio) return;
+    var track = document.getElementById('postAudioTrack');
+    var rect  = track.getBoundingClientRect();
+    var pct   = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
+    postAudio.currentTime = pct * postAudio.duration;
+  }
+</script>
+</body>
+</html>
