@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MRO Briefing — April 5, 2026 | MRO Daily Intelligence</title>
+  <meta name="description" content="Air France Industries KLM Engineering & Maintenance (AFI KLM E&M)" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/style.css" />
+  <style>
+    /* ── Audio Player ── */
+    .post-audio-player {
+      background: linear-gradient(135deg,#0f2847 0%,#1a4a8a 100%);
+      border-radius: 14px;
+      padding: 18px 20px;
+      margin: 0 0 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .post-audio-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .6px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.5);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .post-audio-controls {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .post-play-btn {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.15);
+      border: 1px solid rgba(255,255,255,.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      flex-shrink: 0;
+      transition: background .15s;
+    }
+    .post-play-btn:hover { background: rgba(255,255,255,.25); }
+    .post-play-btn svg { fill: white; width: 20px; height: 20px; }
+    .post-audio-info { flex: 1; }
+    .post-audio-title { font-size: 14px; font-weight: 600; color: #fff; margin-bottom: 3px; }
+    .post-audio-meta { font-size: 12px; color: rgba(255,255,255,.5); }
+    .post-audio-progress {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .post-audio-time { font-size: 11px; color: rgba(255,255,255,.5); min-width: 32px; font-variant-numeric: tabular-nums; }
+    .post-audio-track {
+      flex: 1;
+      height: 4px;
+      background: rgba(255,255,255,.2);
+      border-radius: 99px;
+      cursor: pointer;
+      position: relative;
+    }
+    .post-audio-fill {
+      height: 100%;
+      width: 0%;
+      background: #fff;
+      border-radius: 99px;
+      transition: width .2s linear;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <div class="logo">
+          <span class="logo-icon">✈</span>
+          <div>
+            <div class="logo-name">MRO Daily Intelligence</div>
+            <div class="logo-tagline">Aviation Maintenance Market Briefings</div>
+          </div>
+        </div>
+        <nav class="nav">
+          <a href="../index.html" class="nav-link">Latest</a>
+          <a href="../index.html#about" class="nav-link">About</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section class="post-hero">
+    <div class="container">
+      <a href="../index.html" class="post-back">← All Briefings</a>
+      <div class="post-issue-label">Issue #20 &nbsp;·&nbsp; April 5, 2026</div>
+      <h1 class="post-title">Daily MRO Market News Summary — April 5, 2026</h1>
+      <div class="post-meta-row">
+        <div class="post-meta-item"><strong>April 5, 2026</strong></div>
+        <div class="post-meta-item">·</div>
+        <div class="post-meta-item">Source: <strong>Aviation Week Network</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <main class="post-body">
+    <div class="container">
+      <div class="post-grid">
+        <article class="post-content">
+
+          <!-- ── Audio Player ── -->
+          <div class="post-audio-player" id="audioPlayer">
+            <div class="post-audio-label">
+              <svg viewBox="0 0 24 24" fill="white" width="12" height="12"><path d="M12 3a9 9 0 100 18A9 9 0 0012 3zm-2 13V8l7 4-7 4z"/></svg>
+              Audio Briefing &nbsp;·&nbsp; Daniel, en-GB
+            </div>
+            <div class="post-audio-controls">
+              <button class="post-play-btn" id="postPlayBtn" onclick="togglePostAudio()" aria-label="Play audio briefing">
+                <svg id="postPlayIcon" viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+                <svg id="postPauseIcon" viewBox="0 0 24 24" style="display:none"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+              </button>
+              <div class="post-audio-info">
+                <div class="post-audio-title">Daily Briefing — April 5, 2026</div>
+                <div class="post-audio-meta" id="postAudioMeta">Tap to listen · ~2 min</div>
+              </div>
+            </div>
+            <div class="post-audio-progress">
+              <span class="post-audio-time" id="postAudioCur">0:00</span>
+              <div class="post-audio-track" id="postAudioTrack" onclick="seekPostAudio(event)">
+                <div class="post-audio-fill" id="postAudioFill"></div>
+              </div>
+              <span class="post-audio-time" id="postAudioDur">--:--</span>
+            </div>
+          </div>
+
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px"><strong>Date:</strong> Sunday, April 5, 2026</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px"><strong>Source:</strong> Aviation Week Network, MRO Business Today, AFI KLM E&amp;M, Innovative Systems / Honeywell, IAC International, Indonesia Aviation Leasing Platform, AeroTime, MRO Americas 2026 Preview</p>
+
+<div class="post-section" id="s1">
+  <div class="post-section-header">
+    <div class="section-number">1</div>
+    <span class="section-icon">📈</span>
+    <h2>Personnel &amp; Leadership</h2>
+  </div>
+<h3>AFI KLM E&amp;M Appoints New KLM Engine Services VP <a class="src-link" href="https://engineering.klm.com/press-releases/" target="_blank" rel="noopener">AFI KLM E&M</a></h3>
+<ul>
+<li><strong>Air France Industries KLM Engineering &amp; Maintenance (AFI KLM E&amp;M)</strong> appointed <strong>Benoît Rollier</strong> as Vice President of <strong>KLM Engine Services</strong>, effective this month (Aviation Week, April 3)</li>
+<li>Rollier replaces <strong>Martijn de Vries</strong>, who transitions to the role of <strong>Senior Vice President Commercial</strong> at AFI KLM E&amp;M</li>
+<li>KLM Engine Services is one of Europe's largest engine MRO operations, with capabilities covering <strong>CFM56, GE90, V2500, Trent 700, and CF34</strong> families</li>
+<li><strong>Why it matters:</strong> Leadership transitions at major MRO providers often signal strategic pivots — de Vries' move to a commercial SVP role suggests AFI KLM E&amp;M is sharpening its focus on contract growth and customer acquisition ahead of what is expected to be a record year for engine shop visits</li>
+</ul>
+
+<div class="post-section" id="s2">
+  <div class="post-section-header">
+    <div class="section-number">2</div>
+    <span class="section-icon">🌏</span>
+    <h2>Fleet &amp; Component Deals</h2>
+  </div>
+<h3>Innovative Systems Licences Honeywell Generator Technology for B767, KC-46, F-15</h3>
+<ul>
+<li><strong>Innovative Systems</strong> (aerospace systems integrator) secured an <strong>exclusive licence</strong> from <strong>Honeywell International</strong> covering technical data and tooling for <strong>power generators and generator control units</strong> on the <strong>Boeing 767, KC-46A Pegasus tanker, and F-15</strong> platforms (Aviation Week, April 3)</li>
+<li>Under the licence, Innovative Systems gains rights to manufacture, repair, and overhaul Honeywell-designed generators for these aircraft — spanning both civil and military variants</li>
+<li><strong>Platform significance:</strong></li>
+<li><strong>Boeing 767:</strong> Still operated by Delta, United, and multiple cargo operators (UPS, FedEx, Amazon Air); significant MRO demand remaining</li>
+<li><strong>KC-46A:</strong> US Air Force's primary aerial refuelling tanker; a fleet of 68+ aircraft currently in service with more on order — government MRO contract potential</li>
+<li><strong>F-15:</strong> Eagle and Strike Eagle fleets operated by USAF and multiple allied nations; long service life ahead</li>
+<li><strong>Why it matters:</strong> The Honeywell licence gives Innovative Systems a foothold in a niche but strategically important components segment, reducing OEM sole-source dependency for military and cargo operators</li>
+</ul>
+
+<div class="post-section" id="s3">
+  <div class="post-section-header">
+    <div class="section-number">3</div>
+    <span class="section-icon">🔗</span>
+    <h2>Market Intelligence</h2>
+  </div>
+<h3>Indonesia Launches $800M Aviation Leasing Platform — Fleet Growth to Drive MRO Demand</h3>
+<ul>
+<li><strong>Indonesia</strong> has launched a national <strong>aviation leasing platform with initial capitalisation of $800 million</strong>, designed to allow domestic airlines to acquire aircraft through Indonesian entities rather than foreign lessors (MRO Business Today, April 3)</li>
+<li>The platform is backed by Indonesian state-owned entities and sovereign wealth fund structures</li>
+<li><strong>MRO implications:</strong> A larger domestically-managed Indonesian fleet implies growing demand for local or regional MRO services — Indonesia's <strong>Garuda Maintenance Facility AeroAsia (GMF)</strong> is positioned as the primary beneficiary</li>
+<li>Indonesia's commercial aviation fleet is projected to grow significantly through 2030, with Lion Air group, Garuda Indonesia, and Citilink all expanding</li>
+<li><strong>Why it matters:</strong> Southeast Asia's MRO market is one of the fastest-growing globally — Indonesia's leasing platform accelerates fleet growth, which directly translates to more MRO work-packages entering the regional market over the next 3–5 years</li>
+</ul>
+
+<div class="post-section" id="s4">
+  <div class="post-section-header">
+    <div class="section-number">4</div>
+    <span class="section-icon">💡</span>
+    <h2>Facility &amp; Network Expansions</h2>
+  </div>
+<h3>IAC International Expands into Malta — New European Interior Services Base</h3>
+<ul>
+<li><strong>IAC International</strong> (International Aero Coatings, specialising in aircraft painting, interior refurbishment, and cabin conversion) is expanding into <strong>Malta</strong>, adding the island's <strong>Malta International Airport</strong> to its European service network (MRO Business Today, April 3)</li>
+<li>IAC's Malta facility will offer <strong>interior refurbishment, cabin upgrades, and aircraft painting</strong> for narrowbody aircraft</li>
+<li>Malta's strategic central-Mediterranean location makes it attractive for European, Middle Eastern, and North African airlines needing interior work done between rotations</li>
+<li>IAC already has European bases in Shannon (Ireland) and Lake Charles (US); Malta adds a southern European hub</li>
+<li><strong>Why it matters:</strong> Interior and cabin MRO is a growing segment as airlines invest in retrofits (seatback IFE, lie-flat business class upgrades, cabin densification) as part of post-pandemic product refresh programmes</li>
+</ul>
+
+<div class="post-section" id="s5">
+  <div class="post-section-header">
+    <div class="section-number">5</div>
+    <span class="section-icon">⚠️</span>
+    <h2>Analyst Weekly Wrap</h2>
+  </div>
+<h3>Week of March 30 – April 5: Key Takeaways</h3>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">1. <strong>Ryanair's €25M Madrid MRO hub (April 2):</strong> Low-cost carriers are increasingly internalising maintenance to control costs — Ryanair's 7-bay Madrid centre joins its Stansted, Dublin, and Seville facilities as Europe's largest self-maintained low-cost carrier operation</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">2. <strong>Airbus Skywise spin-out (April 2):</strong> Merging Skywise predictive maintenance with Navblue flight ops software into a standalone subsidiary signals Airbus' intent to compete in the digital MRO software market — directly challenging Boeing Analytics and third-party MRO platforms</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">3. <strong>MRO Americas T-16 days:</strong> With 16 days until Orlando, expect a major wave of announcements in the week of April 13; pre-conference activity is the highest since 2019</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">4. <strong>Engine shortage going commercial:</strong> LEVEL's Barcelona–SF suspension (April 4) is likely the first of several route-level impacts from the engine supply crunch — carriers with tight spare engine ratios will face similar decisions in Q2–Q3 2026</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">5. <strong>China MRO independence:</strong> MRO Greater China (Beijing, May 26–28) and the Innovative Systems/Honeywell licence are both signals of the same macro trend: <strong>supply chain diversification and regional self-sufficiency</strong> in MRO are becoming strategic priorities globally</p>
+<p style="color:var(--gray-400);font-size:13px;font-style:italic;margin-bottom:8px">Sources: Aviation Week Network (April 2026 rolling updates), MRO Business Today (April 3–4, 2026), AFI KLM E&amp;M press release, Innovative Systems / Honeywell announcement, Indonesia state aviation leasing platform announcement, IAC International / MRO Business Today, Huanqiu / Civil Aviation China — MRO Greater China.</p>
+</div>
+          <nav class="post-nav">
+            <a href="april-4-2026.html" class="post-nav-btn">
+              <div class="post-nav-label">← Previous Issue</div>
+              <div class="post-nav-title">April 4 2026</div>
+            </a>
+            <a href="../index.html" class="post-nav-btn" style="text-align:right">
+              <div class="post-nav-label">All Briefings</div>
+              <div class="post-nav-title">View Archive →</div>
+            </a>
+          </nav>
+        </article>
+
+        <aside class="post-sidebar">
+          <div class="toc-widget">
+            <div class="toc-title">In This Issue</div>
+            <ul class="toc-list">
+              <li><a href="#s1"><span class="toc-num">1</span> Market Updates &amp; Growth</a></li>
+              <li><a href="#s2"><span class="toc-num">2</span> Regional Expansion</a></li>
+              <li><a href="#s3"><span class="toc-num">3</span> Supply Chain</a></li>
+              <li><a href="#s4"><span class="toc-num">4</span> Technology &amp; Investment</a></li>
+              <li><a href="#s5"><span class="toc-num">5</span> Challenges &amp; Solutions</a></li>
+            </ul>
+          </div>
+          <div class="sidebar-widget">
+            <h3 class="widget-title">About This Briefing</h3>
+            <p class="widget-text">Source:</p>
+            <div class="widget-badge">
+              <span class="auto-badge">⚡ Automated Daily at 7:00 AM</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand"><span class="logo-icon">✈</span><span class="footer-name">MRO Daily Intelligence</span></div>
+        <div class="footer-text">Automated briefings sourced from Aviation Week Network. Published daily at 7:00 AM.</div>
+      </div>
+    </div>
+  </footer>
+
+<script>
+  var postAudio = null;
+  var audioSrc  = 'posts/april5-2026-email.m4a';  /* relative from inside posts/ dir */
+
+  /* Fix path: this page is in posts/, so audio is same dir */
+  var audioFile = 'april5-2026-email.m4a';
+
+  function fmtPostTime(s) {
+    if (isNaN(s) || !isFinite(s)) return '--:--';
+    var m = Math.floor(s / 60);
+    return m + ':' + String(Math.floor(s % 60)).padStart(2, '0');
+  }
+
+  function togglePostAudio() {
+    var playIcon  = document.getElementById('postPlayIcon');
+    var pauseIcon = document.getElementById('postPauseIcon');
+    var meta      = document.getElementById('postAudioMeta');
+    var fill      = document.getElementById('postAudioFill');
+    var cur       = document.getElementById('postAudioCur');
+    var dur       = document.getElementById('postAudioDur');
+
+    if (!postAudio) {
+      postAudio = new Audio(audioFile);
+      postAudio.addEventListener('loadedmetadata', function() {
+        dur.textContent = fmtPostTime(postAudio.duration);
+        meta.textContent = fmtPostTime(postAudio.duration) + ' · Daniel, en-GB';
+      });
+      postAudio.addEventListener('timeupdate', function() {
+        var pct = (postAudio.currentTime / postAudio.duration) * 100;
+        fill.style.width = pct + '%';
+        cur.textContent = fmtPostTime(postAudio.currentTime);
+      });
+      postAudio.addEventListener('ended', function() {
+        playIcon.style.display = '';
+        pauseIcon.style.display = 'none';
+        meta.textContent = 'Finished · tap to replay';
+        fill.style.width = '0%';
+        cur.textContent = '0:00';
+        postAudio.currentTime = 0;
+      });
+    }
+
+    if (!postAudio.paused) {
+      postAudio.pause();
+      playIcon.style.display = '';
+      pauseIcon.style.display = 'none';
+      meta.textContent = 'Paused';
+    } else {
+      postAudio.play();
+      playIcon.style.display = 'none';
+      pauseIcon.style.display = '';
+      meta.textContent = 'Playing…';
+    }
+  }
+
+  function seekPostAudio(e) {
+    if (!postAudio) return;
+    var track = document.getElementById('postAudioTrack');
+    var rect  = track.getBoundingClientRect();
+    var pct   = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
+    postAudio.currentTime = pct * postAudio.duration;
+  }
+</script>
+</body>
+</html>
