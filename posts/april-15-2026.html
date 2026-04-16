@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MRO Briefing — April 15, 2026 | MRO Daily Intelligence</title>
+  <meta name="description" content="GA Telesis" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/style.css" />
+  <style>
+    /* ── Audio Player ── */
+    .post-audio-player {
+      background: linear-gradient(135deg,#0f2847 0%,#1a4a8a 100%);
+      border-radius: 14px;
+      padding: 18px 20px;
+      margin: 0 0 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .post-audio-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .6px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.5);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .post-audio-controls {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .post-play-btn {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.15);
+      border: 1px solid rgba(255,255,255,.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      flex-shrink: 0;
+      transition: background .15s;
+    }
+    .post-play-btn:hover { background: rgba(255,255,255,.25); }
+    .post-play-btn svg { fill: white; width: 20px; height: 20px; }
+    .post-audio-info { flex: 1; }
+    .post-audio-title { font-size: 14px; font-weight: 600; color: #fff; margin-bottom: 3px; }
+    .post-audio-meta { font-size: 12px; color: rgba(255,255,255,.5); }
+    .post-audio-progress {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .post-audio-time { font-size: 11px; color: rgba(255,255,255,.5); min-width: 32px; font-variant-numeric: tabular-nums; }
+    .post-audio-track {
+      flex: 1;
+      height: 4px;
+      background: rgba(255,255,255,.2);
+      border-radius: 99px;
+      cursor: pointer;
+      position: relative;
+    }
+    .post-audio-fill {
+      height: 100%;
+      width: 0%;
+      background: #fff;
+      border-radius: 99px;
+      transition: width .2s linear;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <div class="logo">
+          <span class="logo-icon">✈</span>
+          <div>
+            <div class="logo-name">MRO Daily Intelligence</div>
+            <div class="logo-tagline">Aviation Maintenance Market Briefings</div>
+          </div>
+        </div>
+        <nav class="nav">
+          <a href="../index.html" class="nav-link">Latest</a>
+          <a href="../index.html#about" class="nav-link">About</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section class="post-hero">
+    <div class="container">
+      <a href="../index.html" class="post-back">← All Briefings</a>
+      <div class="post-issue-label">Issue #28 &nbsp;·&nbsp; April 15, 2026</div>
+      <h1 class="post-title">Daily MRO Market News Summary — April 15, 2026</h1>
+      <div class="post-meta-row">
+        <div class="post-meta-item"><strong>April 15, 2026</strong></div>
+        <div class="post-meta-item">·</div>
+        <div class="post-meta-item">Source: <strong>Aviation Week Network</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <main class="post-body">
+    <div class="container">
+      <div class="post-grid">
+        <article class="post-content">
+
+          <!-- ── Audio Player ── -->
+          <div class="post-audio-player" id="audioPlayer">
+            <div class="post-audio-label">
+              <svg viewBox="0 0 24 24" fill="white" width="12" height="12"><path d="M12 3a9 9 0 100 18A9 9 0 0012 3zm-2 13V8l7 4-7 4z"/></svg>
+              Audio Briefing &nbsp;·&nbsp; Daniel, en-GB
+            </div>
+            <div class="post-audio-controls">
+              <button class="post-play-btn" id="postPlayBtn" onclick="togglePostAudio()" aria-label="Play audio briefing">
+                <svg id="postPlayIcon" viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+                <svg id="postPauseIcon" viewBox="0 0 24 24" style="display:none"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+              </button>
+              <div class="post-audio-info">
+                <div class="post-audio-title">Daily Briefing — April 15, 2026</div>
+                <div class="post-audio-meta" id="postAudioMeta">Tap to listen · ~2 min</div>
+              </div>
+            </div>
+            <div class="post-audio-progress">
+              <span class="post-audio-time" id="postAudioCur">0:00</span>
+              <div class="post-audio-track" id="postAudioTrack" onclick="seekPostAudio(event)">
+                <div class="post-audio-fill" id="postAudioFill"></div>
+              </div>
+              <span class="post-audio-time" id="postAudioDur">--:--</span>
+            </div>
+          </div>
+
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px"><strong>Date:</strong> Tuesday, April 15, 2026</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px"><strong>Source:</strong> Aviation Week Network (Rolling Daily Updates), AviTrader, MRO Business Today, CAPA Centre for Aviation, GA Telesis press release, Pratt &amp; Whitney Canada press release</p>
+
+<div class="post-section" id="s1">
+  <div class="post-section-header">
+    <div class="section-number">1</div>
+    <span class="section-icon">📈</span>
+    <h2>Market Updates and Growth Trends</h2>
+  </div>
+<h3>GA Telesis Commences Disassembly of Two Youngest-Ever A320neo Aircraft <a class="src-link" href="https://www.gatelesis.com/news/" target="_blank" rel="noopener">GA Telesis</a></h3>
+<ul>
+<li><strong>GA Telesis</strong> (Fort Lauderdale, FL) announced it has commenced disassembly of <strong>two Airbus A320neo aircraft less than 5 years old</strong> — making them the youngest A320neo aircraft <strong>ever</strong> inducted into a commercial teardown programme (GA Telesis PR, April 15; CAPA, April 15; MRO Business Today, April 15)</li>
+<li><strong>Aircraft background:</strong> The two A320neos are former <strong>Spirit Airlines</strong> aircraft (MSN 10769 and MSN 10921), acquired by <strong>EirTrade Aviation</strong> in partnership with <strong>RESIDCO</strong> (Chicago) in February 2026, following Spirit's collapse</li>
+<li><strong>Strategic rationale:</strong> With the global shortage of <strong>CFM LEAP-1A and PW1100G-JM</strong> components reaching critical levels, these ultra-young aircraft represent a high-value source of next-generation engine parts with substantial remaining service life</li>
+<li><strong>Sustainability profile:</strong> GA Telesis states <strong>over 90% of processed material</strong> will be reused on other aircraft — the teardown represents circular economy practice at the leading edge of the aviation aftermarket</li>
+<li><strong>Executive quote:</strong> Nigel Christie (MD, GA Telesis UK): <em>"The disassembly of these A320neos directly addresses the constrained supply environment our customers face... while meeting increasingly important environmental expectations."</em></li>
+<li><strong>GA Telesis ecosystem:</strong> 54 locations, 30 countries — the only independent aftermarket provider claiming operating capabilities across 6 continents</li>
+<li><strong>Why it matters:</strong> This is the single most significant development in the next-generation USM market to date. Younger-than-5-year-old A320neos entering teardown creates a structural precedent: the financial logic of teardown vs. return-to-service now applies even to new-generation aircraft when operator circumstances force fleet liquidation. LEAP-1A and PW1100G-JM USM will slowly enter the market — moderating the extreme shortages expected to persist through 2028</li>
+</ul>
+<h3>Pratt &amp; Whitney Canada Launches PT6C-67C and PW127XT MRO Services in Singapore <a class="src-link" href="https://aviationweek.com/mro/aircraft-propulsion" target="_blank" rel="noopener">Aviation Week</a></h3>
+<ul>
+<li><strong>Pratt &amp; Whitney Canada</strong> launched <strong>new MRO services</strong> for the <strong>PT6C-67C helicopter engine</strong> and <strong>PW127XT regional turboprop engine</strong> at its <strong>Singapore facility</strong> (P&amp;WC press release, April 15; MRO Business Today, April 15)</li>
+<li><strong>PT6C-67C:</strong> Used on the Bell 525 Relentless helicopter; new Singapore overhaul line dramatically reduces Asia-Pacific helicopter operators' turnaround times vs. sending engines to North America</li>
+<li><strong>PW127XT:</strong> Next-generation turboprop for the ATR 42-600/72-600 family; the Singapore facility provides regional airlines with local MRO support for ATR fleet operations across Southeast Asia</li>
+<li><strong>Market timing:</strong> Southeast Asia is seeing significant ATR fleet growth as regional airlines expand into secondary routes; having local PW127XT overhaul capability is a direct service enabler for these operators</li>
+<li><strong>Why it matters:</strong> Singapore continues to cement its role as the premier Asia-Pacific engine MRO hub — complementing GE Aerospace's AI Centre of Excellence and Rolls-Royce Seletar operations. P&amp;WC's expansion adds helicopter and regional turboprop coverage to the island's already dominant narrowbody/widebody engine MRO ecosystem</li>
+</ul>
+
+<div class="post-section" id="s2">
+  <div class="post-section-header">
+    <div class="section-number">2</div>
+    <span class="section-icon">🌏</span>
+    <h2>Regional Expansion Activities</h2>
+  </div>
+<h3>FL Technics Wheels and Brakes — UK Part 145 Approval</h3>
+<ul>
+<li><strong>FL Technics Wheels and Brakes</strong> (Lithuanian MRO group subsidiary) received <strong>UK Civil Aviation Authority (CAA) Part 145 approval</strong>, authorising component maintenance on <strong>UK-registered aircraft</strong> (Aviation Week, April 15)</li>
+<li><strong>Significance:</strong> Post-Brexit, UK CAA approvals are separate from EASA — this certification gives FL Technics access to the UK aviation maintenance market for wheel and brake component overhaul</li>
+<li><strong>FL Technics background:</strong> Part of the <strong>Avia Solutions Group</strong> (Lithuanian-headquartered, now one of the world's largest MRO conglomerates). The wheels and brakes unit specialises in landing gear component maintenance, serving commercial airlines across Europe and beyond</li>
+<li><strong>Why it matters:</strong> UK operators — including British Airways, easyJet, Ryanair (UK arm), Virgin Atlantic, and TUI — now have a certified local-equivalent option for wheel and brake overhaul within the UK regulatory framework</li>
+</ul>
+<h3>Solinair Opens New 8,000 m² Hangar at Ljubljana Airport</h3>
+<ul>
+<li><strong>Solinair</strong> (subsidiary of Turkish air cargo group <strong>MNG Airlines</strong>) officially opened its new <strong>8,000 m² (86,000 sq. ft.)</strong> maintenance hangar at <strong>Ljubljana Joze Pucnik Airport</strong>, Slovenia (Aviation Week, April 13–15; CAPA, April 14)</li>
+<li><strong>Capacity:</strong> Up to <strong>6 aircraft simultaneously</strong> for line and base maintenance operations</li>
+<li><strong>Aircraft types serviced:</strong> Airbus, Boeing, Bombardier, Embraer, and ATR — reflecting Solinair's broad Part 145 scope</li>
+<li><strong>Investment context:</strong> Construction was completed on schedule after beginning in early 2025; the facility was designed and built by <strong>Schwarzmann</strong> (Austrian construction specialist)</li>
+<li><strong>Why it matters:</strong> Ljubljana is becoming an increasingly important European MRO hub, positioning Slovenia as a cost-competitive alternative to Western European maintenance centres. The 6-aircraft-simultaneous capacity gives Solinair meaningful market reach for base maintenance contracts across European charter and LCC operators</li>
+</ul>
+
+<div class="post-section" id="s3">
+  <div class="post-section-header">
+    <div class="section-number">3</div>
+    <span class="section-icon">🔗</span>
+    <h2>Supply Chain Developments</h2>
+  </div>
+<h3>A320neo USM Pipeline Activation — Market Impact Analysis</h3>
+<ul>
+<li>The GA Telesis A320neo teardown programme launch has prompted supply chain analysts to quantify the impact on LEAP-1A/PW1100G-JM USM availability (AviTrader, April 15):</li>
+<li><strong>Short-term (2026):</strong> Minimal supply addition — the two aircraft are beginning disassembly now; certified components will enter the market Q3–Q4 2026</li>
+<li><strong>Medium-term (2027–2028):</strong> The precedent set by these teardowns is expected to unlock additional young A320neo disassembly programmes, gradually building the next-generation USM pool</li>
+<li><strong>Pricing impact:</strong> Near-term LEAP/GTF USM pricing remains elevated; meaningful moderation not expected until 2028–2029 when more programmes mature</li>
+<li><strong>Broader context:</strong> The EirTrade/RESIDCO → GA Telesis pathway represents a new business model: acquire young aircraft from distressed operators (Spirit Airlines, Fly One, Breeze), process through teardown, and capture the premium USM value from new-generation engine components</li>
+</ul>
+
+<div class="post-section" id="s4">
+  <div class="post-section-header">
+    <div class="section-number">4</div>
+    <span class="section-icon">💡</span>
+    <h2>Technology and Investment News</h2>
+  </div>
+<h3>Korean Air + Ramco Mechanic Anywhere — Mobile MRO Goes Live</h3>
+<ul>
+<li><strong>Korean Air</strong>'s deployment of <strong>Ramco Systems' Mechanic Anywhere</strong> mobile app is now live across <strong>400+ engineers and mechanics</strong> at the Engine Maintenance Center (Aviation Week, April 15–16; MRO Business Today, April 15)</li>
+<li>The deployment covers real-time task assignment, compliance documentation, and mobile-enabled airworthiness record management</li>
+<li><strong>Ramco's Aviation Suite</strong> is also managing maintenance finance and billing integration — creating a single-system digital backbone for Korean Air's engine MRO operations</li>
+<li><strong>Why it matters:</strong> Korean Air's Engine Maintenance Center is one of Asia's largest in-house engine overhaul operations. Deploying enterprise MRO software at this scale demonstrates that major Asian airline MROs are now investing seriously in digital infrastructure — not just Western counterparts</li>
+</ul>
+<h3>MRO Americas T-6 Days — Final Pre-Show Technology Surge</h3>
+<ul>
+<li><strong>6 days until MRO Americas 2026</strong> (April 21–23, Orlando)</li>
+<li>Technology exhibitors are releasing product previews and scheduling press briefings:</li>
+<li><strong>AI inspection tools:</strong> Multiple vendors previewing automated borescope analysis and wear pattern recognition</li>
+<li><strong>Digital twin platforms:</strong> Component-level life management tools moving from demo to commercial deployment</li>
+<li><strong>Workforce platforms:</strong> Mobile-first maintenance task management (a la Ramco Mechanic Anywhere) gaining traction with large MROs</li>
+</ul>
+
+<div class="post-section" id="s5">
+  <div class="post-section-header">
+    <div class="section-number">5</div>
+    <span class="section-icon">⚠️</span>
+    <h2>Major Challenges and Solutions</h2>
+  </div>
+<h3>Spirit Airlines Fleet Legacy — USM Supply Windfall from Operator Bankruptcy</h3>
+<ul>
+<li>Spirit Airlines' collapse has created an unexpected but significant <strong>USM supply opportunity</strong>:</li>
+<li><strong>Spirit's fleet:</strong> ~150+ A320-family aircraft (mix of A319/A320/A321, including A320neo variants)</li>
+<li><strong>Teardown trajectory:</strong> EirTrade secured 2 A320neos in February; GA Telesis commences disassembly April 15; additional aircraft in the pipeline</li>
+<li><strong>OEM parts included:</strong> Spirit's fleet was young and well-maintained — the components entering the USM pool carry significant service life</li>
+<li><strong>Wider operator bankruptcy wave:</strong> Spirit, Fly One, Breeze (partial), Bonza (Australia) — all feeding USM pools from A320-family fleet liquidations in 2025–2026</li>
+<li><strong>Industry lesson:</strong> Airline bankruptcies, while unfortunate events, create the most reliable and high-quality source of next-generation USM — particularly for LEAP and GTF engine components currently in critical shortage</li>
+</ul>
+
+<div class="post-section" id="s6">
+  <div class="post-section-header">
+    <div class="section-number">📋</div>
+    <span class="section-icon">⚠️</span>
+    <h2>MRO Americas 2026 Countdown — T-6 Days</h2>
+  </div>
+<p style="color:var(--gray-400);font-size:13px;font-style:italic;margin-bottom:8px">6 days until MRO Americas 2026, April 21–23, Orlando, Orange County Convention Center</p>
+<ul>
+<li><strong>This week's big stories:</strong> GA Telesis A320neo teardown (next-gen USM milestone); P&amp;WC Singapore expansion (Asia-Pacific engine MRO deepens); FL Technics UK Part 145; Solinair Ljubljana hangar open</li>
+<li><strong>VSE–PAG close imminent:</strong> Final regulatory clearance expected any day; announcement likely before show opens</li>
+<li><strong>30th anniversary show:</strong> Aviation Week's MRO Americas team is preparing a flagship programme for the 30-year milestone — special sessions, retrospective panels, and a record exhibitor count</li>
+</ul>
+
+<div class="post-section" id="s7">
+  <div class="post-section-header">
+    <div class="section-number">📋</div>
+    <span class="section-icon">⚠️</span>
+    <h2>Weekly Outlook: April 15–18, 2026</h2>
+  </div>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">1. <strong>GA Telesis A320neo disassembly:</strong> First LEAP-1A/PW1100G-JM components certified and listed — watch for pricing signals</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">2. <strong>P&amp;WC Singapore:</strong> Customer uptake for new PT6C-67C and PW127XT services; helicopter and regional turboprop operators booking slots</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">3. <strong>Korean Air Ramco:</strong> Early-stage deployment metrics and potential for fleet-wide rollout announcements</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">4. <strong>VSE–PAG close:</strong> Still the most anticipated MRO news of the week</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">5. <strong>Pre-show announcement peak:</strong> April 16–20 is historically the busiest news period of the year for MRO</p>
+<p style="color:var(--gray-400);font-size:13px;font-style:italic;margin-bottom:8px">Sources: Aviation Week Network (MRO Rolling Daily Updates, April 15, 2026), AviTrader (April 15), CAPA Centre for Aviation (April 14–15), MRO Business Today (April 15), GA Telesis press release (April 15), Pratt &amp; Whitney Canada press release (April 15), ebs.publicnow.com (April 15), seenews.com (April 15).</p>
+</div>
+          <nav class="post-nav">
+            <a href="april-14-2026.html" class="post-nav-btn">
+              <div class="post-nav-label">← Previous Issue</div>
+              <div class="post-nav-title">April 14 2026</div>
+            </a>
+            <a href="../index.html" class="post-nav-btn" style="text-align:right">
+              <div class="post-nav-label">All Briefings</div>
+              <div class="post-nav-title">View Archive →</div>
+            </a>
+          </nav>
+        </article>
+
+        <aside class="post-sidebar">
+          <div class="toc-widget">
+            <div class="toc-title">In This Issue</div>
+            <ul class="toc-list">
+              <li><a href="#s1"><span class="toc-num">1</span> Market Updates &amp; Growth</a></li>
+              <li><a href="#s2"><span class="toc-num">2</span> Regional Expansion</a></li>
+              <li><a href="#s3"><span class="toc-num">3</span> Supply Chain</a></li>
+              <li><a href="#s4"><span class="toc-num">4</span> Technology &amp; Investment</a></li>
+              <li><a href="#s5"><span class="toc-num">5</span> Challenges &amp; Solutions</a></li>
+            </ul>
+          </div>
+          <div class="sidebar-widget">
+            <h3 class="widget-title">About This Briefing</h3>
+            <p class="widget-text">Source:</p>
+            <div class="widget-badge">
+              <span class="auto-badge">⚡ Automated Daily at 7:00 AM</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand"><span class="logo-icon">✈</span><span class="footer-name">MRO Daily Intelligence</span></div>
+        <div class="footer-text">Automated briefings sourced from Aviation Week Network. Published daily at 7:00 AM.</div>
+      </div>
+    </div>
+  </footer>
+
+<script>
+  var postAudio = null;
+  var audioSrc  = 'posts/april15-2026-email.m4a';  /* relative from inside posts/ dir */
+
+  /* Fix path: this page is in posts/, so audio is same dir */
+  var audioFile = 'april15-2026-email.m4a';
+
+  function fmtPostTime(s) {
+    if (isNaN(s) || !isFinite(s)) return '--:--';
+    var m = Math.floor(s / 60);
+    return m + ':' + String(Math.floor(s % 60)).padStart(2, '0');
+  }
+
+  function togglePostAudio() {
+    var playIcon  = document.getElementById('postPlayIcon');
+    var pauseIcon = document.getElementById('postPauseIcon');
+    var meta      = document.getElementById('postAudioMeta');
+    var fill      = document.getElementById('postAudioFill');
+    var cur       = document.getElementById('postAudioCur');
+    var dur       = document.getElementById('postAudioDur');
+
+    if (!postAudio) {
+      postAudio = new Audio(audioFile);
+      postAudio.addEventListener('loadedmetadata', function() {
+        dur.textContent = fmtPostTime(postAudio.duration);
+        meta.textContent = fmtPostTime(postAudio.duration) + ' · Daniel, en-GB';
+      });
+      postAudio.addEventListener('timeupdate', function() {
+        var pct = (postAudio.currentTime / postAudio.duration) * 100;
+        fill.style.width = pct + '%';
+        cur.textContent = fmtPostTime(postAudio.currentTime);
+      });
+      postAudio.addEventListener('ended', function() {
+        playIcon.style.display = '';
+        pauseIcon.style.display = 'none';
+        meta.textContent = 'Finished · tap to replay';
+        fill.style.width = '0%';
+        cur.textContent = '0:00';
+        postAudio.currentTime = 0;
+      });
+    }
+
+    if (!postAudio.paused) {
+      postAudio.pause();
+      playIcon.style.display = '';
+      pauseIcon.style.display = 'none';
+      meta.textContent = 'Paused';
+    } else {
+      postAudio.play();
+      playIcon.style.display = 'none';
+      pauseIcon.style.display = '';
+      meta.textContent = 'Playing…';
+    }
+  }
+
+  function seekPostAudio(e) {
+    if (!postAudio) return;
+    var track = document.getElementById('postAudioTrack');
+    var rect  = track.getBoundingClientRect();
+    var pct   = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
+    postAudio.currentTime = pct * postAudio.duration;
+  }
+</script>
+</body>
+</html>
