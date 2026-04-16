@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MRO Briefing — April 8, 2026 | MRO Daily Intelligence</title>
+  <meta name="description" content="Market context:" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/style.css" />
+  <style>
+    /* ── Audio Player ── */
+    .post-audio-player {
+      background: linear-gradient(135deg,#0f2847 0%,#1a4a8a 100%);
+      border-radius: 14px;
+      padding: 18px 20px;
+      margin: 0 0 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .post-audio-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .6px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.5);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .post-audio-controls {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .post-play-btn {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.15);
+      border: 1px solid rgba(255,255,255,.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      flex-shrink: 0;
+      transition: background .15s;
+    }
+    .post-play-btn:hover { background: rgba(255,255,255,.25); }
+    .post-play-btn svg { fill: white; width: 20px; height: 20px; }
+    .post-audio-info { flex: 1; }
+    .post-audio-title { font-size: 14px; font-weight: 600; color: #fff; margin-bottom: 3px; }
+    .post-audio-meta { font-size: 12px; color: rgba(255,255,255,.5); }
+    .post-audio-progress {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .post-audio-time { font-size: 11px; color: rgba(255,255,255,.5); min-width: 32px; font-variant-numeric: tabular-nums; }
+    .post-audio-track {
+      flex: 1;
+      height: 4px;
+      background: rgba(255,255,255,.2);
+      border-radius: 99px;
+      cursor: pointer;
+      position: relative;
+    }
+    .post-audio-fill {
+      height: 100%;
+      width: 0%;
+      background: #fff;
+      border-radius: 99px;
+      transition: width .2s linear;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <div class="logo">
+          <span class="logo-icon">✈</span>
+          <div>
+            <div class="logo-name">MRO Daily Intelligence</div>
+            <div class="logo-tagline">Aviation Maintenance Market Briefings</div>
+          </div>
+        </div>
+        <nav class="nav">
+          <a href="../index.html" class="nav-link">Latest</a>
+          <a href="../index.html#about" class="nav-link">About</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section class="post-hero">
+    <div class="container">
+      <a href="../index.html" class="post-back">← All Briefings</a>
+      <div class="post-issue-label">Issue #23 &nbsp;·&nbsp; April 8, 2026</div>
+      <h1 class="post-title">Daily MRO Market News Summary — April 8, 2026</h1>
+      <div class="post-meta-row">
+        <div class="post-meta-item"><strong>April 8, 2026</strong></div>
+        <div class="post-meta-item">·</div>
+        <div class="post-meta-item">Source: <strong>Aviation Week Network</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <main class="post-body">
+    <div class="container">
+      <div class="post-grid">
+        <article class="post-content">
+
+          <!-- ── Audio Player ── -->
+          <div class="post-audio-player" id="audioPlayer">
+            <div class="post-audio-label">
+              <svg viewBox="0 0 24 24" fill="white" width="12" height="12"><path d="M12 3a9 9 0 100 18A9 9 0 0012 3zm-2 13V8l7 4-7 4z"/></svg>
+              Audio Briefing &nbsp;·&nbsp; Daniel, en-GB
+            </div>
+            <div class="post-audio-controls">
+              <button class="post-play-btn" id="postPlayBtn" onclick="togglePostAudio()" aria-label="Play audio briefing">
+                <svg id="postPlayIcon" viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+                <svg id="postPauseIcon" viewBox="0 0 24 24" style="display:none"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+              </button>
+              <div class="post-audio-info">
+                <div class="post-audio-title">Daily Briefing — April 8, 2026</div>
+                <div class="post-audio-meta" id="postAudioMeta">Tap to listen · ~2 min</div>
+              </div>
+            </div>
+            <div class="post-audio-progress">
+              <span class="post-audio-time" id="postAudioCur">0:00</span>
+              <div class="post-audio-track" id="postAudioTrack" onclick="seekPostAudio(event)">
+                <div class="post-audio-fill" id="postAudioFill"></div>
+              </div>
+              <span class="post-audio-time" id="postAudioDur">--:--</span>
+            </div>
+          </div>
+
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px"><strong>Date:</strong> Wednesday, April 8, 2026</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px"><strong>Source:</strong> Aviation Week Network (Rolling Daily Updates), AviTrader, APOC Aviation, ePlaneAI, aviationnews-online.com, Access Newswire</p>
+
+<div class="post-section" id="s1">
+  <div class="post-section-header">
+    <div class="section-number">1</div>
+    <span class="section-icon">📈</span>
+    <h2>Market Updates and Growth Trends</h2>
+  </div>
+<h3>HEICO / Sherwood Avionics Acquisition Closes — Defense MRO Expansion Takes Shape</h3>
+<ul>
+<li>Details emerge following the <strong>April 7 HEICO announcement</strong> on Sherwood Avionics: the acquisition reinforces HEICO's <strong>Flight Support Group (FSG)</strong> strategy of acquiring niche, high-expertise Part 145 operators at scale (MRO Business Today, April 8; AviTrader, April 8)</li>
+<li>Sherwood's <strong>~150-person workforce</strong> and established <strong>OEM relationships</strong> across C-130, F-15, F-16, CH-47, and UH-60 platforms give HEICO direct access to US DoD and allied nation defense MRO contracts</li>
+<li><strong>Market context:</strong> Defense MRO globally is entering an expansion phase — NATO allies increasing defence spending to 2–3% of GDP targets, with aircraft fleet readiness a priority across multiple air forces</li>
+<li><strong>Why it matters:</strong> HEICO's move into defense APU and component overhaul (Sherwood's core capabilities) complements its commercial PMA parts dominance — the company is methodically building a dual-track portfolio that spans both civil and military aftermarket</li>
+</ul>
+<h3>Setna iO Credit Expansion Amplifies in Context — Aftermarket Capital Cycle Heating Up</h3>
+<ul>
+<li>The <strong>$550 million Setna iO facility</strong> (announced April 7) is generating market discussion about the <strong>leverage dynamics</strong> of parts trading platforms (AviTrader, April 8)</li>
+<li>Key insight: The combination of Setna's Zulu Global South Florida expansion, LGT capability growth, and J&amp;C Aero integration creates a <strong>multi-platform MRO + parts ecosystem</strong> with interlinked specialisations — engine components (LGT), general trading (PartsLab/Setnix), and aero-structure/USM (Zulu/J&amp;C)</li>
+<li><strong>Why it matters:</strong> Diversified aftermarket platforms are outperforming single-specialisation players in the current market — because no one part of the value chain can fully satisfy the surge demand alone</li>
+</ul>
+
+<div class="post-section" id="s2">
+  <div class="post-section-header">
+    <div class="section-number">2</div>
+    <span class="section-icon">🌏</span>
+    <h2>Regional Expansion Activities</h2>
+  </div>
+<h3>APOC Aviation Acquires A320-200 (MSN 4533) from FTAI for Teardown — USM Supply Reinforced</h3>
+<ul>
+<li><strong>APOC Aviation</strong> (Netherlands-based trading and leasing specialist) has acquired <strong>Airbus A320-200 MSN 4533</strong> from <strong>FTAI Aviation</strong> for teardown (APOC press release, April 8; AviTrader, April 9; CAPA, April 8)</li>
+<li><strong>Aircraft details:</strong> 15 years old; most recently operated by <strong>Jetstar Pacific Airlines</strong></li>
+<li><strong>Teardown location:</strong> <strong>Tarmac Aerosave</strong> Toulouse-Francazal facility, France — scheduled for <strong>May 2026</strong></li>
+<li><strong>Purpose:</strong> Expand APOC's component supply offering in the V2500 / CFM56 USM market</li>
+<li><strong>Why APOC:</strong> APOC's trading model relies on part-out economics — teardowns generate USM inventory that APOC redistributes to MRO providers and operators. Acquiring a 15-year-old A320 (prime age for teardown) reinforces available stock for the CFM56 and V2500 engine families</li>
+<li><strong>Market signal:</strong> With CFM56 engines in high demand for shop visits across Ryanair, Southwest, easyJet, and other high-cycle operators, teardown of serviceable A320-family aircraft is economically compelling</li>
+<li><strong>Why it matters:</strong> This is the second A320-family teardown announced this week (alongside Executive Jet Support's activities), confirming that the USM supply response to the parts shortage is actively scaling</li>
+</ul>
+<h3>British School of Aviation Receives EASA Part 147 Approval for A350 / Trent XWB Training</h3>
+<ul>
+<li><strong>British School of Aviation (BSA)</strong>, operating from London Luton Airport, has received <strong>EASA Part 147 approval</strong> to deliver training on the <strong>Airbus A350</strong> with <strong>Rolls-Royce Trent XWB</strong> engine (Aviation Week, April 8)</li>
+<li><strong>Significance:</strong> BSA is an approved UK-based maintenance training organisation; the new approval extends its scope to the A350 — a long-haul widebody platform now entering its first major MRO maturity wave</li>
+<li><strong>Training scope:</strong> Category B1 and B2 licensed engineer type training for A350 / Trent XWB, covering both airframe/engine systems integration</li>
+<li><strong>Why it matters:</strong> The A350 fleet is growing rapidly across long-haul operators (Qatar Airways, Cathay Pacific, Lufthansa, Singapore Airlines, Air France, IAG). As these aircraft age toward their first heavy-check cycles, demand for A350-qualified maintenance engineers will accelerate sharply. BSA's certification adds European training capacity ahead of that demand wave</li>
+</ul>
+
+<div class="post-section" id="s3">
+  <div class="post-section-header">
+    <div class="section-number">3</div>
+    <span class="section-icon">🔗</span>
+    <h2>Supply Chain Developments</h2>
+  </div>
+<h3>Widebody Teardown Expansion: Executive Jet Support A340-600 and ERJ-145 Programme</h3>
+<ul>
+<li><strong>Executive Jet Support</strong> has acquired multiple aircraft for teardown this week:</li>
+<li><strong>Two Airbus A340-600s</strong> purchased from <strong>USC GmbH</strong> (Germany); teardown in <strong>Poland</strong></li>
+<li><strong>One Embraer ERJ-145</strong> acquired from <strong>Loganair</strong> (UK); teardown in <strong>Latvia</strong></li>
+<li><strong>A340-600 context:</strong> The quad-engine A340-600 (powered by Rolls-Royce Trent 500s) is increasingly economically unviable to operate — all major operators have retired or are retiring this type. Teardown unlocks high-value Trent 500 components and airframe parts for the remaining A340 fleet</li>
+<li><strong>ERJ-145 context:</strong> Loganair operates a regional UK network; the ERJ-145 retirement feeds the Rolls-Royce AE3007 aftermarket used heavily across regional fleets in North America and Europe</li>
+<li><strong>Why it matters:</strong> Multi-type teardown activity across widebody (A340) and regional jet (ERJ-145) segments in a single week reflects the <strong>breadth</strong> of USM demand — not just narrowbody CFM56, but also widebody RR components and regional jet engines</li>
+</ul>
+<h3>V2500 / CFM56 USM Markets: Increasing Competition for Quality Parts</h3>
+<ul>
+<li>Multiple teardown programmes active simultaneously are creating a <strong>more competitive USM market</strong> — good for buyers, challenging for sellers trying to maintain margin</li>
+<li><strong>Key beneficiaries:</strong> Airlines and independent MROs sourcing parts for mid-life A320-family and 737NG fleet maintenance can increasingly find quality USM alternatives to expensive OEM new parts</li>
+<li><strong>Why it matters:</strong> As new OEM part lead times stretch to 18–24 months for some components, USM has become a <strong>primary supply channel</strong> — not a secondary fallback. The USM market is now a structural pillar of the MRO supply chain</li>
+</ul>
+
+<div class="post-section" id="s4">
+  <div class="post-section-header">
+    <div class="section-number">4</div>
+    <span class="section-icon">💡</span>
+    <h2>Technology and Investment News</h2>
+  </div>
+<h3>MRO Americas 2026 Tech Preview: AI and Digital Maintenance Going Mainstream</h3>
+<ul>
+<li><strong>T-13 days</strong> to MRO Americas; exhibitors are finalising booth demonstrations and pre-show media briefings</li>
+<li><strong>Digital maintenance themes expected to dominate the exhibition floor:</strong></li>
+<li><strong>Predictive analytics platforms</strong> integrating real-time sensor data with maintenance scheduling</li>
+<li><strong>AI-assisted inspection tools</strong> — automated borescope analysis, crack detection, and wear measurement</li>
+<li><strong>Digital documentation systems</strong> — blockchain-enabled airworthiness records, reducing paperwork burden and compliance risk</li>
+<li><strong>Key watching brief:</strong> How Boeing Analytics and Airbus Skywise (now a standalone subsidiary) position against independent MRO software platforms at the show</li>
+<li><strong>Why it matters:</strong> The labour shortage is forcing MRO providers to extract maximum productivity from their existing technician base — technology that reduces wasted time, administrative burden, and inspection errors has never had stronger commercial pull</li>
+</ul>
+
+<div class="post-section" id="s5">
+  <div class="post-section-header">
+    <div class="section-number">5</div>
+    <span class="section-icon">⚠️</span>
+    <h2>Major Challenges and Solutions</h2>
+  </div>
+<h3>Trent 500 and AE3007 Aftermarket: Niche but Significant Segments Activated</h3>
+<ul>
+<li>The Executive Jet Support A340-600 teardowns will produce Rolls-Royce <strong>Trent 500</strong> components — a relatively niche but high-value market serving the remaining A340 fleet (~100+ aircraft still in commercial service)</li>
+<li>The ERJ-145 teardowns activate the <strong>Allison/Rolls-Royce AE3007</strong> market — critical for regional carriers in North America and Europe running ERJ-135/145/Legacy 600 aircraft</li>
+<li><strong>Challenge:</strong> As fleet sizes shrink, aftermarket support for "orphaned" types (A340-600, early ERJ variants) becomes increasingly difficult to source through OEM channels — driving reliance on teardown USM</li>
+<li><strong>Solution pathway:</strong> Purpose-structured teardown programmes like Executive Jet Support's model fill the OEM aftermarket gap for declining-fleet types</li>
+</ul>
+
+<div class="post-section" id="s6">
+  <div class="post-section-header">
+    <div class="section-number">📋</div>
+    <span class="section-icon">⚠️</span>
+    <h2>MRO Americas 2026 Countdown — T-13 Days</h2>
+  </div>
+<p style="color:var(--gray-400);font-size:13px;font-style:italic;margin-bottom:8px">13 days until MRO Americas 2026, April 21–23, Orlando</p>
+<ul>
+<li><strong>Week of April 7–13:</strong> The M&amp;A and investment announcement wave is now confirmed — HEICO/Sherwood, Marubeni/DASI, Setna iO credit expansion, and multiple teardown programme launches all concentrated in days 11–13 before the show</li>
+<li><strong>Booth activity:</strong> Volo Aero (Booth 1758), Ontic (Stand 2903, N-S Hall), and dozens of other exhibitors are finalising show strategies</li>
+<li><strong>Media cycle:</strong> Aviation Week's rolling updates, AviTrader, and MRO Business Today are publishing multiple new items daily — the highest output pace of the year for MRO-focused news</li>
+</ul>
+
+<div class="post-section" id="s7">
+  <div class="post-section-header">
+    <div class="section-number">📋</div>
+    <span class="section-icon">⚠️</span>
+    <h2>Weekly Outlook: April 8–10, 2026</h2>
+  </div>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">1. <strong>Teardown surge continues:</strong> Multi-type disassembly activity (A320, A340-600, ERJ-145) creating broad USM supply across narrowbody, widebody, and regional segments</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">2. <strong>Defense MRO integration:</strong> HEICO/Sherwood integration planning underway — watch for subsequent platform capability announcements at MRO Americas</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">3. <strong>Training capacity building:</strong> BSA's A350 Part 147 approval is one signal of a broader industry push to certify more engineers on next-generation platform types</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">4. <strong>Pre-show announcement peak approaching:</strong> April 13–18 will see maximum news velocity; key areas to watch include engine MRO capacity deals, technology platform launches, and fleet management partnerships</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">5. <strong>Capital deployment accelerating:</strong> Setna iO's credit facility and Marubeni/DASI deal signal that capital availability is not the constraint — execution and capacity remain the binding factors</p>
+<p style="color:var(--gray-400);font-size:13px;font-style:italic;margin-bottom:8px">Sources: Aviation Week Network (MRO Rolling Daily Updates, April 8, 2026), AviTrader (April 8–9), APOC Aviation press release (April 8), MRO Business Today (April 8), aviationnews-online.com (April 8), CAPA Centre for Aviation (April 8), alphapilot.tech (April 7–8).</p>
+</div>
+          <nav class="post-nav">
+            <a href="april-7-2026.html" class="post-nav-btn">
+              <div class="post-nav-label">← Previous Issue</div>
+              <div class="post-nav-title">April 7 2026</div>
+            </a>
+            <a href="../index.html" class="post-nav-btn" style="text-align:right">
+              <div class="post-nav-label">All Briefings</div>
+              <div class="post-nav-title">View Archive →</div>
+            </a>
+          </nav>
+        </article>
+
+        <aside class="post-sidebar">
+          <div class="toc-widget">
+            <div class="toc-title">In This Issue</div>
+            <ul class="toc-list">
+              <li><a href="#s1"><span class="toc-num">1</span> Market Updates &amp; Growth</a></li>
+              <li><a href="#s2"><span class="toc-num">2</span> Regional Expansion</a></li>
+              <li><a href="#s3"><span class="toc-num">3</span> Supply Chain</a></li>
+              <li><a href="#s4"><span class="toc-num">4</span> Technology &amp; Investment</a></li>
+              <li><a href="#s5"><span class="toc-num">5</span> Challenges &amp; Solutions</a></li>
+            </ul>
+          </div>
+          <div class="sidebar-widget">
+            <h3 class="widget-title">About This Briefing</h3>
+            <p class="widget-text">Source:</p>
+            <div class="widget-badge">
+              <span class="auto-badge">⚡ Automated Daily at 7:00 AM</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand"><span class="logo-icon">✈</span><span class="footer-name">MRO Daily Intelligence</span></div>
+        <div class="footer-text">Automated briefings sourced from Aviation Week Network. Published daily at 7:00 AM.</div>
+      </div>
+    </div>
+  </footer>
+
+<script>
+  var postAudio = null;
+  var audioSrc  = 'posts/april8-2026-email.m4a';  /* relative from inside posts/ dir */
+
+  /* Fix path: this page is in posts/, so audio is same dir */
+  var audioFile = 'april8-2026-email.m4a';
+
+  function fmtPostTime(s) {
+    if (isNaN(s) || !isFinite(s)) return '--:--';
+    var m = Math.floor(s / 60);
+    return m + ':' + String(Math.floor(s % 60)).padStart(2, '0');
+  }
+
+  function togglePostAudio() {
+    var playIcon  = document.getElementById('postPlayIcon');
+    var pauseIcon = document.getElementById('postPauseIcon');
+    var meta      = document.getElementById('postAudioMeta');
+    var fill      = document.getElementById('postAudioFill');
+    var cur       = document.getElementById('postAudioCur');
+    var dur       = document.getElementById('postAudioDur');
+
+    if (!postAudio) {
+      postAudio = new Audio(audioFile);
+      postAudio.addEventListener('loadedmetadata', function() {
+        dur.textContent = fmtPostTime(postAudio.duration);
+        meta.textContent = fmtPostTime(postAudio.duration) + ' · Daniel, en-GB';
+      });
+      postAudio.addEventListener('timeupdate', function() {
+        var pct = (postAudio.currentTime / postAudio.duration) * 100;
+        fill.style.width = pct + '%';
+        cur.textContent = fmtPostTime(postAudio.currentTime);
+      });
+      postAudio.addEventListener('ended', function() {
+        playIcon.style.display = '';
+        pauseIcon.style.display = 'none';
+        meta.textContent = 'Finished · tap to replay';
+        fill.style.width = '0%';
+        cur.textContent = '0:00';
+        postAudio.currentTime = 0;
+      });
+    }
+
+    if (!postAudio.paused) {
+      postAudio.pause();
+      playIcon.style.display = '';
+      pauseIcon.style.display = 'none';
+      meta.textContent = 'Paused';
+    } else {
+      postAudio.play();
+      playIcon.style.display = 'none';
+      pauseIcon.style.display = '';
+      meta.textContent = 'Playing…';
+    }
+  }
+
+  function seekPostAudio(e) {
+    if (!postAudio) return;
+    var track = document.getElementById('postAudioTrack');
+    var rect  = track.getBoundingClientRect();
+    var pct   = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
+    postAudio.currentTime = pct * postAudio.duration;
+  }
+</script>
+</body>
+</html>
