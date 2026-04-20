@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MRO Briefing — April 20, 2026 | MRO Daily Intelligence</title>
+  <meta name="description" content="MRO Americas 2026 opens tomorrow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/style.css" />
+  <style>
+    /* ── Audio Player ── */
+    .post-audio-player {
+      background: linear-gradient(135deg,#0f2847 0%,#1a4a8a 100%);
+      border-radius: 14px;
+      padding: 18px 20px;
+      margin: 0 0 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .post-audio-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .6px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.5);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .post-audio-controls {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .post-play-btn {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.15);
+      border: 1px solid rgba(255,255,255,.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      flex-shrink: 0;
+      transition: background .15s;
+    }
+    .post-play-btn:hover { background: rgba(255,255,255,.25); }
+    .post-play-btn svg { fill: white; width: 20px; height: 20px; }
+    .post-audio-info { flex: 1; }
+    .post-audio-title { font-size: 14px; font-weight: 600; color: #fff; margin-bottom: 3px; }
+    .post-audio-meta { font-size: 12px; color: rgba(255,255,255,.5); }
+    .post-audio-progress {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .post-audio-time { font-size: 11px; color: rgba(255,255,255,.5); min-width: 32px; font-variant-numeric: tabular-nums; }
+    .post-audio-track {
+      flex: 1;
+      height: 4px;
+      background: rgba(255,255,255,.2);
+      border-radius: 99px;
+      cursor: pointer;
+      position: relative;
+    }
+    .post-audio-fill {
+      height: 100%;
+      width: 0%;
+      background: #fff;
+      border-radius: 99px;
+      transition: width .2s linear;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <div class="logo">
+          <span class="logo-icon">✈</span>
+          <div>
+            <div class="logo-name">MRO Daily Intelligence</div>
+            <div class="logo-tagline">Aviation Maintenance Market Briefings</div>
+          </div>
+        </div>
+        <nav class="nav">
+          <a href="../index.html" class="nav-link">Latest</a>
+          <a href="../index.html#about" class="nav-link">About</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section class="post-hero">
+    <div class="container">
+      <a href="../index.html" class="post-back">← All Briefings</a>
+      <div class="post-issue-label">Issue #31 &nbsp;·&nbsp; April 20, 2026</div>
+      <h1 class="post-title">Daily MRO Market News Summary — April 20, 2026</h1>
+      <div class="post-meta-row">
+        <div class="post-meta-item"><strong>April 20, 2026</strong></div>
+        <div class="post-meta-item">·</div>
+        <div class="post-meta-item">Source: <strong>Aviation Week Network</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <main class="post-body">
+    <div class="container">
+      <div class="post-grid">
+        <article class="post-content">
+
+          <!-- ── Audio Player ── -->
+          <div class="post-audio-player" id="audioPlayer">
+            <div class="post-audio-label">
+              <svg viewBox="0 0 24 24" fill="white" width="12" height="12"><path d="M12 3a9 9 0 100 18A9 9 0 0012 3zm-2 13V8l7 4-7 4z"/></svg>
+              Audio Briefing &nbsp;·&nbsp; Daniel, en-GB
+            </div>
+            <div class="post-audio-controls">
+              <button class="post-play-btn" id="postPlayBtn" onclick="togglePostAudio()" aria-label="Play audio briefing">
+                <svg id="postPlayIcon" viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+                <svg id="postPauseIcon" viewBox="0 0 24 24" style="display:none"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+              </button>
+              <div class="post-audio-info">
+                <div class="post-audio-title">Daily Briefing — April 20, 2026</div>
+                <div class="post-audio-meta" id="postAudioMeta">Tap to listen · ~2 min</div>
+              </div>
+            </div>
+            <div class="post-audio-progress">
+              <span class="post-audio-time" id="postAudioCur">0:00</span>
+              <div class="post-audio-track" id="postAudioTrack" onclick="seekPostAudio(event)">
+                <div class="post-audio-fill" id="postAudioFill"></div>
+              </div>
+              <span class="post-audio-time" id="postAudioDur">--:--</span>
+            </div>
+          </div>
+
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px"><strong>Date:</strong> Monday, April 20, 2026</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px"><strong>Source:</strong> Aviation Week Network (Rolling Daily Updates), Aviation Business News, Aviation A2Z, APEX Aero, CAPA Centre for Aviation, Oliver Wyman, AVM Magazine, Aviation Australia, AMC Competition/Snap-on</p>
+
+<div class="post-section" id="s1">
+  <div class="post-section-header">
+    <div class="section-number">1</div>
+    <span class="section-icon">📈</span>
+    <h2>Market Updates and Growth Trends</h2>
+  </div>
+<h3>MRO Americas 2026 Eve — Global Industry Converges on Orlando</h3>
+<ul>
+<li><strong>MRO Americas 2026 opens tomorrow</strong> (April 21–23, Orange County Convention Center, Orlando, FL) — the 30th anniversary edition, the largest gathering of aviation maintenance professionals worldwide</li>
+<li><strong>17,000+ attendees, 1,000+ exhibitors, 2,000+ airline and lessor buyers</strong> representing <strong>93+ countries</strong> are expected on the exhibition floor over three days (Aviation Week Network)</li>
+<li><strong>The Competition presented by Snap-on (AMCC 2026)</strong> kicked off today, <strong>April 20</strong>, one day before the main show — teams began competing in six divisions: Commercial Aviation, General Aviation, Aerospace, Military, MRO/OEM, and Schools (AMC Competition, April 20)</li>
+<li>Nearly <strong>90 teams from around the world</strong> competing for the William F. "Bill" O'Brien Award for Excellence in Aircraft Maintenance (Snap-on title sponsor contributes <strong>$150,000+</strong> in tools and equipment annually)</li>
+<li>Industry giants competing: United Airlines, Air Canada (two teams), Southwest Airlines; debut challengers include Texarkana College from East Texas</li>
+<li>Air Canada extending reach by covering airfare for Centennial College student competitors — a direct apprenticeship pipeline investment</li>
+<li>Competition disciplines: airframe damage inspection, composite repair, engine fan blade removal, fuel tank entry precautions (15 minutes per event)</li>
+</ul>
+<h3>Oliver Wyman 2026 MRO Survey: Structural "Super Cycle" Deepens <a class="src-link" href="https://www.oliverwyman.com/our-expertise/insights/2026/feb/global-fleet-and-mro-market-forecast-2026-2036.html" target="_blank" rel="noopener">Oliver Wyman</a></h3>
+<ul>
+<li><strong>Global MRO market reached $136 billion in 2025</strong> (+8% YoY) — on trajectory toward <strong>$193 billion by 2036</strong>, approximately double the 2019 pre-COVID level (Oliver Wyman, April 2026)</li>
+<li><strong>North American engine MRO spending</strong> forecast to rise <strong>44% to $19.4 billion by 2035</strong> — the single largest regional growth engine in the aftermarket (Aviation Week Supply Chain)</li>
+<li><strong>Five top industry disruptors for next 5 years</strong> (2026 survey ranking):</li>
+</ul>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">1. Materials shortages</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">2. Geopolitical instability / tariff risk (<strong>new entry to top-5</strong>)</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">3. Workforce shortage</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">4. Cost management</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">5. Generative AI</p>
+<ul>
+<li><strong>58%</strong> of MRO operators still in AI "experimentation" phase; <strong>67%</strong> report AI projects meeting or exceeding expectations — but only <strong>33%</strong> plan IT infrastructure investment vs. <strong>50%</strong> planning AI investment, raising data-readiness concerns</li>
+<li><strong>90%</strong> of surveyed operators directly impacted by tariffs on parts procurement, repair, and engine overhaul — geopolitical cost pressure now classified as <strong>structural, not cyclical</strong></li>
+</ul>
+
+<div class="post-section" id="s2">
+  <div class="post-section-header">
+    <div class="section-number">2</div>
+    <span class="section-icon">🌏</span>
+    <h2>Regional Expansion Activities</h2>
+  </div>
+<h3>Panasonic Avionics × Air India: IFE MRO Milestone for South Asia Market</h3>
+<ul>
+<li><strong>Panasonic Technical Services (PTS)</strong> announced it has been selected by <strong>Air India</strong> as the IFE MRO provider for <strong>74 aircraft</strong> — announced at Aircraft Interiors Expo (AIX) 2026 in Hamburg (April 14; Aviation Week Rolling Updates, April 17)</li>
+<li><strong>Fleet scope:</strong> Boeing 787-9, Airbus A350-1000, A350-900, and A321neo equipped with Panasonic Astrova and X Series IFE systems</li>
+<li><strong>Contract scope:</strong> End-to-end "Total Care Package" including proactive monitoring, spare parts management, global field engineering support, 24/7 technical assistance, and lifecycle support</li>
+<li><strong>India infrastructure investment:</strong> Panasonic opening two new <strong>Line Maintenance Stations</strong> in Mumbai (BOM) and New Delhi (DEL) — converting fleet health data directly into real-time maintenance operations</li>
+<li><strong>Strategic context:</strong> Air India simultaneously took delivery of its <strong>first fully refurbished Boeing 787-8</strong> (reg. VT-ANT, April 13) completed at Boeing's Victorville facility — cabin-to-cabin upgrade aligned with the new IFE platform rollout</li>
+<li>This deal positions Panasonic as the primary IFE aftermarket partner for India's largest airline through the decade, reinforcing India's growing MRO services market ($5.7B projected by 2030)</li>
+</ul>
+<h3>Aviation Australia × Airbus NSW: Workforce Pipeline for Asia-Pacific</h3>
+<ul>
+<li><strong>Aviation Australia</strong> commenced a new <strong>Airbus-aligned apprenticeship training programme in New South Wales (NSW)</strong> in March 2026, announced publicly April 14 (CAPA, April 16)</li>
+<li><strong>27 apprentices</strong> currently enrolled in Diploma of Aeroskills — either <strong>Avionics (MEA50118)</strong> or <strong>Mechanical (MEA50219)</strong> specialisations</li>
+<li>Programme designed to directly support <strong>Airbus maintenance engineering capability requirements</strong> in Australia and feed the regional talent pipeline</li>
+<li>Described as a <strong>"Global Preferred Provider"</strong> partnership — Aviation Australia's second such flagship collaboration this year</li>
+<li><strong>Background:</strong> Aviation Australia already operates training campuses across QLD, NSW, and VIC; this NSW expansion is the first direct Airbus-aligned programme outside Queensland</li>
+</ul>
+<h3>AMC Competition 2026 — Workforce Development on Display</h3>
+<ul>
+<li><strong>Aerospace Maintenance Council (AMC) Competition</strong> — now in its <strong>13th year</strong> — runs April 20–23 at the Orange County Convention Center, Orlando</li>
+<li>Dubbed the <strong>"Olympics of aircraft maintenance"</strong>, the event puts a spotlight on certified Aviation Maintenance Technician (AMT) skill levels and the growing role of school-level teams in addressing the industry's workforce pipeline gap</li>
+<li>School teams from Texarkana College TX (first appearance) and Centennial College Canada competing alongside airline heavyweights — reflecting the urgency of technician recruitment at the institutional level</li>
+<li>50+ companies, educational institutions, community organizations, and individual volunteers supporting the event</li>
+</ul>
+
+<div class="post-section" id="s3">
+  <div class="post-section-header">
+    <div class="section-number">3</div>
+    <span class="section-icon">🔗</span>
+    <h2>Supply Chain Developments</h2>
+  </div>
+<h3>VSE–PAG $2.03B Acquisition: Close Expected at MRO Americas</h3>
+<ul>
+<li><strong>VSE Corporation (NASDAQ: VSEC)</strong> acquisition of <strong>Precision Aviation Group (PAG)</strong> for <strong>$2.03 billion</strong> is expected to close <strong>this week</strong> — potentially announced on the MRO Americas exhibition floor (MDM.com, April 14–20)</li>
+<li><strong>Strategic impact:</strong> Combined entity will create a top-tier aviation aftermarket distribution and MRO services platform with PAG's $600M+ annual revenue and global engine/component MRO capabilities</li>
+<li><strong>PAG's unique assets:</strong> Safran Engine &amp; Propulsion (E&amp;P) Authorized Repair Centre (ARC) network expanded in 2026 to <strong>5 global facilities</strong> (Brazil and Australia added in April); strong turboprop engine focus serving business aviation and regional airline segments</li>
+<li><strong>VSE's existing base:</strong> ~$2B revenue aviation distribution and repair business; acquisition doubles scale and adds international engine MRO depth</li>
+<li>Regulatory approvals complete; transaction in final administrative closing stages</li>
+</ul>
+<h3>EASA Counterfeit Parts Alert: Container Heist Supply Chain Risk Persists</h3>
+<ul>
+<li><strong>EASA warning (originally issued April 3, 2026)</strong> remains active: <strong>12 shipping containers</strong> of engine parts were diverted mid-transit, with stolen parts believed to have re-entered the aftermarket as legitimate inventory (Aviation Week, April 17)</li>
+<li>Risk concentration: Engine MRO is the highest-value, highest-fraud-risk segment ($50,000–$500,000+ per part)</li>
+<li><strong>Authentication solutions gaining momentum:</strong></li>
+<li><strong>DUST Identity Theseus platform</strong> (diamond-dust physical fingerprinting + AI verification) deployed in aerospace materials and components authentication</li>
+<li>Blockchain traceability implementations in early commercial deployment stages</li>
+<li>MRO operators advised to implement enhanced provenance verification protocols ahead of MRO Americas deal activity</li>
+</ul>
+<h3>Material Cost Inflation: No Relief in Sight</h3>
+<ul>
+<li>Oliver Wyman 2026 survey confirms material cost inflation running <strong>100–200 basis points above forecast</strong> across all MRO segments in 2025, with <strong>no relief projected for 2026</strong></li>
+<li><strong>Key cost drivers:</strong> Parts shortages, geopolitical supply disruptions, increased inventory buffer requirements, new-technology R&amp;D costs being passed into aftermarket pricing, legacy fleet repair complexity</li>
+<li><strong>Tariff exposure:</strong> With 90% of operators directly impacted, procurement strategies are shifting to USM (Used Serviceable Material), PMA parts, and increased regional sourcing to bypass tariff corridors</li>
+</ul>
+
+<div class="post-section" id="s4">
+  <div class="post-section-header">
+    <div class="section-number">4</div>
+    <span class="section-icon">💡</span>
+    <h2>Technology and Investment News</h2>
+  </div>
+<h3>AMCC 2026: Technology on the Maintenance Floor</h3>
+<ul>
+<li>The AMC Competition's <strong>composite repair and engine fan blade removal</strong> challenges reflect the increasing technical complexity of modern aircraft maintenance — A320neo/737 MAX-generation structures and engines require more sophisticated skills than legacy fleets</li>
+<li><strong>Key observation from competition organizers:</strong> "Competition drives excellence — competing against United Airlines or Southwest Airlines technicians helps students improve rapidly" (Brandon Sanders, Texarkana College)</li>
+<li><strong>Snap-on's $150,000+ prize package</strong> signals OEM tool manufacturers' strategic investment in certified workforce development — a direct response to the industry's hiring crisis</li>
+</ul>
+<h3>Panasonic Astrova — Next-Gen IFE Platform Gains MRO Footprint</h3>
+<ul>
+<li>Air India deal confirms <strong>Panasonic Astrova IFE</strong> as a major platform choice for Indian carrier fleet modernisation (first Astrova deployment in India, following 2025 order announcement)</li>
+<li>Simultaneously, Panasonic revealed <strong>Astrova debut on Air Canada</strong> (announced at AIX 2026) — expanding the platform's service network requirements globally</li>
+<li><strong>MRO significance:</strong> As Astrova reaches operational scale, the IFE MRO services market for this platform will grow substantially, requiring expanded certified repair stations and spare parts inventory networks globally</li>
+</ul>
+<h3>AI and Digital MRO: State of Play Heading Into MRO Americas</h3>
+<ul>
+<li>Key digital MRO themes expected on the MRO Americas floor (April 21–23):</li>
+<li><strong>Korean Air / Ramco Mechanic Anywhere:</strong> 400+ mechanics on mobile maintenance platform — live deployment case study</li>
+<li><strong>Aloft AeroArchitects 737 Smart Outlet STC:</strong> First FAA-certified aviation smart power outlet — cabin retrofit technology meets digital MRO</li>
+<li><strong>Tier 1 MRO × IntegrUP warehouse automation:</strong> RFID-tracked smart vending machines and vertical lift modules for MRO parts management</li>
+<li><strong>AI predictive maintenance:</strong> SAS Airlines (~1,000 predictive work orders via Airbus RMAX); Donecle drone AI inspection platform (€10M funding, 40+ drones, 15+ countries)</li>
+<li><strong>Digital aerospace MRO market</strong> growing from $1.02B (2025) → <strong>$1.16B (2026)</strong> at <strong>13.9% CAGR</strong> (GII, March 2026)</li>
+</ul>
+
+<div class="post-section" id="s5">
+  <div class="post-section-header">
+    <div class="section-number">5</div>
+    <span class="section-icon">⚠️</span>
+    <h2>Major Challenges and Solutions</h2>
+  </div>
+<h3>Challenge 1: Engine TAT Crisis — The Defining Constraint of MRO Americas 2026</h3>
+<ul>
+<li><strong>Narrow-body engine turnaround time: 180–200+ days</strong> — more than double pre-pandemic norms of 60–90 days (Oliver Wyman 2026 survey)</li>
+<li><strong>>50% of operators</strong> do not expect TAT improvement within 3 years</li>
+<li><strong>67% of operators</strong> report next-gen engine (LEAP/GTF) costs exceeding forecasts by more than 21%; 25% report cost overruns exceeding 50%</li>
+<li>Engine MRO now accounts for <strong>>50% of total MRO spend</strong> — a single LEAP-1A shop visit costs $3–7M</li>
+<li><strong>Solutions being scaled at MRO Americas:</strong></li>
+<li>GA Telesis: First LEAP-1A and PW1100G-JM USM components from A320neo teardown — Q3 2026 certification target; "intense" trader interest</li>
+<li>Modular engine exchange programs (lessors + MROs) reducing slot-dependency</li>
+<li>New test cell capacity: Delta TechOps, AFI KLM E&amp;M, Lufthansa Technik all expanding for LEAP/GTF</li>
+</ul>
+<h3>Challenge 2: Workforce Shortage — Industry-Level Response Takes Shape</h3>
+<ul>
+<li><strong>2/3 of operators</strong> rate certified technician hiring as "moderately to very difficult" (Oliver Wyman 2026)</li>
+<li><strong>>50% expect attrition to worsen</strong> in 2026 vs. 2025; labor cost inflation running <strong>5.5–6.0%</strong> (vs. ~3% pre-COVID)</li>
+<li><strong>Systemic responses being demonstrated at MRO Americas 2026:</strong></li>
+<li><strong>AMC Competition 2026</strong> (starting today, April 20): 90 teams, 6 divisions — skills competition driving enrollment, visibility, and talent pipelines</li>
+<li><strong>Aviation Australia × Airbus NSW (27 apprentices):</strong> OEM-aligned apprenticeship as scalable model for carrier-specific pipeline development</li>
+<li><strong>Air Canada × Centennial College:</strong> Airline-funded student travel + full-year training collaboration — industry-funded talent pipeline</li>
+<li><strong>Korean Air Ramco Mechanic Anywhere:</strong> 400+ mechanics using mobile app, reducing administrative burden and increasing wrench time per technician</li>
+<li><strong>Automation:</strong> Donecle drone inspection (10× faster than manual) reducing visual inspection headcount requirements; Tier 1 MRO × IntegrUP warehouse automation freeing skilled workers for high-value tasks</li>
+</ul>
+<h3>Challenge 3: Tariff and Geopolitical Disruption — New Structural Pressure</h3>
+<ul>
+<li><strong>90% of MRO operators</strong> impacted by tariffs on parts procurement, repair, and engine overhaul (Oliver Wyman 2026)</li>
+<li>Geopolitical instability/tariff risk newly ranked <strong>#2 industry disruptor</strong> for next 5 years — first appearance in top-5</li>
+<li><strong>Strategic responses:</strong></li>
+<li>Regionalization of MRO capacity (India, Southeast Asia, Central Europe investment ramp)</li>
+<li>Increased safety stock / inventory buffer build</li>
+<li>USM and PMA adoption as OEM-independent sourcing alternatives</li>
+<li>Multi-facility ARC networks reducing geographic tariff concentration risk (PAG/VSE model)</li>
+</ul>
+<h3>Challenge 4: Supply Chain Fraud and Counterfeit Parts</h3>
+<ul>
+<li><strong>EASA April 3 warning</strong> still active: 12 containers of high-value engine parts diverted and re-entered supply chain as legitimate inventory</li>
+<li>Broader context: counterfeit parts risk elevated by high demand, long TATs, and supply chain opacity</li>
+<li><strong>Response:</strong> DUST Identity physical authentication, blockchain traceability, and stricter OEM certification verification gaining commercial traction at MRO level</li>
+</ul>
+
+<div class="post-section" id="s6">
+  <div class="post-section-header">
+    <div class="section-number">📋</div>
+    <span class="section-icon">⚠️</span>
+    <h2>MRO Americas 2026 — T-1 Day (Opens Tomorrow, April 21)</h2>
+  </div>
+<p style="color:var(--gray-400);font-size:13px;font-style:italic;margin-bottom:8px">MRO Americas 2026 opens in ONE DAY — April 21–23, Orlando, Orange County Convention Center</p>
+<p style="color:var(--gray-400);font-size:13px;font-style:italic;margin-bottom:8px">30th Anniversary Show — Pre-Show Status:</p>
+<div class="table-wrapper"><table class="post-table">
+<thead><tr><th>Date</th><th>Activity</th></tr></thead><tbody>
+<tr><td>April 20</td><td>AMC Competition (AMCC) kick-off — 90 teams, 6 divisions; registration day</td></tr>
+<tr><td>April 21–23</td><td>Main exhibition + conference opens</td></tr>
+<tr><td>April 21 (expected)</td><td>VSE–PAG $2.03B close announcement</td></tr>
+<tr><td>April 21–22</td><td>HEICO FSG — first post-Sherwood Avionics show appearance</td></tr>
+<tr><td>April 21–23</td><td>Ontic $30M investment programme (Stand 2903 N-S Hall)</td></tr>
+<tr><td>April 21–23</td><td>Tier 1 MRO × IntegrUP (Booth #1731)</td></tr>
+<tr><td>April 21–23</td><td>Volo Aero MRO (Booth #1758) — record Q1 2026 results</td></tr>
+</tbody></table></div>
+<p style="color:var(--gray-400);font-size:13px;font-style:italic;margin-bottom:8px">Top 5 Watch Items for MRO Americas 2026:</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">1. <strong>VSE–PAG $2.03B close</strong> — defining M&amp;A moment of the show; implications for global distribution and turboprop engine MRO</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">2. <strong>Delta TechOps $5B ambition</strong> — how they attract third-party engine contracts beyond Korean Air LEAP-1B</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">3. <strong>Engine MRO capacity announcements</strong> — new LEAP/GTF shop agreements from Tier 1 OEMs and independents</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">4. <strong>Workforce solutions</strong> — large-scale technician training, apprenticeship, and retention programmes</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">5. <strong>Next-gen USM pipeline</strong> — follow-on A320neo teardown announcements after GA Telesis A320neo precedent</p>
+
+<div class="post-section" id="s7">
+  <div class="post-section-header">
+    <div class="section-number">📋</div>
+    <span class="section-icon">⚠️</span>
+    <h2>Today's Headlines Recap (April 18–20, 2026)</h2>
+  </div>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">1. <strong>AMC Competition 2026 Opens Today (April 20):</strong> 90 global teams compete at MRO Americas venue — "Olympics of aircraft maintenance" kicks off one day before main show</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">2. <strong>Panasonic × Air India (74 aircraft):</strong> Full-scope IFE MRO package; two new Mumbai/Delhi line stations — India IFE aftermarket now a structured market</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">3. <strong>Aviation Australia × Airbus NSW (27 apprentices):</strong> Airbus-aligned diploma programme launched March 2026 — OEM-pipeline model for Asia-Pacific workforce crisis</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">4. <strong>VSE–PAG Close Imminent:</strong> $2.03B deal in final administrative stage — announcement expected April 21 at MRO Americas opening</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">5. <strong>Oliver Wyman 2026 Full Survey Themes:</strong> 90% tariff impact; 180–200-day engine TATs; $136B→$193B trajectory; geopolitical risk new top-5 disruptor</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">6. <strong>EASA Counterfeit Parts Alert Remains Active:</strong> 12-container diversion; DUST Identity fingerprinting gaining traction</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">7. <strong>MRO Americas T-1:</strong> 17,000+ attendees; 1,000+ exhibitors; 93 countries — largest MRO gathering in the world opens tomorrow</p>
+
+<div class="post-section" id="s8">
+  <div class="post-section-header">
+    <div class="section-number">📋</div>
+    <span class="section-icon">⚠️</span>
+    <h2>Key Statistics — April 18–20, 2026</h2>
+  </div>
+<div class="table-wrapper"><table class="post-table">
+<thead><tr><th>Metric</th><th>Value</th><th>Source</th></tr></thead><tbody>
+<tr><td>Global MRO market 2025</td><td>$136B (+8% YoY)</td><td>Oliver Wyman</td></tr>
+<tr><td>Global MRO market 2036E</td><td>~$193B</td><td>Oliver Wyman</td></tr>
+<tr><td>NA engine MRO by 2035</td><td>$19.4B (+44%)</td><td>Aviation Week</td></tr>
+<tr><td>India MRO market 2030E</td><td>$5.7B</td><td>IBEF / Alton Aviation</td></tr>
+<tr><td>Air India IFE MRO (Panasonic)</td><td>74 aircraft</td><td>Panasonic Avionics, April 14</td></tr>
+<tr><td>Aviation Australia NSW apprentices</td><td>27</td><td>Aviation Australia, April 14</td></tr>
+<tr><td>VSE–PAG acquisition value</td><td>$2.03B</td><td>VSE Corp, January 2026</td></tr>
+<tr><td>Narrow-body engine TAT</td><td>180–200+ days</td><td>Oliver Wyman</td></tr>
+<tr><td>MRO operators tariff-impacted</td><td>90%</td><td>Oliver Wyman</td></tr>
+<tr><td>AI meeting/exceeding expectations</td><td>67%</td><td>Oliver Wyman</td></tr>
+<tr><td>Still in AI experimentation phase</td><td>58%</td><td>Oliver Wyman</td></tr>
+<tr><td>AMC Competition 2026 teams</td><td>~90 teams (6 divisions)</td><td>AMC / Snap-on</td></tr>
+<tr><td>AMC Snap-on annual prize pool</td><td>$150,000+</td><td>AMC / Snap-on</td></tr>
+<tr><td>MRO Americas 2026 attendees</td><td>17,000+</td><td>Aviation Week Network</td></tr>
+<tr><td>MRO Americas 2026 exhibitors</td><td>1,000+</td><td>Aviation Week Network</td></tr>
+<tr><td>MRO Americas 2026 countries</td><td>93+</td><td>Aviation Week Network</td></tr>
+</tbody></table></div>
+<p style="color:var(--gray-400);font-size:13px;font-style:italic;margin-bottom:8px">Sources: Aviation Week Network (MRO Rolling Daily Updates, April 14–20, 2026; Supply Chain April 17); Oliver Wyman 2026 MRO Survey (April 2026); Aviation Business News (AMC Competition feature, April 2026); Aviation A2Z (Air India / Panasonic IFE, April 14); APEX Aero (AIX 2026 / Panasonic Astrova, April 17); Panasonic Avionics / PR Newswire (April 14); CAPA Centre for Aviation (Aviation Australia / Airbus NSW, April 16); Aviation Australia (April 14); AMC Competition / Snap-on (amccompetition.com, April 20); MDM.com (VSE–PAG close update, April 14–20); AVM Magazine (VSE–PAG background); AeroTime / AviTrader (MRO general, April 2026).</p>
+</div>
+          <nav class="post-nav">
+            <a href="april-17-2026.html" class="post-nav-btn">
+              <div class="post-nav-label">← Previous Issue</div>
+              <div class="post-nav-title">April 17 2026</div>
+            </a>
+            <a href="../index.html" class="post-nav-btn" style="text-align:right">
+              <div class="post-nav-label">All Briefings</div>
+              <div class="post-nav-title">View Archive →</div>
+            </a>
+          </nav>
+        </article>
+
+        <aside class="post-sidebar">
+          <div class="toc-widget">
+            <div class="toc-title">In This Issue</div>
+            <ul class="toc-list">
+              <li><a href="#s1"><span class="toc-num">1</span> Market Updates &amp; Growth</a></li>
+              <li><a href="#s2"><span class="toc-num">2</span> Regional Expansion</a></li>
+              <li><a href="#s3"><span class="toc-num">3</span> Supply Chain</a></li>
+              <li><a href="#s4"><span class="toc-num">4</span> Technology &amp; Investment</a></li>
+              <li><a href="#s5"><span class="toc-num">5</span> Challenges &amp; Solutions</a></li>
+            </ul>
+          </div>
+          <div class="sidebar-widget">
+            <h3 class="widget-title">About This Briefing</h3>
+            <p class="widget-text">Source:</p>
+            <div class="widget-badge">
+              <span class="auto-badge">⚡ Automated Daily at 7:00 AM</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand"><span class="logo-icon">✈</span><span class="footer-name">MRO Daily Intelligence</span></div>
+        <div class="footer-text">Automated briefings sourced from Aviation Week Network. Published daily at 7:00 AM.</div>
+      </div>
+    </div>
+  </footer>
+
+<script>
+  var postAudio = null;
+  var audioSrc  = 'posts/april20-2026-email.m4a';  /* relative from inside posts/ dir */
+
+  /* Fix path: this page is in posts/, so audio is same dir */
+  var audioFile = 'april20-2026-email.m4a';
+
+  function fmtPostTime(s) {
+    if (isNaN(s) || !isFinite(s)) return '--:--';
+    var m = Math.floor(s / 60);
+    return m + ':' + String(Math.floor(s % 60)).padStart(2, '0');
+  }
+
+  function togglePostAudio() {
+    var playIcon  = document.getElementById('postPlayIcon');
+    var pauseIcon = document.getElementById('postPauseIcon');
+    var meta      = document.getElementById('postAudioMeta');
+    var fill      = document.getElementById('postAudioFill');
+    var cur       = document.getElementById('postAudioCur');
+    var dur       = document.getElementById('postAudioDur');
+
+    if (!postAudio) {
+      postAudio = new Audio(audioFile);
+      postAudio.addEventListener('loadedmetadata', function() {
+        dur.textContent = fmtPostTime(postAudio.duration);
+        meta.textContent = fmtPostTime(postAudio.duration) + ' · Daniel, en-GB';
+      });
+      postAudio.addEventListener('timeupdate', function() {
+        var pct = (postAudio.currentTime / postAudio.duration) * 100;
+        fill.style.width = pct + '%';
+        cur.textContent = fmtPostTime(postAudio.currentTime);
+      });
+      postAudio.addEventListener('ended', function() {
+        playIcon.style.display = '';
+        pauseIcon.style.display = 'none';
+        meta.textContent = 'Finished · tap to replay';
+        fill.style.width = '0%';
+        cur.textContent = '0:00';
+        postAudio.currentTime = 0;
+      });
+    }
+
+    if (!postAudio.paused) {
+      postAudio.pause();
+      playIcon.style.display = '';
+      pauseIcon.style.display = 'none';
+      meta.textContent = 'Paused';
+    } else {
+      postAudio.play();
+      playIcon.style.display = 'none';
+      pauseIcon.style.display = '';
+      meta.textContent = 'Playing…';
+    }
+  }
+
+  function seekPostAudio(e) {
+    if (!postAudio) return;
+    var track = document.getElementById('postAudioTrack');
+    var rect  = track.getBoundingClientRect();
+    var pct   = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
+    postAudio.currentTime = pct * postAudio.duration;
+  }
+</script>
+</body>
+</html>
