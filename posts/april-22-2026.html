@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MRO Briefing — April 22, 2026 | MRO Daily Intelligence</title>
+  <meta name="description" content="MRO Americas 2026" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/style.css" />
+  <style>
+    /* ── Audio Player ── */
+    .post-audio-player {
+      background: linear-gradient(135deg,#0f2847 0%,#1a4a8a 100%);
+      border-radius: 14px;
+      padding: 18px 20px;
+      margin: 0 0 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .post-audio-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .6px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.5);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .post-audio-controls {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .post-play-btn {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.15);
+      border: 1px solid rgba(255,255,255,.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      flex-shrink: 0;
+      transition: background .15s;
+    }
+    .post-play-btn:hover { background: rgba(255,255,255,.25); }
+    .post-play-btn svg { fill: white; width: 20px; height: 20px; }
+    .post-audio-info { flex: 1; }
+    .post-audio-title { font-size: 14px; font-weight: 600; color: #fff; margin-bottom: 3px; }
+    .post-audio-meta { font-size: 12px; color: rgba(255,255,255,.5); }
+    .post-audio-progress {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .post-audio-time { font-size: 11px; color: rgba(255,255,255,.5); min-width: 32px; font-variant-numeric: tabular-nums; }
+    .post-audio-track {
+      flex: 1;
+      height: 4px;
+      background: rgba(255,255,255,.2);
+      border-radius: 99px;
+      cursor: pointer;
+      position: relative;
+    }
+    .post-audio-fill {
+      height: 100%;
+      width: 0%;
+      background: #fff;
+      border-radius: 99px;
+      transition: width .2s linear;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <div class="logo">
+          <span class="logo-icon">✈</span>
+          <div>
+            <div class="logo-name">MRO Daily Intelligence</div>
+            <div class="logo-tagline">Aviation Maintenance Market Briefings</div>
+          </div>
+        </div>
+        <nav class="nav">
+          <a href="../index.html" class="nav-link">Latest</a>
+          <a href="../index.html#about" class="nav-link">About</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section class="post-hero">
+    <div class="container">
+      <a href="../index.html" class="post-back">← All Briefings</a>
+      <div class="post-issue-label">Issue #32 &nbsp;·&nbsp; April 22, 2026</div>
+      <h1 class="post-title">Daily MRO Market News Summary — April 22, 2026</h1>
+      <div class="post-meta-row">
+        <div class="post-meta-item"><strong>April 22, 2026</strong></div>
+        <div class="post-meta-item">·</div>
+        <div class="post-meta-item">Source: <strong>Aviation Week Network</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <main class="post-body">
+    <div class="container">
+      <div class="post-grid">
+        <article class="post-content">
+
+          <!-- ── Audio Player ── -->
+          <div class="post-audio-player" id="audioPlayer">
+            <div class="post-audio-label">
+              <svg viewBox="0 0 24 24" fill="white" width="12" height="12"><path d="M12 3a9 9 0 100 18A9 9 0 0012 3zm-2 13V8l7 4-7 4z"/></svg>
+              Audio Briefing &nbsp;·&nbsp; Daniel, en-GB
+            </div>
+            <div class="post-audio-controls">
+              <button class="post-play-btn" id="postPlayBtn" onclick="togglePostAudio()" aria-label="Play audio briefing">
+                <svg id="postPlayIcon" viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+                <svg id="postPauseIcon" viewBox="0 0 24 24" style="display:none"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+              </button>
+              <div class="post-audio-info">
+                <div class="post-audio-title">Daily Briefing — April 22, 2026</div>
+                <div class="post-audio-meta" id="postAudioMeta">Tap to listen · ~2 min</div>
+              </div>
+            </div>
+            <div class="post-audio-progress">
+              <span class="post-audio-time" id="postAudioCur">0:00</span>
+              <div class="post-audio-track" id="postAudioTrack" onclick="seekPostAudio(event)">
+                <div class="post-audio-fill" id="postAudioFill"></div>
+              </div>
+              <span class="post-audio-time" id="postAudioDur">--:--</span>
+            </div>
+          </div>
+
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px"><strong>Date:</strong> Wednesday, April 22, 2026</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px"><strong>Source:</strong> Aviation Week Network (Rolling Daily Updates, MRO Americas coverage), GE Aerospace Q1 2026 Earnings, RTX/Pratt &amp; Whitney, CAPA Centre for Aviation, PR Newswire, Lufthansa Technik, CFM International, MRO Business Today, The Motley Fool, LinkedIn</p>
+
+<div class="post-section" id="s1">
+  <div class="post-section-header">
+    <div class="section-number">1</div>
+    <span class="section-icon">📈</span>
+    <h2>Market Updates and Growth Trends</h2>
+  </div>
+<h3>MRO Americas 2026 — Day 1 in Full Swing; Day 2 Underway</h3>
+<ul>
+<li><strong>MRO Americas 2026</strong> (April 21–23, Orange County Convention Center, Orlando, FL) — 30th anniversary edition — opened to record crowds with <strong>17,000+ attendees, 1,000+ exhibitors, 2,000+ airline and lessor buyers</strong> from <strong>93+ countries</strong> (Aviation Week Network, April 21)</li>
+<li><strong>Core show theme crystallized on Day 1:</strong> "Demand is not the problem; operational capacity is." Show floor conversation shifted from growth to <strong>capacity, parts availability, and cost control</strong> (Craig Shields, LinkedIn / Aviation Week Special, April 21)</li>
+<li><strong>GE Aerospace reaffirmed</strong> at its Q1 2026 earnings call (April 21) that the aftermarket remains structurally strong despite lowering full-year air departures outlook from "mid-single-digit growth" to <strong>"flat to low single-digit growth"</strong> due to Middle East conflict and macro headwinds</li>
+<li>Commercial services backlog exceeds <strong>$170 billion</strong> (up ~$30 billion since 2024); total company backlog surpasses <strong>$210 billion</strong></li>
+<li>Spare parts orders up <strong>over 30% YoY</strong> since March; commercial services orders up <strong>49% in Q1 alone</strong></li>
+<li>Full-year services revenue growth guidance <strong>raised to ~$4 billion</strong> (from previous $3.5 billion estimate)</li>
+<li>LEAP service margins expected to <strong>approach overall CES service margins by 2028</strong> — up from "breakeven a few years ago"</li>
+<li><strong>95% of full-year spare parts revenue already in backlog</strong> — multi-year demand visibility confirmed</li>
+<li><strong>Boeing Q1 2026:</strong> Deliveries slipped to <strong>46 aircraft in March</strong> (737 MAX production line issues); Airbus delivered <strong>114 aircraft in Q1</strong> (down 16% YoY) — delivery delays continue to extend legacy fleet lifespans and boost aftermarket demand</li>
+</ul>
+<h3>Oliver Wyman 2026 Survey Context (Carried Forward) <a class="src-link" href="https://www.oliverwyman.com/our-expertise/insights/2026/feb/global-fleet-and-mro-market-forecast-2026-2036.html" target="_blank" rel="noopener">Oliver Wyman</a></h3>
+<ul>
+<li>Global MRO market hit <strong>$136 billion in 2025</strong> (+8% YoY); projected <strong>~$193 billion by 2036</strong></li>
+<li>North American engine MRO spending to rise <strong>44% to $19.4 billion by 2035</strong></li>
+<li>Narrow-body engine TAT: <strong>180–200+ days</strong> (>50% of operators expect no improvement within 3 years)</li>
+<li><strong>90% of operators</strong> directly impacted by tariffs; geopolitical instability newly ranked <strong>#2 industry disruptor</strong></li>
+</ul>
+
+<div class="post-section" id="s2">
+  <div class="post-section-header">
+    <div class="section-number">2</div>
+    <span class="section-icon">🌏</span>
+    <h2>Regional Expansion Activities</h2>
+  </div>
+<h3>Delta TechOps × LATAM Airlines: A320 Component Repair — Latin America Hub</h3>
+<ul>
+<li><strong>Announced at MRO Americas (April 21):</strong> Delta TechOps and LATAM Airlines signed a long-term collaboration for <strong>Airbus A320 component repair services</strong></li>
+<li><strong>Scope:</strong> Delta TechOps serves as <strong>sole commercial interface</strong>; repair work performed at LATAM's <strong>Sao Carlos, Brazil</strong> facility; portfolio expected to expand over time</li>
+<li><strong>Timeline:</strong> Pending Brazilian regulatory approval; <strong>expected start Q2 2026</strong>; hiring and capability ramping already underway</li>
+<li><strong>Delta TechOps ambition:</strong> Targets <strong>$1 billion revenue for the first time in 2026</strong>; <strong>$2–3 billion within a couple of years</strong>; <strong>$5 billion long-term</strong> (Marc Meredith, SVP &amp; CCO, Delta TechOps)</li>
+<li><strong>LATAM strategic context:</strong> Reinforces ambition to establish Latin America as a "strategic hub for aviation maintenance, engineering expertise, and innovation" (Jerome Cadier, LATAM Brasil CEO)</li>
+<li><strong>Key quote:</strong> "This could evolve eventually into other fleets or other areas" — Sebastian Acuto, VP Fleet &amp; Projects, LATAM Airlines</li>
+</ul>
+<h3>IAG × CFM International: Iberia Maintenance Becomes LEAP Premier MRO Shop</h3>
+<ul>
+<li><strong>Signed April 20 (announced at MRO Americas):</strong> IAG and CFM International signed a licensing agreement making <strong>Iberia Maintenance the latest LEAP Premier MRO shop</strong></li>
+<li><strong>License covers:</strong> Both <strong>LEAP-1A</strong> (A320neo) and <strong>LEAP-1B</strong> (737 MAX) — notably covers both engine types despite A320 dominating IAG's narrowbody fleet</li>
+<li><strong>Timeline:</strong> First LEAP engine induction planned for <strong>Q1 2027</strong> at engine shop near Madrid-Barajas Airport (La Muñoza)</li>
+<li><strong>Scope:</strong> Initially positioned to serve European operators (including IAG member airlines), progressively expanding globally</li>
+<li><strong>Strategic significance:</strong> Iberia has maintained CFM56 since 1992; LEAP Premier membership provides access to proprietary overhaul/repair technology, training, and CFM support</li>
+<li><strong>Market context:</strong> 4,600+ LEAP engines currently operating; 8,600+ on order — LEAP fleet "increasing significantly by end of this decade" (Gaël Méheust, CFM President &amp; CEO)</li>
+<li><strong>GE Aerospace confirms:</strong> Iberia is now GE's <strong>7th Premier MRO partner</strong></li>
+</ul>
+<h3>Ryanair Group × CFM: $800M In-House Engine MRO Plan; Morocco Under Evaluation</h3>
+<ul>
+<li><strong>Announced at MRO Americas (April 21):</strong> Ryanair Group evaluating <strong>six potential locations</strong> for planned in-house engine MRO facilities</li>
+<li>Candidates: <strong>Spain, Italy, Poland, Baltic states, Northern Ireland, Morocco</strong></li>
+<li><strong>Decision expected within "a couple of months"</strong> on first location; two sites ultimately planned</li>
+<li><strong>Total investment: $800 million</strong></li>
+<li><strong>GE Aerospace Q1 call (April 21) supplement:</strong> Ryanair signed agreement covering approximately <strong>2,000 CFM56 and LEAP engines</strong> for material support and MRO services to "scale their in-house capabilities" — consistent with GE's "open MRO strategy"</li>
+<li><strong>Morocco context:</strong> Identified as one of Ryanair's fastest-growing markets; aligns with broader Africa aviation growth narrative</li>
+<li><strong>Ryanair fleet:</strong> 647 Boeing 737-800s and 737-8-200s; FY2026 target: 208 million passengers</li>
+</ul>
+<h3>Lufthansa Technik Canada: Calgary Facility Achieves Full Operational Readiness <a class="src-link" href="https://www.lufthansa-technik.com/en/press-releases" target="_blank" rel="noopener">LHT</a></h3>
+<ul>
+<li><strong>Milestone (April 16–21):</strong> LTCA successfully completed its <strong>first live LEAP-1B engine event</strong> at interim facility in Calgary, confirming <strong>full operational readiness</strong> timed to MRO Americas (Lufthansa Technik press release, April 16)</li>
+<li><strong>Current state:</strong> Interim facility fully operational with <strong>8 maintenance bays</strong>; two training engines in shop for continuous capability building</li>
+<li><strong>Workforce:</strong> <strong>80+ employees</strong> since February 2025 headquarters announcement; passed TCCA (Transport Canada) regulatory audit December 2025</li>
+<li><strong>Permanent facility:</strong> <strong>150,000 sq ft</strong> at Calgary International Airport; construction start <strong>Q2 2026</strong>; will include <strong>Canada's first test cell for latest-generation aircraft engines</strong></li>
+<li><strong>Strategic role:</strong> Part of LHT's MES (Mobile Engine Services) network; provides LEAP-1B services closer to North American customers; reduces turnaround times</li>
+</ul>
+<h3>Latécoère Services: Asia Expansion Planned for 2026</h3>
+<ul>
+<li><strong>Announced at MRO Americas (April 20):</strong> Latécoère Services (500-employee aftermarket division, formed January 2025) planning to <strong>open an Asia-based entity</strong> with sales and operational activities in 2026 (Aviation Week, April 20; Thierry Dubois)</li>
+<li><strong>Model:</strong> Will replicate North America regional hub model (EWIS repair facility in Los Angeles handles demand for the region)</li>
+<li><strong>New offering:</strong> Bundled <strong>integrated engineering, production, and installation</strong> package for aircraft modifications — sold under DOA for STCs</li>
+<li><strong>Timing:</strong> Asia expansion and integrated services rollout both targeted for <strong>2026</strong></li>
+</ul>
+
+<div class="post-section" id="s3">
+  <div class="post-section-header">
+    <div class="section-number">3</div>
+    <span class="section-icon">🔗</span>
+    <h2>Supply Chain Developments</h2>
+  </div>
+<h3>AAR Launches "Airvoyant" — Agentic AI Parts Procurement Platform</h3>
+<ul>
+<li><strong>Announced at MRO Americas (April 21):</strong> AAR Corp. launched new subsidiary <strong>Airvoyant</strong> — an agentic AI platform for automating aviation parts procurement (Aviation Week, Lee Ann Shay)</li>
+<li><strong>Efficiency target:</strong> Reduce procurement costs by <strong>20–30%</strong></li>
+<li><strong>Core capabilities:</strong></li>
+<li><strong>Multi-quote analysis:</strong> AI agents rapidly analyze supplier quotes with ranked recommendations based on historical procurement data</li>
+<li><strong>Intelligent decision making:</strong> Evaluates pricing, vendor performance history, logistics complexity</li>
+<li><strong>Vendor performance tracking:</strong> Creates data lake monitoring vendor responsiveness; rewards high-performing vendors</li>
+<li><strong>Planned:</strong> Automated vendor negotiation and optimization agents later in 2026</li>
+<li><strong>Key integrations:</strong></li>
+<li><strong>Trax (AAR's ERP):</strong> Requisitions auto-streamed to Airvoyant when maintenance teams plan work or respond to unscheduled events</li>
+<li><strong>Aeroxchange:</strong> First third-party vendor to connect systems to Airvoyant</li>
+<li><strong>AWS:</strong> Technology backbone and architectural partner; provided financial investment</li>
+<li><strong>Strategic insight (John Holmes, AAR CEO):</strong> AAR's position as "one of the largest sellers of new and used parts" gave direct visibility into manual procurement inefficiencies</li>
+</ul>
+<h3>GE Aerospace: Supply Chain Stress Signals <a class="src-link" href="https://www.geaerospace.com/news" target="_blank" rel="noopener">GE Aerospace</a></h3>
+<ul>
+<li><strong>Spare parts delinquency up ~70% since 2024</strong> — GE acknowledges "failing to meet customer expectations" despite 25%+ revenue growth over 5 consecutive quarters</li>
+<li><strong>Shop visit pipeline oversubscribed by ~1/3</strong> relative to full-year guidance; two-thirds of 2026 projected shop visit engines already off-wing</li>
+<li><strong>Repair economics:</strong> A repaired part can cost <strong>50% less than a new part</strong> — making repair capability expansion critical to lowering customer cost of ownership</li>
+<li><strong>Flight Deck digital platform impacts:</strong></li>
+<li>McAllen, TX: LEAP HPT repair time reduced <strong>>50%</strong> via cell redesign</li>
+<li>Lafayette, IN: AI-based material assistant predicts LEAP work scopes <strong>9 months in advance</strong></li>
+<li>Singapore: <strong>$300 million investment</strong> underway at repair facility</li>
+</ul>
+<h3>Delta TechOps: $5B Long-Term Revenue Ambition Confirmed</h3>
+<ul>
+<li>Delta TechOps at MRO Americas (April 21) confirmed <strong>$1 billion revenue target for 2026</strong> (first time); <strong>$2–3 billion within a couple of years</strong>; <strong>$5 billion long-term</strong> (within the decade)</li>
+<li>LATAM Sao Carlos deal is the latest third-party MRO expansion after Korean Air LEAP-1B induction</li>
+<li>Delta TechOps is the <strong>first North American airline MRO provider licensed for both LEAP-1A and LEAP-1B</strong> (GE Aerospace earnings call confirmation)</li>
+</ul>
+
+<div class="post-section" id="s4">
+  <div class="post-section-header">
+    <div class="section-number">4</div>
+    <span class="section-icon">💡</span>
+    <h2>Technology and Investment News</h2>
+  </div>
+<h3>Pratt &amp; Whitney: $100+ Million U.S. MRO Investment Wave <a class="src-link" href="https://aviationweek.com/mro/aircraft-propulsion" target="_blank" rel="noopener">Aviation Week</a></h3>
+<ul>
+<li><strong>Announced at MRO Americas (April 21):</strong> RTX's Pratt &amp; Whitney investing <strong>more than $100 million</strong> across three U.S. sites (RTX press release + Aviation Week, Sean Broderick &amp; James Pozzi)</li>
+<li><strong>Detailed breakdown:</strong></li>
+</ul>
+<div class="table-wrapper"><table class="post-table">
+<thead><tr><th>Site</th><th>Investment</th><th>Focus</th><th>Capacity Impact</th></tr></thead><tbody>
+<tr><td>Springdale, AR (PSD)</td><td>—</td><td>Additive manufacturing repair development; GTF engine cases initially</td><td>7,000 sq ft expansion</td></tr>
+<tr><td>Irving, TX</td><td>$78M</td><td>USM acquisition &amp; sales facility</td><td>500,000 sq ft; <strong>60% USM inventory increase</strong></td></tr>
+<tr><td>West Palm Beach, FL</td><td>—</td><td>Engine Center expansion</td><td>50,000 sq ft; <strong>40% capacity increase</strong></td></tr>
+<tr><td>Columbus, GA (previous)</td><td>$70M</td><td>PW1000G overhaul facility</td><td><strong>25% capacity increase</strong></td></tr>
+</tbody></table></div>
+<ul>
+<li><strong>GTF recovery progress:</strong> PW1100 MRO output up <strong>23% YoY</strong>; previous quarter saw <strong>35% growth</strong>; groundings slowly decreasing as engine processing improves (RTX President Chris Calio)</li>
+<li><strong>Strategic context:</strong> Investments target the <strong>PW1000G powder metal contamination issue</strong> that grounded 400+ aircraft</li>
+</ul>
+<h3>Alaska Airlines × Tailsight: AI-Powered Maintenance Planning</h3>
+<ul>
+<li><strong>Announced April 16 (previewed at MRO Americas):</strong> Alaska Airlines partners with <strong>Tailsight</strong> (Austin, TX) for AI-powered maintenance planning and optimization — Alaska is <strong>first major airline</strong> to deploy the platform (PR Newswire)</li>
+<li><strong>Development:</strong> Nearly <strong>2 years</strong> of close collaboration; jointly designed product requirements validated against real operational scenarios</li>
+<li><strong>Capabilities:</strong> Consolidates fragmented inputs (maintenance systems, flight schedules, staffing, station rules, parts availability); constraint-aware planning; real-time optimization; fleet-level + station-level visibility</li>
+<li><strong>Expected outcomes:</strong> Reduced AOG time, improved labor/parts utilization, streamlined maintenance planning</li>
+</ul>
+<h3>Digital MRO at MRO Americas — Key Show Themes</h3>
+<ul>
+<li><strong>AAR Airvoyant:</strong> Agentic AI parts procurement (see above)</li>
+<li><strong>Alaska Airlines × Tailsight:</strong> AI maintenance planning optimization</li>
+<li><strong>GE Aerospace Flight Deck:</strong> AI material assistant predicting work scopes 9 months ahead; digital cell redesign cutting repair times >50%</li>
+<li><strong>Tier 1 MRO × IntegrUP:</strong> RFID-tracked warehouse automation at Booth #1731</li>
+<li><strong>Donecle:</strong> Drone AI inspection platform (€10M funding announced April 15; 40+ drones, 15+ countries)</li>
+<li><strong>Korean Air × Ramco Mechanic Anywhere:</strong> 400+ mechanics on mobile maintenance platform</li>
+</ul>
+
+<div class="post-section" id="s5">
+  <div class="post-section-header">
+    <div class="section-number">5</div>
+    <span class="section-icon">⚠️</span>
+    <h2>Major Challenges and Solutions</h2>
+  </div>
+<h3>Challenge 1: Engine MRO Capacity — The Central Theme of MRO Americas 2026</h3>
+<ul>
+<li><strong>Supply-demand gap widening:</strong> GE Aerospace shop visit pipeline oversubscribed by ~1/3; spare parts delinquency up 70%; narrow-body engine TAT at 180–200+ days</li>
+<li><strong>Solutions being scaled:</strong></li>
+<li><strong>Pratt &amp; Whitney:</strong> $100M+ across 4 U.S. sites; GTF output up 23–35% YoY</li>
+<li><strong>GE Aerospace:</strong> Open MRO strategy expanding third-party capacity; LEAP external channel now ~15% of shop visits (up from ~10% eighteen months ago); Singapore $300M investment</li>
+<li><strong>CFM/IAG:</strong> Iberia Maintenance as 7th LEAP Premier shop (Q1 2027); Ryanair 2,000-engine deal to scale in-house capabilities</li>
+<li><strong>Lufthansa Technik:</strong> Calgary interim facility fully operational; permanent 150,000 sq ft site with test cell breaking ground Q2 2026</li>
+<li><strong>Delta TechOps:</strong> First North American airline MRO licensed for both LEAP-1A and LEAP-1B; LATAM Sao Carlos collaboration adds component capacity</li>
+</ul>
+<h3>Challenge 2: Spare Parts Procurement Inefficiency — Now a Strategic Problem</h3>
+<ul>
+<li>Parts procurement described as the <strong>last major manual process</strong> in MRO — while inventory planning has been digitized, actual purchasing remains inefficient</li>
+<li><strong>Solutions:</strong></li>
+<li><strong>AAR Airvoyant:</strong> Agentic AI targeting 20–30% procurement cost reduction; auto-quote analysis, vendor tracking, AWS-backed platform</li>
+<li><strong>GE Aerospace:</strong> $4B services revenue growth target; 95% spare parts revenue already in backlog; repair vs. new part economics (50% cost advantage)</li>
+<li><strong>Broader shift:</strong> Procurement speed and parts visibility elevated from back-office function to <strong>strategic capability</strong></li>
+</ul>
+<h3>Challenge 3: Workforce Constraints Persist</h3>
+<ul>
+<li><strong>Ongoing:</strong> 2/3 of operators rate certified technician hiring as "moderately to very difficult"; >50% expect attrition to worsen in 2026</li>
+<li><strong>Day 1 AMC Competition:</strong> ~90 teams from around the world competing in 6 divisions — "Olympics of aircraft maintenance" continues at MRO Americas through April 23</li>
+<li><strong>Boeing hiring:</strong> Recruiting 100+ factory workers per week; Honeywell Aerospace adding 1,200+ positions in 2026</li>
+<li><strong>Digital augmentation:</strong> AI maintenance planning (Alaska/Tailsight), drone inspection (Donecle), mobile platforms (Korean Air/Ramco) — all aimed at amplifying technician productivity</li>
+</ul>
+<h3>Challenge 4: Delivery Delays Sustaining Aftermarket Demand</h3>
+<ul>
+<li><strong>Airbus Q1 2026:</strong> 114 deliveries (down 16% YoY)</li>
+<li><strong>Boeing March 2026:</strong> 46 deliveries (737 MAX line issues)</li>
+<li><strong>Impact:</strong> Every delayed new aircraft delivery = extended legacy fleet lifespan = increased maintenance burden for MROs, engine shops, and USM suppliers</li>
+<li><strong>MRO Memo insight (Aviation Week):</strong> Newer neo teardowns reflect frothy engine market — younger aircraft being parted out signals capacity desperation</li>
+</ul>
+
+<div class="post-section" id="s6">
+  <div class="post-section-header">
+    <div class="section-number">📋</div>
+    <span class="section-icon">⚠️</span>
+    <h2>MRO Americas 2026 — Day 1 Recap (April 21)</h2>
+  </div>
+<p style="color:var(--gray-400);font-size:13px;font-style:italic;margin-bottom:8px">MRO Americas 2026 — 30th Anniversary — Day 1 of 3 Completed</p>
+<p style="color:var(--gray-400);font-size:13px;font-style:italic;margin-bottom:8px">Major Day 1 Announcements:</p>
+<div class="table-wrapper"><table class="post-table">
+<thead><tr><th>#</th><th>Announcement</th><th>Company</th><th>Significance</th></tr></thead><tbody>
+<tr><td>1</td><td>$100M+ U.S. MRO investment</td><td>Pratt &amp; Whitney / RTX</td><td>GTF capacity expansion across 4 sites</td></tr>
+<tr><td>2</td><td>A320 component repair collaboration</td><td>Delta TechOps × LATAM</td><td>Latin America MRO hub expansion</td></tr>
+<tr><td>3</td><td>$800M in-house engine MRO plan (6 locations)</td><td>Ryanair Group</td><td>Largest airline MRO self-sufficiency push</td></tr>
+<tr><td>4</td><td>LEAP Premier MRO licensing</td><td>IAG/CFM → Iberia Maintenance</td><td>7th LEAP Premier shop; Q1 2027</td></tr>
+<tr><td>5</td><td>Airvoyant agentic AI procurement platform</td><td>AAR Corp.</td><td>20–30% procurement cost reduction target</td></tr>
+<tr><td>6</td><td>GE Aerospace Q1 earnings: $4B services growth guidance</td><td>GE Aerospace</td><td>Record aftermarket backlog $170B+</td></tr>
+<tr><td>7</td><td>AI maintenance planning deployment</td><td>Alaska Airlines × Tailsight</td><td>First major airline to adopt</td></tr>
+</tbody></table></div>
+<p style="color:var(--gray-400);font-size:13px;font-style:italic;margin-bottom:8px">Top 3 Watch Items for Day 2–3 (April 22–23):</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">1. <strong>VSE–PAG $2.03B close</strong> — defining M&amp;A moment; announcement expected on exhibition floor</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">2. <strong>Ontic $30M investment programme</strong> (Stand 2903) — new partnerships and deals to be unveiled</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">3. <strong>Further engine MRO capacity announcements</strong> — additional LEAP/GTF shop agreements from Tier 1 OEMs and independents</p>
+
+<div class="post-section" id="s7">
+  <div class="post-section-header">
+    <div class="section-number">📋</div>
+    <span class="section-icon">⚠️</span>
+    <h2>Today's Headlines Recap (April 21–22, 2026)</h2>
+  </div>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">1. <strong>Pratt &amp; Whitney $100M+ U.S. MRO Investment (April 21):</strong> 4-site expansion across AR, TX, FL, GA; GTF output up 23–35% YoY; new Irving USM facility with 60% inventory increase</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">2. <strong>Delta TechOps × LATAM A320 Component Repair (April 21):</strong> Sao Carlos, Brazil facility as Latin America MRO hub; Delta targeting $1B revenue in 2026, $5B long-term</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">3. <strong>Ryanair $800M In-House Engine MRO (April 21):</strong> Six locations under evaluation including Morocco; 2,000-engine CFM56/LEAP deal with GE; two facilities planned</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">4. <strong>AAR Airvoyant AI Procurement Platform (April 21):</strong> Agentic AI targeting 20–30% cost reduction; AWS + Aeroxchange integrations; Trax ERP streaming</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">5. <strong>GE Aerospace Q1 2026 Earnings (April 21):</strong> Services backlog $170B+; spare parts orders +30% YoY; services revenue growth raised to ~$4B; LEAP margins approaching overall CES by 2028</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">6. <strong>IAG/CFM LEAP Premier — Iberia Maintenance (April 20–21):</strong> 7th Premier MRO partner; LEAP-1A + LEAP-1B licensed; first induction Q1 2027</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">7. <strong>Lufthansa Technik Canada Calgary Live (April 16–21):</strong> First LEAP-1B engine event completed at interim facility; 80+ employees; permanent 150K sq ft site + test cell breaking ground Q2 2026</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">8. <strong>Alaska Airlines × Tailsight AI Planning (April 16):</strong> First major airline deployment of AI maintenance planning platform; nearly 2 years in development</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">9. <strong>Latécoère Services Asia Push (April 20):</strong> New entity planned for 2026; integrated engineering/production/installation bundle model</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">10. <strong>AMC Competition Day 1 Results:</strong> ~90 teams competing; Snap-on $150K+ prize pool; Air Canada funding Centennial College student competitors</p>
+
+<div class="post-section" id="s8">
+  <div class="post-section-header">
+    <div class="section-number">📋</div>
+    <span class="section-icon">⚠️</span>
+    <h2>Key Statistics — April 21–22, 2026</h2>
+  </div>
+<div class="table-wrapper"><table class="post-table">
+<thead><tr><th>Metric</th><th>Value</th><th>Source</th></tr></thead><tbody>
+<tr><td>GE Aerospace commercial services backlog</td><td>$170B+ (up ~$30B since 2024)</td><td>GE Q1 2026 Earnings</td></tr>
+<tr><td>GE full-year services revenue growth guidance</td><td>~$4B (raised from $3.5B)</td><td>GE Q1 2026 Earnings</td></tr>
+<tr><td>GE spare parts orders growth</td><td>>30% YoY (since March)</td><td>GE Q1 2026 Earnings</td></tr>
+<tr><td>GE spare parts delinquency increase</td><td>~70% since 2024</td><td>GE Q1 2026 Earnings</td></tr>
+<tr><td>GE LEAP external channel share</td><td>~15% of shop visits (up from ~10%)</td><td>GE Q1 2026 Earnings</td></tr>
+<tr><td>Pratt &amp; Whitney U.S. MRO investment</td><td>>$100M across 4 sites</td><td>RTX / Aviation Week</td></tr>
+<tr><td>P&amp;W Irving USM facility</td><td>$78M, 500K sq ft, +60% inventory</td><td>RTX / Aviation Week</td></tr>
+<tr><td>P&amp;W West Palm Beach capacity increase</td><td>40%</td><td>RTX / Aviation Week</td></tr>
+<tr><td>P&amp;W GTF MRO output YoY growth</td><td>23% (35% prior quarter)</td><td>RTX / Aviation Week</td></tr>
+<tr><td>Delta TechOps 2026 revenue target</td><td>$1B (first time)</td><td>Aviation Week / Delta</td></tr>
+<tr><td>Delta TechOps long-term target</td><td>$5B (within the decade)</td><td>Aviation Week / Delta</td></tr>
+<tr><td>Ryanair in-house engine MRO investment</td><td>$800M (two sites)</td><td>Aviation Week</td></tr>
+<tr><td>Ryanair × GE engine agreement scope</td><td>~2,000 CFM56 + LEAP engines</td><td>GE Q1 2026 Earnings</td></tr>
+<tr><td>IAG/Iberia LEAP Premier induction</td><td>Q1 2027</td><td>CFM International</td></tr>
+<tr><td>Lufthansa Technik Calgary employees</td><td>80+</td><td>LHT Press Release</td></tr>
+<tr><td>Lufthansa Technik Calgary permanent facility</td><td>150,000 sq ft, construction Q2 2026</td><td>LHT Press Release</td></tr>
+<tr><td>AAR Airvoyant procurement cost reduction</td><td>20–30% target</td><td>Aviation Week</td></tr>
+<tr><td>GE Singapore repair facility investment</td><td>$300M</td><td>GE Q1 2026 Earnings</td></tr>
+<tr><td>GE McAllen LEAP HPT repair time reduction</td><td>>50%</td><td>GE Q1 2026 Earnings</td></tr>
+<tr><td>Airbus Q1 2026 deliveries</td><td>114 (down 16% YoY)</td><td>Craig Shields / Reuters</td></tr>
+<tr><td>Boeing March 2026 deliveries</td><td>46</td><td>Craig Shields / Reuters</td></tr>
+<tr><td>Global MRO market 2025</td><td>$136B (+8% YoY)</td><td>Oliver Wyman</td></tr>
+</tbody></table></div>
+<p style="color:var(--gray-400);font-size:13px;font-style:italic;margin-bottom:8px">Sources: Aviation Week Network (MRO Rolling Daily Updates, April 20–22, 2026; MRO Americas Day 1 coverage, Aircraft &amp; Propulsion, Supply Chain sections); GE Aerospace Q1 2026 Earnings Call Transcript (April 21, The Motley Fool); RTX/Pratt &amp; Whitney press release (April 21, PR Newswire); CFM International / IAG press release (April 20); Lufthansa Technik press release (April 16); Aviation Business News (LHT Calgary, April 21); PR Newswire (Alaska Airlines/Tailsight, April 16); MRO Business Today (IAG/CFM LEAP Premier, April 21); Craig Shields LinkedIn Newsletter (April 21); CAPA Centre for Aviation (Latécoère Services Asia, April 21); Oliver Wyman 2026 MRO Survey.</p>
+</div>
+          <nav class="post-nav">
+            <a href="april-20-2026.html" class="post-nav-btn">
+              <div class="post-nav-label">← Previous Issue</div>
+              <div class="post-nav-title">April 20 2026</div>
+            </a>
+            <a href="../index.html" class="post-nav-btn" style="text-align:right">
+              <div class="post-nav-label">All Briefings</div>
+              <div class="post-nav-title">View Archive →</div>
+            </a>
+          </nav>
+        </article>
+
+        <aside class="post-sidebar">
+          <div class="toc-widget">
+            <div class="toc-title">In This Issue</div>
+            <ul class="toc-list">
+              <li><a href="#s1"><span class="toc-num">1</span> Market Updates &amp; Growth</a></li>
+              <li><a href="#s2"><span class="toc-num">2</span> Regional Expansion</a></li>
+              <li><a href="#s3"><span class="toc-num">3</span> Supply Chain</a></li>
+              <li><a href="#s4"><span class="toc-num">4</span> Technology &amp; Investment</a></li>
+              <li><a href="#s5"><span class="toc-num">5</span> Challenges &amp; Solutions</a></li>
+            </ul>
+          </div>
+          <div class="sidebar-widget">
+            <h3 class="widget-title">About This Briefing</h3>
+            <p class="widget-text">Source:</p>
+            <div class="widget-badge">
+              <span class="auto-badge">⚡ Automated Daily at 7:00 AM</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand"><span class="logo-icon">✈</span><span class="footer-name">MRO Daily Intelligence</span></div>
+        <div class="footer-text">Automated briefings sourced from Aviation Week Network. Published daily at 7:00 AM.</div>
+      </div>
+    </div>
+  </footer>
+
+<script>
+  var postAudio = null;
+  var audioSrc  = 'posts/april22-2026-email.m4a';  /* relative from inside posts/ dir */
+
+  /* Fix path: this page is in posts/, so audio is same dir */
+  var audioFile = 'april22-2026-email.m4a';
+
+  function fmtPostTime(s) {
+    if (isNaN(s) || !isFinite(s)) return '--:--';
+    var m = Math.floor(s / 60);
+    return m + ':' + String(Math.floor(s % 60)).padStart(2, '0');
+  }
+
+  function togglePostAudio() {
+    var playIcon  = document.getElementById('postPlayIcon');
+    var pauseIcon = document.getElementById('postPauseIcon');
+    var meta      = document.getElementById('postAudioMeta');
+    var fill      = document.getElementById('postAudioFill');
+    var cur       = document.getElementById('postAudioCur');
+    var dur       = document.getElementById('postAudioDur');
+
+    if (!postAudio) {
+      postAudio = new Audio(audioFile);
+      postAudio.addEventListener('loadedmetadata', function() {
+        dur.textContent = fmtPostTime(postAudio.duration);
+        meta.textContent = fmtPostTime(postAudio.duration) + ' · Daniel, en-GB';
+      });
+      postAudio.addEventListener('timeupdate', function() {
+        var pct = (postAudio.currentTime / postAudio.duration) * 100;
+        fill.style.width = pct + '%';
+        cur.textContent = fmtPostTime(postAudio.currentTime);
+      });
+      postAudio.addEventListener('ended', function() {
+        playIcon.style.display = '';
+        pauseIcon.style.display = 'none';
+        meta.textContent = 'Finished · tap to replay';
+        fill.style.width = '0%';
+        cur.textContent = '0:00';
+        postAudio.currentTime = 0;
+      });
+    }
+
+    if (!postAudio.paused) {
+      postAudio.pause();
+      playIcon.style.display = '';
+      pauseIcon.style.display = 'none';
+      meta.textContent = 'Paused';
+    } else {
+      postAudio.play();
+      playIcon.style.display = 'none';
+      pauseIcon.style.display = '';
+      meta.textContent = 'Playing…';
+    }
+  }
+
+  function seekPostAudio(e) {
+    if (!postAudio) return;
+    var track = document.getElementById('postAudioTrack');
+    var rect  = track.getBoundingClientRect();
+    var pct   = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
+    postAudio.currentTime = pct * postAudio.duration;
+  }
+</script>
+</body>
+</html>
