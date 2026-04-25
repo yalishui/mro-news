@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MRO Briefing — April 18, 2026 | MRO Daily Intelligence</title>
+  <meta name="description" content="3 days until MRO Americas 2026" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/style.css" />
+  <style>
+    /* ── Audio Player ── */
+    .post-audio-player {
+      background: linear-gradient(135deg,#0f2847 0%,#1a4a8a 100%);
+      border-radius: 14px;
+      padding: 18px 20px;
+      margin: 0 0 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .post-audio-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .6px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.5);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .post-audio-controls {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .post-play-btn {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.15);
+      border: 1px solid rgba(255,255,255,.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      flex-shrink: 0;
+      transition: background .15s;
+    }
+    .post-play-btn:hover { background: rgba(255,255,255,.25); }
+    .post-play-btn svg { fill: white; width: 20px; height: 20px; }
+    .post-audio-info { flex: 1; }
+    .post-audio-title { font-size: 14px; font-weight: 600; color: #fff; margin-bottom: 3px; }
+    .post-audio-meta { font-size: 12px; color: rgba(255,255,255,.5); }
+    .post-audio-progress {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .post-audio-time { font-size: 11px; color: rgba(255,255,255,.5); min-width: 32px; font-variant-numeric: tabular-nums; }
+    .post-audio-track {
+      flex: 1;
+      height: 4px;
+      background: rgba(255,255,255,.2);
+      border-radius: 99px;
+      cursor: pointer;
+      position: relative;
+    }
+    .post-audio-fill {
+      height: 100%;
+      width: 0%;
+      background: #fff;
+      border-radius: 99px;
+      transition: width .2s linear;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <div class="logo">
+          <span class="logo-icon">✈</span>
+          <div>
+            <div class="logo-name">MRO Daily Intelligence</div>
+            <div class="logo-tagline">Aviation Maintenance Market Briefings</div>
+          </div>
+        </div>
+        <nav class="nav">
+          <a href="../index.html" class="nav-link">Latest</a>
+          <a href="../index.html#about" class="nav-link">About</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section class="post-hero">
+    <div class="container">
+      <a href="../index.html" class="post-back">← All Briefings</a>
+      <div class="post-issue-label">Issue #35 &nbsp;·&nbsp; April 18, 2026</div>
+      <h1 class="post-title">Daily MRO Market News Summary — April 18, 2026</h1>
+      <div class="post-meta-row">
+        <div class="post-meta-item"><strong>April 18, 2026</strong></div>
+        <div class="post-meta-item">·</div>
+        <div class="post-meta-item">Source: <strong>Aviation Week Network</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <main class="post-body">
+    <div class="container">
+      <div class="post-grid">
+        <article class="post-content">
+
+          <!-- ── Audio Player ── -->
+          <div class="post-audio-player" id="audioPlayer">
+            <div class="post-audio-label">
+              <svg viewBox="0 0 24 24" fill="white" width="12" height="12"><path d="M12 3a9 9 0 100 18A9 9 0 0012 3zm-2 13V8l7 4-7 4z"/></svg>
+              Audio Briefing &nbsp;·&nbsp; Daniel, en-GB
+            </div>
+            <div class="post-audio-controls">
+              <button class="post-play-btn" id="postPlayBtn" onclick="togglePostAudio()" aria-label="Play audio briefing">
+                <svg id="postPlayIcon" viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+                <svg id="postPauseIcon" viewBox="0 0 24 24" style="display:none"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+              </button>
+              <div class="post-audio-info">
+                <div class="post-audio-title">Daily Briefing — April 18, 2026</div>
+                <div class="post-audio-meta" id="postAudioMeta">Tap to listen · ~2 min</div>
+              </div>
+            </div>
+            <div class="post-audio-progress">
+              <span class="post-audio-time" id="postAudioCur">0:00</span>
+              <div class="post-audio-track" id="postAudioTrack" onclick="seekPostAudio(event)">
+                <div class="post-audio-fill" id="postAudioFill"></div>
+              </div>
+              <span class="post-audio-time" id="postAudioDur">--:--</span>
+            </div>
+          </div>
+
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px"><strong>Date:</strong> Saturday, April 18, 2026</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px"><strong>Source:</strong> Aviation Week Network (Rolling Daily Updates), AviationPros, PR Newswire, MRO Business Today, Aviation Business News, VHR Aerospace, TradeGroup.com, PAG Events</p>
+
+<div class="post-section" id="s1">
+  <div class="post-section-header">
+    <div class="section-number">1</div>
+    <span class="section-icon">📈</span>
+    <h2>Market Updates and Growth Trends</h2>
+  </div>
+<h3>MRO Americas 2026 — T-3 Days: Pre-Show Momentum Peaks</h3>
+<ul>
+<li><strong>3 days until MRO Americas 2026</strong> (April 21–23, Orlando, Orange County Convention Center) — the show's <strong>30th anniversary</strong></li>
+<li><strong>17,000+ attendees expected</strong> from 93+ countries; 1,000+ exhibitors confirmed — the largest gathering in the event's three-decade history</li>
+<li>Final pre-show registrations and exhibitor announcements accelerating; hotel blocks in Orlando sold out as of this weekend</li>
+<li><strong>Key narrative heading into the show:</strong> aftermarket demand robust but industry under margin pressure from engine TAT crisis, tariffs, and workforce constraints</li>
+<li>VSE–PAG ($2.03B acquisition) close expected <strong>on or before Day 1 (April 21)</strong> — defining M&amp;A event of the 2026 show calendar</li>
+</ul>
+<h3>Oliver Wyman 2026 MRO Forecast: Final Pre-Show Summary <a class="src-link" href="https://www.oliverwyman.com/our-expertise/insights/2026/feb/global-fleet-and-mro-market-forecast-2026-2036.html" target="_blank" rel="noopener">Oliver Wyman</a></h3>
+<ul>
+<li>Global MRO market: <strong>$136B in 2025</strong> (up 8% YoY) → projected <strong>$193B by 2036</strong></li>
+<li>North American engine MRO: forecast to reach <strong>$19.4B by 2035</strong> (+44% from 2025 baseline) — fastest-growing regional segment</li>
+<li><strong>Engine TAT crisis persists:</strong> narrow-body engine turnaround times at 180–200+ days; 50%+ of operators expect no improvement within 3 years</li>
+<li><strong>90%</strong> of surveyed MRO operators report direct tariff impact on parts procurement and engine overhaul costs</li>
+<li><strong>Workforce:</strong> 2/3 of operators rate hiring certified technicians as "moderately to very difficult"; >50% expect attrition to worsen in 2026</li>
+</ul>
+<h3>Delta TechOps Heading Into MRO Americas: $5B Operation, $1.2B Revenue Target</h3>
+<ul>
+<li>Delta TechOps enters the show as a major third-party MRO story: <strong>Q1 2026 revenue $380M</strong> (+100% YoY); full-year target <strong>$1.2B</strong></li>
+<li>First non-Delta customer engine inducted: <strong>Korean Air CFM LEAP-1B</strong> — a strategic signalling move ahead of MRO Americas</li>
+<li>Delta COO Dan Janki confirmed TechOps positioned as a <strong>long-term diversified revenue pillar</strong> at $5B total operation value</li>
+<li>Delta breaking out MRO expenses as a separate reporting line — signal of serious strategic ambition in third-party maintenance</li>
+</ul>
+
+<div class="post-section" id="s2">
+  <div class="post-section-header">
+    <div class="section-number">2</div>
+    <span class="section-icon">🌏</span>
+    <h2>Regional Expansion Activities</h2>
+  </div>
+<h3>VSE–PAG: $2.03B Close Imminent — Show-Opening M&amp;A</h3>
+<ul>
+<li><strong>VSE Corporation / Precision Aviation Group</strong> $2.03B acquisition on track for closing at or before MRO Americas opening (April 21)</li>
+<li>Deal announced January 29, 2026; creates a <strong>leading independent, scaled aviation aftermarket</strong> platform</li>
+<li>Combined entity: strongest in parts distribution, component MRO, and turboprop/turboshaft aftermarket support</li>
+<li>Represents the <strong>largest independent MRO aftermarket deal of 2026</strong> to date</li>
+</ul>
+<h3>India MRO: Tata–Airbus H125 Assembly + ₹39B Rafale Hub — Regional Buildout Continues</h3>
+<ul>
+<li><strong>Tata-Airbus H125 rotorcraft assembly line</strong> in Karnataka operational as of April 2026 — first domestically assembled H125 civil helicopter in India</li>
+<li><strong>DRAL (Dassault Reliance Aerospace)</strong> restructuring ongoing: Dassault raised stake to 51%; Nagpur facility targeted as <strong>regional Rafale MRO hub</strong> for domestic and international operators</li>
+<li><strong>India MRO market projection: $5.7B by 2030</strong> — sustained by fleet growth, defence indigenisation, and civil aviation policy</li>
+</ul>
+<h3>Europe: Norwegian F-16s / Sabena Aerospace — Defense MRO Disputes Emerge</h3>
+<ul>
+<li><strong>Norwegian F-16 fleet transfer to Ukraine</strong> delayed by maintenance disputes involving <strong>Sabena Aerospace</strong> (Belgium) — airworthiness documentation and repair completion gaps</li>
+<li>Highlights structural tension in European defense MRO: aging F-16 fleet lifecycle management increasingly complex in high-demand geopolitical environment</li>
+<li>European defense MRO becoming a separate demand driver alongside commercial MRO growth (Aviation24.be, April 16)</li>
+</ul>
+
+<div class="post-section" id="s3">
+  <div class="post-section-header">
+    <div class="section-number">3</div>
+    <span class="section-icon">🔗</span>
+    <h2>Supply Chain Developments</h2>
+  </div>
+<h3>EASA Counterfeit Parts Alert — Still Active Heading Into MRO Americas</h3>
+<ul>
+<li><strong>EASA warning (issued April 3, 2026)</strong> on fraudulent engine parts after 12 shipping containers diverted/stolen mid-transit remains <strong>active and unresolved</strong></li>
+<li>Expected to be a major exhibit floor discussion topic at MRO Americas — multiple suppliers pitching authentication and traceability solutions</li>
+<li><strong>DUST Identity's Theseus platform</strong> (diamond-dust physical fingerprinting + AI analysis) among leading authentication technologies drawing attention</li>
+</ul>
+<h3>GA Telesis A320neo USM: LEAP-1A/PW1100G-JM Certification Pipeline <a class="src-link" href="https://www.gatelesis.com/news/" target="_blank" rel="noopener">GA Telesis</a></h3>
+<ul>
+<li><strong>GA Telesis</strong> progressing through certification for first-ever <strong>LEAP-1A and PW1100G-JM</strong> Used Serviceable Material components from A320neo teardowns — expected <strong>Q3 2026</strong></li>
+<li>Sets precedent for next-gen narrowbody USM: Boeing delivery delays + GTF issues creating a growing pool of completed-but-undelivered A320neos entering secondary market</li>
+<li>GA Telesis expected to announce further teardown activity at MRO Americas</li>
+</ul>
+<h3>Satair Singapore AutoStore + Schroth North America Distribution</h3>
+<ul>
+<li><strong>Satair</strong> (Airbus aftermarket subsidiary) deploying <strong>AutoStore robotic system</strong> at Singapore facility — automated storage and retrieval of high-velocity parts</li>
+<li>Separately: <strong>Schroth Safety Products IPSB exclusive North America distribution deal</strong> in final stages ahead of show announcement</li>
+<li>Both moves reflect Satair's push toward <strong>automated, high-speed MRO logistics</strong></li>
+</ul>
+
+<div class="post-section" id="s4">
+  <div class="post-section-header">
+    <div class="section-number">4</div>
+    <span class="section-icon">💡</span>
+    <h2>Technology and Investment News</h2>
+  </div>
+<h3>AI in MRO: Pre-Show Landscape</h3>
+<ul>
+<li><strong>Oliver Wyman (April 2026):</strong> 67% of MRO operators report AI investments meeting/exceeding expectations; but <strong>58% still in experimentation phase</strong></li>
+<li>Key bottleneck: data quality — <strong>50% plan AI investment; only 33% plan IT infrastructure investment</strong> — a systemic gap</li>
+<li>Agentic AI emerging as a 2026–2027 theme: autonomous agents for multi-step maintenance workflows gaining commercial traction</li>
+<li>Multiple AI-driven MRO tools expected to debut at MRO Americas — from procurement automation to predictive inspection</li>
+</ul>
+<h3>Donecle — Post-€10M Funding: Show Expansion Plans</h3>
+<ul>
+<li><strong>Donecle</strong> (Toulouse, post-€10M raise) attending MRO Americas with expanded North American and European business development presence</li>
+<li>Platform: 40+ autonomous inspection drones deployed in 15+ countries; approved by major aviation authorities and OEMs</li>
+<li>Drone inspection pitch: <strong>10× faster than manual visual inspections</strong>; AI data platform integration with MRO systems for predictive maintenance</li>
+</ul>
+
+<div class="post-section" id="s5">
+  <div class="post-section-header">
+    <div class="section-number">5</div>
+    <span class="section-icon">⚠️</span>
+    <h2>Major Challenges and Solutions</h2>
+  </div>
+<h3>Engine MRO TAT: No Structural Relief in Sight</h3>
+<ul>
+<li><strong>LEAP/GTF shop visit costs exceeding forecasts</strong> for 67% of operators — 25% report cost overruns >50% above budget</li>
+<li>Engine MRO = >50% of total MRO spend; a single LEAP-1A shop visit costs $3–7M</li>
+<li><strong>USM adoption accelerating</strong> as cost mitigation: GA Telesis, AJW Group, ATR, AerFin all expanding USM inventory ahead of peak demand years</li>
+<li><strong>Modular engine exchange programmes</strong> growing — lessors and MROs offering engine swaps rather than slot-based overhaul</li>
+</ul>
+<h3>Workforce Shortage: MRO Americas Panel Focus</h3>
+<ul>
+<li>Multiple workforce-themed sessions confirmed for MRO Americas 2026 — workforce crisis ranked as #1 long-term industry threat</li>
+<li><strong>GE Aerospace "Lifting Futures":</strong> $30M, 5-year workforce programme targeting 10,000 new aviation maintenance workers by 2030 — anticipated MRO Americas announcement</li>
+<li><strong>Apprenticeship pipeline:</strong> SIAEC, AIESL, Aviation Australia, Tata–Airbus all scaling certified technician programmes across Asia-Pacific and India</li>
+</ul>
+
+<div class="post-section" id="s6">
+  <div class="post-section-header">
+    <div class="section-number">📋</div>
+    <span class="section-icon">⚠️</span>
+    <h2>MRO Americas 2026 Countdown — T-3 Days</h2>
+  </div>
+<p style="color:var(--gray-400);font-size:13px;font-style:italic;margin-bottom:8px">3 days to MRO Americas 2026 | April 21–23 | Orlando, FL | 30th Anniversary</p>
+<p style="color:var(--gray-400);font-size:13px;font-style:italic;margin-bottom:8px">Weekend Pre-Show Checklist for Exhibitors and Attendees:</p>
+<ul>
+<li>1,000+ exhibitors setting up Orange County Convention Center</li>
+<li>Final conference session preparations; keynote speakers confirmed</li>
+<li>VHR Aerospace, Redspin, TradeGroup, 20+ staffing/consulting firms exhibiting</li>
+<li>Booth #1731: Tier 1 MRO / IntegrUP warehouse automation</li>
+<li>Booth #2903 N-S Hall: Ontic $30M global MRO investment</li>
+<li>PAG attending as VSE-PAG close is expected Monday morning</li>
+</ul>
+<p style="color:var(--gray-400);font-size:13px;font-style:italic;margin-bottom:8px">Top 5 Things to Watch at MRO Americas 2026:</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">1. VSE–PAG close announcement (Day 1, April 21)</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">2. Pratt &amp; Whitney GTF aftermarket investment update</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">3. Delta TechOps third-party contract strategy</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">4. Engine MRO capacity deals — LEAP, GTF, Trent</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">5. Workforce solutions: large-scale training/apprenticeship announcements</p>
+
+<div class="post-section" id="s7">
+  <div class="post-section-header">
+    <div class="section-number">📋</div>
+    <span class="section-icon">⚠️</span>
+    <h2>This Week's Headlines Recap (April 14–18)</h2>
+  </div>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">1. <strong>Oliver Wyman Final Pre-Show Numbers:</strong> $136B market; 44% NA engine growth; 90% tariff impact; TAT 180–200+ days</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">2. <strong>Delta TechOps:</strong> Q1 $380M (+100% YoY); Korean Air LEAP-1B first non-Delta engine induction; $5B total value</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">3. <strong>VSE–PAG ($2.03B):</strong> Close imminent at MRO Americas Day 1</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">4. <strong>Donecle €10M:</strong> Post-funding North American expansion underway; drone inspection platform at MRO Americas</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">5. <strong>GA Telesis A320neo USM:</strong> LEAP-1A/PW1100G-JM Q3 2026 first components; precedent-setting</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">6. <strong>EASA Counterfeit Alert:</strong> 12 containers; authentication tech solutions in spotlight at show</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">7. <strong>India MRO:</strong> Tata-Airbus H125 assembly line live; DRAL Nagpur restructuring; $5.7B 2030 target</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">8. <strong>Satair AutoStore + Schroth NA Deal:</strong> Automated parts logistics expansion</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">9. <strong>MRO Americas T-3:</strong> 17,000+ expected; 1,000+ exhibitors; 30th anniversary</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">10. <strong>Workforce Panel Lineup:</strong> GE Lifting Futures, Aviation Australia apprenticeships, SIAEC on show agenda</p>
+
+<div class="post-section" id="s8">
+  <div class="post-section-header">
+    <div class="section-number">📋</div>
+    <span class="section-icon">⚠️</span>
+    <h2>Key Statistics — April 18, 2026 (Pre-Show Summary)</h2>
+  </div>
+<div class="table-wrapper"><table class="post-table">
+<thead><tr><th>Metric</th><th>Value</th><th>Source</th></tr></thead><tbody>
+<tr><td>Global MRO market 2025</td><td>$136B (+8% YoY)</td><td>Oliver Wyman</td></tr>
+<tr><td>Global MRO market 2036E</td><td>~$193B</td><td>Oliver Wyman</td></tr>
+<tr><td>NA engine MRO by 2035</td><td>$19.4B (+44%)</td><td>Aviation Week</td></tr>
+<tr><td>Delta TechOps Q1 2026 revenue</td><td>$380M (+100% YoY)</td><td>Delta Q1 earnings</td></tr>
+<tr><td>Delta TechOps FY2026E</td><td>$1.2B</td><td>Delta Q1 earnings</td></tr>
+<tr><td>VSE–PAG acquisition value</td><td>$2.03B</td><td>VSE Corp, Jan 2026</td></tr>
+<tr><td>MRO Americas expected attendees</td><td>17,000+</td><td>Aviation Week</td></tr>
+<tr><td>MRO Americas exhibitors</td><td>1,000+</td><td>Aviation Week</td></tr>
+<tr><td>Engine TAT (narrow-body)</td><td>180–200+ days</td><td>Oliver Wyman</td></tr>
+<tr><td>MRO operators impacted by tariffs</td><td>90%</td><td>Oliver Wyman</td></tr>
+<tr><td>AI meeting/exceeding expectations</td><td>67%</td><td>Oliver Wyman</td></tr>
+<tr><td>Donecle drones deployed</td><td>40+ in 15+ countries</td><td>Donecle</td></tr>
+</tbody></table></div>
+<p style="color:var(--gray-400);font-size:13px;font-style:italic;margin-bottom:8px">Sources: Aviation Week Network (MRO Rolling Daily Updates, April 2026; Supply Chain); Oliver Wyman 2026 MRO Survey (April 2026); VHR Aerospace (April 2026); TradeGroup.com MRO Americas 2026 Guide; PAG Events page; PR Newswire/VSE Corporation (January 29, 2026); Delta Air Lines Q1 2026 earnings; Aviation24.be (April 16, 2026); Donecle press release (April 15, 2026); GA Telesis (April 15–16, 2026); MRO Business Today (April 2026).</p>
+</div>
+          <nav class="post-nav">
+            <a href="april-17-2026.html" class="post-nav-btn">
+              <div class="post-nav-label">← Previous Issue</div>
+              <div class="post-nav-title">April 17 2026</div>
+            </a>
+            <a href="april-19-2026.html" class="post-nav-btn" style="text-align:right">
+              <div class="post-nav-label">Next Issue →</div>
+              <div class="post-nav-title">April 19 2026</div>
+            </a>
+          </nav>
+        </article>
+
+        <aside class="post-sidebar">
+          <div class="toc-widget">
+            <div class="toc-title">In This Issue</div>
+            <ul class="toc-list">
+              <li><a href="#s1"><span class="toc-num">1</span> Market Updates &amp; Growth</a></li>
+              <li><a href="#s2"><span class="toc-num">2</span> Regional Expansion</a></li>
+              <li><a href="#s3"><span class="toc-num">3</span> Supply Chain</a></li>
+              <li><a href="#s4"><span class="toc-num">4</span> Technology &amp; Investment</a></li>
+              <li><a href="#s5"><span class="toc-num">5</span> Challenges &amp; Solutions</a></li>
+            </ul>
+          </div>
+          <div class="sidebar-widget">
+            <h3 class="widget-title">About This Briefing</h3>
+            <p class="widget-text">Source:</p>
+            <div class="widget-badge">
+              <span class="auto-badge">⚡ Automated Daily at 7:00 AM</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand"><span class="logo-icon">✈</span><span class="footer-name">MRO Daily Intelligence</span></div>
+        <div class="footer-text">Automated briefings sourced from Aviation Week Network. Published daily at 7:00 AM.</div>
+      </div>
+    </div>
+  </footer>
+
+<script>
+  var postAudio = null;
+  var audioSrc  = 'posts/april18-2026-email.m4a';  /* relative from inside posts/ dir */
+
+  /* Fix path: this page is in posts/, so audio is same dir */
+  var audioFile = 'april18-2026-email.m4a';
+
+  function fmtPostTime(s) {
+    if (isNaN(s) || !isFinite(s)) return '--:--';
+    var m = Math.floor(s / 60);
+    return m + ':' + String(Math.floor(s % 60)).padStart(2, '0');
+  }
+
+  function togglePostAudio() {
+    var playIcon  = document.getElementById('postPlayIcon');
+    var pauseIcon = document.getElementById('postPauseIcon');
+    var meta      = document.getElementById('postAudioMeta');
+    var fill      = document.getElementById('postAudioFill');
+    var cur       = document.getElementById('postAudioCur');
+    var dur       = document.getElementById('postAudioDur');
+
+    if (!postAudio) {
+      postAudio = new Audio(audioFile);
+      postAudio.addEventListener('loadedmetadata', function() {
+        dur.textContent = fmtPostTime(postAudio.duration);
+        meta.textContent = fmtPostTime(postAudio.duration) + ' · Daniel, en-GB';
+      });
+      postAudio.addEventListener('timeupdate', function() {
+        var pct = (postAudio.currentTime / postAudio.duration) * 100;
+        fill.style.width = pct + '%';
+        cur.textContent = fmtPostTime(postAudio.currentTime);
+      });
+      postAudio.addEventListener('ended', function() {
+        playIcon.style.display = '';
+        pauseIcon.style.display = 'none';
+        meta.textContent = 'Finished · tap to replay';
+        fill.style.width = '0%';
+        cur.textContent = '0:00';
+        postAudio.currentTime = 0;
+      });
+    }
+
+    if (!postAudio.paused) {
+      postAudio.pause();
+      playIcon.style.display = '';
+      pauseIcon.style.display = 'none';
+      meta.textContent = 'Paused';
+    } else {
+      postAudio.play();
+      playIcon.style.display = 'none';
+      pauseIcon.style.display = '';
+      meta.textContent = 'Playing…';
+    }
+  }
+
+  function seekPostAudio(e) {
+    if (!postAudio) return;
+    var track = document.getElementById('postAudioTrack');
+    var rect  = track.getBoundingClientRect();
+    var pct   = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
+    postAudio.currentTime = pct * postAudio.duration;
+  }
+</script>
+</body>
+</html>
