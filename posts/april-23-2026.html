@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MRO Briefing — April 23, 2026 | MRO Daily Intelligence</title>
+  <meta name="description" content="Delta Air Lines — Descent Profile Optimization (DPO):" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/style.css" />
+  <style>
+    /* ── Audio Player ── */
+    .post-audio-player {
+      background: linear-gradient(135deg,#0f2847 0%,#1a4a8a 100%);
+      border-radius: 14px;
+      padding: 18px 20px;
+      margin: 0 0 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .post-audio-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .6px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.5);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .post-audio-controls {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .post-play-btn {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.15);
+      border: 1px solid rgba(255,255,255,.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      flex-shrink: 0;
+      transition: background .15s;
+    }
+    .post-play-btn:hover { background: rgba(255,255,255,.25); }
+    .post-play-btn svg { fill: white; width: 20px; height: 20px; }
+    .post-audio-info { flex: 1; }
+    .post-audio-title { font-size: 14px; font-weight: 600; color: #fff; margin-bottom: 3px; }
+    .post-audio-meta { font-size: 12px; color: rgba(255,255,255,.5); }
+    .post-audio-progress {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .post-audio-time { font-size: 11px; color: rgba(255,255,255,.5); min-width: 32px; font-variant-numeric: tabular-nums; }
+    .post-audio-track {
+      flex: 1;
+      height: 4px;
+      background: rgba(255,255,255,.2);
+      border-radius: 99px;
+      cursor: pointer;
+      position: relative;
+    }
+    .post-audio-fill {
+      height: 100%;
+      width: 0%;
+      background: #fff;
+      border-radius: 99px;
+      transition: width .2s linear;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <div class="logo">
+          <span class="logo-icon">✈</span>
+          <div>
+            <div class="logo-name">MRO Daily Intelligence</div>
+            <div class="logo-tagline">Aviation Maintenance Market Briefings</div>
+          </div>
+        </div>
+        <nav class="nav">
+          <a href="../index.html" class="nav-link">Latest</a>
+          <a href="../index.html#about" class="nav-link">About</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section class="post-hero">
+    <div class="container">
+      <a href="../index.html" class="post-back">← All Briefings</a>
+      <div class="post-issue-label">Issue #37 &nbsp;·&nbsp; April 23, 2026</div>
+      <h1 class="post-title">Daily MRO Market News Summary — April 23, 2026</h1>
+      <div class="post-meta-row">
+        <div class="post-meta-item"><strong>April 23, 2026</strong></div>
+        <div class="post-meta-item">·</div>
+        <div class="post-meta-item">Source: <strong>Aviation Week Network</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <main class="post-body">
+    <div class="container">
+      <div class="post-grid">
+        <article class="post-content">
+
+          <!-- ── Audio Player ── -->
+          <div class="post-audio-player" id="audioPlayer">
+            <div class="post-audio-label">
+              <svg viewBox="0 0 24 24" fill="white" width="12" height="12"><path d="M12 3a9 9 0 100 18A9 9 0 0012 3zm-2 13V8l7 4-7 4z"/></svg>
+              Audio Briefing &nbsp;·&nbsp; Daniel, en-GB
+            </div>
+            <div class="post-audio-controls">
+              <button class="post-play-btn" id="postPlayBtn" onclick="togglePostAudio()" aria-label="Play audio briefing">
+                <svg id="postPlayIcon" viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+                <svg id="postPauseIcon" viewBox="0 0 24 24" style="display:none"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+              </button>
+              <div class="post-audio-info">
+                <div class="post-audio-title">Daily Briefing — April 23, 2026</div>
+                <div class="post-audio-meta" id="postAudioMeta">Tap to listen · ~2 min</div>
+              </div>
+            </div>
+            <div class="post-audio-progress">
+              <span class="post-audio-time" id="postAudioCur">0:00</span>
+              <div class="post-audio-track" id="postAudioTrack" onclick="seekPostAudio(event)">
+                <div class="post-audio-fill" id="postAudioFill"></div>
+              </div>
+              <span class="post-audio-time" id="postAudioDur">--:--</span>
+            </div>
+          </div>
+
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px"><strong>Date:</strong> Wednesday, April 23, 2026</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px"><strong>Source:</strong> Aviation Week Network (Gallery: Aftermarket News from MRO Americas 2026), GE Aerospace, Simply Wall St / HEICO, MRO Business Today, PR Newswire</p>
+
+<div class="post-section" id="s1">
+  <div class="post-section-header">
+    <div class="section-number">1</div>
+    <span class="section-icon">📈</span>
+    <h2>MRO Americas 2026 Closes After Record-Burning Three Days</h2>
+  </div>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">The 30th anniversary edition of MRO Americas concluded at Orlando's Orange County Convention Center, drawing over 15,000 attendees and 700+ exhibitors across three days (April 21–23). The event featured more contract signings and announcements than any previous edition, with the GTF engine MRO bottleneck, AI-driven procurement, workforce development, and industry consolidation dominating discussions.</p>
+
+<div class="post-section" id="s2">
+  <div class="post-section-header">
+    <div class="section-number">2</div>
+    <span class="section-icon">🌏</span>
+    <h2>GE Aerospace Announces Lifting Futures Workforce Expansion</h2>
+  </div>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">GE Aerospace, through the GE Aerospace Foundation, announced a new round of investments under its <strong>Lifting Futures</strong> program — a $30 million, five-year commitment to add 10,000 skilled workers to advanced manufacturing and MRO by 2030. The new round targets five metropolitan areas:</p>
+<div class="table-wrapper"><table class="post-table">
+<thead><tr><th>Location</th><th>Investment</th><th>Focus</th></tr></thead><tbody>
+<tr><td><strong>Auburn, Alabama</strong></td><td>≥ $1 million</td><td>Calhoun Community College — aviation maintenance training</td></tr>
+<tr><td><strong>Dallas, Texas</strong></td><td>≥ $1 million</td><td>Tarrant County College — Aviation Maintenance Technician Program (includes 3D virtual A320neo engine training)</td></tr>
+<tr><td><strong>Kuala Lumpur, Malaysia</strong></td><td>≥ $1 million</td><td>Universiti Kuala Lumpur — Malaysian Institute of Aviation Technology</td></tr>
+<tr><td><strong>Cincinnati-Dayton, Ohio</strong></td><td>≥ $500,000</td><td>Cincinnati State — hire aviation maintenance instructors, expand enrollment</td></tr>
+<tr><td><strong>Wroclaw, Poland</strong></td><td>≥ $500,000</td><td>XEOS engine maintenance JV with Lufthansa Technik region</td></tr>
+</tbody></table></div>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">GE cited an industry shortage of approximately <strong>5,000 certificated aviation maintenance technicians</strong> as the driving force behind the investment. Specific partner organizations within the five locations will be announced by fall 2026.</p>
+
+<div class="post-section" id="s3">
+  <div class="post-section-header">
+    <div class="section-number">3</div>
+    <span class="section-icon">🔗</span>
+    <h2>Airbus Secures Digital Product Deals with Delta and JetBlue</h2>
+  </div>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">Airbus announced two significant digital agreements at the show:</p>
+<ul>
+<li><strong>Delta Air Lines — Descent Profile Optimization (DPO):</strong> Deployed across Delta's 270-aircraft Airbus fleet — the <strong>largest DPO retrofit on a mixed Airbus fleet to date</strong>. DPO optimizes vertical flight profiles to reduce approach fuel consumption.</li>
+<li><strong>JetBlue — Enhanced Electronic Instrument System + Skywise:</strong> Cockpit display upgrade on 46 A320s, plus adoption of Airbus subsidiary Skywise's Fleet Performance+ solution.</li>
+</ul>
+
+<div class="post-section" id="s4">
+  <div class="post-section-header">
+    <div class="section-number">4</div>
+    <span class="section-icon">💡</span>
+    <h2>Lufthansa Technik Signs Aviatar and Component Contracts</h2>
+  </div>
+<ul>
+<li><strong>Air Transat:</strong> Introduced Aviatar's Electronic Technical Logbook, including the new <strong>Digital Cabin Logbook</strong> application, across its A321 and A330 fleet. Air Transat is the <strong>first customer</strong> to operate the digital system in both the cockpit and cabin.</li>
+<li><strong>Woodward:</strong> Elite Licensed Repair Service Facility Agreement for CFM Leap-1A and -1B components (fuel controls, valves, actuators).</li>
+</ul>
+
+<div class="post-section" id="s5">
+  <div class="post-section-header">
+    <div class="section-number">5</div>
+    <span class="section-icon">⚠️</span>
+    <h2>HEICO Presents at MRO Americas — No New Deals Announced</h2>
+  </div>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">HEICO Corporation (NYSE: HEI) VP of HPG Technical Services Patrick Markham presented at MRO Americas, discussing the company's MRO capabilities and aftermarket positioning. No new deals or product announcements were made. HEICO's FY2026 Q1 results showed sales of $1.179 billion and net income of $190 million. Analysts project revenue reaching $6 billion by 2029, with key risks including OEM pressure on PMA parts and the threat of additive manufacturing.</p>
+
+<div class="post-section" id="s6">
+  <div class="post-section-header">
+    <div class="section-number">📋</div>
+    <span class="section-icon">⚠️</span>
+    <h2>FCAH Aerospace Rebrands as "First Class Air," Signs Boeing Deal</h2>
+  </div>
+<ul>
+<li><strong>Rebranding:</strong> FCAH Aerospace rebranded as <strong>"First Class Air"</strong> and launched a unified integration platform consolidating its operating companies: Cargo Repair, First Class Air Support, Cobalt Aero Services, Innodyne Systems, and Survival Products.</li>
+<li><strong>Boeing Distribution:</strong> Survival Products signed a 10-year exclusive distribution agreement adding its life raft and vest products to Boeing's portfolio.</li>
+</ul>
+
+<div class="post-section" id="s7">
+  <div class="post-section-header">
+    <div class="section-number">📋</div>
+    <span class="section-icon">⚠️</span>
+    <h2>Dedienne Renews Collins Nacelle Tooling License</h2>
+  </div>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">Dedienne Aerospace renewed its exclusive license with Collins Aerospace for legacy and new-generation nacelle tooling, including ground support equipment and related services.</p>
+
+<div class="post-section" id="s8">
+  <div class="post-section-header">
+    <div class="section-number">📋</div>
+    <span class="section-icon">⚠️</span>
+    <h2>DTX Aerospace and Liebherr Sign ERJ Landing Gear Agreement</h2>
+  </div>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">DTX Aerospace signed a license service agreement with Liebherr-Aerospace to perform maintenance on Embraer ERJ family nose landing gear components from its facility in Rio de Janeiro — expanding Latin American MRO capability for regional jet landing gear.</p>
+
+<div class="post-section" id="s9">
+  <div class="post-section-header">
+    <div class="section-number">📋</div>
+    <span class="section-icon">⚠️</span>
+    <h2>Fokker Services Group Integrates SkyLog-25 Recorder</h2>
+  </div>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">Fokker Services Group signed a commercial agreement with KGB Aviation Solutions to integrate the <strong>SkyLog-25</strong> flight data and cockpit voice recorder across multiple aircraft platforms. The solution addresses obsolescence challenges and high maintenance costs for aging legacy fleet recorders.</p>
+
+<div class="post-section" id="s10">
+  <div class="post-section-header">
+    <div class="section-number">📋</div>
+    <span class="section-icon">⚠️</span>
+    <h2>ILS Launches New Digital Capabilities</h2>
+  </div>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">Inventory Locator Service (ILS) introduced two new digital tools:</p>
+<ul>
+<li><strong>Block Aero Technologies Integration:</strong> API connectivity with Block Aero's blockchain-based aviation asset management software to reduce fragmented processes and improve data flow.</li>
+<li><strong>Digital Catalog:</strong> New capability allowing suppliers to extend inventory visibility in a branded, searchable format with a direct path for buyers to engage.</li>
+</ul>
+
+<div class="post-section" id="s11">
+  <div class="post-section-header">
+    <div class="section-number">📋</div>
+    <span class="section-icon">⚠️</span>
+    <h2>AkzoNobel and Donecle Introduce Drone Coatings Inspection Tech</h2>
+  </div>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">AkzoNobel and Donecle introduced the <strong>Iris Coatings Management eXpert</strong> tool, which uses a sensor mounted on a Donecle drone to capture data on dry film thickness, color data, and gloss measurements to evaluate coating performance — combining automated drone inspection with coatings intelligence.</p>
+
+<div class="post-section" id="s12">
+  <div class="post-section-header">
+    <div class="section-number">📋</div>
+    <span class="section-icon">⚠️</span>
+    <h2>Jazz Aviation Signs Embraer Inventory Support Contract</h2>
+  </div>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">Embraer signed a spare parts inventory support agreement with <strong>Jazz Aviation</strong>, which operates 25 E175s. Jazz becomes the <strong>first Canadian customer</strong> of Embraer's Collaborative Inventory Planning program.</p>
+<div class="table-wrapper"><table class="post-table">
+<thead><tr><th>Theme</th><th>Signal</th></tr></thead><tbody>
+<tr><td><strong>GTF engine bottleneck</strong></td><td>P&amp;W's $170M combined investment (Columbus + 3 new sites) shows urgency to reduce turnaround times</td></tr>
+<tr><td><strong>AI meets aviation</strong></td><td>AAR's Airvoyant (agentic AI procurement) was the show's standout innovation</td></tr>
+<tr><td><strong>Workforce crisis</strong></td><td>GE's $30M Lifting Futures + industry shortage of 5,000+ AMTs dominated panels</td></tr>
+<tr><td><strong>Digital transformation</strong></td><td>Flydocs/Aeromexico, Aviatar/Air Transat, Airbus DPO/Delta — airlines investing heavily in digital tools</td></tr>
+<tr><td><strong>Consolidation continues</strong></td><td>Acorn Capital/MTI Aviation, VSE/PAG ($2B), FCAH rebranding — PE and strategic M&amp;A remain active</td></tr>
+<tr><td><strong>Latin America expansion</strong></td><td>AerFin (A330 inventory in Miami), DTX/Liebherr (ERJ landing gear in Rio), AerFin/APAS Chile</td></tr>
+<tr><td><strong>Drone integration</strong></td><td>Donecle with JetBlue, AkzoNobel, and Barfield — automated inspection gaining mainstream adoption</td></tr>
+</tbody></table></div>
+<p style="color:var(--gray-400);font-size:13px;font-style:italic;margin-bottom:8px">This concludes MRO Americas 2026 coverage. Next issue: April 24, 2026.</p>
+</div>
+          <nav class="post-nav">
+            <a href="april-22-2026.html" class="post-nav-btn">
+              <div class="post-nav-label">← Previous Issue</div>
+              <div class="post-nav-title">April 22 2026</div>
+            </a>
+            <a href="april-24-2026.html" class="post-nav-btn" style="text-align:right">
+              <div class="post-nav-label">Next Issue →</div>
+              <div class="post-nav-title">April 24 2026</div>
+            </a>
+          </nav>
+        </article>
+
+        <aside class="post-sidebar">
+          <div class="toc-widget">
+            <div class="toc-title">In This Issue</div>
+            <ul class="toc-list">
+              <li><a href="#s1"><span class="toc-num">1</span> Market Updates &amp; Growth</a></li>
+              <li><a href="#s2"><span class="toc-num">2</span> Regional Expansion</a></li>
+              <li><a href="#s3"><span class="toc-num">3</span> Supply Chain</a></li>
+              <li><a href="#s4"><span class="toc-num">4</span> Technology &amp; Investment</a></li>
+              <li><a href="#s5"><span class="toc-num">5</span> Challenges &amp; Solutions</a></li>
+            </ul>
+          </div>
+          <div class="sidebar-widget">
+            <h3 class="widget-title">About This Briefing</h3>
+            <p class="widget-text">Source:</p>
+            <div class="widget-badge">
+              <span class="auto-badge">⚡ Automated Daily at 7:00 AM</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand"><span class="logo-icon">✈</span><span class="footer-name">MRO Daily Intelligence</span></div>
+        <div class="footer-text">Automated briefings sourced from Aviation Week Network. Published daily at 7:00 AM.</div>
+      </div>
+    </div>
+  </footer>
+
+<script>
+  var postAudio = null;
+  var audioSrc  = 'posts/april23-2026-email.m4a';  /* relative from inside posts/ dir */
+
+  /* Fix path: this page is in posts/, so audio is same dir */
+  var audioFile = 'april23-2026-email.m4a';
+
+  function fmtPostTime(s) {
+    if (isNaN(s) || !isFinite(s)) return '--:--';
+    var m = Math.floor(s / 60);
+    return m + ':' + String(Math.floor(s % 60)).padStart(2, '0');
+  }
+
+  function togglePostAudio() {
+    var playIcon  = document.getElementById('postPlayIcon');
+    var pauseIcon = document.getElementById('postPauseIcon');
+    var meta      = document.getElementById('postAudioMeta');
+    var fill      = document.getElementById('postAudioFill');
+    var cur       = document.getElementById('postAudioCur');
+    var dur       = document.getElementById('postAudioDur');
+
+    if (!postAudio) {
+      postAudio = new Audio(audioFile);
+      postAudio.addEventListener('loadedmetadata', function() {
+        dur.textContent = fmtPostTime(postAudio.duration);
+        meta.textContent = fmtPostTime(postAudio.duration) + ' · Daniel, en-GB';
+      });
+      postAudio.addEventListener('timeupdate', function() {
+        var pct = (postAudio.currentTime / postAudio.duration) * 100;
+        fill.style.width = pct + '%';
+        cur.textContent = fmtPostTime(postAudio.currentTime);
+      });
+      postAudio.addEventListener('ended', function() {
+        playIcon.style.display = '';
+        pauseIcon.style.display = 'none';
+        meta.textContent = 'Finished · tap to replay';
+        fill.style.width = '0%';
+        cur.textContent = '0:00';
+        postAudio.currentTime = 0;
+      });
+    }
+
+    if (!postAudio.paused) {
+      postAudio.pause();
+      playIcon.style.display = '';
+      pauseIcon.style.display = 'none';
+      meta.textContent = 'Paused';
+    } else {
+      postAudio.play();
+      playIcon.style.display = 'none';
+      pauseIcon.style.display = '';
+      meta.textContent = 'Playing…';
+    }
+  }
+
+  function seekPostAudio(e) {
+    if (!postAudio) return;
+    var track = document.getElementById('postAudioTrack');
+    var rect  = track.getBoundingClientRect();
+    var pct   = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
+    postAudio.currentTime = pct * postAudio.duration;
+  }
+</script>
+</body>
+</html>
