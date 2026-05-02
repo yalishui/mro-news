@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MRO Briefing — April 28, 2026 | MRO Daily Intelligence</title>
+  <meta name="description" content="Group revenue Q1 2026:" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/style.css" />
+  <style>
+    /* ── Audio Player ── */
+    .post-audio-player {
+      background: linear-gradient(135deg,#0f2847 0%,#1a4a8a 100%);
+      border-radius: 14px;
+      padding: 18px 20px;
+      margin: 0 0 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .post-audio-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .6px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.5);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .post-audio-controls {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .post-play-btn {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.15);
+      border: 1px solid rgba(255,255,255,.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      flex-shrink: 0;
+      transition: background .15s;
+    }
+    .post-play-btn:hover { background: rgba(255,255,255,.25); }
+    .post-play-btn svg { fill: white; width: 20px; height: 20px; }
+    .post-audio-info { flex: 1; }
+    .post-audio-title { font-size: 14px; font-weight: 600; color: #fff; margin-bottom: 3px; }
+    .post-audio-meta { font-size: 12px; color: rgba(255,255,255,.5); }
+    .post-audio-progress {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .post-audio-time { font-size: 11px; color: rgba(255,255,255,.5); min-width: 32px; font-variant-numeric: tabular-nums; }
+    .post-audio-track {
+      flex: 1;
+      height: 4px;
+      background: rgba(255,255,255,.2);
+      border-radius: 99px;
+      cursor: pointer;
+      position: relative;
+    }
+    .post-audio-fill {
+      height: 100%;
+      width: 0%;
+      background: #fff;
+      border-radius: 99px;
+      transition: width .2s linear;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <div class="logo">
+          <span class="logo-icon">✈</span>
+          <div>
+            <div class="logo-name">MRO Daily Intelligence</div>
+            <div class="logo-tagline">Aviation Maintenance Market Briefings</div>
+          </div>
+        </div>
+        <nav class="nav">
+          <a href="../index.html" class="nav-link">Latest</a>
+          <a href="../index.html#about" class="nav-link">About</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section class="post-hero">
+    <div class="container">
+      <a href="../index.html" class="post-back">← All Briefings</a>
+      <div class="post-issue-label">Issue #40 &nbsp;·&nbsp; April 28, 2026</div>
+      <h1 class="post-title">Daily MRO Market News Summary — April 28, 2026</h1>
+      <div class="post-meta-row">
+        <div class="post-meta-item"><strong>April 28, 2026</strong></div>
+        <div class="post-meta-item">·</div>
+        <div class="post-meta-item">Source: <strong>Aviation Week Network</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <main class="post-body">
+    <div class="container">
+      <div class="post-grid">
+        <article class="post-content">
+
+          <!-- ── Audio Player ── -->
+          <div class="post-audio-player" id="audioPlayer">
+            <div class="post-audio-label">
+              <svg viewBox="0 0 24 24" fill="white" width="12" height="12"><path d="M12 3a9 9 0 100 18A9 9 0 0012 3zm-2 13V8l7 4-7 4z"/></svg>
+              Audio Briefing &nbsp;·&nbsp; Daniel, en-GB
+            </div>
+            <div class="post-audio-controls">
+              <button class="post-play-btn" id="postPlayBtn" onclick="togglePostAudio()" aria-label="Play audio briefing">
+                <svg id="postPlayIcon" viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+                <svg id="postPauseIcon" viewBox="0 0 24 24" style="display:none"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+              </button>
+              <div class="post-audio-info">
+                <div class="post-audio-title">Daily Briefing — April 28, 2026</div>
+                <div class="post-audio-meta" id="postAudioMeta">Tap to listen · ~2 min</div>
+              </div>
+            </div>
+            <div class="post-audio-progress">
+              <span class="post-audio-time" id="postAudioCur">0:00</span>
+              <div class="post-audio-track" id="postAudioTrack" onclick="seekPostAudio(event)">
+                <div class="post-audio-fill" id="postAudioFill"></div>
+              </div>
+              <span class="post-audio-time" id="postAudioDur">--:--</span>
+            </div>
+          </div>
+
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px"><strong>Date:</strong> Tuesday, April 28, 2026</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px"><strong>Source:</strong> Aviation Week Network (MRO Rolling Daily Updates, April 28, 2026), AeroTime (Airbus Q1 2026 Earnings, April 28, 2026), AIN Online, Boston Warwick (Jet Fuel Surge Analysis, April 2026), CTS Engines Press Release, Magnetic Engines Press Release, Aviation Week MRO Americas 2026 Wrap-up Analysis</p>
+
+<div class="post-section" id="s1">
+  <div class="post-section-header">
+    <div class="section-number">1</div>
+    <span class="section-icon">📈</span>
+    <h2>Market Updates and Growth Trends</h2>
+  </div>
+<h3>Airbus Q1 2026 Earnings: Sharp Profit Decline Amid Engine Shortages</h3>
+<ul>
+<li><strong>Group revenue Q1 2026:</strong> <strong>€12.7B</strong> (down <strong>7% YoY</strong> from Q1 2025)</li>
+<li><strong>EBIT Adjusted Q1 2026:</strong> <strong>€300M</strong> (down <strong>52% YoY</strong>)</li>
+<li><strong>Commercial Aircraft EBIT Adjusted Q1 2026:</strong> <strong>€81M</strong> (down <strong>~84% YoY</strong>)</li>
+<li><strong>Q1 2026 deliveries:</strong> <strong>114 aircraft</strong> (down from 136 in Q1 2025, a <strong>16.2% decline</strong>)</li>
+<li><strong>Drivers:</strong> Pratt &amp; Whitney GTF engine shortage (dominant industrial issue), inventory buildup, unfavorable USD/EUR hedge rate</li>
+<li><strong>Full-year 2026 guidance maintained:</strong> ~870 commercial deliveries, ~€7.5B EBIT Adjusted, ~€4.5B free cash flow</li>
+<li><strong>Backlog:</strong> 9,037 aircraft (end-March 2026), up from 8,754 at end-2025</li>
+<li><strong>A320 production target:</strong> 70–75/month by end of 2027; stabilized at 75/month after 2027</li>
+</ul>
+<h3>Jet Fuel Crisis: Airline Margin Compression Accelerates MRO Efficiency Push</h3>
+<ul>
+<li><strong>Mid-April 2026 composite spot prices:</strong> ><strong>$4.78/gallon</strong> (BTS, S&amp;P Global Platts)</li>
+<li><strong>American Airlines Q1 warning:</strong> ><strong>$4B</strong> added to 2026 fuel bill if prices hold</li>
+<li><strong>Delta Air Lines Q1:</strong> ~<strong>$2B</strong> incremental fuel cost in Q2 2026 alone</li>
+<li><strong>United Airlines:</strong> CEO Scott Kirby — fares need to rise <strong>15–20%</strong> to offset; 5 fare increases already implemented in 2026</li>
+</ul>
+
+<div class="post-section" id="s2">
+  <div class="post-section-header">
+    <div class="section-number">2</div>
+    <span class="section-icon">🌏</span>
+    <h2>Regional Expansion Activities</h2>
+  </div>
+<h3>CTS Engines × S.F. Airlines: CF6-80C2 Support Deal (April 28)</h3>
+<ul>
+<li><strong>CTS Engines</strong> signed a new agreement with <strong>S.F. Airlines</strong> (Chinese cargo carrier) covering <strong>GE Aerospace CF6-80C2 engine</strong> maintenance</li>
+<li><strong>Aircraft covered:</strong> Boeing 747 and 767 fleets</li>
+<li><strong>Service location:</strong> CTS Engines' facility in <strong>Coral Springs, Florida</strong></li>
+<li><strong>Significance:</strong> Chinese cargo carrier securing U.S.-based engine MRO capacity; CF6-80C2 is the workhorse engine for 747/767 freighter fleets</li>
+</ul>
+<h3>Magnetic Engines Gains South Africa Civil Aviation Authority Approval (April 28) <a class="src-link" href="https://aviationweek.com/mro/supply-chain/magnetic-expands-cfm-engine-mro-face-testing-parts-bottlenecks" target="_blank" rel="noopener">Aviation Week</a></h3>
+<ul>
+<li><strong>Magnetic Engines</strong> received certification from the <strong>South African Civil Aviation Authority</strong> for its full range of MRO capabilities</li>
+<li><strong>Significance:</strong> One of only a limited number of MROs with this regulatory approval; strengthens Magnetic Engines' ability to serve African and international operators</li>
+</ul>
+
+<div class="post-section" id="s3">
+  <div class="post-section-header">
+    <div class="section-number">3</div>
+    <span class="section-icon">🔗</span>
+    <h2>Supply Chain Developments</h2>
+  </div>
+<h3>Pratt &amp; Whitney GTF Engine Crisis Remains "Dominant Industrial Issue" for Airbus <a class="src-link" href="https://aviationweek.com/mro/aircraft-propulsion" target="_blank" rel="noopener">Aviation Week</a></h3>
+<ul>
+<li><strong>GTF engine delivery shortfall</strong> continues to be the primary constraint on Airbus commercial aircraft output</li>
+<li><strong>Parked, engineless A320neo family airframes</strong> accumulating outside final assembly lines — a "recurring feature" throughout 2024 and 2025</li>
+<li><strong>Airbus A320neo family deliveries</strong> pushed into back end of each year due to GTF bottleneck</li>
+<li><strong>Pratt &amp; Whitney response:</strong> $100M+ investment across 3 U.S. MRO sites (Columbus GA, etc.); 81,000-sq-ft GTF MRO expansion at Columbus Engine Center opened in early 2026</li>
+</ul>
+<h3>Engine MRO Capacity Allocation Shift</h3>
+<ul>
+<li><strong>GE Aerospace Q1 2026:</strong> Warning of "lower volume related to shop visits, spare parts and spare engines" but noting rising demand for performance-restoration modules</li>
+<li><strong>Independent MROs</strong> benefiting from engine shop capacity constraints; Sanad (UAE) achieved record 2025 revenue driven by global engine shop capacity constraints</li>
+</ul>
+
+<div class="post-section" id="s4">
+  <div class="post-section-header">
+    <div class="section-number">4</div>
+    <span class="section-icon">💡</span>
+    <h2>Technology and Investment News</h2>
+  </div>
+<h3>Digital-Twin Predictive Maintenance Adoption Accelerates (April 2026)</h3>
+<ul>
+<li><strong>Lufthansa Technik:</strong> 15–20% increase in bookings for digital-twin-enabled predictive programs</li>
+<li><strong>MTU Aero Engines:</strong> 15–20% increase in bookings for digital-twin-enabled predictive programs</li>
+<li><strong>Technology drivers:</strong> Each 1% improvement in specific fuel consumption now translates to millions of dollars in savings at current fuel price levels</li>
+<li><strong>Engine wash acceleration:</strong> CFM56 and V2500 engine washes being advanced by <strong>300–500 flight hours</strong> (previously discretionary, now economically urgent)</li>
+</ul>
+<h3>SAF Compatibility Testing Accelerates</h3>
+<ul>
+<li>Airlines have brought forward <strong>SAF blend trials and engine compatibility checks by 6–12 months</strong>, viewed as a hedge against future carbon pricing and long-term fuel cost mitigation</li>
+</ul>
+
+<div class="post-section" id="s5">
+  <div class="post-section-header">
+    <div class="section-number">5</div>
+    <span class="section-icon">⚠️</span>
+    <h2>Major Challenges and Solutions</h2>
+  </div>
+<h3>Challenge 1: Airbus Profit Collapse — Supply Chain vs. Demand</h3>
+<ul>
+<li><strong>Q1 2026 EBIT Adjusted collapse:</strong> Commercial aircraft EBIT Adjusted fell <strong>84% YoY</strong> to just €81M</li>
+<li><strong>Root cause:</strong> GTF engine shortage preventing A320neo family delivery ramp-up; inventory buildup tying up cash</li>
+<li><strong>Airbus response:</strong> Maintaining full-year guidance (870 deliveries); back-loaded delivery pattern continues (same as 2025)</li>
+<li><strong>A220 constraints:</strong> Paced by Spirit AeroSystems work package integration (Airbus completed Spirit A220/A350 asset takeover in December 2025; €32M negative adjustment in Q1 accounts)</li>
+</ul>
+<h3>Challenge 2: Airline Fuel Cost Shock — MRO as Efficiency Lever</h3>
+<ul>
+<li><strong>Fuel cost as % of operating expenses:</strong> Jumped from 25–30% historical norm to dominant expense line</li>
+<li><strong>Airline responses:</strong></li>
+<li>United: 5% summer capacity cut</li>
+<li>Lufthansa Group: Removing 20,000 short-haul flights through October 2026; grounding 27 CityLine aircraft early</li>
+<li>SAS: Cancelled ~1,000 April 2026 flights</li>
+<li><strong>MRO opportunity:</strong> Airlines pulling maintenance forward by 3–6 months for efficient aircraft; installing fuel-saving modifications (engine performance restoration, drag-reduction kits, deep engine washes)</li>
+<li><strong>Fleet retirement acceleration:</strong> Pre-2015 narrowbodies (737-800s, A320ceos) burning 15–22% more fuel per seat being retired early</li>
+</ul>
+<h3>Challenge 3: MRO Demand Bifurcation</h3>
+<ul>
+<li><strong>Declining segments:</strong> Line maintenance (lower utilization), routine engine shop visits, legacy-engine shop visits</li>
+<li><strong>Rising segments:</strong> Heavy checks pulled forward, engine performance restoration, SAF compatibility testing, digital-twin predictive maintenance</li>
+<li><strong>Net impact:</strong> Global MRO demand trimmed <strong>4–7%</strong> from base case in 2026; line maintenance and legacy-engine shop visits see steepest near-term contraction</li>
+</ul>
+
+<div class="post-section" id="s6">
+  <div class="post-section-header">
+    <div class="section-number">📋</div>
+    <span class="section-icon">⚠️</span>
+    <h2>Today's Headlines Recap (April 28, 2026)</h2>
+  </div>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">1. <strong>Airbus Q1 2026 Earnings:</strong> Revenue €12.7B (–7% YoY); EBIT Adjusted €300M (–52% YoY); 114 deliveries (–16.2%); full-year guidance maintained</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">2. <strong>CTS Engines × S.F. Airlines CF6 Deal:</strong> GE CF6-80C2 MRO for Boeing 747/767 freighters; Coral Springs, Florida facility</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">3. <strong>Magnetic Engines South Africa Approval:</strong> Full capability certification from South African CAA; limited MROs hold this approval</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">4. <strong>GTF Engine Crisis Persists:</strong> Airbus confirms P&amp;W engine shortage remains "dominant industrial issue"; A320neo deliveries back-loaded</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">5. <strong>Digital-Twin MRO Bookings Rise:</strong> Lufthansa Technik and MTU Aero Engines both report 15–20% increase in predictive maintenance program bookings</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">6. <strong>Jet Fuel >$4.78/gallon:</strong> American Airlines warns of >$4B additional 2026 fuel cost; United implements 5 fare hikes</p>
+
+<div class="post-section" id="s7">
+  <div class="post-section-header">
+    <div class="section-number">📋</div>
+    <span class="section-icon">⚠️</span>
+    <h2>Key Statistics — April 28, 2026</h2>
+  </div>
+<div class="table-wrapper"><table class="post-table">
+<thead><tr><th>Metric</th><th>Value</th><th>Source</th></tr></thead><tbody>
+<tr><td>Airbus Q1 2026 revenue</td><td>€12.7B (–7% YoY)</td><td>AeroTime / Airbus Q1 report</td></tr>
+<tr><td>Airbus Q1 2026 EBIT Adjusted</td><td>€300M (–52% YoY)</td><td>AeroTime / Airbus Q1 report</td></tr>
+<tr><td>Airbus commercial aircraft EBIT Adj. Q1</td><td>€81M (–84% YoY)</td><td>AeroTime</td></tr>
+<tr><td>Airbus Q1 2026 deliveries</td><td>114 aircraft</td><td>Airbus Q1 report</td></tr>
+<tr><td>Airbus Q1 2025 deliveries (comparison)</td><td>136 aircraft</td><td>Airbus Q1 2025 report</td></tr>
+<tr><td>Airbus full-year 2026 delivery target</td><td>~870 aircraft</td><td>Airbus guidance</td></tr>
+<tr><td>Airbus commercial backlog end-March 2026</td><td>9,037 aircraft</td><td>Airbus Q1 report</td></tr>
+<tr><td>Mid-April 2026 jet fuel spot price</td><td>>$4.78/gallon</td><td>BTS / S&amp;P Global Platts</td></tr>
+<tr><td>American Airlines incremental fuel cost</td><td>>$4B (2026)</td><td>AA Q1 2026 earnings</td></tr>
+<tr><td>Delta Air Lines incremental fuel cost</td><td>~$2B (Q2 2026)</td><td>Delta Q1 2026 earnings</td></tr>
+<tr><td>P&amp;W GTF MRO investment</td><td>>$100M (3 U.S. sites)</td><td>Pratt &amp; Whitney April 21</td></tr>
+<tr><td>Lufthansa Technik digital-twin booking increase</td><td>15–20%</td><td>April 2026 reports</td></tr>
+<tr><td>MTU Aero Engines digital-twin booking increase</td><td>15–20%</td><td>April 2026 reports</td></tr>
+<tr><td>Engine wash acceleration (CFM56/V2500)</td><td>300–500 flight hours</td><td>Boston Warwick</td></tr>
+<tr><td>Global MRO demand 2026 base-case trim</td><td>4–7%</td><td>Boston Warwick</td></tr>
+</tbody></table></div>
+<p style="color:var(--gray-400);font-size:13px;font-style:italic;margin-bottom:8px">Sources: AeroTime (Airbus Q1 2026 Earnings, April 28, 2026), Aviation Week Network (MRO Rolling Daily Updates, April 28, 2026), CTS Engines Press Release (April 28, 2026), Magnetic Engines Press Release (April 28, 2026), Boston Warwick (Jet Fuel Surge MRO Analysis, April 30, 2026), Airbus Q1 2026 Earnings Release (April 28, 2026), Bureau of Transportation Statistics, S&amp;P Global Platts, IATA Jet Fuel Monitor.</p>
+</div>
+          <nav class="post-nav">
+            <a href="april-26-2026.html" class="post-nav-btn">
+              <div class="post-nav-label">← Previous Issue</div>
+              <div class="post-nav-title">April 26 2026</div>
+            </a>
+            <a href="../index.html" class="post-nav-btn" style="text-align:right">
+              <div class="post-nav-label">All Briefings</div>
+              <div class="post-nav-title">View Archive →</div>
+            </a>
+          </nav>
+        </article>
+
+        <aside class="post-sidebar">
+          <div class="toc-widget">
+            <div class="toc-title">In This Issue</div>
+            <ul class="toc-list">
+              <li><a href="#s1"><span class="toc-num">1</span> Market Updates &amp; Growth</a></li>
+              <li><a href="#s2"><span class="toc-num">2</span> Regional Expansion</a></li>
+              <li><a href="#s3"><span class="toc-num">3</span> Supply Chain</a></li>
+              <li><a href="#s4"><span class="toc-num">4</span> Technology &amp; Investment</a></li>
+              <li><a href="#s5"><span class="toc-num">5</span> Challenges &amp; Solutions</a></li>
+            </ul>
+          </div>
+          <div class="sidebar-widget">
+            <h3 class="widget-title">About This Briefing</h3>
+            <p class="widget-text">Source:</p>
+            <div class="widget-badge">
+              <span class="auto-badge">⚡ Automated Daily at 7:00 AM</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand"><span class="logo-icon">✈</span><span class="footer-name">MRO Daily Intelligence</span></div>
+        <div class="footer-text">Automated briefings sourced from Aviation Week Network. Published daily at 7:00 AM.</div>
+      </div>
+    </div>
+  </footer>
+
+<script>
+  var postAudio = null;
+  var audioSrc  = 'posts/april28-2026-email.m4a';  /* relative from inside posts/ dir */
+
+  /* Fix path: this page is in posts/, so audio is same dir */
+  var audioFile = 'april28-2026-email.m4a';
+
+  function fmtPostTime(s) {
+    if (isNaN(s) || !isFinite(s)) return '--:--';
+    var m = Math.floor(s / 60);
+    return m + ':' + String(Math.floor(s % 60)).padStart(2, '0');
+  }
+
+  function togglePostAudio() {
+    var playIcon  = document.getElementById('postPlayIcon');
+    var pauseIcon = document.getElementById('postPauseIcon');
+    var meta      = document.getElementById('postAudioMeta');
+    var fill      = document.getElementById('postAudioFill');
+    var cur       = document.getElementById('postAudioCur');
+    var dur       = document.getElementById('postAudioDur');
+
+    if (!postAudio) {
+      postAudio = new Audio(audioFile);
+      postAudio.addEventListener('loadedmetadata', function() {
+        dur.textContent = fmtPostTime(postAudio.duration);
+        meta.textContent = fmtPostTime(postAudio.duration) + ' · Daniel, en-GB';
+      });
+      postAudio.addEventListener('timeupdate', function() {
+        var pct = (postAudio.currentTime / postAudio.duration) * 100;
+        fill.style.width = pct + '%';
+        cur.textContent = fmtPostTime(postAudio.currentTime);
+      });
+      postAudio.addEventListener('ended', function() {
+        playIcon.style.display = '';
+        pauseIcon.style.display = 'none';
+        meta.textContent = 'Finished · tap to replay';
+        fill.style.width = '0%';
+        cur.textContent = '0:00';
+        postAudio.currentTime = 0;
+      });
+    }
+
+    if (!postAudio.paused) {
+      postAudio.pause();
+      playIcon.style.display = '';
+      pauseIcon.style.display = 'none';
+      meta.textContent = 'Paused';
+    } else {
+      postAudio.play();
+      playIcon.style.display = 'none';
+      pauseIcon.style.display = '';
+      meta.textContent = 'Playing…';
+    }
+  }
+
+  function seekPostAudio(e) {
+    if (!postAudio) return;
+    var track = document.getElementById('postAudioTrack');
+    var rect  = track.getBoundingClientRect();
+    var pct   = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
+    postAudio.currentTime = pct * postAudio.duration;
+  }
+</script>
+</body>
+</html>
