@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MRO Briefing — April 30, 2026 | MRO Daily Intelligence</title>
+  <meta name="description" content="Trigger:" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/style.css" />
+  <style>
+    /* ── Audio Player ── */
+    .post-audio-player {
+      background: linear-gradient(135deg,#0f2847 0%,#1a4a8a 100%);
+      border-radius: 14px;
+      padding: 18px 20px;
+      margin: 0 0 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .post-audio-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .6px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.5);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .post-audio-controls {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .post-play-btn {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.15);
+      border: 1px solid rgba(255,255,255,.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      flex-shrink: 0;
+      transition: background .15s;
+    }
+    .post-play-btn:hover { background: rgba(255,255,255,.25); }
+    .post-play-btn svg { fill: white; width: 20px; height: 20px; }
+    .post-audio-info { flex: 1; }
+    .post-audio-title { font-size: 14px; font-weight: 600; color: #fff; margin-bottom: 3px; }
+    .post-audio-meta { font-size: 12px; color: rgba(255,255,255,.5); }
+    .post-audio-progress {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .post-audio-time { font-size: 11px; color: rgba(255,255,255,.5); min-width: 32px; font-variant-numeric: tabular-nums; }
+    .post-audio-track {
+      flex: 1;
+      height: 4px;
+      background: rgba(255,255,255,.2);
+      border-radius: 99px;
+      cursor: pointer;
+      position: relative;
+    }
+    .post-audio-fill {
+      height: 100%;
+      width: 0%;
+      background: #fff;
+      border-radius: 99px;
+      transition: width .2s linear;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <div class="logo">
+          <span class="logo-icon">✈</span>
+          <div>
+            <div class="logo-name">MRO Daily Intelligence</div>
+            <div class="logo-tagline">Aviation Maintenance Market Briefings</div>
+          </div>
+        </div>
+        <nav class="nav">
+          <a href="../index.html" class="nav-link">Latest</a>
+          <a href="../index.html#about" class="nav-link">About</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section class="post-hero">
+    <div class="container">
+      <a href="../index.html" class="post-back">← All Briefings</a>
+      <div class="post-issue-label">Issue #42 &nbsp;·&nbsp; April 30, 2026</div>
+      <h1 class="post-title">Daily MRO Market News Summary — April 30, 2026</h1>
+      <div class="post-meta-row">
+        <div class="post-meta-item"><strong>April 30, 2026</strong></div>
+        <div class="post-meta-item">·</div>
+        <div class="post-meta-item">Source: <strong>Aviation Week Network</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <main class="post-body">
+    <div class="container">
+      <div class="post-grid">
+        <article class="post-content">
+
+          <!-- ── Audio Player ── -->
+          <div class="post-audio-player" id="audioPlayer">
+            <div class="post-audio-label">
+              <svg viewBox="0 0 24 24" fill="white" width="12" height="12"><path d="M12 3a9 9 0 100 18A9 9 0 0012 3zm-2 13V8l7 4-7 4z"/></svg>
+              Audio Briefing &nbsp;·&nbsp; Daniel, en-GB
+            </div>
+            <div class="post-audio-controls">
+              <button class="post-play-btn" id="postPlayBtn" onclick="togglePostAudio()" aria-label="Play audio briefing">
+                <svg id="postPlayIcon" viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+                <svg id="postPauseIcon" viewBox="0 0 24 24" style="display:none"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+              </button>
+              <div class="post-audio-info">
+                <div class="post-audio-title">Daily Briefing — April 30, 2026</div>
+                <div class="post-audio-meta" id="postAudioMeta">Tap to listen · ~2 min</div>
+              </div>
+            </div>
+            <div class="post-audio-progress">
+              <span class="post-audio-time" id="postAudioCur">0:00</span>
+              <div class="post-audio-track" id="postAudioTrack" onclick="seekPostAudio(event)">
+                <div class="post-audio-fill" id="postAudioFill"></div>
+              </div>
+              <span class="post-audio-time" id="postAudioDur">--:--</span>
+            </div>
+          </div>
+
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px"><strong>Date:</strong> Thursday, April 30, 2026</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px"><strong>Source:</strong> Aviation Week Network (MRO Rolling Daily Updates, April 30, 2026), Boston Warwick (Jet Fuel Surge MRO Resilience Analysis, April 30, 2026), Bureau of Transportation Statistics, IATA Jet Fuel Monitor, S&amp;P Global Platts, Setna iO Press Release, Icelandair / Invest Lithuania Announcement, American Airlines Q1 2026 Earnings, Delta Air Lines Q1 2026 Earnings, AeroTime, Aviation Week Network</p>
+
+<div class="post-section" id="s1">
+  <div class="post-section-header">
+    <div class="section-number">1</div>
+    <span class="section-icon">📈</span>
+    <h2>Market Updates and Growth Trends</h2>
+  </div>
+<h3>Jet Fuel Crisis: Sharpest Shock in Over a Decade</h3>
+<ul>
+<li><strong>Trigger:</strong> Late-February 2026 Middle East conflict escalation + Strait of Hormuz supply disruptions</li>
+<li><strong>February 2026 average U.S. airline jet fuel cost:</strong> <strong>$2.39/gallon</strong> (BTS)</li>
+<li><strong>Mid-April 2026 composite spot prices:</strong> <strong>>$4.78/gallon</strong> (BTS, S&amp;P Global Platts, IATA)</li>
+<li><strong>Mid-April 2026 retail FBO prices:</strong> <strong>>$8.60/gallon</strong></li>
+<li><strong>American Airlines Q1 warning (April 23):</strong> Spike will add <strong>>$4 billion</strong> to its 2026 fuel bill if prices hold</li>
+<li><strong>Delta Air Lines Q1:</strong> <strong>~$2 billion</strong> incremental fuel cost hit in Q2 2026 alone</li>
+<li><strong>United Airlines:</strong> CEO Scott Kirby — fares need to rise <strong>15–20%</strong> to offset; 5 fare increases implemented in 2026; checked-bag fees raised $10</li>
+</ul>
+<h3>MRO Demand Recalibration Under Fuel Shock</h3>
+<ul>
+<li><strong>2026 global MRO demand base-case trim:</strong> <strong>4–7%</strong> (line maintenance and legacy-engine shop visits see steepest near-term contraction)</li>
+<li><strong>2025 global MRO market:</strong> <strong>$136B</strong> (+8% YoY) — Oliver Wyman</li>
+<li><strong>2030 projection:</strong> <strong>~$193B</strong> — Oliver Wyman</li>
+<li><strong>Winning MRO segments:</strong> Condition-based maintenance, predictive maintenance, engine performance restoration, heavy checks pulled forward, SAF compatibility testing</li>
+<li><strong>Losing MRO segments:</strong> Line maintenance (lower utilization), routine engine shop visits, legacy-engine shop visits</li>
+</ul>
+
+<div class="post-section" id="s2">
+  <div class="post-section-header">
+    <div class="section-number">2</div>
+    <span class="section-icon">🌏</span>
+    <h2>Regional Expansion Activities</h2>
+  </div>
+<h3>Icelandair Plans Vilnius Technical Services Center (April 30)</h3>
+<ul>
+<li><strong>Icelandair</strong> plans to establish a <strong>technical services center in Vilnius, Lithuania</strong> in May 2026</li>
+<li><strong>Hiring:</strong> <strong>15 specialists</strong> in the first year</li>
+<li><strong>Roles:</strong> Maintenance coordinators, technical records specialists, planning engineers, CAMO engineers</li>
+<li><strong>Source:</strong> Invest Lithuania (national investment promotion agency)</li>
+<li><strong>Significance:</strong> Icelandair expanding third-party technical services into Eastern Europe; tapping Lithuania's growing aviation talent pool</li>
+</ul>
+<h3>Setna iO Acquires 737-800 and V2500 for Teardown (April 30)</h3>
+<ul>
+<li><strong>Setna iO</strong> acquired a <strong>Boeing 737-800</strong> (previously operated by <strong>Air Europa</strong>) and an <strong>IAE V2500 engine</strong> for teardown</li>
+<li><strong>737-800 teardown location:</strong> <strong>ecube</strong> in Castellon, Spain</li>
+<li><strong>V2500 teardown location:</strong> Not yet disclosed</li>
+<li><strong>Significance:</strong> Growing teardown/recycling supply chain; used serviceable material (USM) market expanding as operators seek cost relief from new parts shortages</li>
+</ul>
+
+<div class="post-section" id="s3">
+  <div class="post-section-header">
+    <div class="section-number">3</div>
+    <span class="section-icon">🔗</span>
+    <h2>Supply Chain Developments</h2>
+  </div>
+<h3>Airline Capacity Discipline Accelerates MRO Shifts</h3>
+<ul>
+<li><strong>United Airlines:</strong> Cutting summer 2026 flight volume by <strong>5%</strong></li>
+<li><strong>Lufthansa Group:</strong> Removing <strong>20,000 short-haul flights</strong> through October 2026 (saves ~40,000 metric tons of jet fuel); grounding <strong>27 CityLine aircraft</strong> earlier than planned</li>
+<li><strong>SAS:</strong> Cancelled ~<strong>1,000 flights</strong> in April 2026</li>
+<li><strong>European carriers:</strong> Consolidating routes onto larger aircraft; reducing utilization by <strong>6–9%</strong> at major hubs</li>
+<li><strong>JetBlue:</strong> Describes environment as "biggest headwind since the pandemic"; has not ruled out seeking government support</li>
+</ul>
+<h3>Fleet Retirement Acceleration — MRO Market Dual Edge</h3>
+<ul>
+<li>Airlines accelerating retirement of <strong>pre-2015 narrowbody aircraft</strong> (737-800s, A320ceos) which burn <strong>15–22% more fuel per seat</strong> than newer models</li>
+<li><strong>Lessor data:</strong> <strong>25–30% increase</strong> in early-return negotiations since March 2026</li>
+<li><strong>MRO impact:</strong> Lower utilization reduces line-maintenance events; BUT heavy maintenance (C-checks, D-checks) for efficient "keep" fleet and early-returned aircraft is rising</li>
+</ul>
+
+<div class="post-section" id="s4">
+  <div class="post-section-header">
+    <div class="section-number">4</div>
+    <span class="section-icon">💡</span>
+    <h2>Technology and Investment News</h2>
+  </div>
+<h3>Engine Performance Restoration Prioritized</h3>
+<ul>
+<li><strong>CFM56 and V2500 engine washes</strong> being advanced by <strong>300–500 flight hours</strong> (previously discretionary, now economically urgent)</li>
+<li><strong>Fuel-saving modifications</strong> installed during accelerated downtime: engine performance restoration, drag-reduction kits, deep engine washes</li>
+<li><strong>Each 1% improvement in specific fuel consumption</strong> = millions of dollars in savings at current price levels</li>
+</ul>
+<h3>SAF Compatibility Testing Accelerates</h3>
+<ul>
+<li>Airlines have brought forward <strong>SAF blend trials and engine compatibility checks by 6–12 months</strong></li>
+<li>Viewed as hedge against future carbon pricing and long-term fuel cost mitigation</li>
+<li>MRO providers incorporating SAF compatibility checks into heavy maintenance scopes</li>
+</ul>
+<h3>Private Equity: Selective Premium Valuations</h3>
+<ul>
+<li><strong>Premium valuations:</strong> Platforms with predictive-maintenance capabilities and next-generation engine exposure (GTF, LEAP, XWB) attracting premium valuations</li>
+<li><strong>Pressure on legacy-exposed providers:</strong> Pure-play heavy-maintenance providers heavily exposed to legacy narrowbody fleets face volume pressure; pivoting to efficiency-upgrade packages</li>
+</ul>
+
+<div class="post-section" id="s5">
+  <div class="post-section-header">
+    <div class="section-number">5</div>
+    <span class="section-icon">⚠️</span>
+    <h2>Major Challenges and Solutions</h2>
+  </div>
+<h3>Challenge 1: Jet Fuel — MRO as Strategic Efficiency Lever</h3>
+<ul>
+<li><strong>Fuel as % of operating expenses:</strong> Jumped from 25–30% historical norm to <strong>dominant expense line</strong></li>
+<li><strong>Airline actions:</strong> Capacity cuts, fleet retirement acceleration, maintenance pulled forward for efficient aircraft</li>
+<li><strong>MRO solution:</strong> Heavy checks pulled forward 3–6 months for efficient fleet; fuel-saving modifications installed during planned downtime; engine washes accelerated</li>
+</ul>
+<h3>Challenge 2: MRO Demand Bifurcation — Winners vs. Losers</h3>
+<div class="table-wrapper"><table class="post-table">
+<thead><tr><th><strong>Declining Demand Segments</strong></th><th><strong>Rising Demand Segments</strong></th></tr></thead><tbody>
+<tr><td>Line maintenance (lower utilization)</td><td>Condition-based/predictive maintenance</td></tr>
+<tr><td>Routine engine shop visits</td><td>Engine performance restoration</td></tr>
+<tr><td>Legacy-engine shop visits</td><td>Heavy checks pulled forward (fuel-saving mods)</td></tr>
+<tr><td></td><td>SAF compatibility testing</td></tr>
+<tr><td></td><td>Digital-twin-enabled predictive maintenance</td></tr>
+</tbody></table></div>
+<h3>Challenge 3: Hedging Renaissance — Possible Stabilization</h3>
+<ul>
+<li><strong>Several U.S. majors</strong> have signaled possible limited <strong>fuel-hedging programs for 2027</strong>, which would stabilize cost visibility and slow aggressive capacity/maintenance cuts</li>
+<li><strong>Next 90 days critical:</strong> De-escalation or increased non-OPEC supply could moderate prices by <strong>$0.80–1.20/gallon</strong> by Q3 2026</li>
+</ul>
+
+<div class="post-section" id="s6">
+  <div class="post-section-header">
+    <div class="section-number">📋</div>
+    <span class="section-icon">⚠️</span>
+    <h2>Today's Headlines Recap (April 30, 2026)</h2>
+  </div>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">1. <strong>Jet Fuel >$4.78/gallon:</strong> American Airlines warns of >$4B incremental 2026 fuel cost; Delta Q2 hit ~$2B; United implements 5 fare hikes</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">2. <strong>Icelandair Vilnius Technical Center:</strong> 15 specialists in first year; maintenance coordinators, technical records, planning engineers, CAMO engineers</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">3. <strong>Setna iO 737-800 + V2500 Teardown:</strong> Ex-Air Europa 737-800 to ecube (Spain); V2500 engine also acquired for teardown</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">4. <strong>Airline Capacity Cuts Accelerate:</strong> United –5% summer capacity; Lufthansa –20,000 short-haul flights; SAS –1,000 April flights</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">5. <strong>Fleet Retirement Acceleration:</strong> Pre-2015 narrowbodies (737-800, A320ceo) retired early; 25–30% increase in lessor early-return negotiations</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">6. <strong>Engine Wash Acceleration:</strong> CFM56/V2500 washes advanced 300–500 flight hours; each 1% fuel-burn improvement = millions in savings</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">7. <strong>SAF Testing Brought Forward 6–12 Months:</strong> Airlines accelerating SAF blend trials as hedge against future carbon pricing</p>
+
+<div class="post-section" id="s7">
+  <div class="post-section-header">
+    <div class="section-number">📋</div>
+    <span class="section-icon">⚠️</span>
+    <h2>Key Statistics — April 30, 2026</h2>
+  </div>
+<div class="table-wrapper"><table class="post-table">
+<thead><tr><th>Metric</th><th>Value</th><th>Source</th></tr></thead><tbody>
+<tr><td>Feb 2026 avg. U.S. airline jet fuel cost</td><td>$2.39/gallon</td><td>BTS</td></tr>
+<tr><td>Mid-Apr 2026 composite spot jet fuel</td><td>>$4.78/gallon</td><td>BTS / S&amp;P Global Platts / IATA</td></tr>
+<tr><td>Mid-Apr 2026 retail FBO jet fuel</td><td>>$8.60/gallon</td><td>Industry reports</td></tr>
+<tr><td>American Airlines incremental fuel cost</td><td>>$4B (2026)</td><td>AA Q1 2026 earnings</td></tr>
+<tr><td>Delta Air Lines incremental fuel cost</td><td>~$2B (Q2 2026)</td><td>Delta Q1 2026 earnings</td></tr>
+<tr><td>United Airlines capacity cut (summer 2026)</td><td>5%</td><td>United Airlines</td></tr>
+<tr><td>Lufthansa short-haul flights removed</td><td>20,000 (through Oct 2026)</td><td>Lufthansa Group</td></tr>
+<tr><td>Lufthansa CityLine aircraft grounded early</td><td>27 aircraft</td><td>Lufthansa Group</td></tr>
+<tr><td>SAS cancelled flights (April 2026)</td><td>~1,000</td><td>SAS</td></tr>
+<tr><td>European utilization reduction at major hubs</td><td>6–9%</td><td>Boston Warwick</td></tr>
+<tr><td>Lessor early-return negotiations increase</td><td>25–30% since March 2026</td><td>Boston Warwick</td></tr>
+<tr><td>Pre-2015 narrowbody fuel burn disadvantage</td><td>15–22% per seat</td><td>Boston Warwick</td></tr>
+<tr><td>CFM56/V2500 engine wash acceleration</td><td>300–500 flight hours</td><td>Boston Warwick</td></tr>
+<tr><td>Global MRO demand 2026 base-case trim</td><td>4–7%</td><td>Boston Warwick</td></tr>
+<tr><td>2025 global MRO market</td><td>$136B (+8% YoY)</td><td>Oliver Wyman</td></tr>
+<tr><td>2030 global MRO market projection</td><td>~$193B</td><td>Oliver Wyman</td></tr>
+<tr><td>Possible Q3 2026 fuel price moderation</td><td>$0.80–1.20/gallon drop</td><td>Boston Warwick projection</td></tr>
+<tr><td>Icelandair Vilnius center — Year 1 hires</td><td>15 specialists</td><td>Invest Lithuania</td></tr>
+<tr><td>Setna iO 737-800 teardown location</td><td>ecube, Castellon, Spain</td><td>Setna iO</td></tr>
+</tbody></table></div>
+<p style="color:var(--gray-400);font-size:13px;font-style:italic;margin-bottom:8px">Sources: Boston Warwick (Jet Fuel Surge MRO Resilience Analysis, April 30, 2026), Aviation Week Network (MRO Rolling Daily Updates, April 30, 2026), Bureau of Transportation Statistics (BTS), IATA Jet Fuel Monitor, S&amp;P Global Platts, American Airlines Q1 2026 Earnings Call (April 23, 2026), Delta Air Lines Q1 2026 Earnings Release (April 8, 2026), United Airlines CEO Scott Kirby comments (April 2026), Lufthansa Group Investor Relations (April 20, 2026), SAS press reports (April 2026), Invest Lithuania (April 30, 2026), Setna iO Press Release (April 30, 2026), Oliver Wyman (Global Fleet &amp; MRO Forecast 2026-2036, February 2026 / April 2026 update).</p>
+</div>
+          <nav class="post-nav">
+            <a href="april-29-2026.html" class="post-nav-btn">
+              <div class="post-nav-label">← Previous Issue</div>
+              <div class="post-nav-title">April 29 2026</div>
+            </a>
+            <a href="../index.html" class="post-nav-btn" style="text-align:right">
+              <div class="post-nav-label">All Briefings</div>
+              <div class="post-nav-title">View Archive →</div>
+            </a>
+          </nav>
+        </article>
+
+        <aside class="post-sidebar">
+          <div class="toc-widget">
+            <div class="toc-title">In This Issue</div>
+            <ul class="toc-list">
+              <li><a href="#s1"><span class="toc-num">1</span> Market Updates &amp; Growth</a></li>
+              <li><a href="#s2"><span class="toc-num">2</span> Regional Expansion</a></li>
+              <li><a href="#s3"><span class="toc-num">3</span> Supply Chain</a></li>
+              <li><a href="#s4"><span class="toc-num">4</span> Technology &amp; Investment</a></li>
+              <li><a href="#s5"><span class="toc-num">5</span> Challenges &amp; Solutions</a></li>
+            </ul>
+          </div>
+          <div class="sidebar-widget">
+            <h3 class="widget-title">About This Briefing</h3>
+            <p class="widget-text">Source:</p>
+            <div class="widget-badge">
+              <span class="auto-badge">⚡ Automated Daily at 7:00 AM</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand"><span class="logo-icon">✈</span><span class="footer-name">MRO Daily Intelligence</span></div>
+        <div class="footer-text">Automated briefings sourced from Aviation Week Network. Published daily at 7:00 AM.</div>
+      </div>
+    </div>
+  </footer>
+
+<script>
+  var postAudio = null;
+  var audioSrc  = 'posts/april30-2026-email.m4a';  /* relative from inside posts/ dir */
+
+  /* Fix path: this page is in posts/, so audio is same dir */
+  var audioFile = 'april30-2026-email.m4a';
+
+  function fmtPostTime(s) {
+    if (isNaN(s) || !isFinite(s)) return '--:--';
+    var m = Math.floor(s / 60);
+    return m + ':' + String(Math.floor(s % 60)).padStart(2, '0');
+  }
+
+  function togglePostAudio() {
+    var playIcon  = document.getElementById('postPlayIcon');
+    var pauseIcon = document.getElementById('postPauseIcon');
+    var meta      = document.getElementById('postAudioMeta');
+    var fill      = document.getElementById('postAudioFill');
+    var cur       = document.getElementById('postAudioCur');
+    var dur       = document.getElementById('postAudioDur');
+
+    if (!postAudio) {
+      postAudio = new Audio(audioFile);
+      postAudio.addEventListener('loadedmetadata', function() {
+        dur.textContent = fmtPostTime(postAudio.duration);
+        meta.textContent = fmtPostTime(postAudio.duration) + ' · Daniel, en-GB';
+      });
+      postAudio.addEventListener('timeupdate', function() {
+        var pct = (postAudio.currentTime / postAudio.duration) * 100;
+        fill.style.width = pct + '%';
+        cur.textContent = fmtPostTime(postAudio.currentTime);
+      });
+      postAudio.addEventListener('ended', function() {
+        playIcon.style.display = '';
+        pauseIcon.style.display = 'none';
+        meta.textContent = 'Finished · tap to replay';
+        fill.style.width = '0%';
+        cur.textContent = '0:00';
+        postAudio.currentTime = 0;
+      });
+    }
+
+    if (!postAudio.paused) {
+      postAudio.pause();
+      playIcon.style.display = '';
+      pauseIcon.style.display = 'none';
+      meta.textContent = 'Paused';
+    } else {
+      postAudio.play();
+      playIcon.style.display = 'none';
+      pauseIcon.style.display = '';
+      meta.textContent = 'Playing…';
+    }
+  }
+
+  function seekPostAudio(e) {
+    if (!postAudio) return;
+    var track = document.getElementById('postAudioTrack');
+    var rect  = track.getBoundingClientRect();
+    var pct   = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
+    postAudio.currentTime = pct * postAudio.duration;
+  }
+</script>
+</body>
+</html>
