@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MRO Briefing — May 3, 2026 | MRO Daily Intelligence</title>
+  <meta name="description" content="2025 global MRO market size:" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/style.css" />
+  <style>
+    /* ── Audio Player ── */
+    .post-audio-player {
+      background: linear-gradient(135deg,#0f2847 0%,#1a4a8a 100%);
+      border-radius: 14px;
+      padding: 18px 20px;
+      margin: 0 0 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .post-audio-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .6px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.5);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .post-audio-controls {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .post-play-btn {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.15);
+      border: 1px solid rgba(255,255,255,.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      flex-shrink: 0;
+      transition: background .15s;
+    }
+    .post-play-btn:hover { background: rgba(255,255,255,.25); }
+    .post-play-btn svg { fill: white; width: 20px; height: 20px; }
+    .post-audio-info { flex: 1; }
+    .post-audio-title { font-size: 14px; font-weight: 600; color: #fff; margin-bottom: 3px; }
+    .post-audio-meta { font-size: 12px; color: rgba(255,255,255,.5); }
+    .post-audio-progress {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .post-audio-time { font-size: 11px; color: rgba(255,255,255,.5); min-width: 32px; font-variant-numeric: tabular-nums; }
+    .post-audio-track {
+      flex: 1;
+      height: 4px;
+      background: rgba(255,255,255,.2);
+      border-radius: 99px;
+      cursor: pointer;
+      position: relative;
+    }
+    .post-audio-fill {
+      height: 100%;
+      width: 0%;
+      background: #fff;
+      border-radius: 99px;
+      transition: width .2s linear;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <div class="logo">
+          <span class="logo-icon">✈</span>
+          <div>
+            <div class="logo-name">MRO Daily Intelligence</div>
+            <div class="logo-tagline">Aviation Maintenance Market Briefings</div>
+          </div>
+        </div>
+        <nav class="nav">
+          <a href="../index.html" class="nav-link">Latest</a>
+          <a href="../index.html#about" class="nav-link">About</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section class="post-hero">
+    <div class="container">
+      <a href="../index.html" class="post-back">← All Briefings</a>
+      <div class="post-issue-label">Issue #45 &nbsp;·&nbsp; May 3, 2026</div>
+      <h1 class="post-title">Daily MRO Market News Summary — May 3, 2026</h1>
+      <div class="post-meta-row">
+        <div class="post-meta-item"><strong>May 3, 2026</strong></div>
+        <div class="post-meta-item">·</div>
+        <div class="post-meta-item">Source: <strong>Aviation Week Network</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <main class="post-body">
+    <div class="container">
+      <div class="post-grid">
+        <article class="post-content">
+
+          <!-- ── Audio Player ── -->
+          <div class="post-audio-player" id="audioPlayer">
+            <div class="post-audio-label">
+              <svg viewBox="0 0 24 24" fill="white" width="12" height="12"><path d="M12 3a9 9 0 100 18A9 9 0 0012 3zm-2 13V8l7 4-7 4z"/></svg>
+              Audio Briefing &nbsp;·&nbsp; Daniel, en-GB
+            </div>
+            <div class="post-audio-controls">
+              <button class="post-play-btn" id="postPlayBtn" onclick="togglePostAudio()" aria-label="Play audio briefing">
+                <svg id="postPlayIcon" viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+                <svg id="postPauseIcon" viewBox="0 0 24 24" style="display:none"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+              </button>
+              <div class="post-audio-info">
+                <div class="post-audio-title">Daily Briefing — May 3, 2026</div>
+                <div class="post-audio-meta" id="postAudioMeta">Tap to listen · ~2 min</div>
+              </div>
+            </div>
+            <div class="post-audio-progress">
+              <span class="post-audio-time" id="postAudioCur">0:00</span>
+              <div class="post-audio-track" id="postAudioTrack" onclick="seekPostAudio(event)">
+                <div class="post-audio-fill" id="postAudioFill"></div>
+              </div>
+              <span class="post-audio-time" id="postAudioDur">--:--</span>
+            </div>
+          </div>
+
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px"><strong>Date:</strong> Saturday, May 3, 2026</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px"><strong>Source:</strong> Aviation Week Network (MRO Rolling Daily Updates, May 2026), Acumen Aero Daily Aviation Brief (May 1, 2026), CNBC Europe (Jet Fuel Bidding War, April 29, 2026), AviTrader, Aerospace Global News, Oliver Wyman 2026 MRO Survey, MRO Business Today, RTX/Pratt &amp; Whitney Press Release (April 17, 2026), Aviation Defence Universe</p>
+
+<div class="post-section" id="s1">
+  <div class="post-section-header">
+    <div class="section-number">1</div>
+    <span class="section-icon">📈</span>
+    <h2>Market Updates and Growth Trends</h2>
+  </div>
+<h3>Oliver Wyman 2026 MRO Survey: Industry at $136B and Counting <a class="src-link" href="https://www.oliverwyman.com/our-expertise/insights/2026/feb/global-fleet-and-mro-market-forecast-2026-2036.html" target="_blank" rel="noopener">Oliver Wyman</a></h3>
+<ul>
+<li><strong>2025 global MRO market size:</strong> <strong>>$136 billion</strong> (8% YoY growth over 2024)</li>
+<li><strong>Projected MRO spending by 2030:</strong> <strong>~$193 billion</strong> — nearly double 2019 levels</li>
+<li><strong>Top 5 industry disruptors (next 5 years), per >150 aviation professional respondents:</strong></li>
+</ul>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">1. Material and labor shortages + cost management (dominant for all surveyed years)</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">2. Geopolitical instability/tariffs (new 2026 category, instantly #2)</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">3–4. Additional disruptors ranked in top 4 (supply chain normalization delays, technology adoption gaps)</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">5. Generative AI adoption (first time in top 5)</p>
+<ul>
+<li><strong>Survey demographics:</strong> ~60% C-suite/VP respondents; 80% director-level or above; 70% with primary operations outside North America</li>
+</ul>
+<h3>European Jet Fuel Supply Crisis Deepens: Bidding War for Every Cargo</h3>
+<ul>
+<li><strong>Strait of Hormuz closure</strong> (since Feb 28, 2026) has cut off <strong>360,000 bpd</strong> of jet fuel — 20% of global shipped flows</li>
+<li><strong>Europe's daily jet fuel demand:</strong> ~1.6 million bpd; domestic production covers only 1.1 million bpd (~69%)</li>
+<li><strong>Import deficit:</strong> ~500,000 bpd required; traditional Middle East supply (75% of imports, ~375,000 bpd) largely dried up</li>
+<li><strong>Post-closure Middle East supply shortfall:</strong> ~175,000 bpd (53% of normal flows)</li>
+<li><strong>U.S. jet fuel exports</strong> hit record <strong>442,000 bpd</strong> in early April 2026 (4-week avg 372,000 bpd, vs. 5-year norm of 172,000 bpd)</li>
+<li><strong>EU jet fuel supply estimate:</strong> ~5 months (Dutch government), as domestic production + strategic reserves buffer the shortfall</li>
+<li><strong>Societe Generale:</strong> Physical fuel scarcity is "existential" — <em>"Paying more for energy is manageable; not having it is existential."</em></li>
+</ul>
+
+<div class="post-section" id="s2">
+  <div class="post-section-header">
+    <div class="section-number">2</div>
+    <span class="section-icon">🌏</span>
+    <h2>Regional Expansion Activities</h2>
+  </div>
+<h3>Bird Aviation Signs Three-Year MRO Deal with KM Malta Airlines (May 1)</h3>
+<ul>
+<li><strong>Bird Aviation</strong> signed a <strong>3-year heavy maintenance agreement</strong> with <strong>KM Malta Airlines</strong></li>
+<li><strong>Scope:</strong> C-checks and all scheduled base maintenance for KM Malta Airlines' fleet</li>
+<li><strong>Service location:</strong> Bird Aviation's facilities in <strong>Larnaca, Cyprus</strong></li>
+<li><strong>Significance:</strong> Strengthens Bird Aviation's position as a trusted maintenance provider in the Mediterranean; provides KM Malta Airlines with long-term operational planning stability</li>
+</ul>
+<h3>MRO Greater China: Inaugural Conference Set for Beijing (May 26–28, 2026)</h3>
+<ul>
+<li><strong>First-ever MRO Greater China Conference &amp; Exhibition</strong> will take place <strong>May 26–28, 2026</strong> at the <strong>Capital International Exhibition Center (B1 Hall), Beijing</strong></li>
+<li><strong>Co-organized by:</strong> China Aviation Supplies Group (CASGC), Informa Markets, and Aviation Week Network</li>
+<li><strong>Focus:</strong> Chinese aviation MRO development needs, cutting-edge industry topics, and supply chain innovation</li>
+<li><strong>Significance:</strong> Landmark event for China's aviation maintenance and material supply chain sector; first international MRO conference of this scale in Greater China</li>
+</ul>
+<h3>MRO Southeast Asia 2026: Kuala Lumpur (May 13–14, 2026)</h3>
+<ul>
+<li><strong>MRO Southeast Asia</strong> conference returns to <strong>Hilton Kuala Lumpur, Malaysia</strong> on <strong>May 13–14, 2026</strong></li>
+<li><strong>Expected attendance:</strong> 250+ delegates</li>
+<li><strong>Focus:</strong> Key issues and opportunities in Southeast Asian commercial aviation maintenance</li>
+<li><strong>Significance:</strong> Long-awaited return to Kuala Lumpur; features showcase exhibition alongside conference program</li>
+</ul>
+
+<div class="post-section" id="s3">
+  <div class="post-section-header">
+    <div class="section-number">3</div>
+    <span class="section-icon">🔗</span>
+    <h2>Supply Chain Developments</h2>
+  </div>
+<h3>Engine MRO: Narrowbody Engine TATs Remain Elevated, Costs Exceed Expectations</h3>
+<ul>
+<li><strong>Narrowbody engine turnaround times (TATs):</strong> Regularly <strong>180–200+ days</strong> — well above pre-pandemic levels</li>
+<li><strong>TAT improvement outlook:</strong> >50% of Oliver Wyman survey respondents <strong>do not expect TAT improvements within the next 3 years</strong> (or ever)</li>
+<li><strong>Next-gen narrowbody engine shop costs:</strong></li>
+<li>2/3 of respondents report costs <strong>exceed expectations by ≥21%</strong></li>
+<li>1/4 of respondents report costs <strong>exceed expectations by ≥50%</strong></li>
+<li><strong>Engine MRO accounts for >50% of total MRO spend</strong> globally</li>
+</ul>
+<h3>Material Cost Inflation Outpaces Expectations</h3>
+<ul>
+<li><strong>2025 material cost inflation</strong> outpaced expectations by <strong>100–200 basis points per segment</strong></li>
+<li><strong>2026 outlook:</strong> Respondents expect material cost inflation to be higher again in 2026</li>
+<li><strong>Tariff impacts:</strong> <strong>90% of respondents</strong> report experiencing tariff effects, specifically for component purchases, repairs, and engine overhauls</li>
+<li><strong>Supply chain normalization:</strong> Growing share of respondents believe post-COVID supply chain challenges will subside "much further in the future or never" — indicating a structural shift to a new baseline of higher costs and permanent scarcity</li>
+</ul>
+<h3>Pratt &amp; Whitney GTF Advantage Engine Fully Certified for A320neo Family <a class="src-link" href="https://aviationweek.com/mro/aircraft-propulsion" target="_blank" rel="noopener">Aviation Week</a></h3>
+<ul>
+<li><strong>FAA certification:</strong> February 2025; <strong>EASA validation:</strong> October 2025; <strong>EASA full type certification:</strong> April 2026</li>
+<li><strong>Key improvements over earlier GTF models:</strong></li>
+<li><strong>4–8% more takeoff thrust</strong> — enabling higher payload and longer range</li>
+<li><strong>Up to 2× time on wing</strong> — enhanced hot section durability, longer maintenance intervals</li>
+<li><strong>Fully interchangeable</strong> with current PW1100G-JM GTF models</li>
+<li><strong>HS+ retrofit option:</strong> Delivers <strong>90–95% of full GTF Advantage durability benefits</strong> for existing fleet operators during routine shop visits</li>
+<li><strong>Entry into service:</strong> 2026; production standard target ~2028</li>
+<li><strong>P&amp;W manufacturing investment:</strong> ~$1 billion for turbine airfoil facility in North Carolina; $200 million for forging capability in Georgia</li>
+<li><strong>GTF platform totals:</strong> 2,700+ aircraft delivered; 13,000+ engine orders and commitments across all variants</li>
+</ul>
+
+<div class="post-section" id="s4">
+  <div class="post-section-header">
+    <div class="section-number">4</div>
+    <span class="section-icon">💡</span>
+    <h2>Technology and Investment News</h2>
+  </div>
+<h3>AI in MRO: 58% Stuck at "Experimental" Stage, But Value Realization Improving</h3>
+<ul>
+<li><strong>58% of respondents</strong> (both 2025 and 2026 surveys) report their company is stuck at the <strong>"experimental" stage</strong> of AI development (stalled at proof-of-concept)</li>
+<li><strong>Value realization:</strong> 2/3 of respondents report realizing value from AI efforts <strong>as expected or higher</strong> — a strong uptick over prior years</li>
+<li><strong>Scaling barriers:</strong> Primary blocker is <strong>poor data quality and availability</strong>; organizations need additional investment in data infrastructure and governance</li>
+<li><strong>Investment plans (next 5 years):</strong> 50% plan to invest in AI, but only 33% plan to invest in underlying IT infrastructure — a potential gap</li>
+</ul>
+<h3>Curtiss-Wright Switzerland Achieves ISO 14001 and ISO 45001 Certifications (April 28)</h3>
+<ul>
+<li><strong>Curtiss-Wright's Neuhausen am Rheinfall, Switzerland</strong> facility secured <strong>ISO 14001</strong> (Environmental Management) and <strong>ISO 45001</strong> (Occupational Health &amp; Safety) certifications</li>
+<li><strong>Facility operations:</strong> Motion control and stabilization systems; engineering, program management, and support services for defense and industrial markets</li>
+<li><strong>Significance:</strong> Reinforces commitment to sustainable operations and workforce safety; strengthens customer confidence in responsible operations</li>
+</ul>
+
+<div class="post-section" id="s5">
+  <div class="post-section-header">
+    <div class="section-number">5</div>
+    <span class="section-icon">⚠️</span>
+    <h2>Major Challenges and Solutions</h2>
+  </div>
+<h3>Challenge 1: European Jet Fuel Supply — Physical Scarcity vs. Price</h3>
+<ul>
+<li><strong>Root cause:</strong> Strait of Hormuz closure since Feb 28, 2026, cutting off 360,000 bpd of jet fuel flow</li>
+<li><strong>Europe's import dependency:</strong> 500,000 bpd required; Middle East traditionally supplied 75% (~375,000 bpd)</li>
+<li><strong>Alternative supply:</strong> U.S. exports surged to ~200,000 bpd to Europe (from pre-war 30,000–60,000 bpd), but Europe must "fight for every cargo" against Asian and U.S. domestic buyers</li>
+<li><strong>Airline impacts:</strong></li>
+<li><strong>Lufthansa:</strong> Cancelled ~20,000 flights; saved >40,000 metric tons of jet fuel; 80% of 2026 fuel hedged</li>
+<li><strong>Air France-KLM:</strong> Fare hikes — +€100 long-haul return Economy; +€70 U.S./Canada/Mexico; +€10 short/medium-haul</li>
+<li><strong>IAG (BA, Aer Lingus, Iberia):</strong> No supply interruptions yet; requesting government slot alleviation flexibility</li>
+<li><strong>Wizz Air:</strong> Planning 17% capacity growth for summer 2026; 70% summer fuel hedged</li>
+<li><strong>EasyJet:</strong> No supply disruption; no surcharges on pre-booked flights or summer 2026 bookings</li>
+</ul>
+<h3>Challenge 2: Labor Market — Technician Shortages and Rising Attrition</h3>
+<ul>
+<li><strong>Labor rate inflation:</strong> Pre-pandemic average ~3.0%; 2025 rate <strong>5.5–6.0%</strong> across most categories</li>
+<li><strong>Attrition:</strong> Generally same or slightly worse than 2024; >50% of respondents expect attrition to worsen in 2026</li>
+<li><strong>Technician availability:</strong> 2/3 of respondents report finding qualified aircraft technicians/mechanics is <strong>moderately to very challenging</strong></li>
+<li><strong>U.S. certified mechanics</strong> are not keeping pace with demand (per ATEC Pipeline Report)</li>
+</ul>
+<h3>Challenge 3: MRO Demand Bifurcation Under Fuel Crisis</h3>
+<ul>
+<li><strong>Declining segments:</strong> Line maintenance (lower utilization from flight cuts), routine engine shop visits, legacy-engine shop visits</li>
+<li><strong>Rising segments:</strong> Heavy checks pulled forward for efficient aircraft, engine performance restoration, SAF compatibility testing, digital-twin predictive maintenance</li>
+<li><strong>Net impact:</strong> Global MRO demand trimmed <strong>4–7%</strong> from base case in 2026; line maintenance and legacy-engine shop visits see steepest near-term contraction</li>
+<li><strong>Fleet retirement acceleration:</strong> Pre-2015 narrowbodies burning 15–22% more fuel per seat being retired early</li>
+</ul>
+
+<div class="post-section" id="s6">
+  <div class="post-section-header">
+    <div class="section-number">📋</div>
+    <span class="section-icon">⚠️</span>
+    <h2>Today's Headlines Recap (May 3, 2026)</h2>
+  </div>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">1. <strong>Oliver Wyman 2026 MRO Survey:</strong> Market hit >$136B in 2025; geopolitical instability/tariffs debut as #2 disruptor; AI enters top 5 for first time</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">2. <strong>P&amp;W GTF Advantage Fully Certified:</strong> Up to 2× time on wing; 4–8% more thrust; HS+ retrofit delivers 90–95% of durability gains for existing fleet</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">3. <strong>European Jet Fuel Bidding War:</strong> Strait of Hormuz closure creates 175,000 bpd supply gap; U.S. exports surge to record levels; Lufthansa cancels 20,000 flights</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">4. <strong>Bird Aviation × KM Malta Airlines:</strong> 3-year heavy maintenance deal; C-checks and base maintenance at Larnaca, Cyprus</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">5. <strong>Curtiss-Wright ISO Certifications:</strong> Neuhausen am Rheinfall facility secures ISO 14001 and ISO 45001</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">6. <strong>MRO Greater China Conference:</strong> Inaugural event set for Beijing, May 26–28, 2026</p>
+
+<div class="post-section" id="s7">
+  <div class="post-section-header">
+    <div class="section-number">📋</div>
+    <span class="section-icon">⚠️</span>
+    <h2>Key Statistics — May 3, 2026</h2>
+  </div>
+<div class="table-wrapper"><table class="post-table">
+<thead><tr><th>Metric</th><th>Value</th><th>Source</th></tr></thead><tbody>
+<tr><td>2025 global MRO market size</td><td>>$136B (8% YoY growth)</td><td>Oliver Wyman 2026 MRO Survey</td></tr>
+<tr><td>Projected MRO spending by 2030</td><td>~$193B</td><td>Oliver Wyman</td></tr>
+<tr><td>Pre-war Strait of Hormuz jet fuel flow</td><td>360,000 bpd</td><td>CNBC / IEA</td></tr>
+<tr><td>Europe daily jet fuel demand</td><td>~1.6M bpd</td><td>CNBC</td></tr>
+<tr><td>Europe daily jet fuel import need</td><td>~500,000 bpd</td><td>CNBC</td></tr>
+<tr><td>Post-closure Middle East supply deficit</td><td>~175,000 bpd</td><td>CNBC</td></tr>
+<tr><td>U.S. record jet fuel exports (early April)</td><td>442,000 bpd</td><td>CNBC / EIA</td></tr>
+<tr><td>Lufthansa flights cancelled (pre-Apr 29)</td><td>~20,000</td><td>CNBC / Lufthansa</td></tr>
+<tr><td>Air France-KLM long-haul fare increase</td><td>+€100 return Economy</td><td>Air France-KLM</td></tr>
+<tr><td>GTF Advantage thrust improvement</td><td>4–8% vs. earlier GTF</td><td>P&amp;W / Aerospace Global News</td></tr>
+<tr><td>GTF Advantage time-on-wing improvement</td><td>Up to 2× vs. earlier GTF</td><td>P&amp;W</td></tr>
+<tr><td>HS+ retrofit durability benefit</td><td>90–95% of full GTF Advantage</td><td>P&amp;W</td></tr>
+<tr><td>P&amp;W manufacturing investment (NC facility)</td><td>~$1B</td><td>P&amp;W</td></tr>
+<tr><td>Narrowbody engine TATs</td><td>180–200+ days</td><td>Oliver Wyman</td></tr>
+<tr><td>Next-gen engine shop cost exceedance</td><td>≥21% (2/3 of respondents)</td><td>Oliver Wyman</td></tr>
+<tr><td>Material cost inflation overshoot (2025)</td><td>100–200 bps per segment</td><td>Oliver Wyman</td></tr>
+<tr><td>Labor rate inflation (2025)</td><td>5.5–6.0%</td><td>Oliver Wyman</td></tr>
+<tr><td>AI experimental-stage stuck rate</td><td>58%</td><td>Oliver Wyman</td></tr>
+<tr><td>EU jet fuel supply estimate</td><td>~5 months</td><td>Dutch government</td></tr>
+<tr><td>GTF platform total orders/commitments</td><td>13,000+ engines</td><td>P&amp;W</td></tr>
+</tbody></table></div>
+<p style="color:var(--gray-400);font-size:13px;font-style:italic;margin-bottom:8px">Sources: Aviation Week Network (MRO Rolling Daily Updates, May 2026), Acumen Aero (Daily Aviation Brief, May 1, 2026), CNBC Europe (Jet Fuel Bidding War, April 29, 2026), AviTrader (Bird Aviation–KM Malta Airlines Deal, May 1, 2026), Aerospace Global News (P&amp;W GTF Advantage Certification, April 17, 2026), Oliver Wyman (2026 MRO Survey: Labor and Material Supply Chain Paradigm, April 2026), MRO Business Today (Curtiss-Wright ISO Certifications, April 28, 2026), Aviation Defence Universe, RTX/Pratt &amp; Whitney Press Release (April 17, 2026), Bureau of Transportation Statistics, IEA.</p>
+</div>
+          <nav class="post-nav">
+            <a href="may-2-2026.html" class="post-nav-btn">
+              <div class="post-nav-label">← Previous Issue</div>
+              <div class="post-nav-title">May 2 2026</div>
+            </a>
+            <a href="../index.html" class="post-nav-btn" style="text-align:right">
+              <div class="post-nav-label">All Briefings</div>
+              <div class="post-nav-title">View Archive →</div>
+            </a>
+          </nav>
+        </article>
+
+        <aside class="post-sidebar">
+          <div class="toc-widget">
+            <div class="toc-title">In This Issue</div>
+            <ul class="toc-list">
+              <li><a href="#s1"><span class="toc-num">1</span> Market Updates &amp; Growth</a></li>
+              <li><a href="#s2"><span class="toc-num">2</span> Regional Expansion</a></li>
+              <li><a href="#s3"><span class="toc-num">3</span> Supply Chain</a></li>
+              <li><a href="#s4"><span class="toc-num">4</span> Technology &amp; Investment</a></li>
+              <li><a href="#s5"><span class="toc-num">5</span> Challenges &amp; Solutions</a></li>
+            </ul>
+          </div>
+          <div class="sidebar-widget">
+            <h3 class="widget-title">About This Briefing</h3>
+            <p class="widget-text">Source:</p>
+            <div class="widget-badge">
+              <span class="auto-badge">⚡ Automated Daily at 7:00 AM</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand"><span class="logo-icon">✈</span><span class="footer-name">MRO Daily Intelligence</span></div>
+        <div class="footer-text">Automated briefings sourced from Aviation Week Network. Published daily at 7:00 AM.</div>
+      </div>
+    </div>
+  </footer>
+
+<script>
+  var postAudio = null;
+  var audioSrc  = 'posts/may3-2026-email.m4a';  /* relative from inside posts/ dir */
+
+  /* Fix path: this page is in posts/, so audio is same dir */
+  var audioFile = 'may3-2026-email.m4a';
+
+  function fmtPostTime(s) {
+    if (isNaN(s) || !isFinite(s)) return '--:--';
+    var m = Math.floor(s / 60);
+    return m + ':' + String(Math.floor(s % 60)).padStart(2, '0');
+  }
+
+  function togglePostAudio() {
+    var playIcon  = document.getElementById('postPlayIcon');
+    var pauseIcon = document.getElementById('postPauseIcon');
+    var meta      = document.getElementById('postAudioMeta');
+    var fill      = document.getElementById('postAudioFill');
+    var cur       = document.getElementById('postAudioCur');
+    var dur       = document.getElementById('postAudioDur');
+
+    if (!postAudio) {
+      postAudio = new Audio(audioFile);
+      postAudio.addEventListener('loadedmetadata', function() {
+        dur.textContent = fmtPostTime(postAudio.duration);
+        meta.textContent = fmtPostTime(postAudio.duration) + ' · Daniel, en-GB';
+      });
+      postAudio.addEventListener('timeupdate', function() {
+        var pct = (postAudio.currentTime / postAudio.duration) * 100;
+        fill.style.width = pct + '%';
+        cur.textContent = fmtPostTime(postAudio.currentTime);
+      });
+      postAudio.addEventListener('ended', function() {
+        playIcon.style.display = '';
+        pauseIcon.style.display = 'none';
+        meta.textContent = 'Finished · tap to replay';
+        fill.style.width = '0%';
+        cur.textContent = '0:00';
+        postAudio.currentTime = 0;
+      });
+    }
+
+    if (!postAudio.paused) {
+      postAudio.pause();
+      playIcon.style.display = '';
+      pauseIcon.style.display = 'none';
+      meta.textContent = 'Paused';
+    } else {
+      postAudio.play();
+      playIcon.style.display = 'none';
+      pauseIcon.style.display = '';
+      meta.textContent = 'Playing…';
+    }
+  }
+
+  function seekPostAudio(e) {
+    if (!postAudio) return;
+    var track = document.getElementById('postAudioTrack');
+    var rect  = track.getBoundingClientRect();
+    var pct   = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
+    postAudio.currentTime = pct * postAudio.duration;
+  }
+</script>
+</body>
+</html>
