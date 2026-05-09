@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MRO Briefing — May 9, 2026 | MRO Daily Intelligence</title>
+  <meta name="description" content="2025 global MRO market:" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/style.css" />
+  <style>
+    /* ── Audio Player ── */
+    .post-audio-player {
+      background: linear-gradient(135deg,#0f2847 0%,#1a4a8a 100%);
+      border-radius: 14px;
+      padding: 18px 20px;
+      margin: 0 0 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .post-audio-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .6px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.5);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .post-audio-controls {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .post-play-btn {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.15);
+      border: 1px solid rgba(255,255,255,.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      flex-shrink: 0;
+      transition: background .15s;
+    }
+    .post-play-btn:hover { background: rgba(255,255,255,.25); }
+    .post-play-btn svg { fill: white; width: 20px; height: 20px; }
+    .post-audio-info { flex: 1; }
+    .post-audio-title { font-size: 14px; font-weight: 600; color: #fff; margin-bottom: 3px; }
+    .post-audio-meta { font-size: 12px; color: rgba(255,255,255,.5); }
+    .post-audio-progress {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .post-audio-time { font-size: 11px; color: rgba(255,255,255,.5); min-width: 32px; font-variant-numeric: tabular-nums; }
+    .post-audio-track {
+      flex: 1;
+      height: 4px;
+      background: rgba(255,255,255,.2);
+      border-radius: 99px;
+      cursor: pointer;
+      position: relative;
+    }
+    .post-audio-fill {
+      height: 100%;
+      width: 0%;
+      background: #fff;
+      border-radius: 99px;
+      transition: width .2s linear;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <div class="logo">
+          <span class="logo-icon">✈</span>
+          <div>
+            <div class="logo-name">MRO Daily Intelligence</div>
+            <div class="logo-tagline">Aviation Maintenance Market Briefings</div>
+          </div>
+        </div>
+        <nav class="nav">
+          <a href="../index.html" class="nav-link">Latest</a>
+          <a href="../index.html#about" class="nav-link">About</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section class="post-hero">
+    <div class="container">
+      <a href="../index.html" class="post-back">← All Briefings</a>
+      <div class="post-issue-label">Issue #46 &nbsp;·&nbsp; May 9, 2026</div>
+      <h1 class="post-title">Daily MRO Market News Summary — May 9, 2026</h1>
+      <div class="post-meta-row">
+        <div class="post-meta-item"><strong>May 9, 2026</strong></div>
+        <div class="post-meta-item">·</div>
+        <div class="post-meta-item">Source: <strong>Aviation Week Network</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <main class="post-body">
+    <div class="container">
+      <div class="post-grid">
+        <article class="post-content">
+
+          <!-- ── Audio Player ── -->
+          <div class="post-audio-player" id="audioPlayer">
+            <div class="post-audio-label">
+              <svg viewBox="0 0 24 24" fill="white" width="12" height="12"><path d="M12 3a9 9 0 100 18A9 9 0 0012 3zm-2 13V8l7 4-7 4z"/></svg>
+              Audio Briefing &nbsp;·&nbsp; Daniel, en-GB
+            </div>
+            <div class="post-audio-controls">
+              <button class="post-play-btn" id="postPlayBtn" onclick="togglePostAudio()" aria-label="Play audio briefing">
+                <svg id="postPlayIcon" viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+                <svg id="postPauseIcon" viewBox="0 0 24 24" style="display:none"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+              </button>
+              <div class="post-audio-info">
+                <div class="post-audio-title">Daily Briefing — May 9, 2026</div>
+                <div class="post-audio-meta" id="postAudioMeta">Tap to listen · ~2 min</div>
+              </div>
+            </div>
+            <div class="post-audio-progress">
+              <span class="post-audio-time" id="postAudioCur">0:00</span>
+              <div class="post-audio-track" id="postAudioTrack" onclick="seekPostAudio(event)">
+                <div class="post-audio-fill" id="postAudioFill"></div>
+              </div>
+              <span class="post-audio-time" id="postAudioDur">--:--</span>
+            </div>
+          </div>
+
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px"><strong>Date:</strong> Saturday, May 9, 2026</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px"><strong>Source:</strong> Aviation Week Network (MRO Rolling Daily Updates, May 1–8, 2026), VSE Corporation Q1 2026 Earnings Release (May 5, 2026), AAR CORP. Press Release (May 6, 2026), StandardAero Q1 2026 Earnings Call (May 7, 2026), Oliver Wyman MRO Supply Chain Survey (April 2026), Aviation Week MRO Americas 2026 Coverage (April 2026), MRO Greater China (May 26–28, Beijing), Singapore EDB Aerospace Insights (May 2026), tipranks, Morningstar, CoinUnited, MRO Business Today</p>
+
+<div class="post-section" id="s1">
+  <div class="post-section-header">
+    <div class="section-number">1</div>
+    <span class="section-icon">📈</span>
+    <h2>Market Updates and Growth Trends</h2>
+  </div>
+<h3>Oliver Wyman: MRO Market Surpasses $136B in 2025; Supply Chain Disruptors Reshape Industry <a class="src-link" href="https://www.oliverwyman.com/our-expertise/insights/2026/feb/global-fleet-and-mro-market-forecast-2026-2036.html" target="_blank" rel="noopener">Oliver Wyman</a></h3>
+<ul>
+<li><strong>2025 global MRO market:</strong> <strong>$136B</strong> (+8% YoY) — Oliver Wyman 2026 MRO Survey (150+ aviation professionals, 60% senior executives, 70% outside North America)</li>
+<li><strong>2036 projection:</strong> Approaching <strong>$193B</strong> (nearly double 2019 levels)</li>
+<li><strong>Top 5 industry disruptors (next 5 years):</strong></li>
+</ul>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">1. <strong>Material and labor shortages/cost management</strong> — continues to dominate</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">2. <strong>Geopolitical instability/tariffs</strong> — new category that instantly rose to #2</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">3. <strong>Generative AI adoption</strong> — rounded out top five</p>
+<ul>
+<li><strong>Material cost inflation</strong> exceeded forecasts by <strong>100–200 basis points</strong> in 2025</li>
+<li><strong>90% of respondents</strong> report experiencing tariff impacts (especially component purchases, repairs, and engine overhauls)</li>
+<li>Industry increasingly believes supply chain challenges will <strong>never fully subside</strong> — structural shift to a new higher-cost baseline</li>
+</ul>
+<h3>Engine MRO Remains the Dominant Spend Category</h3>
+<ul>
+<li><strong>Engine MRO:</strong> Accounts for <strong>more than 50%</strong> of total MRO spend</li>
+<li><strong>Narrowbody engine TATs:</strong> Now regularly <strong>180–200+ days</strong> (well above pre-pandemic levels)</li>
+<li><strong>>50% of respondents</strong> do not expect TAT improvement within the next 3 years (if ever)</li>
+<li><strong>Two-thirds of respondents</strong> report shop costs for next-gen narrowbody engines (GTF, LEAP) exceeding expectations by <strong>21% or more</strong>; <strong>25% report cost overruns of 50%+</strong></li>
+</ul>
+<h3>North American MRO: Engine Maintenance to Drive 44% Growth by 2035</h3>
+<ul>
+<li><strong>Aviation Week Intelligence Network (AWIN) forecast:</strong> Engine maintenance spending in North America will rise <strong>44% by 2035 to $19.4B</strong></li>
+<li>AI's growing power demand resonating with suppliers of older aircraft turbines — new secondary market for LM2500/GTF engine MRO</li>
+</ul>
+<h3>StandardAero Q1 2026: Revenue $1.63B, EPS Beat, Raises Full-Year Outlook (May 7) <a class="src-link" href="https://www.standardaero.com/news/" target="_blank" rel="noopener">StandardAero</a></h3>
+<ul>
+<li><strong>Revenue:</strong> <strong>$1.63B</strong> (+13.32% YoY), beating consensus by $142.45M</li>
+<li><strong>Adjusted EPS:</strong> <strong>$0.33</strong> (beat by $0.05)</li>
+<li><strong>FY2026 adjusted EPS outlook raised</strong> to <strong>$1.40–$1.50</strong></li>
+<li><strong>Key leadership:</strong> Russell Ford (Chairman &amp; CEO), Daniel Satterfield (CFO)</li>
+<li>Strong aftermarket performance driven by continued engine MRO demand</li>
+</ul>
+<h3>MRO Americas 2026: 30th Anniversary — AI, Engines, and Supply Chain Dominate (Orlando, April 21–23)</h3>
+<ul>
+<li><strong>17,000+ attendees</strong>, 1,000+ exhibitors, 2,000+ airline/lessor buyers, <strong>93+ countries</strong></li>
+<li><strong>AMC Competition (AMCC):</strong> 87 teams competed; FedEx Express &amp; Tulsa Tech won top honors</li>
+<li><strong>Iberia/IAG</strong> announced as <strong>CFM LEAP Premier MRO provider</strong> — strategic positioning in LEAP aftermarket</li>
+<li><strong>ACSS + Airborne Maintenance &amp; Engineering Services + Innovative Aerosystems</strong> partnered on Boeing 757/767 ADS-B In retrofit package</li>
+<li><strong>MHIRJ</strong> expanding aftermarket for Bombardier CRJ (CRJ-200s finding new life as two-class aircraft on United)</li>
+<li><strong>Lufthansa Technik</strong> advanced milestones for its upcoming Portugal-based aircraft and engine component facility</li>
+</ul>
+
+<div class="post-section" id="s2">
+  <div class="post-section-header">
+    <div class="section-number">2</div>
+    <span class="section-icon">🌏</span>
+    <h2>Regional Expansion Activities</h2>
+  </div>
+<h3>VSE Corporation Closes $2.025B Acquisition of Precision Aviation Group — Creates 61-Site Global Platform (May 5)</h3>
+<ul>
+<li><strong>Transaction value:</strong> <strong>$2.025B</strong> ($1.75B cash + ~$275M equity + up to $125M earnout)</li>
+<li><strong>Close date:</strong> May 5, 2026</li>
+<li><strong>Seller:</strong> GenNx360 Capital Partners</li>
+<li><strong>Combined platform:</strong> <strong>61 locations across 8 countries</strong>; 48 repair facilities; 11 distribution centers</li>
+<li><strong>Revenue impact:</strong> Increases VSE revenue by <strong>~50% on a pro forma 2025 basis</strong></li>
+<li><strong>EBITDA:</strong> Immediately accretive; path to exceeding <strong>20% consolidated Adjusted EBITDA margins</strong></li>
+<li><strong>Funding:</strong> February 2026 equity/tangential equity unit offerings + <strong>$900M Term Loan B (2033)</strong></li>
+<li><strong>Net leverage ratio:</strong> Improved to <strong>2.0x</strong> from 2.3x pre-acquisition</li>
+<li><strong>CEO John Cuomo:</strong> <em>"The addition of PAG meaningfully expands our global footprint, strengthens our repair capabilities, and enhances our ability to deliver integrated, end-to-end solutions."</em></li>
+<li><strong>New debt arrangement led by RBC Capital Markets; legal counsel by Jones Day</strong></li>
+</ul>
+<h3>VSE Corporation Q1 2026: Record Revenue, Lifts FY2026 Guidance to 57–61% Growth (May 5)</h3>
+<ul>
+<li><strong>Q1 2026 total revenues:</strong> <strong>$324.6M</strong> (+26.8% YoY from $256.0M)</li>
+<li><strong>Organic revenue growth:</strong> <strong>15%</strong> (excluding acquisitions)</li>
+<li><strong>GAAP EPS (Diluted):</strong> <strong>$1.04</strong> (+55.2% YoY)</li>
+<li><strong>Adjusted EPS (Diluted):</strong> <strong>$1.17</strong> (+50.0% YoY)</li>
+<li><strong>Adjusted EBITDA:</strong> <strong>$55.4M</strong> (+37.4% YoY); margin <strong>17.1%</strong> (+130 bps)</li>
+<li><strong>FY2026 revenue guidance updated:</strong> <strong>57%–61% growth</strong> (previously 19–23%)</li>
+<li><strong>FY2026 Adjusted EBITDA margin guidance:</strong> <strong>18.1%–18.5%</strong> (previously 16.8–17.3%)</li>
+<li><strong>Q1 segment breakdown:</strong> Products $202.4M; Services $122.2M</li>
+<li><strong>Cash position:</strong> $1.2B cash + $400M undrawn revolving credit facility</li>
+<li><strong>NorthStar Technologies</strong> acquired April 1, 2026 — MRO and third-party logistics for B&amp;GA market</li>
+</ul>
+<h3>StandardAero Acquires Unified Turbines (Milton, Vermont) <a class="src-link" href="https://www.standardaero.com/news/" target="_blank" rel="noopener">StandardAero</a></h3>
+<ul>
+<li>Expands hot section component repair/overhaul for Pratt &amp; Whitney and Honeywell turboprop engines</li>
+<li>Strengthens <strong>PT6A and PW100</strong> engine capabilities</li>
+<li>Aligned with StandardAero's Component Repair Services segment</li>
+</ul>
+<h3>AAR CORP. Segment Realignment &amp; Wind-Down of Legacy Commercial Programs (May 6)</h3>
+<ul>
+<li><strong>New structure (effective Q4 FY2026):</strong> Four segments — Parts Supply | Repair, Engineering &amp; Software | Government Solutions | Legacy Commercial Programs</li>
+<li><strong>Legacy Commercial Programs (LTM to Feb 28, 2026):</strong> Sales <strong>$252.4M</strong>; GAAP operating loss $(0.2)M; Adjusted operating income $5.0M; net assets ~$160M</li>
+<li><strong>Wind-down timeline:</strong> <strong>3–4 years</strong></li>
+<li><strong>Rationale:</strong> <em>"Requires significant asset pools and no longer meets our capital return thresholds"</em></li>
+<li><strong>Expected outcome:</strong> More simplified business model with higher margins and improved returns on capital</li>
+<li><strong>CEO John M. Holmes:</strong> Redeployment of talented team members to other AAR growth initiatives</li>
+<li>FY2026 guidance (Q4 and full year, ending May 31, 2026) unchanged</li>
+</ul>
+<h3>CCE Group (Paris) Acquires InTech Aerospace (Houston, Texas)</h3>
+<ul>
+<li>Expands cabin repair, refurbishment, fabrication, and aftermarket support capabilities</li>
+<li>Reinforces CCE Group's North American presence</li>
+</ul>
+<h3>Tighitco &amp; VSE Corp Ink Distribution Partnership</h3>
+<ul>
+<li>Covers payload restraint systems, onboard equipment, and aircraft interior products</li>
+</ul>
+<h3>Cabinair Group &amp; Summit Lenso Partner on Asia-Pacific Aircraft Modifications</h3>
+<ul>
+<li>Focus on Thailand initially; EASA Part 145 and Part 21 certified</li>
+<li>Summit Lenso facility near Bangkok's Suvarnabhumi Airport</li>
+</ul>
+<h3>MRO Greater China — Inaugural Event, Beijing, May 26–28, 2026</h3>
+<ul>
+<li><strong>Venue:</strong> Beijing Capital International Convention &amp; Exhibition Center (B1 Hall)</li>
+<li><strong>Co-hosts:</strong> China Aviation Supplies Group (CAS) + Aviation Week Network (Informa)</li>
+<li>First major international MRO brand exhibition to be held in mainland China</li>
+<li>High anticipation for China's aviation MRO and spare parts supply chain ecosystem</li>
+</ul>
+<h3>Singapore Aerospace Sector: Asia Leads Global Aviation Growth (Singapore Airshow 2026 Coverage)</h3>
+<ul>
+<li><strong>EDB Singapore:</strong> Asia leading global aviation growth trajectory</li>
+<li>World's leading aerospace players announcing new investments and partnerships at Singapore Airshow 2026</li>
+<li>Singapore consolidating position as Asia-Pacific's premier aerospace hub</li>
+</ul>
+
+<div class="post-section" id="s3">
+  <div class="post-section-header">
+    <div class="section-number">3</div>
+    <span class="section-icon">🔗</span>
+    <h2>Supply Chain Developments</h2>
+  </div>
+<h3>Oliver Wyman: Supply Chain "New Normal" — Structural Shift Permanent <a class="src-link" href="https://www.oliverwyman.com/our-expertise/insights/2026/feb/global-fleet-and-mro-market-forecast-2026-2036.html" target="_blank" rel="noopener">Oliver Wyman</a></h3>
+<ul>
+<li>Supply chain challenges now <strong>structurally shifted</strong> to a new baseline with persistently higher costs and scarcity</li>
+<li>Contributing factors: materials shortages, geopolitical instability, increased spare parts inventory needs, aging fleet demanding more service, recouping high cost of new aircraft technology development</li>
+<li><strong>Key stat:</strong> 90% of MRO operators experiencing tariff impacts on component purchases, repairs, and engine overhauls</li>
+</ul>
+<h3>Airline Capacity Discipline Cascading Through MRO</h3>
+<ul>
+<li>Despite airline capacity discipline (United –5% summer 2026; Lufthansa –20,000 flights through October 2026), engine MRO demand remains elevated due to aging fleet and next-gen engine complexity</li>
+<li><strong>Engine values remain elevated in 2026</strong> as persistent MRO backlogs and supply chain constraints limit availability (IBA, March 2026)</li>
+</ul>
+<h3>APOC Aviation Triples Landing Gear Inventory (May 1)</h3>
+<ul>
+<li>Acquired "zero-cycles-since-new" Safran landing gear for Airbus A321 (NEO-compatible)</li>
+<li>Has <strong>tripled landing gear assets</strong> in the last 12 months</li>
+<li>Coverage spans both widebody and narrowbody platforms</li>
+</ul>
+<h3>Executive Jet Support Expands Portfolio — ATR72-500 to Poland Teardown</h3>
+<ul>
+<li>LOI to acquire <strong>Airbus A330</strong> from Air Caraibes Atlantique</li>
+<li>Acquired <strong>ATR72-500</strong> from FlyCAA; will be torn down in Poland to support EJS's ATR program investment</li>
+</ul>
+
+<div class="post-section" id="s4">
+  <div class="post-section-header">
+    <div class="section-number">4</div>
+    <span class="section-icon">💡</span>
+    <h2>Technology and Investment News</h2>
+  </div>
+<h3>MRO Americas 2026: AI Takes Center Stage</h3>
+<ul>
+<li><strong>Airlines mull AI's potential and limits for MRO</strong> — Some see AI driving maintenance efficiencies; concerns raised about potential "brain drain" from overreliance on AI systems</li>
+<li><strong>GE Aerospace + Waygate Technologies:</strong> New AI-guided engine borescope inspection tool — aims to provide more consistent inspection results</li>
+<li><strong>Zymbly:</strong> Using AI in unique ways to change MRO operations (CEO Ben Jacob interview at MRO Americas)</li>
+<li><strong>Airbus:</strong> Launching Skywise as major move in digital and connectivity services</li>
+<li><strong>Testek:</strong> ADAS (Automatic Data Acquisition Systems) evolution under discussion (SVP Todd Meredith)</li>
+</ul>
+<h3>AI Adoption Still Predominantly Experimental — 58% Stalled at Stage 1</h3>
+<ul>
+<li><strong>58% of respondents</strong> stuck at "experimental" stage (consistent with prior year)</li>
+<li><strong>Two-thirds</strong> report seeing value from AI efforts as expected or better than expected — strong uptick over prior years</li>
+<li><strong>Primary barrier:</strong> Lack of data quality and availability</li>
+<li><strong>Investment gap:</strong> 50% plan to invest in AI (next 5 years); only 33% plan IT infrastructure investment — potential bottleneck</li>
+<li><strong>Insight:</strong> Better understanding of AI's strengths/weaknesses enabling more successful use cases; industry may be reaching a tipping point from experimentation to real value extraction</li>
+</ul>
+<h3>AMT Workforce Development: Major Donations and Programs</h3>
+<ul>
+<li><strong>GA Telesis</strong> donates two Rolls-Royce <strong>Trent 800 engines</strong> to <strong>Broward College</strong> — valued at <strong>$4.1M</strong></li>
+<li><strong>Duncan Aviation</strong> donates Honeywell <strong>TFE731 engine</strong> to <strong>Lincoln North Star High School</strong> aviation program</li>
+<li>Both moves aimed at improving technical education and preparing graduates for evolving global fleet demands</li>
+</ul>
+<h3>Digital Transformation: Fleet &amp; MRO Software Market</h3>
+<ul>
+<li><strong>Global fleet and MRO software market:</strong> $96B → $121B by 2030 (continued digital transformation driving growth)</li>
+<li>Ramco deployment live at <strong>Korean Air</strong> with 400+ Mechanic Anywhere users</li>
+<li><strong>Aloft AeroArchitects</strong> received first certified aviation smart outlet (737 cabin STC)</li>
+</ul>
+
+<div class="post-section" id="s5">
+  <div class="post-section-header">
+    <div class="section-number">5</div>
+    <span class="section-icon">⚠️</span>
+    <h2>Major Challenges and Solutions</h2>
+  </div>
+<h3>Challenge 1: Supply Chain — "New Normal" Requires Structural Adaptation</h3>
+<ul>
+<li>90% of MRO operators affected by tariffs; material cost inflation exceeding forecasts by 100–200 bps</li>
+<li>Supply chain challenges deemed <strong>permanent</strong> — industry must adapt structurally, not wait for normalization</li>
+<li><strong>Solution:</strong> Strategic inventory buildup; diversification of supplier base; greater investment in data infrastructure</li>
+</ul>
+<h3>Challenge 2: Labor — Chronic Shortage with High Attrition</h3>
+<ul>
+<li><strong>Labor rate inflation:</strong> 5.5–6.0% across most categories (vs. ~3.0% pre-pandemic)</li>
+<li>Stubbornly high for <strong>engines and components</strong> specifically</li>
+<li><strong>Two-thirds of respondents</strong> find it moderately to very challenging to find aircraft technicians/mechanics</li>
+<li><strong>>50% expect attrition to worsen next year</strong> — US certified mechanics not keeping pace with demand</li>
+<li><strong>Solutions:</strong> Earlier education pipeline (AMT donations, apprenticeships), developmental training programs, improved benefits</li>
+</ul>
+<h3>Challenge 3: AI Integration — Experimental Stage vs. Value Expectation Gap</h3>
+<ul>
+<li>Despite strong AI experimentation results, <strong>58% still stuck at experimental</strong> — infrastructure gap</li>
+<li><strong>Solution:</strong> Invest in IT infrastructure alongside AI; data quality improvement as prerequisite</li>
+<li>Half of companies planning AI investment (next 5 years) but only one-third investing in IT infrastructure — disconnect needs resolution</li>
+</ul>
+<h3>Challenge 4: Next-Gen Engine Cost Overruns — Systemic Issue</h3>
+<ul>
+<li>Two-thirds report next-gen narrowbody engine (GTF, LEAP) shop costs <strong>exceeding expectations by 21%+</strong>; 25% exceed by <strong>50%+</strong></li>
+<li>TATs of <strong>180–200+ days</strong> now normal — no relief expected for 3+ years per majority of operators</li>
+<li><strong>Solutions:</strong> Fleet planning adjustments; predictive maintenance to pre-empt failures; OEM-MRO collaboration on shop process optimization</li>
+</ul>
+<h3>Challenge 5: Integration Risk — Mega M&amp;A Execution</h3>
+<ul>
+<li><strong>VSE–PAG ($2.025B)</strong> and <strong>AAR restructuring</strong> represent two of the largest MRO platform changes of 2026</li>
+<li>Integration execution risk significant: cross-selling, repair insourcing, procurement efficiencies are key synergy levers</li>
+<li>VSE expects clear path to <strong>>20% Adjusted EBITDA margins</strong> through disciplined integration</li>
+</ul>
+
+<div class="post-section" id="s6">
+  <div class="post-section-header">
+    <div class="section-number">📋</div>
+    <span class="section-icon">⚠️</span>
+    <h2>Today's Headlines Recap (May 9, 2026)</h2>
+  </div>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">1. <strong>VSE Closes $2.025B PAG Acquisition (May 5):</strong> 61-site global platform; 50% revenue increase; FY2026 guidance raised to 57–61% growth; immediately EBITDA-accretive</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">2. <strong>VSE Q1 2026 Record:</strong> $324.6M revenue (+27%); $1.17 adjusted EPS (+50%); 15% organic growth; $1.2B cash position</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">3. <strong>AAR Segment Realignment (May 6):</strong> Wind-down of Legacy Commercial Programs ($252.4M LTM sales) over 3–4 years; new four-segment structure; capital redeployment focus</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">4. <strong>StandardAero Q1 2026:</strong> $1.63B revenue (+13.32%); raises FY2026 EPS outlook to $1.40–$1.50; Unified Turbines acquisition expands PT6A/PW100 capabilities</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">5. <strong>Oliver Wyman 2026 Survey:</strong> MRO market $136B in 2025 (+8%); supply chain disruptions now structural; 90% tariff impact; labor rate inflation 5.5–6%; AI still 58% experimental</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">6. <strong>MRO Americas 2026 Wrap (April 21–23):</strong> 17,000+ attendees; Iberia selected as CFM LEAP Premier MRO; AI/GTF/LEAP dominate; 30th anniversary milestone</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">7. <strong>MRO Greater China (May 26–28, Beijing):</strong> Inaugural event launches in 17 days; first international MRO brand show in mainland China</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">8. <strong>AMT Workforce Pipeline:</strong> GA Telesis $4.1M Trent 800 donation (Broward College); Duncan Aviation TFE731 donation (Lincoln North Star HS)</p>
+
+<div class="post-section" id="s7">
+  <div class="post-section-header">
+    <div class="section-number">📋</div>
+    <span class="section-icon">⚠️</span>
+    <h2>Key Statistics — May 9, 2026</h2>
+  </div>
+<div class="table-wrapper"><table class="post-table">
+<thead><tr><th>Metric</th><th>Value</th><th>Source</th></tr></thead><tbody>
+<tr><td>2025 global MRO market</td><td>$136B (+8% YoY)</td><td>Oliver Wyman 2026 Survey</td></tr>
+<tr><td>2036 global MRO market projection</td><td>~$193B</td><td>Oliver Wyman</td></tr>
+<tr><td>Engine MRO as % of total spend</td><td>>50%</td><td>Oliver Wyman</td></tr>
+<tr><td>North American engine MRO 2035 forecast</td><td>$19.4B (+44%)</td><td>AWIN</td></tr>
+<tr><td>Narrowbody engine TAT (current)</td><td>180–200+ days</td><td>Oliver Wyman</td></tr>
+<tr><td>Next-gen engine cost overrun (>21%)</td><td>~67% of operators</td><td>Oliver Wyman</td></tr>
+<tr><td>Tariff impact on MRO operators</td><td>90% of respondents</td><td>Oliver Wyman</td></tr>
+<tr><td>Material cost inflation (vs. forecast)</td><td>+100–200 bps in 2025</td><td>Oliver Wyman</td></tr>
+<tr><td>Labor rate inflation</td><td>5.5–6.0%</td><td>Oliver Wyman</td></tr>
+<tr><td>Finding technicians "very challenging"</td><td>~67% of respondents</td><td>Oliver Wyman</td></tr>
+<tr><td>AI still in "experimental" stage</td><td>58%</td><td>Oliver Wyman</td></tr>
+<tr><td>VSE Q1 2026 total revenue</td><td>$324.6M (+26.8%)</td><td>VSE Q1 2026 ER</td></tr>
+<tr><td>VSE Q1 2026 adjusted EPS</td><td>$1.17 (+50%)</td><td>VSE Q1 2026 ER</td></tr>
+<tr><td>VSE FY2026 revenue growth guidance</td><td>57–61%</td><td>VSE Q1 2026 ER</td></tr>
+<tr><td>VSE–PAG acquisition value</td><td>$2.025B</td><td>VSE Corp</td></tr>
+<tr><td>VSE–PAG combined sites</td><td>61 locations, 8 countries</td><td>VSE Corp</td></tr>
+<tr><td>VSE pro forma revenue increase</td><td>~50%</td><td>VSE Corp</td></tr>
+<tr><td>VSE post-PAG EBITDA margin target</td><td>>20%</td><td>VSE Corp</td></tr>
+<tr><td>AAR Legacy Commercial Programs LTM sales</td><td>$252.4M</td><td>AAR Corp</td></tr>
+<tr><td>AAR Legacy segment net assets</td><td>~$160M</td><td>AAR Corp</td></tr>
+<tr><td>AAR wind-down timeline</td><td>3–4 years</td><td>AAR Corp</td></tr>
+<tr><td>StandardAero Q1 2026 revenue</td><td>$1.63B (+13.32%)</td><td>StandardAero Q1 2026 EC</td></tr>
+<tr><td>StandardAero FY2026 adjusted EPS guidance</td><td>$1.40–$1.50</td><td>StandardAero Q1 2026 EC</td></tr>
+<tr><td>GA Telesis engine donation (Broward College)</td><td>$4.1M (2x Trent 800)</td><td>Aviation Week</td></tr>
+<tr><td>MRO Greater China event dates</td><td>May 26–28, 2026, Beijing</td><td>Aviation Week</td></tr>
+<tr><td>MRO Americas 2026 attendance</td><td>17,000+ attendees, 93+ countries</td><td>Aviation Week</td></tr>
+<tr><td>AMC Competition 2026 teams</td><td>87 teams</td><td>Aviation Week</td></tr>
+</tbody></table></div>
+<p style="color:var(--gray-400);font-size:13px;font-style:italic;margin-bottom:8px">Sources: Aviation Week Network (MRO Rolling Daily Updates, May 1–8, 2026; MRO Americas 2026 coverage, April 22–May 1, 2026), VSE Corporation Q1 2026 Earnings Release and PAG acquisition press release (May 5, 2026), AAR CORP. segment realignment announcement (May 6, 2026), StandardAero Q1 2026 earnings call transcript via Seeking Alpha (May 7, 2026), Oliver Wyman 2026 MRO Supply Chain Survey (April 2026), Aviation Week Intelligence Network North American MRO forecast (April 2026), Singapore EDB Aerospace Insights (May 2026), MRO Greater China official website (aviationweek.com; mrogreatercn.com), tipranks (May 5, 2026), Morningstar Business Wire (May 5, 2026), CoinUnited (May 6, 2026), IBA aircraft engine values report (March 2026), GA Telesis and Duncan Aviation press releases (May 5–6, 2026).</p>
+</div>
+          <nav class="post-nav">
+            <a href="may-3-2026.html" class="post-nav-btn">
+              <div class="post-nav-label">← Previous Issue</div>
+              <div class="post-nav-title">May 3 2026</div>
+            </a>
+            <a href="../index.html" class="post-nav-btn" style="text-align:right">
+              <div class="post-nav-label">All Briefings</div>
+              <div class="post-nav-title">View Archive →</div>
+            </a>
+          </nav>
+        </article>
+
+        <aside class="post-sidebar">
+          <div class="toc-widget">
+            <div class="toc-title">In This Issue</div>
+            <ul class="toc-list">
+              <li><a href="#s1"><span class="toc-num">1</span> Market Updates &amp; Growth</a></li>
+              <li><a href="#s2"><span class="toc-num">2</span> Regional Expansion</a></li>
+              <li><a href="#s3"><span class="toc-num">3</span> Supply Chain</a></li>
+              <li><a href="#s4"><span class="toc-num">4</span> Technology &amp; Investment</a></li>
+              <li><a href="#s5"><span class="toc-num">5</span> Challenges &amp; Solutions</a></li>
+            </ul>
+          </div>
+          <div class="sidebar-widget">
+            <h3 class="widget-title">About This Briefing</h3>
+            <p class="widget-text">Source:</p>
+            <div class="widget-badge">
+              <span class="auto-badge">⚡ Automated Daily at 7:00 AM</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand"><span class="logo-icon">✈</span><span class="footer-name">MRO Daily Intelligence</span></div>
+        <div class="footer-text">Automated briefings sourced from Aviation Week Network. Published daily at 7:00 AM.</div>
+      </div>
+    </div>
+  </footer>
+
+<script>
+  var postAudio = null;
+  var audioSrc  = 'posts/may9-2026-email.m4a';  /* relative from inside posts/ dir */
+
+  /* Fix path: this page is in posts/, so audio is same dir */
+  var audioFile = 'may9-2026-email.m4a';
+
+  function fmtPostTime(s) {
+    if (isNaN(s) || !isFinite(s)) return '--:--';
+    var m = Math.floor(s / 60);
+    return m + ':' + String(Math.floor(s % 60)).padStart(2, '0');
+  }
+
+  function togglePostAudio() {
+    var playIcon  = document.getElementById('postPlayIcon');
+    var pauseIcon = document.getElementById('postPauseIcon');
+    var meta      = document.getElementById('postAudioMeta');
+    var fill      = document.getElementById('postAudioFill');
+    var cur       = document.getElementById('postAudioCur');
+    var dur       = document.getElementById('postAudioDur');
+
+    if (!postAudio) {
+      postAudio = new Audio(audioFile);
+      postAudio.addEventListener('loadedmetadata', function() {
+        dur.textContent = fmtPostTime(postAudio.duration);
+        meta.textContent = fmtPostTime(postAudio.duration) + ' · Daniel, en-GB';
+      });
+      postAudio.addEventListener('timeupdate', function() {
+        var pct = (postAudio.currentTime / postAudio.duration) * 100;
+        fill.style.width = pct + '%';
+        cur.textContent = fmtPostTime(postAudio.currentTime);
+      });
+      postAudio.addEventListener('ended', function() {
+        playIcon.style.display = '';
+        pauseIcon.style.display = 'none';
+        meta.textContent = 'Finished · tap to replay';
+        fill.style.width = '0%';
+        cur.textContent = '0:00';
+        postAudio.currentTime = 0;
+      });
+    }
+
+    if (!postAudio.paused) {
+      postAudio.pause();
+      playIcon.style.display = '';
+      pauseIcon.style.display = 'none';
+      meta.textContent = 'Paused';
+    } else {
+      postAudio.play();
+      playIcon.style.display = 'none';
+      pauseIcon.style.display = '';
+      meta.textContent = 'Playing…';
+    }
+  }
+
+  function seekPostAudio(e) {
+    if (!postAudio) return;
+    var track = document.getElementById('postAudioTrack');
+    var rect  = track.getBoundingClientRect();
+    var pct   = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
+    postAudio.currentTime = pct * postAudio.duration;
+  }
+</script>
+</body>
+</html>
