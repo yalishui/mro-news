@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MRO Briefing — May 5, 2026 | MRO Daily Intelligence</title>
+  <meta name="description" content="Q1 2026 total revenues:" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/style.css" />
+  <style>
+    /* ── Audio Player ── */
+    .post-audio-player {
+      background: linear-gradient(135deg,#0f2847 0%,#1a4a8a 100%);
+      border-radius: 14px;
+      padding: 18px 20px;
+      margin: 0 0 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .post-audio-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .6px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.5);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .post-audio-controls {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .post-play-btn {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.15);
+      border: 1px solid rgba(255,255,255,.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      flex-shrink: 0;
+      transition: background .15s;
+    }
+    .post-play-btn:hover { background: rgba(255,255,255,.25); }
+    .post-play-btn svg { fill: white; width: 20px; height: 20px; }
+    .post-audio-info { flex: 1; }
+    .post-audio-title { font-size: 14px; font-weight: 600; color: #fff; margin-bottom: 3px; }
+    .post-audio-meta { font-size: 12px; color: rgba(255,255,255,.5); }
+    .post-audio-progress {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .post-audio-time { font-size: 11px; color: rgba(255,255,255,.5); min-width: 32px; font-variant-numeric: tabular-nums; }
+    .post-audio-track {
+      flex: 1;
+      height: 4px;
+      background: rgba(255,255,255,.2);
+      border-radius: 99px;
+      cursor: pointer;
+      position: relative;
+    }
+    .post-audio-fill {
+      height: 100%;
+      width: 0%;
+      background: #fff;
+      border-radius: 99px;
+      transition: width .2s linear;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <div class="logo">
+          <span class="logo-icon">✈</span>
+          <div>
+            <div class="logo-name">MRO Daily Intelligence</div>
+            <div class="logo-tagline">Aviation Maintenance Market Briefings</div>
+          </div>
+        </div>
+        <nav class="nav">
+          <a href="../index.html" class="nav-link">Latest</a>
+          <a href="../index.html#about" class="nav-link">About</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section class="post-hero">
+    <div class="container">
+      <a href="../index.html" class="post-back">← All Briefings</a>
+      <div class="post-issue-label">Issue #48 &nbsp;·&nbsp; May 5, 2026</div>
+      <h1 class="post-title">Daily MRO Market News Summary — May 5, 2026</h1>
+      <div class="post-meta-row">
+        <div class="post-meta-item"><strong>May 5, 2026</strong></div>
+        <div class="post-meta-item">·</div>
+        <div class="post-meta-item">Source: <strong>Aviation Week Network</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <main class="post-body">
+    <div class="container">
+      <div class="post-grid">
+        <article class="post-content">
+
+          <!-- ── Audio Player ── -->
+          <div class="post-audio-player" id="audioPlayer">
+            <div class="post-audio-label">
+              <svg viewBox="0 0 24 24" fill="white" width="12" height="12"><path d="M12 3a9 9 0 100 18A9 9 0 0012 3zm-2 13V8l7 4-7 4z"/></svg>
+              Audio Briefing &nbsp;·&nbsp; Daniel, en-GB
+            </div>
+            <div class="post-audio-controls">
+              <button class="post-play-btn" id="postPlayBtn" onclick="togglePostAudio()" aria-label="Play audio briefing">
+                <svg id="postPlayIcon" viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+                <svg id="postPauseIcon" viewBox="0 0 24 24" style="display:none"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+              </button>
+              <div class="post-audio-info">
+                <div class="post-audio-title">Daily Briefing — May 5, 2026</div>
+                <div class="post-audio-meta" id="postAudioMeta">Tap to listen · ~2 min</div>
+              </div>
+            </div>
+            <div class="post-audio-progress">
+              <span class="post-audio-time" id="postAudioCur">0:00</span>
+              <div class="post-audio-track" id="postAudioTrack" onclick="seekPostAudio(event)">
+                <div class="post-audio-fill" id="postAudioFill"></div>
+              </div>
+              <span class="post-audio-time" id="postAudioDur">--:--</span>
+            </div>
+          </div>
+
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px"><strong>Date:</strong> Monday, May 5, 2026</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px"><strong>Source:</strong> Aviation Week Network (MRO Rolling Daily Updates, May 5, 2026), VSE Corporation Q1 2026 Earnings Release (May 5, 2026), VSE Corporation PAG Acquisition Close Press Release (May 5, 2026), tipranks, Morningstar Business Wire, CoinUnited</p>
+
+<div class="post-section" id="s1">
+  <div class="post-section-header">
+    <div class="section-number">1</div>
+    <span class="section-icon">📈</span>
+    <h2>Market Updates and Growth Trends</h2>
+  </div>
+<h3>VSE Corporation Reports Record Q1 2026 Revenue and Profitability</h3>
+<ul>
+<li><strong>Q1 2026 total revenues:</strong> <strong>$324.6M</strong> (+26.8% YoY from $256.0M)</li>
+<li><strong>Organic revenue growth:</strong> <strong>15%</strong> (excluding acquisitions)</li>
+<li><strong>GAAP EPS (Diluted):</strong> <strong>$1.04</strong> (+55.2% YoY)</li>
+<li><strong>Adjusted EPS (Diluted):</strong> <strong>$1.17</strong> (+50.0% YoY)</li>
+<li><strong>Adjusted EBITDA:</strong> <strong>$55.4M</strong> (+37.4% YoY); margin <strong>17.1%</strong> (+130 bps)</li>
+<li><strong>Q1 segment breakdown:</strong> Products $202.4M; Services $122.2M</li>
+<li><strong>Operating income:</strong> $32.7M (+33.6% YoY); GAAP net income $29.1M (+108.0% YoY)</li>
+<li><strong>Distribution revenue:</strong> +26% YoY; <strong>Repair revenue:</strong> +28% YoY</li>
+<li><strong>CEO John Cuomo:</strong> <em>"VSE is off to a record start to 2026, with organic revenue growth of 15% in the quarter, led by strong performance in our distribution business and supported by continued growth in MRO."</em></li>
+<li><strong>Liquidity:</strong> $1.2B cash + $400M undrawn revolving credit facility; net leverage ratio improved to <strong>2.0x</strong> from 2.3x</li>
+</ul>
+<h3>VSE Corporation Closes $2.025B Acquisition of Precision Aviation Group — Creates 61-Site Global Platform</h3>
+<ul>
+<li><strong>Transaction value:</strong> <strong>$2.025B</strong> ($1.75B cash + ~$275M equity + up to $125M earnout)</li>
+<li><strong>Close date:</strong> May 5, 2026</li>
+<li><strong>Seller:</strong> GenNx360 Capital Partners</li>
+<li><strong>Combined platform:</strong> <strong>61 locations across 8 countries</strong>; 48 repair facilities; 11 distribution centers</li>
+<li><strong>Revenue impact:</strong> Increases VSE revenue by <strong>~50% on a pro forma 2025 basis</strong></li>
+<li><strong>EBITDA:</strong> Immediately accretive; path to exceeding <strong>20% consolidated Adjusted EBITDA margins</strong></li>
+<li><strong>Funding:</strong> February 2026 equity/tangential equity unit offerings + <strong>$900M Term Loan B (2033)</strong></li>
+<li><strong>New debt:</strong> led by RBC Capital Markets; legal counsel by Jones Day</li>
+<li><strong>FY2026 revenue guidance updated:</strong> <strong>57%–61% growth</strong> (previously 19–23%)</li>
+<li><strong>FY2026 Adjusted EBITDA margin guidance:</strong> <strong>18.1%–18.5%</strong> (previously 16.8–17.3%)</li>
+<li><strong>Net leverage ratio:</strong> Improved to <strong>2.0x</strong> from 2.3x pre-acquisition</li>
+<li><strong>CEO John Cuomo:</strong> <em>"The addition of PAG meaningfully expands our global footprint, strengthens our repair capabilities, and enhances our ability to deliver integrated, end-to-end solutions to our customers. PAG's margin profile is immediately accretive and supports a clear path to exceeding 20% consolidated Adjusted EBITDA margins over time."</em></li>
+<li><strong>NorthStar Technologies</strong> also acquired April 1, 2026 — MRO and third-party logistics for B&amp;GA market; included in Q1 results</li>
+</ul>
+
+<div class="post-section" id="s2">
+  <div class="post-section-header">
+    <div class="section-number">2</div>
+    <span class="section-icon">🌏</span>
+    <h2>Regional Expansion Activities</h2>
+  </div>
+<h3>CCE Group (Paris) Acquires InTech Aerospace — Expands North American Cabin Capabilities</h3>
+<ul>
+<li><strong>Acquirer:</strong> CCE Group (Paris-based)</li>
+<li><strong>Acquired:</strong> InTech Aerospace (Houston, Texas)</li>
+<li><strong>InTech focus:</strong> Cabin repair, refurbishment, fabrication, and aftermarket support services</li>
+<li><strong>Strategic impact:</strong> Expands CCE's cabin capabilities; reinforces North American presence</li>
+<li><strong>Significance:</strong> CCE Group continuing to build a global cabin interiors MRO platform through targeted acquisitions</li>
+</ul>
+<h3>VSE–PAG Creates North America's Largest Independent Aviation Aftermarket Platform</h3>
+<ul>
+<li>48 repair facilities + 11 distribution centers across 8 countries</li>
+<li>Enhanced reach across commercial, business &amp; general aviation (B&amp;GA), rotorcraft, OEM, and defense markets</li>
+<li>PAG operating as part of VSE Aviation platform effective May 5, 2026</li>
+</ul>
+
+<div class="post-section" id="s3">
+  <div class="post-section-header">
+    <div class="section-number">3</div>
+    <span class="section-icon">🔗</span>
+    <h2>Supply Chain Developments</h2>
+  </div>
+<h3>Used Serviceable Material (USM) Market: Landing Gear Inventory Building Accelerates</h3>
+<ul>
+<li><strong>APOC Aviation</strong> has tripled landing gear assets in the last 12 months (reported May 1; confirmed as ongoing)</li>
+<li>Both widebody and narrowbody platform coverage expanding</li>
+<li>Zero-cycles-since-new Safran A321 NEO-compatible landing gear in high demand ahead of rising retirement wave</li>
+<li>EJS ATR72-500 Poland teardown (announced May 1) reinforces growing teardown pipeline for regional aircraft</li>
+</ul>
+
+<div class="post-section" id="s4">
+  <div class="post-section-header">
+    <div class="section-number">4</div>
+    <span class="section-icon">💡</span>
+    <h2>Technology and Investment News</h2>
+  </div>
+<h3>VSE Corporation: NorthStar Integration Underway — B&amp;GA Market Expansion</h3>
+<ul>
+<li><strong>NorthStar Technologies</strong> (acquired April 1, 2026) — MRO and third-party logistics for business and general aviation market</li>
+<li>Integration underway; included in Q1 2026 results</li>
+<li>VSE targeting <strong>15% organic growth</strong> across distribution and repair segments through FY2026</li>
+</ul>
+<h3>VSE–PAG: Cross-Selling and Repair Insourcing as Primary Synergy Levers</h3>
+<ul>
+<li>Key synergy drivers identified: cross-selling between legacy VSE and PAG customer bases, repair insourcing opportunities, procurement efficiencies</li>
+<li>Management targeting >20% Adjusted EBITDA margins over time through disciplined integration</li>
+</ul>
+
+<div class="post-section" id="s5">
+  <div class="post-section-header">
+    <div class="section-number">5</div>
+    <span class="section-icon">⚠️</span>
+    <h2>Major Challenges and Solutions</h2>
+  </div>
+<h3>Challenge: Mega M&amp;A Integration Execution Risk</h3>
+<ul>
+<li>VSE–PAG ($2.025B) is one of the largest MRO platform combinations of 2026</li>
+<li><strong>Solution:</strong> Disciplined integration roadmap; clear synergy levers (cross-selling, insourcing, procurement); immediate EBITDA accretion as early signal of success</li>
+<li><strong>Risk noted:</strong> Forward-looking risks include integration challenges, supply chain disruptions, workforce retention, and cyclicality in aviation aftermarket</li>
+</ul>
+<h3>Challenge: Elevated Debt Load Post-Acquisition</h3>
+<ul>
+<li>$900M new Term Loan B + ~$275M equity issued</li>
+<li><strong>Solution:</strong> Strong pre-acquisition cash position ($1.2B); improved net leverage ratio (2.0x); $400M undrawn credit facility as backstop</li>
+</ul>
+
+<div class="post-section" id="s6">
+  <div class="post-section-header">
+    <div class="section-number">📋</div>
+    <span class="section-icon">⚠️</span>
+    <h2>Today's Headlines Recap (May 5, 2026)</h2>
+  </div>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">1. <strong>VSE Q1 2026 Record:</strong> $324.6M revenue (+27%); $1.17 adj EPS (+50%); 15% organic growth; $1.2B cash</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">2. <strong>VSE closes $2.025B PAG acquisition (May 5):</strong> 61 locations/8 countries; immediately EBITDA-accretive; FY2026 guidance raised to 57–61% revenue growth</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">3. <strong>NorthStar Technologies (April 1):</strong> B&amp;GA MRO and logistics acquired; integration underway</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">4. <strong>CCE Group acquires InTech Aerospace:</strong> Cabin interiors specialist; Houston base; reinforces North American footprint</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">5. <strong>VSE–PAG net leverage:</strong> Improved to 2.0x from 2.3x; $900M Term Loan B (2033) + $400M revolver</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">6. <strong>FY2026 VSE guidance:</strong> Revenue 57–61% growth; Adj. EBITDA margin 18.1–18.5%</p>
+
+<div class="post-section" id="s7">
+  <div class="post-section-header">
+    <div class="section-number">📋</div>
+    <span class="section-icon">⚠️</span>
+    <h2>Key Statistics — May 5, 2026</h2>
+  </div>
+<div class="table-wrapper"><table class="post-table">
+<thead><tr><th>Metric</th><th>Value</th><th>Source</th></tr></thead><tbody>
+<tr><td>VSE Q1 2026 total revenue</td><td>$324.6M (+26.8%)</td><td>VSE Q1 2026 ER</td></tr>
+<tr><td>VSE Q1 2026 adj. EPS</td><td>$1.17 (+50%)</td><td>VSE Q1 2026 ER</td></tr>
+<tr><td>VSE Q1 2026 adj. EBITDA</td><td>$55.4M (+37.4%)</td><td>VSE Q1 2026 ER</td></tr>
+<tr><td>VSE Q1 2026 EBITDA margin</td><td>17.1% (+130 bps)</td><td>VSE Q1 2026 ER</td></tr>
+<tr><td>VSE Q1 organic revenue growth</td><td>15%</td><td>VSE Q1 2026 ER</td></tr>
+<tr><td>VSE FY2026 revenue guidance</td><td>57–61% growth</td><td>VSE Q1 2026 ER</td></tr>
+<tr><td>VSE FY2026 EBITDA margin guidance</td><td>18.1–18.5%</td><td>VSE Q1 2026 ER</td></tr>
+<tr><td>VSE–PAG transaction value</td><td>$2.025B</td><td>VSE PAG PR</td></tr>
+<tr><td>VSE–PAG combined locations</td><td>61 sites, 8 countries</td><td>VSE PAG PR</td></tr>
+<tr><td>VSE–PAG revenue increase (PF 2025)</td><td>~50%</td><td>VSE PAG PR</td></tr>
+<tr><td>VSE–PAG EBITDA margin target</td><td>>20%</td><td>VSE PAG PR</td></tr>
+<tr><td>VSE cash position</td><td>$1.2B + $400M undrawn revolver</td><td>VSE Q1 2026 ER</td></tr>
+<tr><td>VSE net leverage ratio</td><td>2.0x</td><td>VSE Q1 2026 ER</td></tr>
+<tr><td>NorthStar acquisition date</td><td>April 1, 2026</td><td>VSE Q1 2026 ER</td></tr>
+</tbody></table></div>
+<p style="color:var(--gray-400);font-size:13px;font-style:italic;margin-bottom:8px">Sources: Aviation Week Network (MRO Rolling Daily Updates, May 5, 2026), VSE Corporation Q1 2026 Earnings Release (May 5, 2026), VSE Corporation PAG Acquisition Close Press Release (May 5, 2026), tipranks (May 5, 2026), Morningstar Business Wire (May 5, 2026), CoinUnited (May 6, 2026).</p>
+</div>
+          <nav class="post-nav">
+            <a href="may-4-2026.html" class="post-nav-btn">
+              <div class="post-nav-label">← Previous Issue</div>
+              <div class="post-nav-title">May 4 2026</div>
+            </a>
+            <a href="may-9-2026.html" class="post-nav-btn" style="text-align:right">
+              <div class="post-nav-label">Next Issue →</div>
+              <div class="post-nav-title">May 9 2026</div>
+            </a>
+          </nav>
+        </article>
+
+        <aside class="post-sidebar">
+          <div class="toc-widget">
+            <div class="toc-title">In This Issue</div>
+            <ul class="toc-list">
+              <li><a href="#s1"><span class="toc-num">1</span> Market Updates &amp; Growth</a></li>
+              <li><a href="#s2"><span class="toc-num">2</span> Regional Expansion</a></li>
+              <li><a href="#s3"><span class="toc-num">3</span> Supply Chain</a></li>
+              <li><a href="#s4"><span class="toc-num">4</span> Technology &amp; Investment</a></li>
+              <li><a href="#s5"><span class="toc-num">5</span> Challenges &amp; Solutions</a></li>
+            </ul>
+          </div>
+          <div class="sidebar-widget">
+            <h3 class="widget-title">About This Briefing</h3>
+            <p class="widget-text">Source:</p>
+            <div class="widget-badge">
+              <span class="auto-badge">⚡ Automated Daily at 7:00 AM</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand"><span class="logo-icon">✈</span><span class="footer-name">MRO Daily Intelligence</span></div>
+        <div class="footer-text">Automated briefings sourced from Aviation Week Network. Published daily at 7:00 AM.</div>
+      </div>
+    </div>
+  </footer>
+
+<script>
+  var postAudio = null;
+  var audioSrc  = 'posts/may5-2026-email.m4a';  /* relative from inside posts/ dir */
+
+  /* Fix path: this page is in posts/, so audio is same dir */
+  var audioFile = 'may5-2026-email.m4a';
+
+  function fmtPostTime(s) {
+    if (isNaN(s) || !isFinite(s)) return '--:--';
+    var m = Math.floor(s / 60);
+    return m + ':' + String(Math.floor(s % 60)).padStart(2, '0');
+  }
+
+  function togglePostAudio() {
+    var playIcon  = document.getElementById('postPlayIcon');
+    var pauseIcon = document.getElementById('postPauseIcon');
+    var meta      = document.getElementById('postAudioMeta');
+    var fill      = document.getElementById('postAudioFill');
+    var cur       = document.getElementById('postAudioCur');
+    var dur       = document.getElementById('postAudioDur');
+
+    if (!postAudio) {
+      postAudio = new Audio(audioFile);
+      postAudio.addEventListener('loadedmetadata', function() {
+        dur.textContent = fmtPostTime(postAudio.duration);
+        meta.textContent = fmtPostTime(postAudio.duration) + ' · Daniel, en-GB';
+      });
+      postAudio.addEventListener('timeupdate', function() {
+        var pct = (postAudio.currentTime / postAudio.duration) * 100;
+        fill.style.width = pct + '%';
+        cur.textContent = fmtPostTime(postAudio.currentTime);
+      });
+      postAudio.addEventListener('ended', function() {
+        playIcon.style.display = '';
+        pauseIcon.style.display = 'none';
+        meta.textContent = 'Finished · tap to replay';
+        fill.style.width = '0%';
+        cur.textContent = '0:00';
+        postAudio.currentTime = 0;
+      });
+    }
+
+    if (!postAudio.paused) {
+      postAudio.pause();
+      playIcon.style.display = '';
+      pauseIcon.style.display = 'none';
+      meta.textContent = 'Paused';
+    } else {
+      postAudio.play();
+      playIcon.style.display = 'none';
+      pauseIcon.style.display = '';
+      meta.textContent = 'Playing…';
+    }
+  }
+
+  function seekPostAudio(e) {
+    if (!postAudio) return;
+    var track = document.getElementById('postAudioTrack');
+    var rect  = track.getBoundingClientRect();
+    var pct   = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
+    postAudio.currentTime = pct * postAudio.duration;
+  }
+</script>
+</body>
+</html>
