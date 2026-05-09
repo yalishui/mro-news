@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MRO Briefing — May 6, 2026 | MRO Daily Intelligence</title>
+  <meta name="description" content="Announcement date:" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/style.css" />
+  <style>
+    /* ── Audio Player ── */
+    .post-audio-player {
+      background: linear-gradient(135deg,#0f2847 0%,#1a4a8a 100%);
+      border-radius: 14px;
+      padding: 18px 20px;
+      margin: 0 0 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .post-audio-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .6px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.5);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .post-audio-controls {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .post-play-btn {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.15);
+      border: 1px solid rgba(255,255,255,.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      flex-shrink: 0;
+      transition: background .15s;
+    }
+    .post-play-btn:hover { background: rgba(255,255,255,.25); }
+    .post-play-btn svg { fill: white; width: 20px; height: 20px; }
+    .post-audio-info { flex: 1; }
+    .post-audio-title { font-size: 14px; font-weight: 600; color: #fff; margin-bottom: 3px; }
+    .post-audio-meta { font-size: 12px; color: rgba(255,255,255,.5); }
+    .post-audio-progress {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .post-audio-time { font-size: 11px; color: rgba(255,255,255,.5); min-width: 32px; font-variant-numeric: tabular-nums; }
+    .post-audio-track {
+      flex: 1;
+      height: 4px;
+      background: rgba(255,255,255,.2);
+      border-radius: 99px;
+      cursor: pointer;
+      position: relative;
+    }
+    .post-audio-fill {
+      height: 100%;
+      width: 0%;
+      background: #fff;
+      border-radius: 99px;
+      transition: width .2s linear;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <div class="logo">
+          <span class="logo-icon">✈</span>
+          <div>
+            <div class="logo-name">MRO Daily Intelligence</div>
+            <div class="logo-tagline">Aviation Maintenance Market Briefings</div>
+          </div>
+        </div>
+        <nav class="nav">
+          <a href="../index.html" class="nav-link">Latest</a>
+          <a href="../index.html#about" class="nav-link">About</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section class="post-hero">
+    <div class="container">
+      <a href="../index.html" class="post-back">← All Briefings</a>
+      <div class="post-issue-label">Issue #49 &nbsp;·&nbsp; May 6, 2026</div>
+      <h1 class="post-title">Daily MRO Market News Summary — May 6, 2026</h1>
+      <div class="post-meta-row">
+        <div class="post-meta-item"><strong>May 6, 2026</strong></div>
+        <div class="post-meta-item">·</div>
+        <div class="post-meta-item">Source: <strong>Aviation Week Network</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <main class="post-body">
+    <div class="container">
+      <div class="post-grid">
+        <article class="post-content">
+
+          <!-- ── Audio Player ── -->
+          <div class="post-audio-player" id="audioPlayer">
+            <div class="post-audio-label">
+              <svg viewBox="0 0 24 24" fill="white" width="12" height="12"><path d="M12 3a9 9 0 100 18A9 9 0 0012 3zm-2 13V8l7 4-7 4z"/></svg>
+              Audio Briefing &nbsp;·&nbsp; Daniel, en-GB
+            </div>
+            <div class="post-audio-controls">
+              <button class="post-play-btn" id="postPlayBtn" onclick="togglePostAudio()" aria-label="Play audio briefing">
+                <svg id="postPlayIcon" viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+                <svg id="postPauseIcon" viewBox="0 0 24 24" style="display:none"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+              </button>
+              <div class="post-audio-info">
+                <div class="post-audio-title">Daily Briefing — May 6, 2026</div>
+                <div class="post-audio-meta" id="postAudioMeta">Tap to listen · ~2 min</div>
+              </div>
+            </div>
+            <div class="post-audio-progress">
+              <span class="post-audio-time" id="postAudioCur">0:00</span>
+              <div class="post-audio-track" id="postAudioTrack" onclick="seekPostAudio(event)">
+                <div class="post-audio-fill" id="postAudioFill"></div>
+              </div>
+              <span class="post-audio-time" id="postAudioDur">--:--</span>
+            </div>
+          </div>
+
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px"><strong>Date:</strong> Tuesday, May 6, 2026</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px"><strong>Source:</strong> Aviation Week Network (MRO Rolling Daily Updates, May 6, 2026), AAR CORP. Press Release (May 6, 2026), Aviation Week MRO Americas 2026 Coverage (April 22–May 1, 2026), Aviation Week Intelligence Network, CoinUnited (VSE PAG financial analysis)</p>
+
+<div class="post-section" id="s1">
+  <div class="post-section-header">
+    <div class="section-number">1</div>
+    <span class="section-icon">📈</span>
+    <h2>Market Updates and Growth Trends</h2>
+  </div>
+<h3>AAR CORP. Announces Major Segment Realignment — Legacy Commercial Programs to Wind Down (May 6)</h3>
+<ul>
+<li><strong>Announcement date:</strong> May 6, 2026</li>
+<li><strong>Effective:</strong> Q4 FY2026 (beginning approximately August 1, 2026)</li>
+<li><strong>New four-segment structure:</strong></li>
+</ul>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">1. <strong>Parts Supply</strong> — new parts distribution and used serviceable material (USM)</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">2. <strong>Repair, Engineering, and Software</strong> — MRO services (Airframe MRO, Component MRO), plus Trax℠, Aerostrat℠, and Airvoyant℠ software platforms</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">3. <strong>Government Solutions</strong> — fleet management, customer-owned aircraft operations, performance-based logistics programs, and Mobility Systems (formerly Expeditionary Services)</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">4. <strong>Legacy Commercial Programs</strong> — asset-heavy flight hour-based component repair programs for commercial airlines (being wound down)</p>
+<ul>
+<li><strong>Legacy Commercial Programs financials (LTM to Feb 28, 2026):</strong></li>
+<li>Sales: <strong>$252.4M</strong></li>
+<li>GAAP operating loss: <strong>$(0.2)M</strong></li>
+<li>Adjusted operating income: <strong>$5.0M</strong></li>
+<li>Net assets (as of Feb 28, 2026): <strong>~$160M</strong></li>
+<li><strong>Wind-down rationale:</strong> Segment "requires significant asset pools and no longer meets our capital return thresholds"</li>
+<li><strong>Timeline:</strong> Approximately <strong>3–4 years</strong> to complete wind-down</li>
+<li><strong>Expected outcomes:</strong> Periodic gains anticipated as assets divested; talented team members to be redeployed to other AAR growth initiatives</li>
+<li><strong>CEO John M. Holmes:</strong> <em>"Once complete, we believe the wind-down of Legacy Commercial Programs will result in a more simplified business model with higher margins and improved returns on capital."</em></li>
+<li><strong>Guidance unchanged:</strong> Q4 FY2026 and full-year FY2026 guidance (ending May 31, 2026) unaffected</li>
+</ul>
+<h3>MRO Americas 2026: 30th Anniversary Wrap — AI, GTF/LEAP, and Workforce Dominate (Orlando, April 21–23)</h3>
+<ul>
+<li><strong>Attendance:</strong> 17,000+ attendees, 1,000+ exhibitors, 2,000+ airline/lessor buyers, 93+ countries</li>
+<li><strong>AMC Competition (AMCC):</strong> 87 teams competed across 6 divisions; <strong>FedEx Express and Tulsa Tech</strong> won top honors; Snap-on $150K prize pool</li>
+<li><strong>Iberia/IAG</strong> announced as <strong>CFM LEAP Premier MRO provider</strong> — strategic positioning in LEAP aftermarket</li>
+<li><strong>MHIRJ</strong> expanding aftermarket offerings for Bombardier CRJ (CRJ-200s finding new life as two-class aircraft on United)</li>
+<li><strong>ACSS + Airborne Maintenance &amp; Engineering Services + Innovative Aerosystems</strong> partnered on Boeing 757/767 ADS-B In retrofit package</li>
+<li><strong>Lufthansa Technik</strong> advanced milestones for its upcoming Portugal-based aircraft and engine component facility</li>
+<li><strong>Airlines mull AI's potential and limits for MRO:</strong> Some see AI driving maintenance efficiencies; concerns raised about potential "brain drain" from overreliance</li>
+<li><strong>GE Aerospace + Waygate Technologies:</strong> New AI-guided engine borescope inspection tool — aims for more consistent inspection results</li>
+<li><strong>Zymbly:</strong> Using AI to change MRO operations (CEO Ben Jacob interview)</li>
+<li><strong>Airbus:</strong> Launching Skywise as major move in digital and connectivity services</li>
+<li><strong>Sustainability:</strong> Henkel showcased new sustainable MRO products; aviation industry prioritizing SAF compatibility checks</li>
+</ul>
+
+<div class="post-section" id="s2">
+  <div class="post-section-header">
+    <div class="section-number">2</div>
+    <span class="section-icon">🌏</span>
+    <h2>Regional Expansion Activities</h2>
+  </div>
+<h3>Cabinair Group &amp; Summit Lenso Partner on Asia-Pacific Aircraft Modifications</h3>
+<ul>
+<li><strong>Companies:</strong> Cabinair Group (EASA Part 145/Part 21 certified) + Summit Lenso (aerospace manufacturer)</li>
+<li><strong>Location:</strong> Summit Lenso facility near Bangkok's Suvarnabhumi Airport, Thailand</li>
+<li><strong>Focus:</strong> Aircraft modification and cabin solutions in Asia-Pacific; initial operations in Thailand</li>
+<li><strong>Strategic impact:</strong> First major cabin interiors partnership targeting Thailand's growing MRO market</li>
+</ul>
+<h3>Duncan Aviation Donates Honeywell TFE731 Engine to Lincoln North Star High School AMT Program</h3>
+<ul>
+<li><strong>Company:</strong> Duncan Aviation</li>
+<li><strong>Recipient:</strong> Lincoln North Star High School aviation program (Lincoln, Nebraska)</li>
+<li><strong>Donated engine:</strong> Honeywell TFE731 (originally earmarked for Duncan Aviation's apprentice program in Provo, Utah; reallocated to avoid duplicating resources and maximize community impact)</li>
+<li><strong>Key quote — Kasey Harwick, Executive VP &amp; COO:</strong> <em>"We've always believed in using real-world equipment to build confidence and competence in our technicians. When this engine no longer had a home internally, it made perfect sense to extend that same opportunity to students at Lincoln North Star."</em></li>
+<li><strong>Significance:</strong> Second major AMT workforce pipeline investment in two days (following GA Telesis $4.1M donation on May 5)</li>
+</ul>
+
+<div class="post-section" id="s3">
+  <div class="post-section-header">
+    <div class="section-number">3</div>
+    <span class="section-icon">🔗</span>
+    <h2>Supply Chain Developments</h2>
+  </div>
+<h3>AAR Wind-Down: Capital Redeployment from Asset-Heavy Programs</h3>
+<ul>
+<li>Legacy Commercial Programs segment characterized by "significant asset pools" — typical of flight-hour component repair programs requiring large pools of repairable parts and inventory</li>
+<li>Wind-down will generate <strong>periodic gains as assets are divested over 3–4 years</strong></li>
+<li>Freed capital expected to be redeployed to higher-return activities within Parts Supply and Repair, Engineering &amp; Software segments</li>
+</ul>
+<h3>North American MRO Capacity: Engine Shop Bottleneck Persists</h3>
+<ul>
+<li><strong>Aviation Week Intelligence Network (AWIN) forecast:</strong> North American engine maintenance spending will rise <strong>44% by 2035 to $19.4B</strong></li>
+<li>MRO Americas 2026 discussions centered on extended TATs (180–200+ days for narrowbody engines) and shop cost overruns for next-gen engines</li>
+</ul>
+
+<div class="post-section" id="s4">
+  <div class="post-section-header">
+    <div class="section-number">4</div>
+    <span class="section-icon">💡</span>
+    <h2>Technology and Investment News</h2>
+  </div>
+<h3>AAR Software Platforms: Trax℠, Aerostrat℠, Airvoyant℠ <a class="src-link" href="https://www.trax.aero/news/" target="_blank" rel="noopener">Trax</a></h3>
+<ul>
+<li>AAR's new Repair, Engineering, and Software segment includes three proprietary platforms:</li>
+<li><strong>Trax℠</strong> — MRO/maintenance operations software</li>
+<li><strong>Aerostrat℠</strong> — operations/supply chain optimization</li>
+<li><strong>Airvoyant℠</strong> — aviation intelligence/analytics</li>
+<li>These platforms retained and positioned as growth drivers in the new segment structure</li>
+</ul>
+<h3>AI-Guided Engine Borescope Inspection</h3>
+<ul>
+<li><strong>GE Aerospace + Waygate Technologies</strong> showcased new AI-guided engine borescope at MRO Americas 2026</li>
+<li>Target: More consistent inspection results; reduced operator variability</li>
+<li>Emerging as a key quality/cost efficiency tool for engine MRO shops</li>
+</ul>
+
+<div class="post-section" id="s5">
+  <div class="post-section-header">
+    <div class="section-number">5</div>
+    <span class="section-icon">⚠️</span>
+    <h2>Major Challenges and Solutions</h2>
+  </div>
+<h3>Challenge: Legacy Business Divestment Complexity</h3>
+<ul>
+<li>AAR's Legacy Commercial Programs involves long-term airline contracts, customer relationships, and significant asset pools</li>
+<li><strong>Solution:</strong> 3–4 year wind-down timeline allows orderly contract completion and asset monetization; team redeployment preserves institutional knowledge</li>
+</ul>
+<h3>Challenge: MRO Labor Pipeline — Short-Term vs. Long-Term</h3>
+<ul>
+<li>Two major engine donations in consecutive days (GA Telesis $4.1M on May 5; Duncan Aviation TFE731 on May 6) highlight industry-wide AMT shortage</li>
+<li><strong>Short-term solutions:</strong> Engine donations, apprenticeships, high school programs</li>
+<li><strong>Long-term challenge:</strong> US certified mechanics not keeping pace with demand; >50% of Oliver Wyman survey respondents expect attrition to worsen</li>
+</ul>
+
+<div class="post-section" id="s6">
+  <div class="post-section-header">
+    <div class="section-number">📋</div>
+    <span class="section-icon">⚠️</span>
+    <h2>Today's Headlines Recap (May 6, 2026)</h2>
+  </div>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">1. <strong>AAR segment realignment (May 6):</strong> Wind-down of Legacy Commercial Programs ($252.4M LTM sales) over 3–4 years; new four-segment structure; capital redeployment focus</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">2. <strong>MRO Americas 2026 wrap-up:</strong> 17,000+ attendees; Iberia/IAG selected as CFM LEAP Premier MRO; AI borescope tools; 30th anniversary milestone confirmed</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">3. <strong>Cabinair + Summit Lenso:</strong> Asia-Pacific cabin modification partnership; Thailand focus; EASA Part 145/Part 21 capabilities</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">4. <strong>Duncan Aviation TFE731 donation:</strong> Engine reallocated from Provo apprentice program to Lincoln North Star High School; community impact focus</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">5. <strong>AAR software platforms (Trax, Aerostrat, Airvoyant):</strong> Retained and positioned as growth drivers in new segment structure</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">6. <strong>Engine MRO capacity outlook:</strong> AWIN forecast 44% North American engine MRO growth by 2035; TAT bottleneck persists</p>
+
+<div class="post-section" id="s7">
+  <div class="post-section-header">
+    <div class="section-number">📋</div>
+    <span class="section-icon">⚠️</span>
+    <h2>Key Statistics — May 6, 2026</h2>
+  </div>
+<div class="table-wrapper"><table class="post-table">
+<thead><tr><th>Metric</th><th>Value</th><th>Source</th></tr></thead><tbody>
+<tr><td>AAR Legacy Commercial Programs LTM sales</td><td>$252.4M</td><td>AAR Corp</td></tr>
+<tr><td>AAR Legacy segment adj. operating income</td><td>$5.0M</td><td>AAR Corp</td></tr>
+<tr><td>AAR Legacy segment net assets</td><td>~$160M</td><td>AAR Corp</td></tr>
+<tr><td>AAR wind-down timeline</td><td>3–4 years</td><td>AAR Corp</td></tr>
+<tr><td>MRO Americas 2026 attendance</td><td>17,000+, 93+ countries</td><td>Aviation Week</td></tr>
+<tr><td>North American engine MRO 2035 forecast</td><td>$19.4B (+44%)</td><td>AWIN</td></tr>
+<tr><td>AMC Competition 2026 — top teams</td><td>FedEx Express, Tulsa Tech</td><td>Aviation Week</td></tr>
+</tbody></table></div>
+<p style="color:var(--gray-400);font-size:13px;font-style:italic;margin-bottom:8px">Sources: Aviation Week Network (MRO Rolling Daily Updates, May 6, 2026), AAR CORP. segment realignment and wind-down press release (May 6, 2026), Aviation Week MRO Americas 2026 coverage (April 22–May 1, 2026), CoinUnited (VSE financial analysis, May 6, 2026).</p>
+</div>
+          <nav class="post-nav">
+            <a href="may-5-2026.html" class="post-nav-btn">
+              <div class="post-nav-label">← Previous Issue</div>
+              <div class="post-nav-title">May 5 2026</div>
+            </a>
+            <a href="may-9-2026.html" class="post-nav-btn" style="text-align:right">
+              <div class="post-nav-label">Next Issue →</div>
+              <div class="post-nav-title">May 9 2026</div>
+            </a>
+          </nav>
+        </article>
+
+        <aside class="post-sidebar">
+          <div class="toc-widget">
+            <div class="toc-title">In This Issue</div>
+            <ul class="toc-list">
+              <li><a href="#s1"><span class="toc-num">1</span> Market Updates &amp; Growth</a></li>
+              <li><a href="#s2"><span class="toc-num">2</span> Regional Expansion</a></li>
+              <li><a href="#s3"><span class="toc-num">3</span> Supply Chain</a></li>
+              <li><a href="#s4"><span class="toc-num">4</span> Technology &amp; Investment</a></li>
+              <li><a href="#s5"><span class="toc-num">5</span> Challenges &amp; Solutions</a></li>
+            </ul>
+          </div>
+          <div class="sidebar-widget">
+            <h3 class="widget-title">About This Briefing</h3>
+            <p class="widget-text">Source:</p>
+            <div class="widget-badge">
+              <span class="auto-badge">⚡ Automated Daily at 7:00 AM</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand"><span class="logo-icon">✈</span><span class="footer-name">MRO Daily Intelligence</span></div>
+        <div class="footer-text">Automated briefings sourced from Aviation Week Network. Published daily at 7:00 AM.</div>
+      </div>
+    </div>
+  </footer>
+
+<script>
+  var postAudio = null;
+  var audioSrc  = 'posts/may6-2026-email.m4a';  /* relative from inside posts/ dir */
+
+  /* Fix path: this page is in posts/, so audio is same dir */
+  var audioFile = 'may6-2026-email.m4a';
+
+  function fmtPostTime(s) {
+    if (isNaN(s) || !isFinite(s)) return '--:--';
+    var m = Math.floor(s / 60);
+    return m + ':' + String(Math.floor(s % 60)).padStart(2, '0');
+  }
+
+  function togglePostAudio() {
+    var playIcon  = document.getElementById('postPlayIcon');
+    var pauseIcon = document.getElementById('postPauseIcon');
+    var meta      = document.getElementById('postAudioMeta');
+    var fill      = document.getElementById('postAudioFill');
+    var cur       = document.getElementById('postAudioCur');
+    var dur       = document.getElementById('postAudioDur');
+
+    if (!postAudio) {
+      postAudio = new Audio(audioFile);
+      postAudio.addEventListener('loadedmetadata', function() {
+        dur.textContent = fmtPostTime(postAudio.duration);
+        meta.textContent = fmtPostTime(postAudio.duration) + ' · Daniel, en-GB';
+      });
+      postAudio.addEventListener('timeupdate', function() {
+        var pct = (postAudio.currentTime / postAudio.duration) * 100;
+        fill.style.width = pct + '%';
+        cur.textContent = fmtPostTime(postAudio.currentTime);
+      });
+      postAudio.addEventListener('ended', function() {
+        playIcon.style.display = '';
+        pauseIcon.style.display = 'none';
+        meta.textContent = 'Finished · tap to replay';
+        fill.style.width = '0%';
+        cur.textContent = '0:00';
+        postAudio.currentTime = 0;
+      });
+    }
+
+    if (!postAudio.paused) {
+      postAudio.pause();
+      playIcon.style.display = '';
+      pauseIcon.style.display = 'none';
+      meta.textContent = 'Paused';
+    } else {
+      postAudio.play();
+      playIcon.style.display = 'none';
+      pauseIcon.style.display = '';
+      meta.textContent = 'Playing…';
+    }
+  }
+
+  function seekPostAudio(e) {
+    if (!postAudio) return;
+    var track = document.getElementById('postAudioTrack');
+    var rect  = track.getBoundingClientRect();
+    var pct   = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
+    postAudio.currentTime = pct * postAudio.duration;
+  }
+</script>
+</body>
+</html>
