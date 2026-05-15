@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MRO Briefing — May 14, 2026 | MRO Daily Intelligence</title>
+  <meta name="description" content="GE Aerospace" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/style.css" />
+  <style>
+    /* ── Audio Player ── */
+    .post-audio-player {
+      background: linear-gradient(135deg,#0f2847 0%,#1a4a8a 100%);
+      border-radius: 14px;
+      padding: 18px 20px;
+      margin: 0 0 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .post-audio-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .6px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.5);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .post-audio-controls {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .post-play-btn {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.15);
+      border: 1px solid rgba(255,255,255,.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      flex-shrink: 0;
+      transition: background .15s;
+    }
+    .post-play-btn:hover { background: rgba(255,255,255,.25); }
+    .post-play-btn svg { fill: white; width: 20px; height: 20px; }
+    .post-audio-info { flex: 1; }
+    .post-audio-title { font-size: 14px; font-weight: 600; color: #fff; margin-bottom: 3px; }
+    .post-audio-meta { font-size: 12px; color: rgba(255,255,255,.5); }
+    .post-audio-progress {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .post-audio-time { font-size: 11px; color: rgba(255,255,255,.5); min-width: 32px; font-variant-numeric: tabular-nums; }
+    .post-audio-track {
+      flex: 1;
+      height: 4px;
+      background: rgba(255,255,255,.2);
+      border-radius: 99px;
+      cursor: pointer;
+      position: relative;
+    }
+    .post-audio-fill {
+      height: 100%;
+      width: 0%;
+      background: #fff;
+      border-radius: 99px;
+      transition: width .2s linear;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <div class="logo">
+          <span class="logo-icon">✈</span>
+          <div>
+            <div class="logo-name">MRO Daily Intelligence</div>
+            <div class="logo-tagline">Aviation Maintenance Market Briefings</div>
+          </div>
+        </div>
+        <nav class="nav">
+          <a href="../index.html" class="nav-link">Latest</a>
+          <a href="../index.html#about" class="nav-link">About</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section class="post-hero">
+    <div class="container">
+      <a href="../index.html" class="post-back">← All Briefings</a>
+      <div class="post-issue-label">Issue #57 &nbsp;·&nbsp; May 14, 2026</div>
+      <h1 class="post-title">Daily MRO Market News Summary — May 14, 2026</h1>
+      <div class="post-meta-row">
+        <div class="post-meta-item"><strong>May 14, 2026</strong></div>
+        <div class="post-meta-item">·</div>
+        <div class="post-meta-item">Source: <strong>Aviation Week Network</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <main class="post-body">
+    <div class="container">
+      <div class="post-grid">
+        <article class="post-content">
+
+          <!-- ── Audio Player ── -->
+          <div class="post-audio-player" id="audioPlayer">
+            <div class="post-audio-label">
+              <svg viewBox="0 0 24 24" fill="white" width="12" height="12"><path d="M12 3a9 9 0 100 18A9 9 0 0012 3zm-2 13V8l7 4-7 4z"/></svg>
+              Audio Briefing &nbsp;·&nbsp; Daniel, en-GB
+            </div>
+            <div class="post-audio-controls">
+              <button class="post-play-btn" id="postPlayBtn" onclick="togglePostAudio()" aria-label="Play audio briefing">
+                <svg id="postPlayIcon" viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+                <svg id="postPauseIcon" viewBox="0 0 24 24" style="display:none"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+              </button>
+              <div class="post-audio-info">
+                <div class="post-audio-title">Daily Briefing — May 14, 2026</div>
+                <div class="post-audio-meta" id="postAudioMeta">Tap to listen · ~2 min</div>
+              </div>
+            </div>
+            <div class="post-audio-progress">
+              <span class="post-audio-time" id="postAudioCur">0:00</span>
+              <div class="post-audio-track" id="postAudioTrack" onclick="seekPostAudio(event)">
+                <div class="post-audio-fill" id="postAudioFill"></div>
+              </div>
+              <span class="post-audio-time" id="postAudioDur">--:--</span>
+            </div>
+          </div>
+
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px"><strong>Date:</strong> Thursday, May 14, 2026</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px"><strong>Source:</strong> Aviation Week Network (MRO Rolling Daily Updates, May 14, 2026), Emirates/WAM media centre, Aviation Business Middle East, Emirates press release, Aviation Week Intelligence Network (AWIN), Aviation Business News, Asian Aviation, AeroTime</p>
+
+<div class="post-section" id="s1">
+  <div class="post-section-header">
+    <div class="section-number">1</div>
+    <span class="section-icon">📈</span>
+    <h2>Market Updates and Growth Trends</h2>
+  </div>
+<h3>GE Aerospace and Emirates Sign $300M Engine Maintenance Partnership — GE90/GP7200 Repair Capability Development <a class="src-link" href="https://www.geaerospace.com/news" target="_blank" rel="noopener">GE Aerospace</a></h3>
+<ul>
+<li><strong>GE Aerospace</strong> and <strong>Emirates</strong> signed an agreement for technical and training consultancy to develop <strong>comprehensive piece-part component repair capabilities</strong> for the <strong>GE90</strong> and <strong>Engine Alliance GP7200 engines</strong> at Emirates' Dubai maintenance centre (officially announced May 14, 2026 — Emirates press release; Aviation Week coverage).</li>
+<li><strong>Signatories:</strong> Adel Al Redha (Deputy President &amp; COO, Emirates) and Mohamed Ali (President &amp; CEO, Commercial Engines and Services, GE Aerospace).</li>
+<li><strong>Agreement scope:</strong></li>
+<li>Technical consultancy and training support from GE Aerospace</li>
+<li>Setup of a <strong>dedicated piece-part repair line</strong> at Emirates Engineering</li>
+<li>Knowledge transfer and operational best practices</li>
+<li>Alignment with global benchmarks in engine component repair</li>
+<li><strong>Fleet coverage:</strong> <strong>GE90</strong> powers Emirates' entire <strong>Boeing 777 fleet</strong>; <strong>GP7200</strong> (Engine Alliance — GE/Safran JV) powers a portion of Emirates' <strong>Airbus A380 fleet</strong>.</li>
+<li><strong>Emirates Engineering fleet:</strong> Supports <strong>more than 270 aircraft</strong> — Boeing 777, Airbus A380, and Airbus A350 — through line and base maintenance operations in Dubai.</li>
+<li><strong>Investment:</strong> The partnership supports a <strong>$300M expansion</strong> of the <strong>Emirates Engine Maintenance Centre (EEMC)</strong> — scaling infrastructure and maintenance capacity.</li>
+<li><strong>Mohamed Ali (GE Aerospace CEO):</strong> Framework agreement reinforces GE Aerospace's commitment to building regional MRO capability ecosystems globally (following the $300M Singapore AI CoE investment targeting 21-day engine cycle by 2028).</li>
+<li><strong>Adel Al Redha (Emirates COO):</strong> Building in-house engine repair capabilities is central to Emirates' operational resilience and cost efficiency strategy — reducing reliance on sending engines to external shops.</li>
+</ul>
+<h3>Asia-Pacific MRO Demand Counter-Cyclical Boost from Capacity Cuts</h3>
+<ul>
+<li><strong>Aviation Week</strong> (Adrian Schofield report, May 14, 2026): Asia-Pacific airlines implementing <strong>capacity reductions</strong> are likely to drive a <strong>counter-cyclical boost in MRO demand</strong>.</li>
+<li><strong>Mechanism:</strong> When airlines cut schedules, they typically <strong>advance maintenance schedules</strong> for aircraft taken out of service — rather than deferring, as might happen with unscheduled maintenance.</li>
+<li><strong>Implication:</strong> Experienced Asia-Pacific MRO operators with available slots can capture this demand — particularly for base maintenance checks and heavy airframe work.</li>
+<li><strong>Market context:</strong> Capacity cuts at several Asia-Pacific carriers reflect fuel price pressures, geopolitical route disruptions, and competitive dynamics — not a structural demand collapse.</li>
+</ul>
+
+<div class="post-section" id="s2">
+  <div class="post-section-header">
+    <div class="section-number">2</div>
+    <span class="section-icon">🌏</span>
+    <h2>Regional Expansion Activities</h2>
+  </div>
+<h3>Middle East MRO — UAE Consolidates as Engine Aftermarket Hub</h3>
+<ul>
+<li>Emirates' $300M EEMC expansion + Sanad's AED480M ($130M) Al Ain hub (announced May 11) represent a <strong>coordinated UAE strategy</strong> to build world-class, domestically anchored engine MRO capability.</li>
+<li><strong>GE90 support:</strong> As the world's largest 777 operator, Emirates faces unique engine support challenges — the GE90 entered service in 1995 and many units are now in their third or fourth major shop visit cycle, requiring sophisticated piece-part and module repair.</li>
+<li><strong>GP7200 support:</strong> Emirates operates the largest A380 fleet globally — the GP7200-powered portion of that fleet is entering a similar deep-maintenance cycle.</li>
+<li><strong>Dubai's logistics advantage:</strong> Between Asia-Pacific and Europe, Dubai offers natural connectivity for engine transit MRO — attractive for third-party engine inductions from carriers across the Indian Ocean and Middle East regions.</li>
+</ul>
+<h3>Philippines MRO Cluster — Dornier Technology's Multi-Hangar Expansion Strategy</h3>
+<ul>
+<li><strong>Aviation Business News</strong> (May 13–14 coverage): Dornier Technology's Clark International Airport expansion is explicitly targeting <strong>three customer segments</strong>:</li>
+</ul>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">1. <strong>Southeast Asian LCCs</strong> — the fastest-growing airline segment in the region, with chronic MRO slot shortages.</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">2. <strong>Northeast Asian airlines</strong> — Japan and South Korea face acute <strong>AMT labor shortages</strong>, driving outbound MRO demand to lower-cost regional providers.</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">3. <strong>Aircraft lessors</strong> — need combined heavy maintenance + repaint services when repositioning aircraft between operators — Dornier's one-stop package is a key differentiator.</p>
+<h3>MAB Engineering Hangar 4 Doubling — Malaysia's MRO Self-Sufficiency Push</h3>
+<ul>
+<li><strong>MAB Engineering</strong> (MAG MRO arm) officially commissioned <strong>Hangar 4</strong> at Kuala Lumpur Subang on <strong>May 7, 2026</strong> — doubling capacity from 2 to 4 maintenance lines.</li>
+<li><strong>Operating since May 7; reported in industry press through May 14.</strong></li>
+<li><strong>Hangar 4 supports:</strong> 1 widebody line (A330-200/300) + 1 narrowbody line (B737-800/MAX) + 2 narrowbody propeller lines (ATR72).</li>
+<li><strong>Customer split:</strong> ~50% internal (Malaysia Airlines + Firefly); ~50% external third-party MRO customers.</li>
+<li><strong>Facility details:</strong> 15-year lease with Impeccable Vintage Properties (Khazanah Nasional Bhd subsidiary); CEO Capt. Nasaruddin A. Bakar: <em>"Not only doubles our maintenance capacity at Subang, but enhances our ability to serve both MAG airlines and international customers more effectively."</em></li>
+</ul>
+
+<div class="post-section" id="s3">
+  <div class="post-section-header">
+    <div class="section-number">3</div>
+    <span class="section-icon">🔗</span>
+    <h2>Supply Chain Developments</h2>
+  </div>
+<h3>GE90/GP7200 Piece-Part Repair — Addressing Long-Term Fleet Support Gap</h3>
+<ul>
+<li>The GE90 and GP7200 are both in <strong>peak lifecycle aftermarket demand</strong> — GE90 entered service 1995; GP7200 entered service 2008.</li>
+<li><strong>Piece-part repair</strong> is critical for: reducing AOG events; managing shop visit economics; maximizing component lifecycle value before retirement.</li>
+<li><strong>Supply chain gap:</strong> Neither engine had sufficient independent piece-part repair infrastructure in the Middle East/Asia-Pacific corridor — Emirates-GE partnership fills this gap.</li>
+<li><strong>GE Aerospace's global MRO ecosystem strategy:</strong> Investing in regional repair hubs (Singapore, UAE) to reduce engine transit times and build local capability — rather than routing all work through original equipment manufacturing locations.</li>
+</ul>
+<h3>USM Market — Widebody Activity Picking Up</h3>
+<ul>
+<li><strong>Seattle Aviation Solutions</strong> acquired its <strong>fifth aircraft in six months</strong> — a <strong>Boeing 777-200 with Rolls-Royce Trent 892-17 engines</strong> (May 14, Aviation Week Rolling Daily Update).</li>
+<li><strong>Context:</strong> Widebody USM (777, A330, A340) has been relatively quieter than narrowbody (A320, 737) in recent years — this acquisition signals <strong>renewed widebody teardown market activity</strong> as first-generation 777s (delivered 1995–2000) reach end-of-life.</li>
+<li><strong>Trent 892-17:</strong> Powers Boeing 777-200 and 777-200ER variants — a relatively concentrated model type in terms of engine fit, making engine module and piece-part recovery attractive.</li>
+<li><strong>Implication:</strong> Widebody USM market is entering a <strong>multi-year growth phase</strong> as 777-200ER and A330ceo fleets age — expect more widebody teardown announcements in H2 2026.</li>
+</ul>
+
+<div class="post-section" id="s4">
+  <div class="post-section-header">
+    <div class="section-number">4</div>
+    <span class="section-icon">💡</span>
+    <h2>Technology and Investment News</h2>
+  </div>
+<h3>GE Aerospace + Emirates — $300M Knowledge Transfer Program <a class="src-link" href="https://www.geaerospace.com/news" target="_blank" rel="noopener">GE Aerospace</a></h3>
+<ul>
+<li>The partnership is structured as a <strong>technology and training transfer program</strong> — GE Aerospace providing technical expertise to build Emirates' in-house piece-part repair capabilities.</li>
+<li><strong>Components in scope:</strong> Full range of GE90 and GP7200 piece parts — hot section, cold section, structural components.</li>
+<li><strong>Learning model:</strong> Emirates engineers will receive training at GE Aerospace's global repair network — building institutional knowledge that can be applied independently over time.</li>
+<li><strong>$300M</strong> covers: new equipment; facility modifications; training programs; initial inventory; operational setup.</li>
+</ul>
+<h3>Digital MRO — MRO SouthEast Asia Agenda</h3>
+<ul>
+<li><strong>MRO SouthEast Asia (May 13–14, Kuala Lumpur)</strong> featured a <strong>dedicated digital MRO track</strong> with sessions on:</li>
+<li>AI-powered predictive maintenance deployment in tropical/climatic conditions</li>
+<li>Digital twin applications for widebody MRO</li>
+<li>Data standardization across multi-OEM fleets</li>
+<li>Ramco, SAP, and IFS showcasing MRO software integrations with airline operations systems</li>
+</ul>
+
+<div class="post-section" id="s5">
+  <div class="post-section-header">
+    <div class="section-number">5</div>
+    <span class="section-icon">⚠️</span>
+    <h2>Major Challenges and Solutions</h2>
+  </div>
+<h3>Challenge 1: Widebody Engine Aging — Supporting the 777 and A380 Aftermarket</h3>
+<ul>
+<li>Emirates operates the world's largest <strong>777 fleet</strong> and <strong>A380 fleet</strong> — both fleets are aging into peak maintenance demand with complex supply chains.</li>
+<li><strong>GE90 issues:</strong> High-pressure turbine blade and vane erosion; combustor liner distress; turbine blade creep — all requiring sophisticated repair capabilities.</li>
+<li><strong>GP7200 issues:</strong> Similar high-temperature component challenges; availability of OEM-approved repair processes critical.</li>
+<li><strong>Solution:</strong> Emirates-GE partnership builds domestic repair capability; reduces engine transit to external shops; accelerates turnaround for Emirates' own fleet while enabling third-party work.</li>
+</ul>
+<h3>Challenge 2: Asia-Pacific MRO Slot Scarcity — Infrastructure vs. Demand Gap</h3>
+<ul>
+<li>Fleet growth continues to <strong>outpace MRO infrastructure development</strong> throughout Asia-Pacific.</li>
+<li>Dornier Technology (Clark), MAB Engineering (Subang), and multiple other Asia-Pacific MROs are building capacity simultaneously — but most new facilities won't be fully operational until 2027–2028.</li>
+<li><strong>Near-term solution:</strong> Long-term slot reservation agreements; airlines building relationships with multiple regional MROs; lessors pre-positioning maintenance contracts.</li>
+</ul>
+<h3>Challenge 3: USM Quality and Documentation — Widebody Segment</h3>
+<ul>
+<li>Widebody USM (777, A330) requires <strong>more rigorous documentation</strong> than narrowbody due to complex certification requirements, especially for <strong>EASA Part 21</strong> used on Europe-registered aircraft.</li>
+<li><strong>Solution:</strong> Experienced USM providers (Seattle Aviation Solutions, APOC Aviation) investing in <strong>documentation and traceability systems</strong> — increasingly a competitive differentiator.</li>
+</ul>
+
+<div class="post-section" id="s6">
+  <div class="post-section-header">
+    <div class="section-number">📋</div>
+    <span class="section-icon">⚠️</span>
+    <h2>Key Statistics — May 14, 2026</h2>
+  </div>
+<div class="table-wrapper"><table class="post-table">
+<thead><tr><th>Metric</th><th>Value</th><th>Source</th></tr></thead><tbody>
+<tr><td>Emirates-GE Aerospace partnership investment</td><td>$300M</td><td>Emirates/WAM</td></tr>
+<tr><td>Emirates Engineering fleet coverage</td><td>270+ aircraft</td><td>Emirates/WAM</td></tr>
+<tr><td>Emirates Boeing 777 fleet</td><td>Full fleet — GE90 powered</td><td>Emirates/WAM</td></tr>
+<tr><td>Emirates A380 fleet</td><td>Partial — GP7200 powered</td><td>Emirates/WAM</td></tr>
+<tr><td>Sanad Al Ain facility investment</td><td>AED480M (~$130M)</td><td>WAM/Sanad</td></tr>
+<tr><td>Sanad annual component throughput target</td><td>65,000 components/year</td><td>WAM/Sanad</td></tr>
+<tr><td>Sanad new jobs created</td><td>350+</td><td>WAM/Sanad</td></tr>
+<tr><td>Sanad engine inductions 2025</td><td>230/year</td><td>WAM/Sanad</td></tr>
+<tr><td>Sanad engine inductions 2035 target</td><td>>500/year</td><td>WAM/Sanad</td></tr>
+<tr><td>MAB Engineering capacity doubling</td><td>2 → 4 maintenance lines</td><td>AeroTime / Aviation Business News</td></tr>
+<tr><td>MAB Engineering Hangar 4 line mix</td><td>1 widebody + 1 narrowbody + 2 ATR</td><td>AeroTime</td></tr>
+<tr><td>MAB Engineering customer split</td><td>~50% internal / ~50% external</td><td>AeroTime</td></tr>
+<tr><td>Dornier Technology Hangar 1+2+3 area</td><td>~13,811 sqm (+194%)</td><td>Aviation Business News</td></tr>
+<tr><td>Dornier Technology Hangar 3 opening</td><td>End of Q3 2026</td><td>Aviation Business News</td></tr>
+<tr><td>Seattle Aviation Solutions acquisitions</td><td>5th aircraft in 6 months</td><td>Aviation Week</td></tr>
+<tr><td>Seattle Aviation Solutions latest acquisition</td><td>B777-200 + Rolls-Royce Trent 892-17</td><td>Aviation Week</td></tr>
+<tr><td>MRO Greater China countdown</td><td>12 days (May 26–28, Beijing)</td><td>Aviation Week</td></tr>
+<tr><td>MRO SouthEast Asia</td><td>May 13–14, Kuala Lumpur (Day 2)</td><td>MRO Business Today</td></tr>
+</tbody></table></div>
+<p style="color:var(--gray-400);font-size:13px;font-style:italic;margin-bottom:8px">Sources: Aviation Week Network (MRO Rolling Daily Updates, May 14, 2026; Adrian Schofield Asia-Pacific report), Emirates press release / WAM media centre (May 14, 2026), Emirates/WAM media centre article (May 14, 2026), Aviation Business Middle East (May 14, 2026 — GE Emirates partnership; Al Ain hub), Aviation Business News / MRO Management (May 13–14, 2026 — Dornier, Asia-Pacific MRO), Asian Aviation (May 14, 2026), AeroTime (May 7, 2026 — MAB Engineering Hangar 4), Aviation Week Intelligence Network (AWIN) Asia-Pacific MRO coverage (May 2026), MRO Business Today upcoming events calendar (May 2026).</p>
+</div>
+          <nav class="post-nav">
+            <a href="may-13-2026.html" class="post-nav-btn">
+              <div class="post-nav-label">← Previous Issue</div>
+              <div class="post-nav-title">May 13 2026</div>
+            </a>
+            <a href="may-15-2026.html" class="post-nav-btn" style="text-align:right">
+              <div class="post-nav-label">Next Issue →</div>
+              <div class="post-nav-title">May 15 2026</div>
+            </a>
+          </nav>
+        </article>
+
+        <aside class="post-sidebar">
+          <div class="toc-widget">
+            <div class="toc-title">In This Issue</div>
+            <ul class="toc-list">
+              <li><a href="#s1"><span class="toc-num">1</span> Market Updates &amp; Growth</a></li>
+              <li><a href="#s2"><span class="toc-num">2</span> Regional Expansion</a></li>
+              <li><a href="#s3"><span class="toc-num">3</span> Supply Chain</a></li>
+              <li><a href="#s4"><span class="toc-num">4</span> Technology &amp; Investment</a></li>
+              <li><a href="#s5"><span class="toc-num">5</span> Challenges &amp; Solutions</a></li>
+            </ul>
+          </div>
+          <div class="sidebar-widget">
+            <h3 class="widget-title">About This Briefing</h3>
+            <p class="widget-text">Source:</p>
+            <div class="widget-badge">
+              <span class="auto-badge">⚡ Automated Daily at 7:00 AM</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand"><span class="logo-icon">✈</span><span class="footer-name">MRO Daily Intelligence</span></div>
+        <div class="footer-text">Automated briefings sourced from Aviation Week Network. Published daily at 7:00 AM.</div>
+      </div>
+    </div>
+  </footer>
+
+<script>
+  var postAudio = null;
+  var audioSrc  = 'posts/may14-2026-email.m4a';  /* relative from inside posts/ dir */
+
+  /* Fix path: this page is in posts/, so audio is same dir */
+  var audioFile = 'may14-2026-email.m4a';
+
+  function fmtPostTime(s) {
+    if (isNaN(s) || !isFinite(s)) return '--:--';
+    var m = Math.floor(s / 60);
+    return m + ':' + String(Math.floor(s % 60)).padStart(2, '0');
+  }
+
+  function togglePostAudio() {
+    var playIcon  = document.getElementById('postPlayIcon');
+    var pauseIcon = document.getElementById('postPauseIcon');
+    var meta      = document.getElementById('postAudioMeta');
+    var fill      = document.getElementById('postAudioFill');
+    var cur       = document.getElementById('postAudioCur');
+    var dur       = document.getElementById('postAudioDur');
+
+    if (!postAudio) {
+      postAudio = new Audio(audioFile);
+      postAudio.addEventListener('loadedmetadata', function() {
+        dur.textContent = fmtPostTime(postAudio.duration);
+        meta.textContent = fmtPostTime(postAudio.duration) + ' · Daniel, en-GB';
+      });
+      postAudio.addEventListener('timeupdate', function() {
+        var pct = (postAudio.currentTime / postAudio.duration) * 100;
+        fill.style.width = pct + '%';
+        cur.textContent = fmtPostTime(postAudio.currentTime);
+      });
+      postAudio.addEventListener('ended', function() {
+        playIcon.style.display = '';
+        pauseIcon.style.display = 'none';
+        meta.textContent = 'Finished · tap to replay';
+        fill.style.width = '0%';
+        cur.textContent = '0:00';
+        postAudio.currentTime = 0;
+      });
+    }
+
+    if (!postAudio.paused) {
+      postAudio.pause();
+      playIcon.style.display = '';
+      pauseIcon.style.display = 'none';
+      meta.textContent = 'Paused';
+    } else {
+      postAudio.play();
+      playIcon.style.display = 'none';
+      pauseIcon.style.display = '';
+      meta.textContent = 'Playing…';
+    }
+  }
+
+  function seekPostAudio(e) {
+    if (!postAudio) return;
+    var track = document.getElementById('postAudioTrack');
+    var rect  = track.getBoundingClientRect();
+    var pct   = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
+    postAudio.currentTime = pct * postAudio.duration;
+  }
+</script>
+</body>
+</html>
