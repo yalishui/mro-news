@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MRO Briefing — May 12, 2026 | MRO Daily Intelligence</title>
+  <meta name="description" content="Aviation Business News" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/style.css" />
+  <style>
+    /* ── Audio Player ── */
+    .post-audio-player {
+      background: linear-gradient(135deg,#0f2847 0%,#1a4a8a 100%);
+      border-radius: 14px;
+      padding: 18px 20px;
+      margin: 0 0 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .post-audio-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .6px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.5);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .post-audio-controls {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .post-play-btn {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.15);
+      border: 1px solid rgba(255,255,255,.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      flex-shrink: 0;
+      transition: background .15s;
+    }
+    .post-play-btn:hover { background: rgba(255,255,255,.25); }
+    .post-play-btn svg { fill: white; width: 20px; height: 20px; }
+    .post-audio-info { flex: 1; }
+    .post-audio-title { font-size: 14px; font-weight: 600; color: #fff; margin-bottom: 3px; }
+    .post-audio-meta { font-size: 12px; color: rgba(255,255,255,.5); }
+    .post-audio-progress {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .post-audio-time { font-size: 11px; color: rgba(255,255,255,.5); min-width: 32px; font-variant-numeric: tabular-nums; }
+    .post-audio-track {
+      flex: 1;
+      height: 4px;
+      background: rgba(255,255,255,.2);
+      border-radius: 99px;
+      cursor: pointer;
+      position: relative;
+    }
+    .post-audio-fill {
+      height: 100%;
+      width: 0%;
+      background: #fff;
+      border-radius: 99px;
+      transition: width .2s linear;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <div class="logo">
+          <span class="logo-icon">✈</span>
+          <div>
+            <div class="logo-name">MRO Daily Intelligence</div>
+            <div class="logo-tagline">Aviation Maintenance Market Briefings</div>
+          </div>
+        </div>
+        <nav class="nav">
+          <a href="../index.html" class="nav-link">Latest</a>
+          <a href="../index.html#about" class="nav-link">About</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section class="post-hero">
+    <div class="container">
+      <a href="../index.html" class="post-back">← All Briefings</a>
+      <div class="post-issue-label">Issue #55 &nbsp;·&nbsp; May 12, 2026</div>
+      <h1 class="post-title">Daily MRO Market News Summary — May 12, 2026</h1>
+      <div class="post-meta-row">
+        <div class="post-meta-item"><strong>May 12, 2026</strong></div>
+        <div class="post-meta-item">·</div>
+        <div class="post-meta-item">Source: <strong>Aviation Week Network</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <main class="post-body">
+    <div class="container">
+      <div class="post-grid">
+        <article class="post-content">
+
+          <!-- ── Audio Player ── -->
+          <div class="post-audio-player" id="audioPlayer">
+            <div class="post-audio-label">
+              <svg viewBox="0 0 24 24" fill="white" width="12" height="12"><path d="M12 3a9 9 0 100 18A9 9 0 0012 3zm-2 13V8l7 4-7 4z"/></svg>
+              Audio Briefing &nbsp;·&nbsp; Daniel, en-GB
+            </div>
+            <div class="post-audio-controls">
+              <button class="post-play-btn" id="postPlayBtn" onclick="togglePostAudio()" aria-label="Play audio briefing">
+                <svg id="postPlayIcon" viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+                <svg id="postPauseIcon" viewBox="0 0 24 24" style="display:none"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+              </button>
+              <div class="post-audio-info">
+                <div class="post-audio-title">Daily Briefing — May 12, 2026</div>
+                <div class="post-audio-meta" id="postAudioMeta">Tap to listen · ~2 min</div>
+              </div>
+            </div>
+            <div class="post-audio-progress">
+              <span class="post-audio-time" id="postAudioCur">0:00</span>
+              <div class="post-audio-track" id="postAudioTrack" onclick="seekPostAudio(event)">
+                <div class="post-audio-fill" id="postAudioFill"></div>
+              </div>
+              <span class="post-audio-time" id="postAudioDur">--:--</span>
+            </div>
+          </div>
+
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px"><strong>Date:</strong> Tuesday, May 12, 2026</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px"><strong>Source:</strong> Aviation Week Network (MRO Rolling Daily Updates, May 12, 2026), Liebherr-Aerospace press releases, Sunvair Aerospace Group press releases, Aviation Business News, Aviation Business Middle East, Asian Aviation</p>
+
+<div class="post-section" id="s1">
+  <div class="post-section-header">
+    <div class="section-number">1</div>
+    <span class="section-icon">📈</span>
+    <h2>Market Updates and Growth Trends</h2>
+  </div>
+<h3>Asia-Pacific MRO Capacity Crunch — Infrastructure Lagging Fleet Growth</h3>
+<ul>
+<li><strong>Aviation Business News</strong> (May 13 coverage of May 12 developments): A dominant theme across Asia-Pacific MRO in mid-May 2026 is the structural mismatch between <strong>fleet growth and available maintenance infrastructure</strong>.</li>
+<li>Multiple parallel expansions (Dornier Technology Clark, MAB Engineering Subang, Sanad Al Ain) are all attempting to close the same gap simultaneously — underscoring the <strong>region-wide nature of the capacity constraint</strong>.</li>
+<li>Airlines across Asia face <strong>mounting pressure securing MRO slots</strong>; lessors increasingly locking in long-term maintenance partnerships to guarantee access.</li>
+<li><strong>Aviation Week Intelligence Network (AWIN) forecast:</strong> Engine maintenance spending in North America will rise <strong>44% by 2035 to $19.4B</strong> — similar dynamics playing out across Asia-Pacific.</li>
+</ul>
+<h3>SIA Engineering Posts Record Profit — Asia-Pacific Engine MRO Demand Strong</h3>
+<ul>
+<li><strong>SIA Engineering Company (SIAEC)</strong> posted a <strong>record profit</strong> in its latest results, driven by: strong global MRO demand; higher engine deliveries; increased aircraft movements at <strong>Singapore Changi Airport</strong>.</li>
+<li>Singapore continues to cement its position as <strong>Asia-Pacific's premier MRO hub</strong> — with a mature ecosystem of engine, component, and line maintenance providers.</li>
+<li><strong>Implication:</strong> Premium Asia-Pacific MRO hubs (Singapore, Hong Kong/Kai Tak redevelopment) remain attractive even as new entrants (Philippines, Malaysia, Vietnam) scale up.</li>
+</ul>
+
+<div class="post-section" id="s2">
+  <div class="post-section-header">
+    <div class="section-number">2</div>
+    <span class="section-icon">🌏</span>
+    <h2>Regional Expansion Activities</h2>
+  </div>
+<h3>Liebherr-Aerospace Adds EU REACH-Compliant Coating Capability in Shanghai — First in China</h3>
+<ul>
+<li><strong>Liebherr-Aerospace</strong> (Lindenberg, Germany) announced the addition of <strong>advanced protection coating capabilities</strong> at its Shanghai, China facility (May 12, 2026 — Aviation Week).</li>
+<li><strong>Technology:</strong> Industrialized <strong>trivalent chromium system</strong> and <strong>post-application conversion sealer coating process</strong> for heat transfer equipment components.</li>
+<li><strong>Compliance:</strong> Conforms to <strong>EU REACH (Registration, Evaluation, Authorization and Restriction of Chemicals)</strong> regulations — critical for European airline customers operating in China and Chinese carriers with European route networks.</li>
+<li><strong>Strategic significance:</strong> <strong>First company</strong> to offer EU REACH-compliant trivalent chromium coating service for heat transfer equipment to airline customers in mainland China.</li>
+<li><strong>MRO Greater China context:</strong> The announcement comes <strong>14 days ahead</strong> of the inaugural <strong>MRO Greater China event (May 26–28, Beijing)</strong> — positioning Liebherr as a key technology partner for China's expanding MRO ecosystem.</li>
+<li><strong>Capabilities added:</strong> Liebherr-Shanghai now offers full lifecycle support for flight control, landing gear, air conditioning, and engine components — with localized, regulation-compliant finishes.</li>
+</ul>
+<h3>Sunvair Aerospace Group Acquires Aircraft Systems — Deepening Component MRO in the Americas</h3>
+<ul>
+<li><strong>Sunvair Aerospace Group</strong> (President &amp; CEO: Kerry Jarandson) acquired <strong>Aircraft Systems</strong>, a <strong>Miami-based MRO provider</strong> (May 12, 2026 — Aviation Week).</li>
+<li><strong>Target specialization:</strong> Airframe and landing gear components; hydraulic, electrohydraulic, mechanical, electromechanical, electronic, and pneumatic accessories.</li>
+<li><strong>Target certifications:</strong> <strong>FAA and EASA Part 145</strong> repair station with unlimited <strong>Accessory Class I, II ratings</strong>.</li>
+<li><strong>CEO comment (Kerry Jarandson):</strong> <em>"The additional capabilities from Aircraft Systems expand the depth of Sunvair's offerings."</em></li>
+<li><strong>Strategic rationale:</strong> Sunvair is building a full-spectrum component MRO platform — the Aircraft Systems acquisition adds breadth across multiple accessory categories, strengthening Sunvair's ability to serve airlines and lessors needing comprehensive component support from a single provider.</li>
+</ul>
+
+<div class="post-section" id="s3">
+  <div class="post-section-header">
+    <div class="section-number">3</div>
+    <span class="section-icon">🔗</span>
+    <h2>Supply Chain Developments</h2>
+  </div>
+<h3>Component MRO Consolidation — Americas Trend Accelerating</h3>
+<ul>
+<li>Sunvair's acquisition of Aircraft Systems follows a pattern of <strong>component MRO consolidation</strong> observed across 2025–2026:</li>
+<li>AAR wind-down of Legacy Commercial Programs ($252.4M LTM sales, 3–4 year wind-down)</li>
+<li>StandardAero acquisition of Unified Turbines (PT6A/PW100 hot section)</li>
+<li>CCE Group acquisition of InTech Aerospace (Houston)</li>
+<li><strong>Component MRO dynamics:</strong> Airlines increasingly prefer <strong>single-source component support</strong> covering multiple ATA chapters — driving MROs toward broader capability portfolios.</li>
+<li>Aircraft Systems' <strong>Accessory Class I, II ratings</strong> (unlimited) are particularly valuable — they cover a wide range of aircraft accessories without specific model limitations.</li>
+</ul>
+<h3>Heat Transfer Equipment MRO — Specialized Niche with Regulatory Complexity</h3>
+<ul>
+<li>Liebherr-Aerospace's Shanghai coating capability highlights the <strong>specialized nature of heat transfer equipment MRO</strong> — components requiring corrosion protection under extreme thermal and pressure conditions.</li>
+<li>EU REACH compliance in China is a <strong>dual market enabler</strong>: allows European airlines to source MRO support locally in China while ensuring Chinese carriers' components meet European environmental standards for routes to Europe.</li>
+<li><strong>Emerging trend:</strong> Component OEMs (Liebherr, Collins, Safran) increasinglylocalizing specialized repair capabilities to capture aftermarket revenue in high-growth markets (China, Southeast Asia, Middle East).</li>
+</ul>
+
+<div class="post-section" id="s4">
+  <div class="post-section-header">
+    <div class="section-number">4</div>
+    <span class="section-icon">💡</span>
+    <h2>Technology and Investment News</h2>
+  </div>
+<h3>Liebherr-Aerospace — Localization as Technology Transfer Strategy</h3>
+<ul>
+<li>The Shanghai facility upgrade represents <strong>technology transfer</strong> from Liebherr's German operations to its Chinese facility — enabling China-based airlines and MROs to access European-standard repair processes locally.</li>
+<li><strong>Competitive dynamic:</strong> Chinese domestic MRO providers face increasing competition from global OEMs setting up localized capabilities — Liebherr's move may prompt similar localization from Collins Aerospace, Honeywell, and Safran.</li>
+</ul>
+<h3>Sunvair — Platform Building Through Acquisition</h3>
+<ul>
+<li>Sunvair Aerospace Group has been on an <strong>acquisition trajectory</strong> to build a comprehensive component MRO platform — the Aircraft Systems deal follows prior strategic acquisitions.</li>
+<li><strong>Kerry Jarandson's strategy:</strong> Depth of offering is the competitive differentiator — airlines and lessors want a trusted component partner covering multiple ATA ranges, rather than managing dozens of individual specialist vendors.</li>
+<li><strong>Miami as component MRO hub:</strong> The acquisition reinforces <strong>South Florida's role</strong> as a gateway for Americas-based MRO, with proximity to Latin American airline customers and transatlantic parts logistics.</li>
+</ul>
+
+<div class="post-section" id="s5">
+  <div class="post-section-header">
+    <div class="section-number">5</div>
+    <span class="section-icon">⚠️</span>
+    <h2>Major Challenges and Solutions</h2>
+  </div>
+<h3>Challenge 1: Regulatory Fragmentation — EU REACH as Barrier and Opportunity</h3>
+<ul>
+<li>EU REACH compliance creates a <strong>barrier for non-European MRO providers</strong> operating in China and Asia — and an <strong>opportunity for European OEMs</strong> that can establish compliant local capabilities.</li>
+<li><strong>Solution:</strong> Liebherr-Aerospace's approach — localize EU-standard processes to high-demand markets — sidesteps the regulatory barrier while creating a competitive moat.</li>
+</ul>
+<h3>Challenge 2: Component MRO Fragmentation — Airlines Demand One-Stop Solutions</h3>
+<ul>
+<li>Airlines operating mixed fleets (narrowbody + widebody; legacy + next-gen) face complexity managing multiple component MRO relationships.</li>
+<li><strong>Solution:</strong> Strategic acquisitions (Sunvair/Aircraft Systems) enable MROs to consolidate across ATA chapters — reducing vendor management burden for customers and increasing wallet share per airline account.</li>
+</ul>
+<h3>Challenge 3: Asia-Pacific MRO Slot Availability — Long-Term Infrastructure Investment Required</h3>
+<ul>
+<li>Short-term MRO slot shortages across Asia-Pacific cannot be resolved by individual airline contracts — require <strong>greenfield capacity investment</strong> (Dornier, MAB Engineering, Sanad).</li>
+<li><strong>Timeline mismatch:</strong> Most new facilities coming online 2026–2027; demand has been growing since 2023 — gap is already embedded in the system.</li>
+<li><strong>Solution:</strong> Long-term slot reservations; lessors locking in capacity agreements; airlines expanding internal MRO capabilities.</li>
+</ul>
+
+<div class="post-section" id="s6">
+  <div class="post-section-header">
+    <div class="section-number">📋</div>
+    <span class="section-icon">⚠️</span>
+    <h2>Key Statistics — May 12, 2026</h2>
+  </div>
+<div class="table-wrapper"><table class="post-table">
+<thead><tr><th>Metric</th><th>Value</th><th>Source</th></tr></thead><tbody>
+<tr><td>Liebherr-Aerospace Shanghai capability</td><td>EU REACH trivalent chromium coating (heat transfer)</td><td>Aviation Week / Liebherr</td></tr>
+<tr><td>Sunvair/Aircraft Systems acquisition</td><td>Strategic acquisition (FAA + EASA Part 145)</td><td>Aviation Week / Sunvair</td></tr>
+<tr><td>Aircraft Systems accessory ratings</td><td>Unlimited Accessory Class I, II</td><td>Aviation Week</td></tr>
+<tr><td>SIAEC record profit driver</td><td>Strong engine MRO demand + Changi traffic</td><td>Aviation Week (May 15 coverage)</td></tr>
+<tr><td>Asia-Pacific engine MRO as % global spend</td><td>~36%</td><td>Oliver Wyman / prior reports</td></tr>
+<tr><td>MRO Greater China countdown</td><td>14 days (May 26–28, Beijing)</td><td>Aviation Week</td></tr>
+<tr><td>MRO SouthEast Asia countdown</td><td>1 day (May 13–14, Kuala Lumpur)</td><td>MRO Business Today</td></tr>
+<tr><td>AWIN North American engine MRO 2035 forecast</td><td>$19.4B (+44%)</td><td>AWIN forecast</td></tr>
+</tbody></table></div>
+<p style="color:var(--gray-400);font-size:13px;font-style:italic;margin-bottom:8px">Sources: Aviation Week Network (MRO Rolling Daily Updates, May 12, 2026), Liebherr-Aerospace press release (May 12, 2026), Sunvair Aerospace Group press release (May 12, 2026), Aviation Business News / MRO Management (May 13 coverage of May 12 developments), Aviation Business Middle East (May 12, 2026), Asian Aviation (May 12–13, 2026 coverage), Aviation Week MRO Greater China event page (May 26–28, 2026, Beijing).</p>
+</div>
+          <nav class="post-nav">
+            <a href="may-11-2026.html" class="post-nav-btn">
+              <div class="post-nav-label">← Previous Issue</div>
+              <div class="post-nav-title">May 11 2026</div>
+            </a>
+            <a href="may-15-2026.html" class="post-nav-btn" style="text-align:right">
+              <div class="post-nav-label">Next Issue →</div>
+              <div class="post-nav-title">May 15 2026</div>
+            </a>
+          </nav>
+        </article>
+
+        <aside class="post-sidebar">
+          <div class="toc-widget">
+            <div class="toc-title">In This Issue</div>
+            <ul class="toc-list">
+              <li><a href="#s1"><span class="toc-num">1</span> Market Updates &amp; Growth</a></li>
+              <li><a href="#s2"><span class="toc-num">2</span> Regional Expansion</a></li>
+              <li><a href="#s3"><span class="toc-num">3</span> Supply Chain</a></li>
+              <li><a href="#s4"><span class="toc-num">4</span> Technology &amp; Investment</a></li>
+              <li><a href="#s5"><span class="toc-num">5</span> Challenges &amp; Solutions</a></li>
+            </ul>
+          </div>
+          <div class="sidebar-widget">
+            <h3 class="widget-title">About This Briefing</h3>
+            <p class="widget-text">Source:</p>
+            <div class="widget-badge">
+              <span class="auto-badge">⚡ Automated Daily at 7:00 AM</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand"><span class="logo-icon">✈</span><span class="footer-name">MRO Daily Intelligence</span></div>
+        <div class="footer-text">Automated briefings sourced from Aviation Week Network. Published daily at 7:00 AM.</div>
+      </div>
+    </div>
+  </footer>
+
+<script>
+  var postAudio = null;
+  var audioSrc  = 'posts/may12-2026-email.m4a';  /* relative from inside posts/ dir */
+
+  /* Fix path: this page is in posts/, so audio is same dir */
+  var audioFile = 'may12-2026-email.m4a';
+
+  function fmtPostTime(s) {
+    if (isNaN(s) || !isFinite(s)) return '--:--';
+    var m = Math.floor(s / 60);
+    return m + ':' + String(Math.floor(s % 60)).padStart(2, '0');
+  }
+
+  function togglePostAudio() {
+    var playIcon  = document.getElementById('postPlayIcon');
+    var pauseIcon = document.getElementById('postPauseIcon');
+    var meta      = document.getElementById('postAudioMeta');
+    var fill      = document.getElementById('postAudioFill');
+    var cur       = document.getElementById('postAudioCur');
+    var dur       = document.getElementById('postAudioDur');
+
+    if (!postAudio) {
+      postAudio = new Audio(audioFile);
+      postAudio.addEventListener('loadedmetadata', function() {
+        dur.textContent = fmtPostTime(postAudio.duration);
+        meta.textContent = fmtPostTime(postAudio.duration) + ' · Daniel, en-GB';
+      });
+      postAudio.addEventListener('timeupdate', function() {
+        var pct = (postAudio.currentTime / postAudio.duration) * 100;
+        fill.style.width = pct + '%';
+        cur.textContent = fmtPostTime(postAudio.currentTime);
+      });
+      postAudio.addEventListener('ended', function() {
+        playIcon.style.display = '';
+        pauseIcon.style.display = 'none';
+        meta.textContent = 'Finished · tap to replay';
+        fill.style.width = '0%';
+        cur.textContent = '0:00';
+        postAudio.currentTime = 0;
+      });
+    }
+
+    if (!postAudio.paused) {
+      postAudio.pause();
+      playIcon.style.display = '';
+      pauseIcon.style.display = 'none';
+      meta.textContent = 'Paused';
+    } else {
+      postAudio.play();
+      playIcon.style.display = 'none';
+      pauseIcon.style.display = '';
+      meta.textContent = 'Playing…';
+    }
+  }
+
+  function seekPostAudio(e) {
+    if (!postAudio) return;
+    var track = document.getElementById('postAudioTrack');
+    var rect  = track.getBoundingClientRect();
+    var pct   = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
+    postAudio.currentTime = pct * postAudio.duration;
+  }
+</script>
+</body>
+</html>
