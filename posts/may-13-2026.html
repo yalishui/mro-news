@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MRO Briefing — May 13, 2026 | MRO Daily Intelligence</title>
+  <meta name="description" content="MRO SouthEast Asia 2026" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/style.css" />
+  <style>
+    /* ── Audio Player ── */
+    .post-audio-player {
+      background: linear-gradient(135deg,#0f2847 0%,#1a4a8a 100%);
+      border-radius: 14px;
+      padding: 18px 20px;
+      margin: 0 0 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .post-audio-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .6px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.5);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .post-audio-controls {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .post-play-btn {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.15);
+      border: 1px solid rgba(255,255,255,.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      flex-shrink: 0;
+      transition: background .15s;
+    }
+    .post-play-btn:hover { background: rgba(255,255,255,.25); }
+    .post-play-btn svg { fill: white; width: 20px; height: 20px; }
+    .post-audio-info { flex: 1; }
+    .post-audio-title { font-size: 14px; font-weight: 600; color: #fff; margin-bottom: 3px; }
+    .post-audio-meta { font-size: 12px; color: rgba(255,255,255,.5); }
+    .post-audio-progress {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .post-audio-time { font-size: 11px; color: rgba(255,255,255,.5); min-width: 32px; font-variant-numeric: tabular-nums; }
+    .post-audio-track {
+      flex: 1;
+      height: 4px;
+      background: rgba(255,255,255,.2);
+      border-radius: 99px;
+      cursor: pointer;
+      position: relative;
+    }
+    .post-audio-fill {
+      height: 100%;
+      width: 0%;
+      background: #fff;
+      border-radius: 99px;
+      transition: width .2s linear;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <div class="logo">
+          <span class="logo-icon">✈</span>
+          <div>
+            <div class="logo-name">MRO Daily Intelligence</div>
+            <div class="logo-tagline">Aviation Maintenance Market Briefings</div>
+          </div>
+        </div>
+        <nav class="nav">
+          <a href="../index.html" class="nav-link">Latest</a>
+          <a href="../index.html#about" class="nav-link">About</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section class="post-hero">
+    <div class="container">
+      <a href="../index.html" class="post-back">← All Briefings</a>
+      <div class="post-issue-label">Issue #56 &nbsp;·&nbsp; May 13, 2026</div>
+      <h1 class="post-title">Daily MRO Market News Summary — May 13, 2026</h1>
+      <div class="post-meta-row">
+        <div class="post-meta-item"><strong>May 13, 2026</strong></div>
+        <div class="post-meta-item">·</div>
+        <div class="post-meta-item">Source: <strong>Aviation Week Network</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <main class="post-body">
+    <div class="container">
+      <div class="post-grid">
+        <article class="post-content">
+
+          <!-- ── Audio Player ── -->
+          <div class="post-audio-player" id="audioPlayer">
+            <div class="post-audio-label">
+              <svg viewBox="0 0 24 24" fill="white" width="12" height="12"><path d="M12 3a9 9 0 100 18A9 9 0 0012 3zm-2 13V8l7 4-7 4z"/></svg>
+              Audio Briefing &nbsp;·&nbsp; Daniel, en-GB
+            </div>
+            <div class="post-audio-controls">
+              <button class="post-play-btn" id="postPlayBtn" onclick="togglePostAudio()" aria-label="Play audio briefing">
+                <svg id="postPlayIcon" viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+                <svg id="postPauseIcon" viewBox="0 0 24 24" style="display:none"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+              </button>
+              <div class="post-audio-info">
+                <div class="post-audio-title">Daily Briefing — May 13, 2026</div>
+                <div class="post-audio-meta" id="postAudioMeta">Tap to listen · ~2 min</div>
+              </div>
+            </div>
+            <div class="post-audio-progress">
+              <span class="post-audio-time" id="postAudioCur">0:00</span>
+              <div class="post-audio-track" id="postAudioTrack" onclick="seekPostAudio(event)">
+                <div class="post-audio-fill" id="postAudioFill"></div>
+              </div>
+              <span class="post-audio-time" id="postAudioDur">--:--</span>
+            </div>
+          </div>
+
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px"><strong>Date:</strong> Wednesday, May 13, 2026</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px"><strong>Source:</strong> Aviation Week Network (MRO Rolling Daily Updates, May 13, 2026), Satair press releases, SIA Engineering (Philippines) announcements, Dornier Technology announcements, Aviation Business News, Aviation Business Middle East, MTU Aero Engines press releases, SR Technics press releases, Bombardier press releases, CAPA – Centre for Aviation, Asian Aviation, MRO Business Today</p>
+
+<div class="post-section" id="s1">
+  <div class="post-section-header">
+    <div class="section-number">1</div>
+    <span class="section-icon">📈</span>
+    <h2>Market Updates and Growth Trends</h2>
+  </div>
+<h3>MRO SouthEast Asia 2026 Kicks Off in Kuala Lumpur — Capacity, Workforce, and Digital MRO on Agenda</h3>
+<ul>
+<li><strong>MRO SouthEast Asia 2026</strong> opened <strong>May 13–14, 2026</strong> in <strong>Kuala Lumpur, Malaysia</strong> — the region's second major MRO industry gathering following MRO Americas 2026.</li>
+<li><strong>Co-located with:</strong> Routes Asia 2026 — bringing together airlines, airports, and MRO providers for two days of deal-making and strategic discussion.</li>
+<li><strong>Key agenda themes:</strong> Regional MRO capacity expansion; workforce pipeline development; digital transformation; and the growing role of lessors in shaping MRO demand.</li>
+<li><strong>Malaysia's MRO ambition:</strong> The Malaysian government has set an <strong>ambitious target for MRO industry growth</strong> to capture a larger share of the region's MRO business — directly aligned with MAB Engineering's Hangar 4 commissioning (May 7) and the Malaysian aviation cluster's push for self-sufficiency.</li>
+</ul>
+<h3>Satair Completes Unical and Ecube Acquisition — Airbus Material Services Arm Scales USM Business</h3>
+<ul>
+<li><strong>Satair</strong> (CEO: Richard Stoddart — who also heads Airbus Material Services) announced the <strong>completion of the acquisition of Unical Aviation and ecube</strong> (May 13, 2026 — Aviation Week).</li>
+<li><strong>Deal scope:</strong> Major operational sites across <strong>North America and Europe</strong> — significantly expanding Satair's industrial footprint.</li>
+<li><strong>Strategic purpose:</strong> Growth of <strong>used serviceable material (USM)</strong> business; leveraging the <strong>circular economy</strong> to benefit customers.</li>
+<li><strong>Richard Stoddart quote:</strong> <em>"This acquisition isn't just about getting bigger; it's about leveraging the circular economy to the benefit of our customers."</em></li>
+<li><strong>Airbus context:</strong> As Airbus Materials Services head, Stoddart is integrating Unical/ecube into Airbus's broader aftermarket ecosystem — reinforcing Airbus's strategy to control more of the aircraft lifecycle value chain from spares to end-of-life asset management.</li>
+</ul>
+
+<div class="post-section" id="s2">
+  <div class="post-section-header">
+    <div class="section-number">2</div>
+    <span class="section-icon">🌏</span>
+    <h2>Regional Expansion Activities</h2>
+  </div>
+<h3>Satair–Unical/ecube — Transatlantic USM Platform Created</h3>
+<ul>
+<li><strong>Unical Aviation</strong> (New York-based) + <strong>ecube</strong> (Europe-based) together create a <strong>transatlantic USM supply platform</strong> under Satair's ownership.</li>
+<li>Combined footprint gives Satair access to: <strong>North American aircraft teardown supply</strong> (Unical) + <strong>European narrowbody/widebody USM inventory</strong> (ecube).</li>
+<li><strong>USM market significance:</strong> Satair is now one of the largest independent USM suppliers globally — competing directly with Aero翿 (ST Engineering), GA Telesis, and OEM material services arms.</li>
+<li><strong>Circular economy narrative:</strong> Stoddart's emphasis on sustainability positions Satair's USM business as environmentally driven — appealing to airlines with ESG commitments.</li>
+</ul>
+<h3>Philippines MRO Cluster Strengthens — SIA Engineering Expands to Manila, Dornier Accelerates Clark</h3>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">#### SIA Engineering (Philippines) Expands HK Express Line Maintenance to Manila</p>
+<ul>
+<li><strong>SIA Engineering (Philippines)</strong> — a subsidiary of SIA Engineering Company — expanded <strong>line maintenance support for HK Express Airways to Manila</strong>, extending the existing partnership at Clark International Airport.</li>
+<li><strong>HK Express:</strong> Second largest airline in Hong Kong; part of the UAC (U-First) group alongside Cathay Pacific, HK Express, and Air Hong Kong.</li>
+<li><strong>Strategic context:</strong> SIA Engineering (Philippines) is emerging as a <strong>key line maintenance partner</strong> for LCCs and regional carriers across Southeast Asia — providing cost-competitive base maintenance and line station coverage from Clark.</li>
+</ul>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">#### Dornier Technology: Second Clark Hangar Operational; Third by Q3 2026</p>
+<ul>
+<li><strong>Dornier Technology</strong> (CEO: Nick Gitsis) brought its <strong>second hangar at Clark International Airport (Philippines) into operation</strong> — part of a multi-phase capacity expansion plan.</li>
+<li><strong>Hangar 1:</strong> 4,705 sqm — 1 narrowbody OR 2 turboprop aircraft.</li>
+<li><strong>Hangar 2 (new):</strong> 4,401 sqm — up to 4 turboprop aircraft simultaneously.</li>
+<li><strong>Hangar 3 (under construction):</strong> 4,705 sqm — 2 narrowbody aircraft simultaneously; targeted opening <strong>end of Q3 2026</strong>.</li>
+<li><strong>Hangar 4:</strong> 2,250 sqm — 2 turboprop aircraft access.</li>
+<li><strong>Total combined hangar area (Hangars 1–3):</strong> ~13,811 sqm — a <strong>194% increase</strong> from single-hangar operations.</li>
+<li><strong>New capability:</strong> <strong>Full aircraft painting capability</strong> added — narrowbody + ATR aircraft — enabling <strong>combined heavy maintenance + repaint from a single location</strong> (key differentiator for lessor repositioning workflows).</li>
+<li><strong>Target customers:</strong> Southeast Asian LCCs; Northeast Asian airlines (labor shortage impacted); aircraft lessors needing combined maintenance + repaint.</li>
+</ul>
+
+<div class="post-section" id="s3">
+  <div class="post-section-header">
+    <div class="section-number">3</div>
+    <span class="section-icon">🔗</span>
+    <h2>Supply Chain Developments</h2>
+  </div>
+<h3>MTU Maintenance Lease Services Invests in TRecs — AI Engine Lifecycle Management</h3>
+<ul>
+<li><strong>MTU Maintenance Lease Services (MLS)</strong> — engine leasing and asset management arm of <strong>MTU Aero Engines AG</strong> — announced a <strong>strategic minority investment in TRecs</strong> (trecs.aero), a startup developing an <strong>AI-driven engine lifecycle management platform</strong> (May 13, 2026 — Aviation Week / ePlaneAI / Morningstar Business Wire).</li>
+<li><strong>Platform capability:</strong> AI-powered tracking and management of engine transitions through the MRO lifecycle — shop visits, redeliveries, asset tracking, and lifecycle cost prediction.</li>
+<li><strong>MTU MLS role:</strong> Major engine lessor and asset manager with a large portfolio of leased engines; TRecs platform will enhance digital capabilities for <strong>engine transition management</strong>.</li>
+<li><strong>Investment rationale:</strong> Digitalisation of engine asset management reduces administrative burden, improves shop visit planning, and enables predictive lifecycle optimization — directly addressing the <strong>fragmented data environment</strong> that Oliver Wyman identified as the #1 AI adoption barrier.</li>
+</ul>
+<h3>SR Technics Confirms LEAP-1A Third-Party MRO Launch in 2027 — First Asia-Pacific Contract Signed <a class="src-link" href="https://www.srtechnics.com/news/" target="_blank" rel="noopener">SR Technics</a></h3>
+<ul>
+<li><strong>SR Technics</strong> confirmed plans (May 13, 2026 — Aviation Week / Centre for Aviation) to commence <strong>full LEAP-1A overhaul and testing services to third parties in 2027</strong>, after industrialization and capability buildup in Zurich.</li>
+<li><strong>First third-party contract signed:</strong> General terms agreement with a <strong>major Asia-Pacific operator</strong> — signaling early market demand for independent LEAP MRO providers.</li>
+<li><strong>Capabilities in place:</strong> <strong>Two test cells in Zurich</strong> — key enabler for LEAP-1A full-service third-party operations.</li>
+<li><strong>Safran relationship:</strong> SR Technics joined the LEAP aftermarket network in 2022 under an offload agreement with <strong>Safran Aircraft Engines</strong>; the partnership was <strong>extended by eight years in 2025</strong> — providing the commercial framework for SR Technics to now serve the open market.</li>
+<li><strong>Bo Lump (SR Technics Global SVP Business Development):</strong> <em>"The demand out there is such that we'll have to do more than we're doing today."</em></li>
+<li><strong>GTF expansion:</strong> SR Technics is simultaneously expanding <strong>GTF (Pratt &amp; Whitney PW1100G)</strong> capabilities — positioning as a full-service narrowbody engine MRO in Europe.</li>
+<li><strong>PW4000 commitment:</strong> Despite some MROs exiting PW4000 support, SR Technics has committed long-term — opened a new facility in Bad Zurzach (January 2026) for PW4000 94" and 100" variants.</li>
+</ul>
+
+<div class="post-section" id="s4">
+  <div class="post-section-header">
+    <div class="section-number">4</div>
+    <span class="section-icon">💡</span>
+    <h2>Technology and Investment News</h2>
+  </div>
+<h3>Bombardier Launches FastTrack A&amp;P Certification Program — Workforce Pipeline in North America</h3>
+<ul>
+<li><strong>Bombardier</strong> launched its <strong>FastTrack program</strong> — an <strong>accelerated FAA Airframe and Powerplant (A&amp;P) certification pathway</strong> — at its Hartford, Connecticut facility (May 13, 2026 — Aviation Week / Bombardier press release / AIN Online).</li>
+<li><strong>Program design:</strong> Accelerated route to FAA A&amp;P certification with real-world work experience integrated into the training.</li>
+<li><strong>Purpose:</strong> Address the <strong>acute shortage of certified aircraft maintenance technicians</strong> in North America — identified by Oliver Wyman as the most pressing operational challenge for MROs and airlines.</li>
+<li><strong>Strategic alignment:</strong> FastTrack graduates can feed into Bombardier's expanding business aviation MRO network — which includes service centres in Connecticut, Dallas, London Biggin Hill, and Singapore.</li>
+<li><strong>North American MRO demand context:</strong> Business aviation MRO is experiencing sustained demand growth; Bombardier's MRO network is a key revenue pillar alongside aircraft manufacturing.</li>
+</ul>
+<h3>AI in MRO — From Experimentation to Operational Deployment</h3>
+<ul>
+<li>MTU MLS–TRecs investment signals a <strong>practical deployment</strong> of AI in engine asset management — moving beyond the experimental stage that Oliver Wyman characterized as affecting 58% of operators.</li>
+<li><strong>TRecs differentiator:</strong> Not just data collection — predictive analytics for engine shop visit timing, redelivery condition forecasting, and lifecycle cost optimization.</li>
+<li><strong>MRO SouthEast Asia agenda</strong> includes a dedicated digital MRO track — with presentations on AI-powered predictive maintenance, digital twin applications, and data standardization.</li>
+</ul>
+
+<div class="post-section" id="s5">
+  <div class="post-section-header">
+    <div class="section-number">5</div>
+    <span class="section-icon">⚠️</span>
+    <h2>Major Challenges and Solutions</h2>
+  </div>
+<h3>Challenge 1: Chronic AMT Shortage in North America</h3>
+<ul>
+<li><strong>Oliver Wyman 2026 Survey:</strong> Two-thirds of MRO operators find it moderately to very challenging to find aircraft technicians; >50% expect attrition to worsen next year.</li>
+<li><strong>Labor rate inflation:</strong> 5.5–6.0% (vs. ~3.0% pre-pandemic) — persistent across engines and components.</li>
+<li><strong>Solutions deployed:</strong> Bombardier FastTrack (accelerated A&amp;P certification); GA Telesis + Duncan Aviation engine donations to technical schools; developmental training programs; apprenticeships.</li>
+</ul>
+<h3>Challenge 2: LEAP Aftermarket Maturation — First Major MRO Cycle Approaching</h3>
+<ul>
+<li>The <strong>CFM LEAP-1A</strong> entered service in 2016; the first major aftermarket overhaul cycle is now approaching (engines reaching 5–6 year / first shop visit window).</li>
+<li>Independent MRO providers (SR Technics, MTU, Lufthansa Technik) are racing to industrialize LEAP capabilities before the wave hits.</li>
+<li><strong>Challenge:</strong> LEAP shop costs are <strong>exceeding operator expectations by 21%+</strong> for two-thirds of operators — creating both a revenue opportunity and a customer relations challenge for MROs.</li>
+<li><strong>SR Technics strategy:</strong> Industrialize now; sign third-party contracts early; leverage Safran relationship for parts access and technical support.</li>
+</ul>
+<h3>Challenge 3: USM Market Consolidation — Global Platforms Emerging</h3>
+<ul>
+<li>Satair's Unical/ecube acquisition creates a <strong>global USM platform</strong> with transatlantic reach — raising the competitive bar for regional USM suppliers.</li>
+<li><strong>Implication:</strong> Smaller USM brokers and teardown operators face increasing pressure to scale or specialize — consolidation in the sector is expected to accelerate.</li>
+</ul>
+
+<div class="post-section" id="s6">
+  <div class="post-section-header">
+    <div class="section-number">📋</div>
+    <span class="section-icon">⚠️</span>
+    <h2>Key Statistics — May 13, 2026</h2>
+  </div>
+<div class="table-wrapper"><table class="post-table">
+<thead><tr><th>Metric</th><th>Value</th><th>Source</th></tr></thead><tbody>
+<tr><td>Satair/Unical/ecube acquisition</td><td>Completed</td><td>Aviation Week / Satair</td></tr>
+<tr><td>Satair USM footprint expansion</td><td>North America + Europe</td><td>Satair press release</td></tr>
+<tr><td>Dornier Technology Clark Hangar 2</td><td>4,401 sqm; up to 4 turboprops</td><td>Aviation Business News</td></tr>
+<tr><td>Dornier Technology Hangar 3 opening</td><td>End of Q3 2026</td><td>Aviation Business News</td></tr>
+<tr><td>Combined hangar area (Hangars 1–3)</td><td>~13,811 sqm (+194%)</td><td>Aviation Business News</td></tr>
+<tr><td>Dornier new painting capability</td><td>Narrowbody + ATR</td><td>Aviation Business News</td></tr>
+<tr><td>MTU MLS investment in TRecs</td><td>Strategic minority investment</td><td>Aviation Week / MTU</td></tr>
+<tr><td>SR Technics first third-party LEAP-1A contract</td><td>Asia-Pacific operator (general terms)</td><td>Centre for Aviation / SR Technics</td></tr>
+<tr><td>SR Technics Safran partnership extension</td><td>8 years (2025)</td><td>SR Technics press release</td></tr>
+<tr><td>SR Technics LEAP-1A full third-party launch</td><td>2027</td><td>Aviation Week / CAPA</td></tr>
+<tr><td>SR Technics Zurich test cells</td><td>2 cells</td><td>Centre for Aviation</td></tr>
+<tr><td>SR Technics PW4000 facility</td><td>Bad Zurzach, opened January 2026</td><td>Aviation Week / SR Technics</td></tr>
+<tr><td>MRO SouthEast Asia dates</td><td>May 13–14, 2026, Kuala Lumpur</td><td>MRO Business Today</td></tr>
+<tr><td>MRO Greater China dates</td><td>May 26–28, 2026, Beijing</td><td>Aviation Week</td></tr>
+<tr><td>AMT shortage "very challenging"</td><td>~67% of operators</td><td>Oliver Wyman 2026</td></tr>
+<tr><td>Labor rate inflation</td><td>5.5–6.0%</td><td>Oliver Wyman 2026</td></tr>
+<tr><td>Next-gen engine cost overrun (>21%)</td><td>~67% of operators</td><td>Oliver Wyman 2026</td></tr>
+</tbody></table></div>
+<p style="color:var(--gray-400);font-size:13px;font-style:italic;margin-bottom:8px">Sources: Aviation Week Network (MRO Rolling Daily Updates, May 13, 2026; LEAP 2027 article), Satair press release (May 13, 2026), MTU Aero Engines / MTU MLS press release via Morningstar Business Wire and ePlaneAI (May 13, 2026), SR Technics press release / Centre for Aviation (May 13, 2026), Bombardier press release / AIN Online / Aviation Week (May 13, 2026), Aviation Business News / MRO Management (May 13, 2026), Aviation Business Middle East (May 12–13, 2026), Asian Aviation (May 13, 2026), Dornier Technology / Aviation Business News (May 12–13, 2026), MRO Business Today upcoming events calendar (May 2026), Oliver Wyman 2026 MRO Supply Chain Survey (April 2026).</p>
+</div>
+          <nav class="post-nav">
+            <a href="may-12-2026.html" class="post-nav-btn">
+              <div class="post-nav-label">← Previous Issue</div>
+              <div class="post-nav-title">May 12 2026</div>
+            </a>
+            <a href="may-15-2026.html" class="post-nav-btn" style="text-align:right">
+              <div class="post-nav-label">Next Issue →</div>
+              <div class="post-nav-title">May 15 2026</div>
+            </a>
+          </nav>
+        </article>
+
+        <aside class="post-sidebar">
+          <div class="toc-widget">
+            <div class="toc-title">In This Issue</div>
+            <ul class="toc-list">
+              <li><a href="#s1"><span class="toc-num">1</span> Market Updates &amp; Growth</a></li>
+              <li><a href="#s2"><span class="toc-num">2</span> Regional Expansion</a></li>
+              <li><a href="#s3"><span class="toc-num">3</span> Supply Chain</a></li>
+              <li><a href="#s4"><span class="toc-num">4</span> Technology &amp; Investment</a></li>
+              <li><a href="#s5"><span class="toc-num">5</span> Challenges &amp; Solutions</a></li>
+            </ul>
+          </div>
+          <div class="sidebar-widget">
+            <h3 class="widget-title">About This Briefing</h3>
+            <p class="widget-text">Source:</p>
+            <div class="widget-badge">
+              <span class="auto-badge">⚡ Automated Daily at 7:00 AM</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand"><span class="logo-icon">✈</span><span class="footer-name">MRO Daily Intelligence</span></div>
+        <div class="footer-text">Automated briefings sourced from Aviation Week Network. Published daily at 7:00 AM.</div>
+      </div>
+    </div>
+  </footer>
+
+<script>
+  var postAudio = null;
+  var audioSrc  = 'posts/may13-2026-email.m4a';  /* relative from inside posts/ dir */
+
+  /* Fix path: this page is in posts/, so audio is same dir */
+  var audioFile = 'may13-2026-email.m4a';
+
+  function fmtPostTime(s) {
+    if (isNaN(s) || !isFinite(s)) return '--:--';
+    var m = Math.floor(s / 60);
+    return m + ':' + String(Math.floor(s % 60)).padStart(2, '0');
+  }
+
+  function togglePostAudio() {
+    var playIcon  = document.getElementById('postPlayIcon');
+    var pauseIcon = document.getElementById('postPauseIcon');
+    var meta      = document.getElementById('postAudioMeta');
+    var fill      = document.getElementById('postAudioFill');
+    var cur       = document.getElementById('postAudioCur');
+    var dur       = document.getElementById('postAudioDur');
+
+    if (!postAudio) {
+      postAudio = new Audio(audioFile);
+      postAudio.addEventListener('loadedmetadata', function() {
+        dur.textContent = fmtPostTime(postAudio.duration);
+        meta.textContent = fmtPostTime(postAudio.duration) + ' · Daniel, en-GB';
+      });
+      postAudio.addEventListener('timeupdate', function() {
+        var pct = (postAudio.currentTime / postAudio.duration) * 100;
+        fill.style.width = pct + '%';
+        cur.textContent = fmtPostTime(postAudio.currentTime);
+      });
+      postAudio.addEventListener('ended', function() {
+        playIcon.style.display = '';
+        pauseIcon.style.display = 'none';
+        meta.textContent = 'Finished · tap to replay';
+        fill.style.width = '0%';
+        cur.textContent = '0:00';
+        postAudio.currentTime = 0;
+      });
+    }
+
+    if (!postAudio.paused) {
+      postAudio.pause();
+      playIcon.style.display = '';
+      pauseIcon.style.display = 'none';
+      meta.textContent = 'Paused';
+    } else {
+      postAudio.play();
+      playIcon.style.display = 'none';
+      pauseIcon.style.display = '';
+      meta.textContent = 'Playing…';
+    }
+  }
+
+  function seekPostAudio(e) {
+    if (!postAudio) return;
+    var track = document.getElementById('postAudioTrack');
+    var rect  = track.getBoundingClientRect();
+    var pct   = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
+    postAudio.currentTime = pct * postAudio.duration;
+  }
+</script>
+</body>
+</html>
