@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MRO Briefing — June 12, 2026 | MRO Daily Intelligence</title>
+  <meta name="description" content="BeauTech Power Systems" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/style.css" />
+  <style>
+    /* ── Audio Player ── */
+    .post-audio-player {
+      background: linear-gradient(135deg,#0f2847 0%,#1a4a8a 100%);
+      border-radius: 14px;
+      padding: 18px 20px;
+      margin: 0 0 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .post-audio-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .6px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.5);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .post-audio-controls {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .post-play-btn {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.15);
+      border: 1px solid rgba(255,255,255,.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      flex-shrink: 0;
+      transition: background .15s;
+    }
+    .post-play-btn:hover { background: rgba(255,255,255,.25); }
+    .post-play-btn svg { fill: white; width: 20px; height: 20px; }
+    .post-audio-info { flex: 1; }
+    .post-audio-title { font-size: 14px; font-weight: 600; color: #fff; margin-bottom: 3px; }
+    .post-audio-meta { font-size: 12px; color: rgba(255,255,255,.5); }
+    .post-audio-progress {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .post-audio-time { font-size: 11px; color: rgba(255,255,255,.5); min-width: 32px; font-variant-numeric: tabular-nums; }
+    .post-audio-track {
+      flex: 1;
+      height: 4px;
+      background: rgba(255,255,255,.2);
+      border-radius: 99px;
+      cursor: pointer;
+      position: relative;
+    }
+    .post-audio-fill {
+      height: 100%;
+      width: 0%;
+      background: #fff;
+      border-radius: 99px;
+      transition: width .2s linear;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <div class="logo">
+          <span class="logo-icon">✈</span>
+          <div>
+            <div class="logo-name">MRO Daily Intelligence</div>
+            <div class="logo-tagline">Aviation Maintenance Market Briefings</div>
+          </div>
+        </div>
+        <nav class="nav">
+          <a href="../index.html" class="nav-link">Latest</a>
+          <a href="../index.html#about" class="nav-link">About</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section class="post-hero">
+    <div class="container">
+      <a href="../index.html" class="post-back">← All Briefings</a>
+      <div class="post-issue-label">Issue #73 &nbsp;·&nbsp; June 12, 2026</div>
+      <h1 class="post-title">Daily MRO Market News Summary — June 12, 2026</h1>
+      <div class="post-meta-row">
+        <div class="post-meta-item"><strong>June 12, 2026</strong></div>
+        <div class="post-meta-item">·</div>
+        <div class="post-meta-item">Source: <strong>Aviation Week Network</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <main class="post-body">
+    <div class="container">
+      <div class="post-grid">
+        <article class="post-content">
+
+          <!-- ── Audio Player ── -->
+          <div class="post-audio-player" id="audioPlayer">
+            <div class="post-audio-label">
+              <svg viewBox="0 0 24 24" fill="white" width="12" height="12"><path d="M12 3a9 9 0 100 18A9 9 0 0012 3zm-2 13V8l7 4-7 4z"/></svg>
+              Audio Briefing &nbsp;·&nbsp; Daniel, en-GB
+            </div>
+            <div class="post-audio-controls">
+              <button class="post-play-btn" id="postPlayBtn" onclick="togglePostAudio()" aria-label="Play audio briefing">
+                <svg id="postPlayIcon" viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+                <svg id="postPauseIcon" viewBox="0 0 24 24" style="display:none"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+              </button>
+              <div class="post-audio-info">
+                <div class="post-audio-title">Daily Briefing — June 12, 2026</div>
+                <div class="post-audio-meta" id="postAudioMeta">Tap to listen · ~2 min</div>
+              </div>
+            </div>
+            <div class="post-audio-progress">
+              <span class="post-audio-time" id="postAudioCur">0:00</span>
+              <div class="post-audio-track" id="postAudioTrack" onclick="seekPostAudio(event)">
+                <div class="post-audio-fill" id="postAudioFill"></div>
+              </div>
+              <span class="post-audio-time" id="postAudioDur">--:--</span>
+            </div>
+          </div>
+
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px"><strong>Date:</strong> Friday, June 12, 2026</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px"><strong>Source:</strong> Aviation Week Network (MRO Rolling Daily Updates, June 11–12, 2026), Aviation Week MRO (Alex Derber, Keith Mwanalushi, Lee Ann Shay, Lindsay Bjerregaard, June 10–11, 2026), AeroTime, PR Newswire, Company Press Releases</p>
+
+<div class="post-section" id="s1">
+  <div class="post-section-header">
+    <div class="section-number">1</div>
+    <span class="section-icon">📈</span>
+    <h2>Market Updates and Growth Trends</h2>
+  </div>
+<h3>Engine Trading Market Warned of Sharp Correction Risk</h3>
+<ul>
+<li><strong>BeauTech Power Systems</strong> VP of Acquisitions and Trading <strong>Lee Whitehurst</strong> (joined May 11, 2026) warns the engine trading market could face a <strong>sharp correction</strong> if supply conditions suddenly shift</li>
+<li><strong>Trigger risk:</strong> Airline bankruptcies (cited <strong>Spirit Airlines</strong> as example) or fleet groundings could release large volumes of assets into the market, outpacing demand</li>
+<li><strong>Current state:</strong> Constrained MRO capacity has kept spare engine demand elevated; shop visit turnaround times now <strong>9+ months</strong> (historically ~3 months)</li>
+<li><strong>Key vulnerability:</strong> Airlines increasingly reliant on lessors for spare engines; market strength could reverse quickly</li>
+<li><strong>Whitehurst's caution:</strong> "The greatest risk is overcommitting capital based on recent trends"</li>
+<li><strong>BeauTech strategy:</strong> Focus on short-term leasing, disciplined acquisition pricing, maintaining serviceable inventory sourced directly from OEMs (GE Aerospace, CFM International, Pratt &amp; Whitney)</li>
+</ul>
+<h3>Asia-Pacific MRO Investment Acceleration</h3>
+<ul>
+<li><strong>Collins Aerospace</strong> explicitly calls Asia-Pacific "a key growth market for the industry" as multiple major players expand simultaneously in Malaysia</li>
+<li><strong>GE Aerospace</strong> doubling CFM Leap engine MRO shop visit capacity at Subang within 3 years; building new Leap-specific engine test facility</li>
+<li><strong>SIA Engineering</strong> Base Maintenance Malaysia (BMM) operating two hangars for A350, B777, B787 — up to 6 concurrent aircraft checks</li>
+<li><strong>FL Technics</strong> expanding in Bangkok to support APAC aircraft transitions, citing fleet expansion and increasing leasing activity</li>
+<li><strong>Malaysia's aerospace target:</strong> $13 billion by 2030 under 15-year national plan (2026 = final phase); 2025 non-airline aerospace revenue estimated at ~$7 billion (NAICO Malaysia)</li>
+</ul>
+<h3>Ascent Aviation Prepares for First IAI 777-300ER P2F Conversion</h3>
+<ul>
+<li><strong>Ascent Aviation Services</strong> (Marana, AZ) managing nearly <strong>100 Spirit Airlines aircraft</strong> while preparing for <strong>September 1, 2026</strong> launch of first <strong>IAI 777-300ER Passenger-to-Freighter (P2F)</strong> conversion</li>
+<li><strong>First conversion aircraft arrives:</strong> Mid-August 2026; first conversion duration: <strong>6–7 months</strong></li>
+<li><strong>Contract:</strong> 15-year IAI agreement for <strong>60–70+ conversions</strong> at 6 aircraft/year target run rate</li>
+<li><strong>Investment:</strong> ~$100M total (two new 90,000 ft² hangars opened Dec 2025, 200% capacity increase); ~$10M in tooling so far</li>
+<li><strong>Workforce:</strong> 300–400 new jobs; Spirit Airlines collapse provided qualified workers supplementing hiring pipeline</li>
+<li><strong>Certification expansion:</strong> ISO 9001 obtained; AS9100 applied for; Chinese CAAC certification in progress</li>
+</ul>
+
+<div class="post-section" id="s2">
+  <div class="post-section-header">
+    <div class="section-number">2</div>
+    <span class="section-icon">🌏</span>
+    <h2>Regional Expansion Activities</h2>
+  </div>
+<h3>Collins Aerospace Quadruples Malaysia MRO Footprint ($63M)</h3>
+<ul>
+<li><strong>Collins Aerospace</strong> (RTX) investing <strong>$63 million</strong> to expand MRO facility at <strong>Subang Aerotech Park, Kuala Lumpur, Malaysia</strong></li>
+<li><strong>Current footprint:</strong> 46,000 ft² → <strong>Expanded footprint: 164,000 ft²</strong> (~3.5x growth)</li>
+<li><strong>New capabilities:</strong> Air cycle machines, heat exchangers, valves, new-generation starters</li>
+<li><strong>Technology:</strong> Autonomous mobile robots, real-time location systems for productivity and faster turnaround</li>
+<li><strong>Workforce:</strong> Plans to <strong>double employment</strong> of skilled talent in the region</li>
+<li><strong>Timeline:</strong> New facility expected by <strong>end of 2026</strong></li>
+<li><strong>Quote (Irene Makris, President of Power &amp; Controls, Collins Aerospace):</strong> "The Asia-Pacific region is a key growth market for the industry, and this investment ensures that we grow alongside our customers."</li>
+</ul>
+<h3>AJW Group Gains South African AMO Approval</h3>
+<ul>
+<li><strong>AJW Group</strong> obtained <strong>Approved Maintenance Organization (AMO)</strong> approval from the <strong>South African Civil Aviation Authority (SACAA)</strong> on June 12, 2026</li>
+<li><strong>Coverage:</strong> B and X category ratings — airframe, engine, avionics, and electrical components</li>
+<li><strong>Significance:</strong> Expands AJW's maintenance service footprint into Africa; positions company for growing African aviation MRO demand</li>
+</ul>
+<h3>Air India Selects Lufthansa Technik for A350 APU MRO <a class="src-link" href="https://www.lufthansa-technik.com/en/press-releases" target="_blank" rel="noopener">LHT</a></h3>
+<ul>
+<li><strong>Air India</strong> signed multiyear contract with <strong>Lufthansa Technik (LHT)</strong> for APU MRO on its <strong>Airbus A350</strong> fleet</li>
+<li><strong>Scope:</strong> 40 <strong>Honeywell HGT1700 APUs</strong> to be serviced at LHT's specialized workshops in <strong>Hamburg, Germany</strong></li>
+<li><strong>Significance:</strong> Deepens LHT-Air India relationship; A350 fleet growth in India driving APU MRO demand</li>
+</ul>
+<h3>AvAir Opens Dallas Warehouse</h3>
+<ul>
+<li><strong>AvAir</strong> opened new <strong>45,000 ft²</strong> warehouse near <strong>Dallas-Fort Worth International Airport</strong> (June 8, 2026)</li>
+<li><strong>COO:</strong> Tyler Botthof</li>
+<li><strong>Significance:</strong> Complements existing facilities in Dublin (Ireland) and Chandler (Arizona); central U.S. location streamlines distribution and inventory availability</li>
+<li><strong>Correction Note:</strong> Aviation Week rolling update initially cited 450,000 ft²; confirmed at 45,000 ft² per PR Newswire and company press release</li>
+</ul>
+
+<div class="post-section" id="s3">
+  <div class="post-section-header">
+    <div class="section-number">3</div>
+    <span class="section-icon">🔗</span>
+    <h2>Supply Chain Developments</h2>
+  </div>
+<h3>Baltic MROs Tighten Supply Chains Under Geopolitical Pressure</h3>
+<ul>
+<li><strong>FL Technics</strong> (CEO Žilvinas Lapinskas) and <strong>Heston Materials</strong> (CEO Kęstutis Volungevičius) adapting supply chain strategies to regional geopolitical uncertainty</li>
+<li><strong>Key structural shifts observed:</strong></li>
+<li>Airlines abandoning forward planning — <strong>3–6 month purchasing now rare</strong>; buying only in AOG situations</li>
+<li>Heston Materials deploying <strong>conservative supplier strategy</strong> — trusted European/U.S. partners only; strict vetting criteria</li>
+<li>Heston expanding warehousing in <strong>Ireland and Lithuania</strong> with further expansion under review; continuous teardown and recertification activity</li>
+<li>Rising fuel prices feeding into <strong>higher transportation costs</strong> across Baltic supply routes</li>
+<li><strong>FL Technics digitalization:</strong> <strong>Sensus ERP platform</strong> enabling real-time inventory visibility, predictive material forecasting, stock pooling across locations, and AOG acceleration</li>
+<li><strong>Industry implication:</strong> Shift from just-in-time to ready-to-deploy inventory models; digitalization becoming competitive necessity in volatile environments</li>
+</ul>
+<h3>FDH Aero — Bain Capital Majority Stake for Next Growth Phase</h3>
+<ul>
+<li><strong>Bain Capital Private Equity</strong> taking majority stake in <strong>FDH Aero</strong> (announced June 8, 2026; closing H2 2026)</li>
+<li><strong>Audax Private Equity</strong> (majority since 2017) to remain a <strong>significant investor</strong></li>
+<li><strong>CEO Ian Walsh</strong> interview highlights:</li>
+<li>Deal driven by need for greater capital/resources after 9 years of sustained growth under Audax</li>
+<li>Bain brings <strong>4 decades</strong> of aviation/aerospace/defense investment experience</li>
+<li>Investment priorities: inventory stock, operational technology, systems/process improvements (quoting speed, inventory visibility, on-time delivery)</li>
+<li>Growth strategy: organic expansion + strategic M&amp;A</li>
+<li>2026 performance: "tracking ahead of plan"</li>
+<li><strong>Market context:</strong> Parts availability pressure from manufacturers ramping commercial + defense production; ongoing critical raw material shortages; Middle East conflict highlighting need for resilient supply chains</li>
+</ul>
+<h3>Air Transport Components Acquires Aero Controls (Seattle)</h3>
+<ul>
+<li><strong>Air Transport Components Group</strong> acquired <strong>Seattle-based Aero Controls</strong> (June 8, 2026)</li>
+<li><strong>Aero Controls services:</strong> Aircraft component repair/overhaul, parts sales, consignment management, engineered solutions</li>
+<li><strong>Integration:</strong> Aero Controls team and leadership remain in place; operates as business unit of Air Transport Components Group</li>
+<li><strong>Significance:</strong> Strengthens in-house engineering and proprietary repair capabilities; Pacific Northwest MRO consolidation</li>
+</ul>
+
+<div class="post-section" id="s4">
+  <div class="post-section-header">
+    <div class="section-number">4</div>
+    <span class="section-icon">💡</span>
+    <h2>Technology and Investment News</h2>
+  </div>
+<h3>Collins Aerospace: Industry 4.0 at Subang</h3>
+<ul>
+<li>New Malaysia facility to feature <strong>autonomous mobile robots</strong> and <strong>real-time location systems</strong></li>
+<li>Goal: Drive better productivity and faster turnaround times for component MRO</li>
+<li>Part of broader industry trend toward digitization/automation to address skilled labor constraints</li>
+</ul>
+<h3>FL Technics Sensus ERP Platform Deployment</h3>
+<ul>
+<li><strong>Sensus platform</strong> capabilities: Real-time inventory tracking, predictive material forecasting, stock pooling, inter-location transfers, AOG decision acceleration, compliance oversight</li>
+<li>Improves working capital efficiency while strengthening parts availability</li>
+<li>Represents Baltic region MRO digitalization leadership</li>
+</ul>
+<h3>TAT Technologies — $45M in New Long-Term MRO Contracts <a class="src-link" href="https://www.tat-technologies.com/news/" target="_blank" rel="noopener">TAT Technologies</a></h3>
+<ul>
+<li><strong>TAT Technologies</strong> (Nasdaq: TATT) awarded <strong>$45 million</strong> in new long-term MRO agreements (June 3, 2026)</li>
+<li><strong>Contract terms:</strong> 5–10 years with international commercial and cargo airline customers</li>
+<li><strong>Coverage:</strong> APU platforms under OEM authorization + heat exchangers</li>
+<li><strong>Significance:</strong> Validates TAT's competitive position in APU and thermal component MRO segments</li>
+</ul>
+<h3>StandardAero CEO Succession <a class="src-link" href="https://www.standardaero.com/news/" target="_blank" rel="noopener">StandardAero</a></h3>
+<ul>
+<li><strong>Russell Ford</strong> retiring end of 2026; <strong>Paul McElhinney</strong> (current lead independent director) becomes CEO <strong>October 1, 2026</strong></li>
+<li>McElhinney: 30+ years aerospace/industrial leadership; StandardAero board member since 2019; prior roles at AE Industrial Partners, GE Power Services, GE Aerospace</li>
+<li><strong>Significance:</strong> Leadership transition at one of world's largest independent MRO providers ($1.63B Q1 2026 revenue, +13.32% YoY)</li>
+</ul>
+<h3>Ascent Aviation: P2F Conversion Technology &amp; Training</h3>
+<ul>
+<li>Staggered dual-line strategy for IAI 777-300ER P2F conversions — second line in 2027</li>
+<li><strong>Structures Apprentice Program</strong> launched January 2024; ~5 cohorts completed (10–12 students each)</li>
+<li>Expanding landing gear capabilities (A320/737) and pursuing A330 full service center status</li>
+<li>Vertical integration trend: bringing outsourced work in-house to reduce turnaround times</li>
+</ul>
+
+<div class="post-section" id="s5">
+  <div class="post-section-header">
+    <div class="section-number">5</div>
+    <span class="section-icon">⚠️</span>
+    <h2>Major Challenges and Solutions</h2>
+  </div>
+<h3>Challenge 1: Engine Trading Market Vulnerability</h3>
+<ul>
+<li><strong>Risk:</strong> Market strength built on constrained MRO capacity, not structural demand growth; airline bankruptcies or fleet groundings could trigger oversupply</li>
+<li><strong>Solution (BeauTech):</strong> Disciplined capital allocation, short-term leasing focus, OEM-direct sourcing, maintaining serviceable inventory buffer</li>
+<li><strong>Broader implication:</strong> Engine lessors and traders need contingency planning for supply-side shocks</li>
+</ul>
+<h3>Challenge 2: Baltic Geopolitical Supply Chain Pressure</h3>
+<ul>
+<li><strong>Risk:</strong> Airlines shifting to reactive/AOG-only purchasing; rising fuel costs increasing logistics expenses; cross-border transaction friction</li>
+<li><strong>Solution (FL Technics/Heston):</strong> Digitalization (Sensus ERP), trusted Western supplier corridors, expanded warehousing near customers, continuous USM teardown activity</li>
+<li><strong>Industry impact:</strong> Structural shift from lean-inventory models to buffer-stock strategies in geopolitically exposed regions</li>
+</ul>
+<h3>Challenge 3: GTF Engine Issues Continue to Distort Fleet Planning</h3>
+<ul>
+<li><strong>Risk:</strong> Dozens of Spirit Airlines aircraft may remain in storage for <strong>multiple years</strong> awaiting GTF engine returns</li>
+<li><strong>Impact:</strong> Extended storage creates long-term MRO demand but distorts normal fleet planning; airlines delaying retirements due to OEM delivery delays face compounding fuel-burn penalties</li>
+<li><strong>Ascent Aviation insight:</strong> ~100 Spirit aircraft received; "a few more stragglers" still arriving; some with LOIs from buyers; at least one being disassembled</li>
+</ul>
+<h3>Challenge 4: MRO Workforce — Rare Upside from Airline Failures</h3>
+<ul>
+<li>Spirit Airlines collapse provided qualified aviation workers to Ascent Aviation, supplementing 300–400 new hires</li>
+<li>Ascent's Structures Apprentice Program (since Jan 2024) building long-term pipeline</li>
+<li>Collins Aerospace doubling skilled employment in Malaysia</li>
+<li>Iberia actively recruiting EASA Part 66 B1/B2 certifying staff for A320ceo/neo, A321XLR, A330, A350 line maintenance (Flight Plan 2030)</li>
+<li>Women in Aviation International (WAI) opened 2027 scholarship program: <strong>$200,000+</strong> across <strong>50+ scholarships</strong> (deadline Sept 1, 2026)</li>
+</ul>
+<h3>Challenge 5: Parts Availability &amp; Raw Material Shortages</h3>
+<ul>
+<li>FDH Aero CEO Walsh: "Ongoing shortages of critical raw materials" expected to persist</li>
+<li>Manufacturers ramping commercial + defense production straining component supply</li>
+<li><strong>Solution approach:</strong> FDH investing in quoting speed, forecast accuracy, on-time delivery improvements with Bain capital</li>
+<li>GA Telesis–CASC cooperation deal (June 2) targeting aviation materials support and overseas asset management</li>
+</ul>
+
+<div class="post-section" id="s6">
+  <div class="post-section-header">
+    <div class="section-number">📋</div>
+    <span class="section-icon">⚠️</span>
+    <h2>Today's Headlines Recap (June 12, 2026)</h2>
+  </div>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">1. <strong>Collins Aerospace $63M Malaysia Expansion:</strong> Quadrupling MRO footprint to 164,000 ft² at Subang Aerotech Park; autonomous robots + real-time location systems; doubling employment; target end of 2026</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">2. <strong>AJW Group South Africa AMO Approval:</strong> SACAA B and X category ratings for airframe, engine, avionics, electrical components</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">3. <strong>Air India Selects LHT for A350 APU MRO:</strong> 40 Honeywell HGT1700 APUs; multiyear contract; Hamburg workshops</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">4. <strong>BeauTech Engine Market Correction Warning:</strong> Lee Whitehurst cautions against overcommitting capital; Spirit Airlines bankruptcy cited as supply-shock risk; 9+ month shop visit TATs</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">5. <strong>FDH Aero — Bain Capital Majority Stake:</strong> Closing H2 2026; Audax remains significant investor; investment in inventory, technology, M&A; 2026 tracking ahead of plan</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">6. <strong>Baltic MRO Supply Chain Tightening:</strong> FL Technics Sensus ERP platform; Heston Materials conservative sourcing + warehouse expansion; airlines abandoning forward planning</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">7. <strong>Ascent Aviation IAI 777-300ER P2F Launch:</strong> Sept 1, 2026 start; ~$100M investment; 15-year, 60–70+ aircraft contract; ~100 Spirit aircraft in work</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">8. <strong>AvAir Dallas Warehouse:</strong> 45,000 ft² near DFW; complements Dublin + Chandler facilities</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">9. <strong>Air Transport Components Acquires Aero Controls:</strong> Seattle-based; component repair/overhaul; team and leadership retained</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">10. <strong>TAT Technologies $45M MRO Contracts:</strong> 5–10 year terms; APU platforms + heat exchangers; commercial and cargo customers</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">11. <strong>StandardAero CEO Succession:</strong> Paul McElhinney succeeds Russell Ford October 1, 2026</p>
+
+<div class="post-section" id="s7">
+  <div class="post-section-header">
+    <div class="section-number">📋</div>
+    <span class="section-icon">⚠️</span>
+    <h2>Key Statistics — June 12, 2026</h2>
+  </div>
+<div class="table-wrapper"><table class="post-table">
+<thead><tr><th>Metric</th><th>Value</th><th>Source</th></tr></thead><tbody>
+<tr><td>Collins Aerospace Malaysia investment</td><td>$63 million</td><td>Aviation Week / Collins Aerospace</td></tr>
+<tr><td>Collins Malaysia footprint expansion</td><td>46,000 → 164,000 ft² (~3.5x)</td><td>Aviation Week</td></tr>
+<tr><td>Collins Malaysia target completion</td><td>End of 2026</td><td>Aviation Week</td></tr>
+<tr><td>Air India A350 APU MRO contract</td><td>40 HGT1700 APUs</td><td>Aviation Week</td></tr>
+<tr><td>AvAir Dallas warehouse</td><td>45,000 ft²</td><td>PR Newswire / AvAir</td></tr>
+<tr><td>FDH Aero Bain Capital deal close</td><td>H2 2026</td><td>Aviation Week (Fast 5)</td></tr>
+<tr><td>Ascent Aviation P2F investment</td><td>~$100M (total); ~$10M tooling</td><td>Aviation Week</td></tr>
+<tr><td>Ascent IAI P2F contract</td><td>15 years; 60–70+ aircraft</td><td>Aviation Week</td></tr>
+<tr><td>Ascent first P2F conversion start</td><td>September 1, 2026</td><td>Aviation Week</td></tr>
+<tr><td>Ascent new hangar capacity</td><td>2 × 90,000 ft² (200% increase)</td><td>Aviation Week</td></tr>
+<tr><td>Ascent workforce expansion</td><td>300–400 new jobs</td><td>Aviation Week</td></tr>
+<tr><td>Spirit Airlines aircraft at Ascent</td><td>~100</td><td>Aviation Week</td></tr>
+<tr><td>TAT Technologies new MRO contracts</td><td>$45 million (5–10 year terms)</td><td>TAT Technologies / PR Newswire</td></tr>
+<tr><td>Engine shop visit TATs (current)</td><td>9+ months (vs. ~3 months historical)</td><td>Aviation Week / BeauTech</td></tr>
+<tr><td>WAI 2027 scholarships</td><td>$200,000+ / 50+ awards</td><td>Aviation Week</td></tr>
+<tr><td>Malaysia aerospace 2030 target</td><td>$13 billion</td><td>NAICO Malaysia</td></tr>
+<tr><td>Malaysia 2025 non-airline aerospace revenue</td><td>~$7 billion (est.)</td><td>NAICO Malaysia</td></tr>
+</tbody></table></div>
+<p style="color:var(--gray-400);font-size:13px;font-style:italic;margin-bottom:8px">Sources: Aviation Week Network (MRO Rolling Daily Updates, June 11–12, 2026; Alex Derber, "Collins Responds to Surging Asian MRO Demand," June 11, 2026; Keith Mwanalushi, "Baltic MROs Tighten Supply Chains Amid Geopolitical Pressure," June 11, 2026; Lee Ann Shay, "Fast 5: FDH Aero CEO on Selecting Bain for Next Phase," June 11, 2026; Lindsay Bjerregaard, "Ascent Aviation Juggles Spirit Surge Ahead of IAI P2F Program Launch," June 10, 2026; Keith Mwanalushi, "Engine Trading Market Warned of Possible Sharp Correction," June 10, 2026), AeroTime, PR Newswire, AvAir Press Release (June 8, 2026), TAT Technologies Press Release (June 3, 2026), NAICO Malaysia, Collins Aerospace / RTX.</p>
+</div>
+          <nav class="post-nav">
+            <a href="may-30-2026.html" class="post-nav-btn">
+              <div class="post-nav-label">← Previous Issue</div>
+              <div class="post-nav-title">May 30 2026</div>
+            </a>
+            <a href="../index.html" class="post-nav-btn" style="text-align:right">
+              <div class="post-nav-label">All Briefings</div>
+              <div class="post-nav-title">View Archive →</div>
+            </a>
+          </nav>
+        </article>
+
+        <aside class="post-sidebar">
+          <div class="toc-widget">
+            <div class="toc-title">In This Issue</div>
+            <ul class="toc-list">
+              <li><a href="#s1"><span class="toc-num">1</span> Market Updates &amp; Growth</a></li>
+              <li><a href="#s2"><span class="toc-num">2</span> Regional Expansion</a></li>
+              <li><a href="#s3"><span class="toc-num">3</span> Supply Chain</a></li>
+              <li><a href="#s4"><span class="toc-num">4</span> Technology &amp; Investment</a></li>
+              <li><a href="#s5"><span class="toc-num">5</span> Challenges &amp; Solutions</a></li>
+            </ul>
+          </div>
+          <div class="sidebar-widget">
+            <h3 class="widget-title">About This Briefing</h3>
+            <p class="widget-text">Source:</p>
+            <div class="widget-badge">
+              <span class="auto-badge">⚡ Automated Daily at 7:00 AM</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand"><span class="logo-icon">✈</span><span class="footer-name">MRO Daily Intelligence</span></div>
+        <div class="footer-text">Automated briefings sourced from Aviation Week Network. Published daily at 7:00 AM.</div>
+      </div>
+    </div>
+  </footer>
+
+<script>
+  var postAudio = null;
+  var audioSrc  = 'posts/june12-2026-email.m4a';  /* relative from inside posts/ dir */
+
+  /* Fix path: this page is in posts/, so audio is same dir */
+  var audioFile = 'june12-2026-email.m4a';
+
+  function fmtPostTime(s) {
+    if (isNaN(s) || !isFinite(s)) return '--:--';
+    var m = Math.floor(s / 60);
+    return m + ':' + String(Math.floor(s % 60)).padStart(2, '0');
+  }
+
+  function togglePostAudio() {
+    var playIcon  = document.getElementById('postPlayIcon');
+    var pauseIcon = document.getElementById('postPauseIcon');
+    var meta      = document.getElementById('postAudioMeta');
+    var fill      = document.getElementById('postAudioFill');
+    var cur       = document.getElementById('postAudioCur');
+    var dur       = document.getElementById('postAudioDur');
+
+    if (!postAudio) {
+      postAudio = new Audio(audioFile);
+      postAudio.addEventListener('loadedmetadata', function() {
+        dur.textContent = fmtPostTime(postAudio.duration);
+        meta.textContent = fmtPostTime(postAudio.duration) + ' · Daniel, en-GB';
+      });
+      postAudio.addEventListener('timeupdate', function() {
+        var pct = (postAudio.currentTime / postAudio.duration) * 100;
+        fill.style.width = pct + '%';
+        cur.textContent = fmtPostTime(postAudio.currentTime);
+      });
+      postAudio.addEventListener('ended', function() {
+        playIcon.style.display = '';
+        pauseIcon.style.display = 'none';
+        meta.textContent = 'Finished · tap to replay';
+        fill.style.width = '0%';
+        cur.textContent = '0:00';
+        postAudio.currentTime = 0;
+      });
+    }
+
+    if (!postAudio.paused) {
+      postAudio.pause();
+      playIcon.style.display = '';
+      pauseIcon.style.display = 'none';
+      meta.textContent = 'Paused';
+    } else {
+      postAudio.play();
+      playIcon.style.display = 'none';
+      pauseIcon.style.display = '';
+      meta.textContent = 'Playing…';
+    }
+  }
+
+  function seekPostAudio(e) {
+    if (!postAudio) return;
+    var track = document.getElementById('postAudioTrack');
+    var rect  = track.getBoundingClientRect();
+    var pct   = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
+    postAudio.currentTime = pct * postAudio.duration;
+  }
+</script>
+</body>
+</html>
