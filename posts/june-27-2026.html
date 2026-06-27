@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MRO Briefing — June 27, 2026 | MRO Daily Intelligence</title>
+  <meta name="description" content="IATA" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/style.css" />
+  <style>
+    /* ── Audio Player ── */
+    .post-audio-player {
+      background: linear-gradient(135deg,#0f2847 0%,#1a4a8a 100%);
+      border-radius: 14px;
+      padding: 18px 20px;
+      margin: 0 0 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .post-audio-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .6px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.5);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .post-audio-controls {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .post-play-btn {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.15);
+      border: 1px solid rgba(255,255,255,.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      flex-shrink: 0;
+      transition: background .15s;
+    }
+    .post-play-btn:hover { background: rgba(255,255,255,.25); }
+    .post-play-btn svg { fill: white; width: 20px; height: 20px; }
+    .post-audio-info { flex: 1; }
+    .post-audio-title { font-size: 14px; font-weight: 600; color: #fff; margin-bottom: 3px; }
+    .post-audio-meta { font-size: 12px; color: rgba(255,255,255,.5); }
+    .post-audio-progress {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .post-audio-time { font-size: 11px; color: rgba(255,255,255,.5); min-width: 32px; font-variant-numeric: tabular-nums; }
+    .post-audio-track {
+      flex: 1;
+      height: 4px;
+      background: rgba(255,255,255,.2);
+      border-radius: 99px;
+      cursor: pointer;
+      position: relative;
+    }
+    .post-audio-fill {
+      height: 100%;
+      width: 0%;
+      background: #fff;
+      border-radius: 99px;
+      transition: width .2s linear;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <div class="logo">
+          <span class="logo-icon">✈</span>
+          <div>
+            <div class="logo-name">MRO Daily Intelligence</div>
+            <div class="logo-tagline">Aviation Maintenance Market Briefings</div>
+          </div>
+        </div>
+        <nav class="nav">
+          <a href="../index.html" class="nav-link">Latest</a>
+          <a href="../index.html#about" class="nav-link">About</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section class="post-hero">
+    <div class="container">
+      <a href="../index.html" class="post-back">← All Briefings</a>
+      <div class="post-issue-label">Issue #74 &nbsp;·&nbsp; June 27, 2026</div>
+      <h1 class="post-title">Daily MRO Market News Summary — June 27, 2026</h1>
+      <div class="post-meta-row">
+        <div class="post-meta-item"><strong>June 27, 2026</strong></div>
+        <div class="post-meta-item">·</div>
+        <div class="post-meta-item">Source: <strong>Aviation Week Network</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <main class="post-body">
+    <div class="container">
+      <div class="post-grid">
+        <article class="post-content">
+
+          <!-- ── Audio Player ── -->
+          <div class="post-audio-player" id="audioPlayer">
+            <div class="post-audio-label">
+              <svg viewBox="0 0 24 24" fill="white" width="12" height="12"><path d="M12 3a9 9 0 100 18A9 9 0 0012 3zm-2 13V8l7 4-7 4z"/></svg>
+              Audio Briefing &nbsp;·&nbsp; Daniel, en-GB
+            </div>
+            <div class="post-audio-controls">
+              <button class="post-play-btn" id="postPlayBtn" onclick="togglePostAudio()" aria-label="Play audio briefing">
+                <svg id="postPlayIcon" viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+                <svg id="postPauseIcon" viewBox="0 0 24 24" style="display:none"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+              </button>
+              <div class="post-audio-info">
+                <div class="post-audio-title">Daily Briefing — June 27, 2026</div>
+                <div class="post-audio-meta" id="postAudioMeta">Tap to listen · ~2 min</div>
+              </div>
+            </div>
+            <div class="post-audio-progress">
+              <span class="post-audio-time" id="postAudioCur">0:00</span>
+              <div class="post-audio-track" id="postAudioTrack" onclick="seekPostAudio(event)">
+                <div class="post-audio-fill" id="postAudioFill"></div>
+              </div>
+              <span class="post-audio-time" id="postAudioDur">--:--</span>
+            </div>
+          </div>
+
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px"><strong>Date:</strong> Saturday, June 27, 2026</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px"><strong>Source:</strong> Aviation Week Network (MRO Rolling Daily Updates June 22–27, 2026), Aviation Week MRO (Lindsay Bjerregaard, Alex Derber, Graham Warwick, Guy Norris, June 24–25, 2026), IATA Press Release, FL Technics Press Release, Neptune Aviation / GlobeNewswire, Centre for Aviation, MRO Business Today, IFF Magazine</p>
+
+<div class="post-section" id="s1">
+  <div class="post-section-header">
+    <div class="section-number">1</div>
+    <span class="section-icon">📈</span>
+    <h2>Market Updates and Growth Trends</h2>
+  </div>
+<h3>IATA / Emerton Engine MRO Bottleneck Study — Major Report Released <a class="src-link" href="https://www.iata.org/en/pressroom/press-releases/" target="_blank" rel="noopener">IATA</a></h3>
+<ul>
+<li><strong>IATA</strong> in collaboration with <strong>Emerton</strong> released the report <strong>"Single Aisle Aircraft Engines MRO: Strategic Levers to Address Supply Chain Challenges"</strong> on <strong>June 24, 2026</strong> (Madrid; Press Release 34)</li>
+<li><strong>Scope:</strong> Bottlenecks in MRO of latest-generation single-aisle engines — <strong>CFM LEAP</strong> and <strong>Pratt &amp; Whitney Geared Turbofan (GTF)</strong></li>
+<li><strong>Root causes identified:</strong> Engine durability issues, spare parts shortages, limited spare engine availability, constrained aftermarket access</li>
+<li><strong>Current state (March 2025 peak):</strong> <strong>648 aircraft</strong> grounded — <strong>28% of the GTF fleet</strong> — awaiting engine shop visits, spare engines, or parts</li>
+<li><strong>Single-aisle engine deliveries — 2024 actuals:</strong> <strong>2,000 engines</strong> total (GTF: 800; LEAP: 1,200)</li>
+<li><strong>2030–2040 stable delivery forecast:</strong> <strong>~3,700 engines/year</strong> (GTF: 1,200; LEAP: 2,500)</li>
+<li><strong>Maintenance demand projections:</strong></li>
+<li><strong>LEAP shop visits:</strong> ~600–800 (2025) → <strong>>5,000 by 2040</strong></li>
+<li><strong>GTF shop visits:</strong> ~1,000 (2025) → <strong>>2,000 by 2040</strong></li>
+<li><strong>Airline adaptations:</strong> Retaining older aircraft, extending leases, leasing additional aircraft, adjusting capacity</li>
+<li><strong>Quote (Willie Walsh, IATA Director General):</strong> "Engine MRO bottlenecks are disrupting airline operations. Without significant changes, this will only get worse as the fleet of latest-generation single-aisle aircraft grows."</li>
+</ul>
+<h3>USM / Asset Recovery Market Continues to Strengthen</h3>
+<ul>
+<li><strong>AMTRA Aero Component Solutions</strong> (Tulsa, OK) acquired <strong>Airbus A330-200 airframe (MSN 529)</strong> from <strong>Cargo Aircraft Management</strong> (June 22, 2026)</li>
+<li>Airframe slated for disassembly; harvested <strong>used serviceable material (USM)</strong> to be marketed through AMTRA's global sales network</li>
+<li><strong>Werner Aero</strong> acquired <strong>Airbus A321ceo (MSN 544)</strong> from <strong>FTAI Aviation</strong> (June 25, 2026)</li>
+<li>Aircraft to undergo disassembly and asset recovery at <strong>Tarmac Aerosave in Tarbes, France</strong></li>
+<li><strong>Market signal:</strong> A330 platform (both classic and neo) prominent across recent USM activity, reflecting sustained demand for A330 spare parts and growing teardown pipeline</li>
+</ul>
+<h3>Vallair Expands A330neo Base Maintenance Capability</h3>
+<ul>
+<li><strong>Vallair</strong> obtained regulatory approval to perform base maintenance on <strong>Airbus A330neo</strong> aircraft at <strong>Châteauroux, France</strong> (June 25, 2026)</li>
+<li><strong>Approved variants:</strong> <strong>A330-800</strong> and <strong>A330-900</strong></li>
+<li><strong>Scope of approval:</strong> Scheduled heavy maintenance checks, structural inspections, modifications, related technical services</li>
+<li><strong>Vallair position:</strong> Expansion addresses growing A330neo MRO demand; widens competitive base maintenance options in Western Europe</li>
+</ul>
+
+<div class="post-section" id="s2">
+  <div class="post-section-header">
+    <div class="section-number">2</div>
+    <span class="section-icon">🌏</span>
+    <h2>Regional Expansion Activities</h2>
+  </div>
+<h3>Ontic Adds 100,000 ft² Florida Manufacturing Facility</h3>
+<ul>
+<li><strong>Ontic</strong> signed a <strong>long-term lease</strong> for a new <strong>100,000 ft²</strong> manufacturing facility in <strong>Weston, Florida</strong> (announced week of June 22, 2026)</li>
+<li><strong>Site details:</strong> Less than <strong>20 miles</strong> from Ontic's new MRO facility in <strong>Miramar, Florida</strong> (opened last year)</li>
+<li><strong>Purpose:</strong> Additional space for <strong>original equipment production</strong> supporting expanding <strong>licensed product lines</strong>; responds to increasing demand for manufacturing space as the company continues to acquire new licenses</li>
+<li><strong>Footprint signal:</strong> Weston facility is <strong>Ontic's 10th worldwide</strong></li>
+<li><strong>Strategic context:</strong> South Florida aerospace cluster consolidation; military + civil aviation licensing model</li>
+</ul>
+<h3>Commercial Jet Hosts Neptune Aviation A319 Airtanker Conversion</h3>
+<ul>
+<li><strong>Neptune Aviation Services</strong> (Missoula, MT) first <strong>Airbus A319</strong> delivered to <strong>Commercial Jet's 400,000 ft²</strong> maintenance facility in <strong>Dothan, Alabama</strong> (June 24, 2026)</li>
+<li><strong>Scope:</strong> Conversion into a prototype <strong>aerial firefighting air tanker</strong> — launch of Neptune's <strong>Next-Generation Airtanker Program</strong></li>
+<li><strong>Operational target:</strong> First A319 airtanker expected operational for the <strong>2028 wildfire season</strong></li>
+<li><strong>Market relevance:</strong> A319 airframe offers larger retardant/fire-retardant capacity vs. legacy C-130 / RJ-85 platforms; rising demand for modern, higher-cycle aerial firefighting assets</li>
+</ul>
+<h3>UK / EU Digital MRO Capability Expansion (FL Technics Group)</h3>
+<ul>
+<li><strong>FL Technics</strong> integrating <strong>Sensus Aero</strong> to expand digital MRO software capabilities; combined group now developing and externalizing the <strong>Sensus MRO platform</strong></li>
+<li><strong>Czech integration:</strong> Platform may deploy at <strong>Job Air Technic</strong> (acquired by parent <strong>Avia Solutions Group</strong> earlier in 2026) — <strong>8 maintenance bays across two hangars</strong> near <strong>Ostrava, Czechia</strong></li>
+<li><strong>FL Technics global footprint:</strong> Hangars in <strong>Lithuania, the UK, and Indonesia</strong>; new <strong>five-bay facility in the Dominican Republic</strong> opened late 2025</li>
+</ul>
+
+<div class="post-section" id="s3">
+  <div class="post-section-header">
+    <div class="section-number">3</div>
+    <span class="section-icon">🔗</span>
+    <h2>Supply Chain Developments</h2>
+  </div>
+<h3>IATA's 4-Stage Engine Aftermarket Liberalization Plan <a class="src-link" href="https://www.iata.org/en/pressroom/press-releases/" target="_blank" rel="noopener">IATA</a></h3>
+<ul>
+<li><strong>IATA + Emerton</strong> report outlines a structured industry reform path:</li>
+</ul>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">1. <strong>Increase engine parts availability</strong> — accelerate repair solution approvals, expand licensed production of critical components, expand access to USM from engine teardowns</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">2. <strong>Ensure fair access to the MRO market</strong> — remove barriers limiting independent MRO participation, support fair access to parts/repair info/tools; builds on the <strong>IATA-CFM agreement (signed 2018, renewed January 2026)</strong></p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">3. <strong>Secure long-term access to spare parts</strong> — embed long-term access and predictable spare parts pricing in aircraft/engine acquisition decisions; protections assignable to chosen MROs (including independents)</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">4. <strong>Adopt industry-wide best practices</strong> — OEMs (engine, airframe, component) should adopt transparent aftermarket principles, support customer choice and regulator-approved alternative parts/repairs</p>
+<ul>
+<li><strong>Walsh:</strong> "Resolving today's disruption is the immediate priority. But long-term resilience will depend on a more transparent, competitive, and collaborative aftermarket."</li>
+</ul>
+<h3>FEAM Aero — Global Integration &amp; Digital Standardization</h3>
+<ul>
+<li><strong>FEAM Aero</strong> (HQ now Miami, FL since summer 2025) integrating international acquisitions under the <strong>"FEAM EMEA"</strong> brand</li>
+<li><strong>Acquired assets:</strong> <strong>BOS Aerospace</strong> (UK) and <strong>Northern Aerotech</strong> (Copenhagen) — combined footprint ~<strong>40 locations</strong> across both subsidiaries</li>
+<li><strong>New U.S. customers:</strong></li>
+<li><strong>GlobalX Airlines</strong> (Global Crossing Airlines Group) — line maintenance customer since <strong>December 2025</strong>; transition from insourced to outsourced maintenance in Miami</li>
+<li><strong>Atlas Air</strong> — growing presence in Miami; integrating within one FEAM hangar; building out <strong>"pods for cohabitating airline staff"</strong></li>
+<li><strong>Leadership change:</strong> <strong>Wayne Sisson</strong> retired as COO in <strong>January 2026</strong>; <strong>Dan Allawat</strong> (Chief Strategy Officer) returned to COO role</li>
+<li><strong>Quote (Allawat):</strong> "Back to the basics: customer focus, execution and discipline."</li>
+</ul>
+<h3>A330 Family — Sustained Spare Parts Demand</h3>
+<ul>
+<li><strong>Three of four recent rolling-update entries (June 25–26)</strong> involve the A330 platform — base maintenance approval (Vallair), teardown (AMTRA)</li>
+<li>Combined with prior weeks' activity: A330 is the highest-activity widebody for both aftermarket parts supply and emerging MRO capability expansion</li>
+</ul>
+
+<div class="post-section" id="s4">
+  <div class="post-section-header">
+    <div class="section-number">4</div>
+    <span class="section-icon">💡</span>
+    <h2>Technology and Investment News</h2>
+  </div>
+<h3>FL Technics — Sensus Aero Acquisition (Digital MRO Platform Commercialization)</h3>
+<ul>
+<li><strong>FL Technics</strong> (Lithuanian MRO provider) acquired <strong>Sensus Aero</strong> (MRO software developer); integration completed <strong>June 25, 2026</strong></li>
+<li><strong>Sensus MRO platform</strong> features:</li>
+<li><strong>Automated work pack generation and task sequencing</strong></li>
+<li><strong>Turnaround time forecasting</strong> for slot and capacity planning</li>
+<li><strong>Intelligent inventory management</strong> with proactive parts provisioning</li>
+<li><strong>Real-time resource load balancing</strong> to prevent bottlenecks</li>
+<li><strong>Strategic shift:</strong> FL Technics transitioning from MRO service provider to <strong>MRO technology solutions provider</strong> — plans to commercialize Sensus MRO to external aviation organizations</li>
+<li><strong>Quote (Žilvinas Lapinskas, CEO of FL Technics):</strong> "Sensus Aero combines deep aviation expertise with technology capabilities developed specifically for the needs of the MRO industry. Integrating the platform into FL Technics Group allows us to further develop its capabilities while creating additional value for customers both within and outside our organisation."</li>
+<li><strong>Quote (Paulius Cegis, CEO of Sensus Aero):</strong> "Joining FL Technics Group allows us to build on that experience and bring proven, industry-focused technology solutions to a wider market."</li>
+</ul>
+<h3>FEAM Aero — AI-Driven Operations Strategy</h3>
+<ul>
+<li><strong>Chief Information Officer Joseph Hernandez</strong> leading digital transformation with explicit "off-the-shelf and embedded AI" preference to minimize investment risk</li>
+<li><strong>AI / digital initiatives:</strong></li>
+<li><strong>Cybersecurity training platform</strong> — personalizes training by generating phishing test emails based on employees' normal message patterns</li>
+<li><strong>Digitized customer worksheets</strong> — replacing manual/analog processes across dozens of customers and locations</li>
+<li><strong>Customer portal (in development)</strong> — AI-automated work package ingestion, planning/scheduling optimization, real-time maintenance visibility</li>
+<li><strong>Strategic vision:</strong> Standardize core systems, centralize data capture, push innovation to edge stations</li>
+<li><strong>Quote (Hernandez):</strong> "We're trying to standardize the core systems and then centralize the data collection and capturing, and then we're going to push the innovation out to the edge where all of our individual stations and end users are located."</li>
+</ul>
+<h3>Delta Air Lines Fleetwide VCT 737 Finlets Retrofit</h3>
+<ul>
+<li><strong>Delta Air Lines</strong> began <strong>fleetwide installation of VCT's drag-reducing 737 finlets</strong> (June 24, 2026)</li>
+<li><strong>Validated benefit:</strong> <strong>1.2% fuel burn reduction</strong></li>
+<li><strong>Strategic relevance:</strong> Sustained cost pressure + sustainability targets make aerodynamic retrofits a near-term MRO-driven value lever; finlet installation is a light-mod MRO activity</li>
+<li><strong>Article author:</strong> <strong>Graham Warwick</strong> (Aviation Week)</li>
+</ul>
+
+<div class="post-section" id="s5">
+  <div class="post-section-header">
+    <div class="section-number">5</div>
+    <span class="section-icon">⚠️</span>
+    <h2>Major Challenges and Solutions</h2>
+  </div>
+<h3>Challenge 1: Engine MRO Capacity Bottleneck Threatens Single-Aisle Growth</h3>
+<ul>
+<li><strong>Risk:</strong> 648 aircraft (28% of GTF fleet) grounded at March 2025 peak; LEAP shop visits to grow ~7x by 2040; airlines forced to retain older aircraft, extend leases, add capacity through expensive short-term measures</li>
+<li><strong>IATA / Emerton solution:</strong> 4-stage framework (parts availability, fair MRO market access, long-term spare parts security, industry-wide best practices); build on renewed <strong>IATA-CFM agreement (Jan 2026)</strong></li>
+<li><strong>Walsh:</strong> "Capacity alone will not be enough. Airlines need better access to spare parts, more approved repair options, fair access to MRO capacity, and greater competition in the aftermarket."</li>
+</ul>
+<h3>Challenge 2: Digital Fragmentation Across MRO Networks</h3>
+<ul>
+<li><strong>Risk:</strong> Airlines/MROs juggling dozens of customer worksheets, manual paper processes, and inconsistent data capture across global station networks</li>
+<li><strong>FL Technics solution:</strong> Sensus MRO platform consolidates fragmented systems into a single program with automated work packs, TAT forecasting, intelligent inventory, and real-time load balancing</li>
+<li><strong>FEAM solution:</strong> Off-the-shelf / embedded AI to minimize investment risk while building customer portal and standardizing digital workflows across ~40 international locations</li>
+</ul>
+<h3>Challenge 3: Sustainability / Fuel Cost Pressure on Aging Fleets</h3>
+<ul>
+<li><strong>Risk:</strong> Airlines delaying retirements (driven by OEM delivery delays) face compounding fuel-burn penalties; sustainability targets hard to meet</li>
+<li><strong>Solution examples:</strong></li>
+<li>Delta + VCT 737 finlets (<strong>1.2% fuel burn reduction</strong> validated; fleetwide rollout)</li>
+<li>Industry push to adopt aerodynamic retrofits as a routine MRO activity</li>
+</ul>
+<h3>Challenge 4: Aftermarket / Spare Parts Access Concentration</h3>
+<ul>
+<li><strong>Risk:</strong> OEM-controlled spare parts and licensed production create supply concentration; airlines dependent on a small number of approved MRO sources</li>
+<li><strong>IATA / industry solution:</strong> Expand USM channels, accelerate repair solution approvals, support regulator-approved alternative parts, embed fair-access provisions in procurement contracts</li>
+</ul>
+<h3>Challenge 5: Specialized MRO Talent and Capability Gaps (A330neo)</h3>
+<ul>
+<li><strong>Risk:</strong> A330neo fleet growth outpacing certified base maintenance capacity; airlines face limited options for heavy checks, structural inspections, modifications</li>
+<li><strong>Solution:</strong> <strong>Vallair A330neo approval in Châteauroux</strong> adds competitive capacity for <strong>A330-800/-900</strong> heavy maintenance; FEAM scaling pods/cohabitation model for mixed-fleet line maintenance (Atlas Air, GlobalX in Miami)</li>
+</ul>
+<h3>Challenge 6: Climate-Driven Demand for Aerial Firefighting</h3>
+<ul>
+<li><strong>Risk:</strong> Intensifying wildfire seasons straining legacy C-130 / RJ-85 tanker fleets</li>
+<li><strong>Solution:</strong> <strong>Neptune Aviation + Commercial Jet A319 conversion</strong> in Dothan, AL — modernized, higher-capacity airtanker for the <strong>2028 wildfire season</strong></li>
+</ul>
+
+<div class="post-section" id="s6">
+  <div class="post-section-header">
+    <div class="section-number">📋</div>
+    <span class="section-icon">⚠️</span>
+    <h2>Today's Headlines Recap (June 27, 2026)</h2>
+  </div>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">1. <strong>IATA / Emerton Engine MRO Report:</strong> 4-stage framework; 648 GTF aircraft grounded at 2025 peak (28% of fleet); LEAP shop visits to grow from ~600-800 (2025) to >5,000 (2040)</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">2. <strong>FL Technics Acquires Sensus Aero:</strong> MRO software platform commercialization; Sensus MRO features automated work packs, TAT forecasting, intelligent inventory, real-time load balancing</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">3. <strong>FEAM Aero Post-Expansion Strategy:</strong> Global integration under FEAM EMEA brand (~40 locations); "back to basics" operational focus; AI/digital roadmap led by CIO Joseph Hernandez</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">4. <strong>Vallair A330neo Approval in Châteauroux:</strong> Base maintenance clearance for A330-800 and A330-900; scheduled heavy checks, structural inspections, modifications</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">5. <strong>Ontic 100,000 ft² Weston Florida Facility:</strong> Long-term lease; 10th Ontic site worldwide; supports licensed product lines; 20 mi from Miramar MRO facility</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">6. <strong>Delta Fleetwide VCT 737 Finlets:</strong> Validated 1.2% fuel burn reduction; aerodynamic retrofit as routine MRO activity</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">7. <strong>Neptune Aviation A319 Airtanker:</strong> First A319 delivered to Commercial Jet Dothan, AL (400,000 ft²); prototype aerial firefighting conversion for 2028 wildfire season</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">8. <strong>AMTRA Aero A330-200 Acquisition:</strong> MSN 529 from Cargo Aircraft Management; USM harvest; A330 platform demand continuation</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">9. <strong>Werner Aero A321ceo Acquisition:</strong> MSN 544 from FTAI Aviation; disassembly at Tarmac Aerosave Tarbes, France</p>
+<p style="font-size:14px;line-height:1.75;color:var(--gray-600);margin-bottom:12px">10. <strong>IATA-CFM Agreement Renewal (referenced):</strong> Foundation for January 2026 renewal; supports fair MRO market access provisions</p>
+
+<div class="post-section" id="s7">
+  <div class="post-section-header">
+    <div class="section-number">📋</div>
+    <span class="section-icon">⚠️</span>
+    <h2>Key Statistics — June 27, 2026</h2>
+  </div>
+<div class="table-wrapper"><table class="post-table">
+<thead><tr><th>Metric</th><th>Value</th><th>Source</th></tr></thead><tbody>
+<tr><td>GTF aircraft grounded (March 2025 peak)</td><td>648 (28% of fleet)</td><td>IATA / Emerton</td></tr>
+<tr><td>Single-aisle engine deliveries 2024</td><td>2,000 (GTF 800, LEAP 1,200)</td><td>IATA / Emerton</td></tr>
+<tr><td>Single-aisle engine deliveries 2030-2040</td><td>~3,700/year (GTF 1,200; LEAP 2,500)</td><td>IATA / Emerton</td></tr>
+<tr><td>LEAP shop visits 2025 → 2040</td><td>~600-800 → >5,000</td><td>IATA / Emerton</td></tr>
+<tr><td>GTF shop visits 2025 → 2040</td><td>~1,000 → >2,000</td><td>IATA / Emerton</td></tr>
+<tr><td>Vallair A330neo approval date</td><td>June 25, 2026</td><td>Aviation Week</td></tr>
+<tr><td>Vallair approved variants</td><td>A330-800 and A330-900</td><td>Aviation Week</td></tr>
+<tr><td>Ontic Weston Florida facility</td><td>100,000 ft² (long-term lease)</td><td>Ontic / MRO Business Today</td></tr>
+<tr><td>Ontic total global sites</td><td>10 (Weston = 10th)</td><td>GFL Alliance</td></tr>
+<tr><td>Delta 737 finlet fuel burn reduction</td><td>1.2% (validated)</td><td>Aviation Week (Graham Warwick)</td></tr>
+<tr><td>Neptune A319 conversion facility</td><td>Commercial Jet Dothan, AL — 400,000 ft²</td><td>Neptune / GlobeNewswire</td></tr>
+<tr><td>First A319 airtanker operational</td><td>2028 wildfire season</td><td>Neptune / GlobeNewswire</td></tr>
+<tr><td>AMTRA A330-200 acquisition</td><td>MSN 529 from Cargo Aircraft Mgmt (June 22, 2026)</td><td>Centre for Aviation</td></tr>
+<tr><td>Werner A321ceo acquisition</td><td>MSN 544 from FTAI Aviation (June 25, 2026)</td><td>Aviation Week</td></tr>
+<tr><td>Job Air Technic capacity</td><td>8 maintenance bays / 2 hangars near Ostrava</td><td>Aviation Week</td></tr>
+<tr><td>FL Technics global hangars</td><td>Lithuania, UK, Indonesia + 5-bay DR (late 2025)</td><td>Aviation Week</td></tr>
+<tr><td>FEAM EMEA combined locations</td><td>~40 (BOS Aerospace + Northern Aerotech)</td><td>Aviation Week (Lindsay Bjerregaard)</td></tr>
+<tr><td>GlobalX Miami line maintenance start</td><td>December 2025</td><td>Aviation Week</td></tr>
+</tbody></table></div>
+<p style="color:var(--gray-400);font-size:13px;font-style:italic;margin-bottom:8px">Sources: Aviation Week Network (MRO Rolling Daily Updates, June 22–27, 2026; Lindsay Bjerregaard, "FEAM's Post-Expansion Playbook: Global Integration And AI Innovation," June 25, 2026; Alex Derber, "FL Technics Bolsters Digital Capabilities With Sensus," June 25, 2026; Graham Warwick, "Delta Begins Fleetwide Installation Of VCT's Drag-Reducing 737 Finlets," June 24, 2026; Alex Derber, "IATA Renews Call For Engine Maintenance Liberalization," June 24, 2026; Guy Norris, "Conversion Begins For First Neptune A319 Air Tanker," June 24, 2026), IATA Press Release 34 (June 24, 2026, Madrid), Emerton Study, FL Technics Press Release (June 25, 2026), Neptune Aviation / GlobeNewswire (June 24, 2026), MRO Business Today, Centre for Aviation, IFF Magazine, AeroTime, S&amp;P Global / Aviation News Online.</p>
+</div>
+          <nav class="post-nav">
+            <a href="june-12-2026.html" class="post-nav-btn">
+              <div class="post-nav-label">← Previous Issue</div>
+              <div class="post-nav-title">June 12 2026</div>
+            </a>
+            <a href="../index.html" class="post-nav-btn" style="text-align:right">
+              <div class="post-nav-label">All Briefings</div>
+              <div class="post-nav-title">View Archive →</div>
+            </a>
+          </nav>
+        </article>
+
+        <aside class="post-sidebar">
+          <div class="toc-widget">
+            <div class="toc-title">In This Issue</div>
+            <ul class="toc-list">
+              <li><a href="#s1"><span class="toc-num">1</span> Market Updates &amp; Growth</a></li>
+              <li><a href="#s2"><span class="toc-num">2</span> Regional Expansion</a></li>
+              <li><a href="#s3"><span class="toc-num">3</span> Supply Chain</a></li>
+              <li><a href="#s4"><span class="toc-num">4</span> Technology &amp; Investment</a></li>
+              <li><a href="#s5"><span class="toc-num">5</span> Challenges &amp; Solutions</a></li>
+            </ul>
+          </div>
+          <div class="sidebar-widget">
+            <h3 class="widget-title">About This Briefing</h3>
+            <p class="widget-text">Source:</p>
+            <div class="widget-badge">
+              <span class="auto-badge">⚡ Automated Daily at 7:00 AM</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand"><span class="logo-icon">✈</span><span class="footer-name">MRO Daily Intelligence</span></div>
+        <div class="footer-text">Automated briefings sourced from Aviation Week Network. Published daily at 7:00 AM.</div>
+      </div>
+    </div>
+  </footer>
+
+<script>
+  var postAudio = null;
+  var audioSrc  = 'posts/june27-2026-email.m4a';  /* relative from inside posts/ dir */
+
+  /* Fix path: this page is in posts/, so audio is same dir */
+  var audioFile = 'june27-2026-email.m4a';
+
+  function fmtPostTime(s) {
+    if (isNaN(s) || !isFinite(s)) return '--:--';
+    var m = Math.floor(s / 60);
+    return m + ':' + String(Math.floor(s % 60)).padStart(2, '0');
+  }
+
+  function togglePostAudio() {
+    var playIcon  = document.getElementById('postPlayIcon');
+    var pauseIcon = document.getElementById('postPauseIcon');
+    var meta      = document.getElementById('postAudioMeta');
+    var fill      = document.getElementById('postAudioFill');
+    var cur       = document.getElementById('postAudioCur');
+    var dur       = document.getElementById('postAudioDur');
+
+    if (!postAudio) {
+      postAudio = new Audio(audioFile);
+      postAudio.addEventListener('loadedmetadata', function() {
+        dur.textContent = fmtPostTime(postAudio.duration);
+        meta.textContent = fmtPostTime(postAudio.duration) + ' · Daniel, en-GB';
+      });
+      postAudio.addEventListener('timeupdate', function() {
+        var pct = (postAudio.currentTime / postAudio.duration) * 100;
+        fill.style.width = pct + '%';
+        cur.textContent = fmtPostTime(postAudio.currentTime);
+      });
+      postAudio.addEventListener('ended', function() {
+        playIcon.style.display = '';
+        pauseIcon.style.display = 'none';
+        meta.textContent = 'Finished · tap to replay';
+        fill.style.width = '0%';
+        cur.textContent = '0:00';
+        postAudio.currentTime = 0;
+      });
+    }
+
+    if (!postAudio.paused) {
+      postAudio.pause();
+      playIcon.style.display = '';
+      pauseIcon.style.display = 'none';
+      meta.textContent = 'Paused';
+    } else {
+      postAudio.play();
+      playIcon.style.display = 'none';
+      pauseIcon.style.display = '';
+      meta.textContent = 'Playing…';
+    }
+  }
+
+  function seekPostAudio(e) {
+    if (!postAudio) return;
+    var track = document.getElementById('postAudioTrack');
+    var rect  = track.getBoundingClientRect();
+    var pct   = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
+    postAudio.currentTime = pct * postAudio.duration;
+  }
+</script>
+</body>
+</html>
